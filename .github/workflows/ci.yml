@@ -22,7 +22,7 @@ jobs:
           - os: macos-latest
             cc: clang
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build, test, and reproduce vectors
         env:
           CC: ${{ matrix.cc }}
@@ -32,7 +32,7 @@ jobs:
     name: ubuntu / ASan + UBSan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run sanitizer suite
         run: make CC=clang sanitize
 
@@ -43,7 +43,7 @@ jobs:
       run:
         shell: msys2 {0}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: msys2/setup-msys2@v2
         with:
           msystem: UCRT64

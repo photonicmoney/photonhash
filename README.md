@@ -116,6 +116,12 @@ Implementation vulnerabilities should follow the [security policy](SECURITY.md);
 normal research findings and changes should follow the
 [contribution guide](CONTRIBUTING.md).
 
+## Contact
+
+Research correspondence and independent implementation results may be sent to
+[lightman-laser@proton.me](mailto:lightman-laser@proton.me). Please use
+GitHub private vulnerability reporting for exploitable implementation issues.
+
 ## Versioning
 
 - construction/specification: v0.2 working draft;
