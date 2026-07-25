@@ -1,0 +1,38 @@
+# Build outputs
+/ph_selftest
+/ph_vectors
+/ph_bench
+/ph_selftest.exe
+/ph_vectors.exe
+/ph_bench.exe
+/photonhash.o
+*.o
+*.obj
+*.exe
+*.dSYM/
+/photonhash_test_vectors.generated.txt
+
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Editors, operating systems, and scratch files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.codex/
+.agents/
+*.log
+*.tmp
+*.bak
+*.orig
+*.swp
+*~
+/.spec-*.patch
+/.apply-patch.*

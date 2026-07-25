@@ -1,0 +1,85 @@
+PhotonHash test vectors — Appendix A (draft)
+generator: photonhash-ref 0.2.2-experimental
+parameters: n = 1024, entries 4-bit signed [-8,7], shift = 8 (spec v0.2 era 0), header = 80 bytes, nonce = 8-byte LE
+domain tags: LASER/PhotonHash/v1/{matrix,vector,final}
+convention: nibble k = byte[k>>1], even k low nibble, odd k high nibble
+
+vector 0
+  nonce         0000000000000000
+  parent      03dc9bf7b5f2e15d07a1a2b71d92363ed692210a75537354786087f516514e42
+  header[0:16]af7594b6c2b0f728a3587da67ef2ed94
+  seed_M[0:16]834a9a6eb1e65ac5060fff022ea46f61
+  M.checksum  29c82642b7ac7e55db39fb630984486dad43ed9b7e655b67f2476e0fae1a6d83
+  h_in        c90fb43b73df79b338fbe851fe4c953851ef199c13f78ce51a1050020dccf708
+  x[0:8]        -1 -6 -8 -4 7 0 -6 -3
+  shake256(x) ac3c54a83a8b08dfa08daa0e572a2906464f556e55fea6f83c8be3985c7af44e
+  y[0:8]        289 153 -642 -633 403 -409 544 -55
+  y range       [-1977, 2131]
+  shake256(y) a863c97f8f5c62182d40af864d06aa2268371b433499b647e109fe12bcb6f44b
+  r[0:16]     01dde1f203404e0322402ed00f0c05e2
+  shake256(r) bf4da71cdc769de52786b802e084e5f4995769aaeeb14e30041f0e2b8ce87537
+  d           1e8be31be22c19bc9cb4c1011eccc18180f91e59f5d11c2c670fb45143e84018
+
+vector 1
+  nonce         0000000000000001
+  parent      767f60fe362ea5af7fc21c43738001b882125cb322c71c76f15a23a6eeec302a
+  header[0:16]cfc0931068f6115356aa246196180b9a
+  seed_M[0:16]8e89cf0768cba492430d5c67a7a32c56
+  M.checksum  f6cac0d6843a85866e7e39ee43817d66d5cf53b50247205421f6fcac9cf3b3e2
+  h_in        3d183f672b2aba4054317b95ff07dcafd88034b9688357c2e3f57263e33c8b62
+  x[0:8]        -7 3 -3 0 3 6 -1 -6
+  shake256(x) 0e774a901a84dc182bb93da8b21357b22e6551e2362e6b3a09fc067bf5429943
+  y[0:8]        -521 17 -1146 89 199 1549 215 143
+  y range       [-2263, 2899]
+  shake256(y) aeb0d7817c510246f9f9c2f0b2e05ca7095bfd61a08dc47aa08b691f1567c68f
+  r[0:16]     0d0b6000001215d43d5460522e301313
+  shake256(r) 5789cb8a805e139cd6b0e1626bd57cb41f144f79ef3d9b9d6ae9f3f4f2501eb5
+  d           46836c67853300937f4eeea75ab92f416e193d12e5bcd6ff6fb90cb05cf38158
+
+vector 2
+  nonce         00000000deadbeef
+  parent      b192df942126d485d17d689f0b22d0eeeb63e27e2102c50e6baa89b16f2d0d9d
+  header[0:16]5184a1581798b8cd587682f6c61bed68
+  seed_M[0:16]00e18e1ef534178108078be99dac1ad8
+  M.checksum  e2493d9a3fe8b30f7710e3f9991e0420ef740dafeed5aad96148f1b6679b0acf
+  h_in        2079f1a070f342b08ee98ab78c4551c37f8ba74837f05059e97acb6c019b2e73
+  x[0:8]        -5 -8 -2 -7 1 5 -3 3
+  shake256(x) 0105bfa5898f9a9f54c6f4022165df98acb7bce9a750918abfd59d68ce643006
+  y[0:8]        -103 -41 587 950 401 768 64 -489
+  y range       [-1955, 2361]
+  shake256(y) 6817b4951ed583b8031e6f716f6e5d23bfc5dfd34e964b6fb487e8719005d13a
+  r[0:16]     ff3231e02e6f0ec3fedd4e2e132134fe
+  shake256(r) e838bf956ae4595dc574b33b0775a33c9628ce7ad0444eb2c132ba9ab4022162
+  d           7ea550048ac51bb7f6678d8f18147615d20eb0e1245af3071fa91c2a2d96d611
+
+vector 3
+  nonce         0123456789abcdef
+  parent      672936f58c525131c62f893f2fd8145ed73f13a758e5ea7e9098b7a48ec6baee
+  header[0:16]dcdaf0ac0186e65978777b74fc9a40d4
+  seed_M[0:16]1e317898310ae0aa5ad1930a8d244bc7
+  M.checksum  8ef02351496d5585ddffa9cd252f29d536fa3cbeedbd00f5b88bc2b6fd44f771
+  h_in        54fc42b729e49a2f5fd561c3d3685671fb44145d3a5b8a3a8fb620a9d77f1d64
+  x[0:8]        -4 -8 -5 5 2 2 -8 -3
+  shake256(x) 6cbb829b685b192e8a0d5d92bae5f76a69bf9b8ddad89cd6c274f4ba695a67db
+  y[0:8]        185 328 1132 2223 262 310 137 -320
+  y range       [-2470, 2223]
+  shake256(y) e0d36ee85bf15d8ee770cb6178c83abd0d802dd3cce9a355a73f29024ffd78ca
+  r[0:16]     108411e01f241d42faf1e01e120dc113
+  shake256(r) fa939393c4dffed16df1f1e37896c04fcbbc17cacc0c9eb6053fbfc150ea9eb9
+  d           ebcc1092603cf5d4fb1cf9350e2e3d05a2b1df231f8a9b2bc452b659f03864cd
+
+vector 4
+  nonce         ffffffffffffffff
+  parent      e39ac795b1e5d67a41e4503cdca2985bf5c5c3c449560b3f44c5b9d8099d368a
+  header[0:16]a03c4fb5720989d422698281db1ec047
+  seed_M[0:16]eb0fde37bfd1b9a0fb2aaed9323e08b6
+  M.checksum  41ca1a754b99c315cc28a495a52dcb2f0bb200e27c9102790e7c88eaf9b9198f
+  h_in        0b0f4cccc84fccd4a06b4e6d352f5e68c07a94415b81efba2d913f06efbdd4ef
+  x[0:8]        0 7 -5 -4 1 -5 -3 -7
+  shake256(x) f0659bc229032359bd7014292e47ef938f5369fa59f072d40ebee0f0bd4c6655
+  y[0:8]        968 523 231 617 604 1445 -64 -1035
+  y range       [-1821, 2642]
+  shake256(y) c70d7219c63577e7b3aab4b98484e52ac120d8f8800163a2f7176179fd9ab681
+  r[0:16]     232052bf41d112dfc1d30fef00311e1d
+  shake256(r) bf556b156fa4bb9f69cdff8fb83592ebae93f9647af8ca94bbbac683ffb8df00
+  d           d0cdc7139472f29b582137b3eb32d7bb792db60f4ea1fdcbcb824c447ff2ff33

@@ -1,0 +1,55 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unix:
+    name: ${{ matrix.os }} / ${{ matrix.cc }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            cc: gcc
+          - os: ubuntu-latest
+            cc: clang
+          - os: macos-latest
+            cc: clang
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build, test, and reproduce vectors
+        env:
+          CC: ${{ matrix.cc }}
+        run: make CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' test check-vectors
+
+  sanitizers:
+    name: ubuntu / ASan + UBSan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run sanitizer suite
+        run: make CC=clang sanitize
+
+  windows:
+    name: windows / UCRT64 GCC
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            make
+            mingw-w64-ucrt-x86_64-gcc
+      - name: Build, test, and reproduce vectors
+        run: make CC=gcc CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' test check-vectors
