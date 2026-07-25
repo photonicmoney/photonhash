@@ -23,6 +23,17 @@ cross-nonce amortization, and optimized electronic batching are considered?
 This release defines a falsifiable candidate; it does not establish that the
 answer is yes.
 
+## Construction lineage
+
+PhotonHash is an experimental proof-of-work construction in the lineage of
+[HeavyHash](https://arxiv.org/abs/1911.05193) and
+[LightHash](https://doi.org/10.1364/OPTICA.476173). It adopts their
+family-level idea of placing low-precision matrix-vector work between digital
+hashing stages; it does not claim that hash-matrix-hash proof of work or
+photonic proof of work is new. PhotonHash defines a distinct, incompatible
+byte-level pipeline and parameter profile. See the
+[related-work comparison](docs/spec-v0.2.md#21-related-work-and-construction-lineage).
+
 ## What is included
 
 | Path | Purpose |

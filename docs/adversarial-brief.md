@@ -27,9 +27,10 @@ fastest way to be acknowledged in this project's history is to wound it.
 
 | Artifact | Contents | Role |
 |----------|----------|------|
-| `photonhash-spec-v0.2.md` | Construction §5, cost model §6, analog model §7, schedule §8, security analysis §9 | The claims |
-| `photonhash-ref` 0.2.2-experimental | Portable C11 implementation, self-tests, benchmark | Shared review oracle; not yet normative |
-| `photonhash_test_vectors.txt` | Five end-to-end vectors at n = 1024 | The ground truth for reimplementation |
+| [`docs/spec-v0.2.md`](spec-v0.2.md) | Lineage §2.1, construction §5, cost model §6, analog model §7, schedule §8, security analysis §9 | The claims |
+| [`src/photonhash.c`](../src/photonhash.c) and tests | Portable C11 implementation, self-tests, benchmark | Shared review oracle; not yet normative |
+| [`docs/test-vectors.txt`](test-vectors.txt) | Five end-to-end vectors at n = 1024 | The ground truth for reimplementation |
+| [HeavyHash](https://arxiv.org/abs/1911.05193) and [LightHash](https://doi.org/10.1364/OPTICA.476173) | Prior optical proof-of-work constructions | Related-work and comparison baseline; not inherited security |
 
 The release CI rebuilds the reference with GCC and Clang, exercises ASan/UBSan,
 and reproduces its vectors byte-for-byte. These checks validate implementation

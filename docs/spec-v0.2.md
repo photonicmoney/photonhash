@@ -60,6 +60,46 @@ hypotheses unless accompanied by the evidence requested in Sections 9 and 12.
   advantage; the hardness schedule (Section 8) exists to erode electronic
   cache-resident implementations over time.
 
+### 2.1 Related work and construction lineage
+
+PhotonHash belongs to the line of optical proof-of-work constructions
+introduced by HeavyHash and developed further by LightHash. It does not claim
+the generic hash-matrix-hash pattern, low-precision photonic matrix-vector
+work, or photonic proof of work as novel.
+
+HeavyHash was introduced by Dubrovsky, Ball, and Penkovsky in
+[*Optical Proof of Work*](https://arxiv.org/abs/1911.05193). Its stated design
+deliberately avoids inventing an all-optical cryptographic hash: it composes an
+existing digital hash with a low-precision vector-matrix weighting function
+whose evaluation cost is intended to be dominated by a sufficiently large
+matrix-vector product suitable for photonic acceleration.
+
+LightHash was introduced by Pai et al. in
+[*Experimental evaluation of digitally verifiable photonic computing for
+blockchain and cryptocurrency*](https://doi.org/10.1364/OPTICA.476173). The
+paper explicitly presents LightHash as an improvement on the HeavyHash line.
+Its published construction uses SHA3-256 around a photonic matrix-vector stage,
+a 256 by 256 block-diagonal integer operator assembled from tunable `N` by `N`
+blocks, optical photodetection followed by binary thresholding, and an explicit
+batch-size parameter `S`. It also analyzes systematic photonic error and states
+a photonic-advantage criterion.
+
+PhotonHash adopts the family-level placement of matrix-vector work between
+digital hashing stages, but not either prior byte-level algorithm. The active
+v0.2.2-experimental profile instead specifies domain-separated SHAKE256, a
+parent-derived full dense 1024 by 1024 matrix, signed 4-bit matrix and vector
+entries, exact `int32_t` accumulation, a 4-bit requantized value per output
+component, and a final hash over both the input-binding digest and packed
+requantized output. Its boundary-flagged hybrid model makes digital assist and
+candidate rechecking explicit, while cross-nonce batching and amortization are
+treated as attack surfaces rather than excluded by assumption.
+
+These differences define PhotonHash's concrete review target; they do not
+establish cryptographic security, hardware advantage, or novelty of the broader
+construction family. PhotonHash is not wire-compatible with HeavyHash,
+LightHash, or network-specific descendants such as kHeavyHash, and it inherits
+no security result from them.
+
 ## 3. Notation and primitives
 
 - `SHAKE256(m, L)` — the SHA-3 extendable-output function, first L bytes.
