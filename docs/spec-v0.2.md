@@ -1,9 +1,9 @@
 # PhotonHash: Technical Specification
 
-**Version:** 0.2 (working draft)
+**Version:** 0.2 (frozen falsified research profile)
 **Author:** Lightman
-**Status:** OPEN FOR CRYPTANALYSIS — all parameters marked ⚠ are provisional
-**Reference release:** 0.2.2-experimental
+**Status:** FALSIFIED — frozen for reproduction; MUST NOT activate in Laser consensus
+**Reference release:** 0.2.3-falsified
 **Review status:** no published independent audit or independent conforming implementation is claimed
 
 **Changes in v0.2** (driven by findings from the reference implementation,
@@ -22,8 +22,9 @@ regenerated; v0.1 vectors are obsolete.
 
 ## 1. Scope
 
-This document specifies PhotonHash, the proof-of-work function of the Laser
-blockchain. It defines the complete mining and verification pipeline, genesis
+This document specifies the frozen PhotonHash v0.2 proof-of-work candidate
+evaluated for the Laser blockchain. This profile is not a Laser consensus
+rule and must not be activated. It defines the mining and verification pipeline, genesis
 parameters, the requantization rule that bridges analog optical computation and
 exact digital verification, the scheduled hardness evolution, and the security
 arguments and known attack surfaces. It is written to be sufficient for an
@@ -35,15 +36,17 @@ specified elsewhere.
 
 ## 2. Design goals and hypotheses
 
-PhotonHash is intended to satisfy the following properties. R1 and R5 are
-directly testable construction properties; R2, R3, R4, and R6 remain research
+PhotonHash was intended to satisfy the following properties. R1 and R5 are
+directly testable construction properties; R2, R4, and R6 remain research
 hypotheses unless accompanied by the evidence requested in Sections 9 and 12.
+R3 is now falsified for the active n=1024 profile by the balanced exact RTX
+5090 baseline. This profile must not be activated in Laser consensus.
 
 - **R1 (Asymmetry).** Verification requires exactly one pipeline evaluation;
   mining requires an expected number of evaluations proportional to difficulty.
 - **R2 (Uniformity).** Output is computationally indistinguishable from uniform
   for any adversary that cannot break the underlying hash.
-- **R3 (Optical dominance).** The matrix stage targets ≥ 90% ⚠ of
+- **R3 (Optical dominance; FALSIFIED for n=1024).** The matrix stage targets ≥ 90% ⚠ of
   marginal mining cost on all known hardware classes, and must map natively to
   programmable photonic linear-algebra hardware (MZI meshes, crossbar arrays).
 - **R4 (Analog realizability).** A miner computing the matrix stage in analog
@@ -85,8 +88,8 @@ batch-size parameter `S`. It also analyzes systematic photonic error and states
 a photonic-advantage criterion.
 
 PhotonHash adopts the family-level placement of matrix-vector work between
-digital hashing stages, but not either prior byte-level algorithm. The active
-v0.2.2-experimental profile instead specifies domain-separated SHAKE256, a
+digital hashing stages, but not either prior byte-level algorithm. The frozen
+v0.2.3-falsified profile instead specifies domain-separated SHAKE256, a
 parent-derived full dense 1024 by 1024 matrix, signed 4-bit matrix and vector
 entries, exact `int32_t` accumulation, a 4-bit requantized value per output
 component, and a final hash over both the input-binding digest and packed
@@ -241,11 +244,12 @@ Per attempt at genesis parameters:
 | Requantize and pack    | n components into n/2 bytes               |
 | Final digest           | tagged SHAKE256 over 32 + n/2 bytes       |
 
-R3 targets a matvec share ≥ 90% on mining-relevant hardware, but no universal
-share is currently established. Earlier scalar estimates spanning roughly
-80–95% inferred matrix cost by subtracting a hash-only baseline from the full
-pipeline. That baseline omitted allocation, vector decoding, requantization,
-and packing, so the inferred value overattributed cost to the matvec.
+R3 targets a matvec share ≥ 90% on mining-relevant hardware. The balanced
+CUDA result below falsifies that target for the active profile. Earlier
+scalar estimates spanning roughly 80–95% inferred matrix cost by subtracting
+a hash-only baseline from the full pipeline. That baseline omitted allocation,
+vector decoding, requantization, and packing, so the inferred value
+overattributed cost to the matvec.
 
 The reference benchmark now allocates scratch buffers once and times input
 binding, vector expansion, decoding, the exact scalar matvec loop,
@@ -253,6 +257,16 @@ requantization and packing, and final hashing directly over batches of
 distinct nonces. Results must identify CPU, compiler, flags, dimension, and
 batch size. Even a correct scalar stage share does not establish mining
 economics or optical advantage.
+
+The balanced exact end-to-end CUDA baseline uses register-resident SHAKE,
+autotuned exact INT8-by-INT8-to-INT32 GEMM, and cross-batch overlap. Across 75
+sustained samples, GEMM consumed 11.06-12.21% of sequential device time and
+the best mean eight-stream pipeline reached 33.43 million attempts/s. This
+result is reproducible from `tools/ph_cuda_bench.cu` and documented in
+[the RTX 5090 report](cuda-rtx5090-baseline.md). It falsifies R3 for n=1024
+but does not resolve the full electronic-versus-photonic energy comparison.
+The resulting non-activation decision is recorded in
+[the profile decision](v0.2-profile-decision.md).
 
 ## 7. Analog evaluation: boundary-flagged hybrid discipline
 
@@ -394,9 +408,13 @@ economics. The required comparison is an exact optimized electronic pipeline
 (at minimum INT8 inputs with int32 accumulation, plus packed INT4 where an
 exact native path exists) against a complete photonic pipeline including
 modulation, detection, ADC, guard-band classification, digital row
-recomputation, SHAKE generation, and candidate rechecking. Status: OPEN,
-priority 1; no photonic-advantage claim should be inferred until this baseline
-exists.
+recomputation, SHAKE generation, and candidate rechecking. Status: R3
+FALSIFIED for n=1024; the full substrate comparison remains open. The
+balanced exact RTX 5090 baseline reached 33.43 million mean overlapped
+attempts/s and placed 11.06-12.21% of sequential device time in GEMM.
+Register-resident SHAKE, packed-INT4 exploration, pipeline-depth sweeps, and
+initial approximation attacks are complete. Independent reproduction and the
+complete photonic comparison remain open.
 
 **A3 — Precision cheating.** Covered by Section 7: consensus admits only
 digitally exact solutions, so under-precision strategies are self-punishing
@@ -443,25 +461,26 @@ generic search (target sizing accounts for the quadratic speedup).
 - **Digital reference (shared review oracle):** portable C, exact integer
   matvec, constant output across platforms; disagreements between prose and
   implementation are review findings to resolve before any future freeze.
-- **Required GPU baseline:** exact batched INT8 inputs with `int32`
-  accumulation, plus packed INT4 kernels where the device exposes a suitable
-  exact path (A2); generate vectors with on-device SHAKE and include decoding,
-  requantization, final hashing, and candidate verification in throughput and
-  energy measurements.
+- **Measured GPU baseline:** the bundled exact CUDA path uses batched INT8
+  inputs with `int32` accumulation and includes on-device SHAKE, decoding,
+  requantization, final hashing, and target comparison. Its RTX 5090 result is
+  documented in [the measurement report](cuda-rtx5090-baseline.md). Packed
+  INT4 kernels remain an optimization target where the device exposes a
+  suitable exact path (A2).
 - **Photonic target profile:** matrix programmed to mesh once per template
   (per R5); vectors modulated at line rate; candidate-check discipline of
   Section 7 implemented in the driver, not the device.
 
 ## 11. Test vectors
 
-Draft Appendix A vectors are bundled with the reference implementation
-(`photonhash-ref` 0.2.2-experimental): five end-to-end vectors (parent hash → M checksum →
+Appendix A vectors are bundled with the frozen reference implementation
+(`photonhash-ref` 0.2.3-falsified): five end-to-end vectors (parent hash → M checksum →
 h_in → x → y → r → d) at n = 1024, generated deterministically from fixed
 ASCII labels. They reproduce byte-for-byte from the bundled generator. No
-published independent conforming implementation is claimed yet. The vectors freeze the nibble
-convention, domain tags, offsets, and the v0.2 shift rule; they remain draft
-(⚠) until parameters survive external cryptanalysis, at which point Appendix
-A becomes normative.
+published independent conforming implementation is claimed yet. The vectors
+freeze the nibble convention, domain tags, offsets, and the v0.2 shift rule.
+They are normative only for reproducing this falsified research profile and
+have no Laser consensus status.
 
 ## 12. Open items for cryptanalysis
 
@@ -469,17 +488,18 @@ A becomes normative.
 |------|----------------------------------------------------------------------|----------|
 | OI-1 | Measure ρ and δ (Section 7) on real photonic matvec hardware          | High     |
 | OI-2 | Formal ROM security proof of the sandwich construction                | High     |
-| OI-3 | Distributional analysis of SHAKE-derived M (rank, spectra, outliers)  | Medium   |
+| OI-3 | Independently reproduce and extend the bundled matrix corpus          | Medium   |
 | OI-4 | Era-transition economic/game-theoretic modeling                       | Medium   |
 | OI-5 | Succinct verification path for large-n eras                           | Medium   |
 | OI-6 | W/σ operating point: entropy & attack bar vs δ, against measured ρ    | High     |
 
 Adversarial analysis of A1 in particular is solicited: a sub-quadratic exact
 strategy for fresh-vector, fixed-random-matrix products would break the
-design's economics and must be found now, not after genesis.
+design's economics and must be investigated before any successor activation.
 
 ---
 
-*This specification is a working draft for cryptographic review. Parameters
-marked ⚠ are provisional. The digital reference implementation is a shared
-review oracle, not a normative standard, until a future parameter freeze.*
+*This specification and its vectors are frozen as the reproduction oracle for
+the falsified v0.2 profile. They are not Laser consensus rules. Parameters
+marked ⚠ identify the provisional assumptions that failed or remain open for
+successor research.*

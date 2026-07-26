@@ -1,14 +1,14 @@
-# PhotonHash v0.2.2-experimental
+# PhotonHash v0.2.3-falsified
 
 PhotonHash is an experimental proof-of-work construction built around a dense,
 deterministic matrix-vector product. This repository contains the portable C11
 reference implementation and the materials needed to review or independently
 reimplement it.
 
-> **Research release — open for cryptanalysis.** PhotonHash is a candidate,
-> not a frozen protocol commitment. Its security and hardware-economics
-> hypotheses have not been established by a published independent audit. Do
-> not use this release to secure assets of value.
+> **FALSIFIED PROFILE — FROZEN RESEARCH ARTIFACT.** The active n=1024 profile
+> failed its R3 hardware-economic requirement and MUST NOT be activated in
+> Laser consensus. This release is preserved for reproduction, independent
+> review, and successor-design work. Do not use it to secure assets of value.
 
 This release's reference profile uses a fixed 1024 × 1024 matrix at every
 height. The larger-dimension schedule discussed in the specification is
@@ -43,9 +43,13 @@ byte-level pipeline and parameter profile. See the
 | [`tests/ph_selftest.c`](tests/ph_selftest.c) | Known-answer and pipeline invariant tests |
 | [`tests/ph_vectors.c`](tests/ph_vectors.c) | Deterministic vector generator |
 | [`tests/ph_bench.c`](tests/ph_bench.c) | Scalar reference benchmark |
+| [`tools/ph_cuda_bench.cu`](tools/ph_cuda_bench.cu) | Exact batched CUDA pipeline and power benchmark |
+| [`tools/ph_matrix_analysis.py`](tools/ph_matrix_analysis.py) | Independent matrix corpus and approximation experiments |
 | [`docs/spec-v0.2.md`](docs/spec-v0.2.md) | Working technical specification |
 | [`docs/test-vectors.txt`](docs/test-vectors.txt) | Golden end-to-end vectors |
 | [`docs/adversarial-brief.md`](docs/adversarial-brief.md) | Claims, attack surfaces, and review targets |
+| [`docs/cuda-rtx5090-baseline.md`](docs/cuda-rtx5090-baseline.md) | RTX 5090 methodology, results, and limitations |
+| [`docs/v0.2-profile-decision.md`](docs/v0.2-profile-decision.md) | Evidence-based non-activation decision |
 
 The implementation has no runtime dependencies beyond a C11 implementation
 and the C standard library. The repository expects a POSIX-style `make`;
@@ -78,6 +82,16 @@ reports SHAKE generation, nibble decoding, exact matvec, requantization and
 packing, final hashing, scalar MAC throughput, and effective matrix-read
 bandwidth separately.
 
+With CUDA, cuBLAS, and a configured host C++ compiler:
+
+~~~sh
+make cuda-bench
+~~~
+
+The CUDA benchmark differentially checks the complete device path against the
+C oracle before timing. Pass batch and iteration counts directly to
+`ph_cuda_bench` for sustained measurements.
+
 ## Construction summary
 
 For each block template, PhotonHash derives a signed 4-bit matrix `M` from the
@@ -99,25 +113,35 @@ implementation claiming conformance must match the golden vectors exactly;
 
 ## Evidence and non-claims
 
-The 90% matrix-share figure is a design target, not a measured property.
+The 90% matrix-share figure was a design target, not an established property.
 Earlier scalar estimates spanning roughly 80–95% used subtraction against a
 hash-only baseline that omitted allocation, vector decoding, requantization,
 and packing costs. Those estimates are historical context, not stage-level
 evidence. Use the direct benchmark in this tree and record the CPU, compiler,
 flags, dimension, and batch size with every result.
 
+A balanced exact end-to-end GPU baseline falsifies that target on an RTX 5090
+at n=1024. Across 75 sustained samples, exact GEMM consumed 11.06-12.21% of
+sequential device time; the best mean overlapped pipeline reached 33.43
+million attempts/s. The final path uses register-resident SHAKE, cuBLAS
+autotuning, and an eight-stream pipeline selected after a depth sweep. See the
+[measurement report](docs/cuda-rtx5090-baseline.md) and
+[profile decision](docs/v0.2-profile-decision.md).
+
 The economically relevant comparison is an exact, aggressively optimized
 electronic miner—at minimum batched INT8 inputs with `int32` accumulation,
 plus packed INT4 kernels where the target exposes a suitable exact path—
 against a complete photonic system including modulation, detection, ADC,
 guard-band classification, digital row recomputation, SHAKE generation, and
-candidate rechecking. No such end-to-end comparison is claimed here.
+candidate rechecking. No photonic advantage is claimed here.
 
-This repository does **not** demonstrate an optical energy advantage, prove
-resistance to cross-nonce amortization, establish analog correctness under
-real correlated noise, claim memory-hardness, claim ASIC resistance, or
-provide a formal random-oracle proof. Those questions are explicit review
-targets in the [adversarial review brief](docs/adversarial-brief.md).
+The active profile must not be activated or frozen into Laser consensus. This
+repository does **not** demonstrate an optical energy advantage, prove
+resistance to every cross-nonce amortization strategy, establish analog
+correctness under real correlated noise, claim memory-hardness, claim ASIC
+resistance, or provide a formal random-oracle proof. Those questions are
+explicit review targets in the
+[adversarial review brief](docs/adversarial-brief.md).
 
 No published independent audit is claimed for this release. Passing build,
 sanitizer, and vector-reproduction checks—when recorded by CI—are
@@ -131,10 +155,10 @@ assumptions. Start with the
 [adversarial review brief](docs/adversarial-brief.md), which defines claims,
 severity tiers, and reporting expectations.
 
-Before any parameter freeze, the project requires resolution of the listed
-high-priority questions plus at least two independent implementations matching
-an expanded, frozen vector set. Publication of this repository is intended to
-make that external review possible.
+The v0.2 profile and vectors are frozen only as a falsified research artifact.
+Any successor construction requires resolution of the listed high-priority
+questions plus at least two independent implementations matching a new,
+expanded vector set before consensus consideration.
 
 Implementation vulnerabilities should follow the [security policy](SECURITY.md);
 normal research findings and changes should follow the
@@ -148,10 +172,10 @@ GitHub private vulnerability reporting for exploitable implementation issues.
 
 ## Versioning
 
-- construction/specification: v0.2 working draft;
-- reference release: v0.2.2-experimental;
+- construction/specification: v0.2 falsified research profile;
+- reference release: v0.2.3-falsified;
 - reference profile: fixed `n = 1024`;
-- release date: 2026-07-25.
+- release date: 2026-07-26.
 
 Any change to consensus-visible output requires a new version and new vectors.
 See the [changelog](CHANGELOG.md) for the history of this release line.

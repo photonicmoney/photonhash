@@ -1,0 +1,62 @@
+{
+    "GeneratedUtc":  "2026-07-26T07:30:57.8683183Z",
+    "Executable":  "ph_cuda_bench.exe",
+    "GpuMetadata":  "NVIDIA GeForce RTX 5090, 595.79, 32607 MiB, 600.00 W",
+    "TargetAttemptsPerRun":  100000000,
+    "Repeats":  5,
+    "Datasets":  [
+                     0,
+                     1,
+                     2,
+                     3,
+                     4
+                 ],
+    "Summary":  [
+                    {
+                        "Batch":  8192,
+                        "Samples":  25,
+                        "DeviceAttemptsPerSecondMean":  22470405.477880005,
+                        "DeviceAttemptsPerSecondStdDev":  201326.74837262285,
+                        "DeviceAttemptsPerSecondCvPercent":  0.89596402063509728,
+                        "GemmSharePercentMean":  11.060773760000002,
+                        "GemmSharePercentStdDev":  0.24089146929604344,
+                        "IntegratedEnergyUjPerAttemptMean":  10.29582864,
+                        "IntegratedEnergyUjPerAttemptStdDev":  0.16241282501029095,
+                        "PipelineAttemptsPerSecondMean":  31484951.524480008,
+                        "PipelineAttemptsPerSecondStdDev":  1499937.5979632027,
+                        "PipelineIntegratedEnergyUjPerAttemptMean":  10.129993759999998,
+                        "PipelineIntegratedEnergyUjPerAttemptStdDev":  0.46487484661118578
+                    },
+                    {
+                        "Batch":  32768,
+                        "Samples":  25,
+                        "DeviceAttemptsPerSecondMean":  30453422.256799992,
+                        "DeviceAttemptsPerSecondStdDev":  308582.20697450172,
+                        "DeviceAttemptsPerSecondCvPercent":  1.0132923793338133,
+                        "GemmSharePercentMean":  12.12138792,
+                        "GemmSharePercentStdDev":  0.318429627236265,
+                        "IntegratedEnergyUjPerAttemptMean":  9.5695035200000014,
+                        "IntegratedEnergyUjPerAttemptStdDev":  0.16742932174455988,
+                        "PipelineAttemptsPerSecondMean":  33429377.144680008,
+                        "PipelineAttemptsPerSecondStdDev":  639503.83825451031,
+                        "PipelineIntegratedEnergyUjPerAttemptMean":  10.789189999999998,
+                        "PipelineIntegratedEnergyUjPerAttemptStdDev":  0.26011733540349952
+                    },
+                    {
+                        "Batch":  131072,
+                        "Samples":  25,
+                        "DeviceAttemptsPerSecondMean":  32044277.386600003,
+                        "DeviceAttemptsPerSecondStdDev":  473634.12676948309,
+                        "DeviceAttemptsPerSecondCvPercent":  1.4780614992664596,
+                        "GemmSharePercentMean":  12.206674200000002,
+                        "GemmSharePercentStdDev":  0.10255245351891867,
+                        "IntegratedEnergyUjPerAttemptMean":  9.73723828,
+                        "IntegratedEnergyUjPerAttemptStdDev":  0.17247714207649853,
+                        "PipelineAttemptsPerSecondMean":  31848566.611599993,
+                        "PipelineAttemptsPerSecondStdDev":  533205.15006804676,
+                        "PipelineIntegratedEnergyUjPerAttemptMean":  10.927075040000002,
+                        "PipelineIntegratedEnergyUjPerAttemptStdDev":  0.16679829956154638
+                    }
+                ],
+    "RawCsv":  "research/results/cuda-rtx5090-20260726.csv"
+}

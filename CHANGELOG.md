@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## v0.2.3-falsified — 2026-07-26
+
+- Added an exact end-to-end CUDA baseline with on-device SHAKE, signed-vector
+  expansion, cuBLAS INT8-by-INT8-to-INT32 GEMM, requantization, final hashing,
+  target comparison, differential validation, stage timing, and NVML energy
+  measurement.
+- Optimized the electronic path with register-resident Keccak, autotuned exact
+  GEMM, and configurable multi-stream overlap.
+- Completed 75 sustained RTX 5090 samples across three batch sizes and five
+  parent matrices. GEMM remained at 11.06-12.21% of sequential device time;
+  the best mean overlapped result was 33.43 million attempts/s.
+- Added a 1,000-parent matrix corpus, deep SVD analysis, and low-rank,
+  partial-row, and column-skipping approximation experiments.
+- Marked the active n=1024 profile's R3 target falsified and recorded a
+  non-activation decision for Laser consensus.
 - Replaced the subtraction-derived matrix-share estimate with direct,
   allocation-free stage timing over batches of distinct nonces.
 - Added `ph_verify_with_matrix` for callers that cache a parent-derived matrix.

@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Author:** Lightman
-**Targets:** *PhotonHash: Technical Specification* v0.2 · `photonhash-ref` 0.2.2-experimental
+**Targets:** *PhotonHash: Technical Specification* v0.2 · `photonhash-ref` 0.2.3-falsified
 **Status:** OPEN — this document is an invitation to break the design
 
 ---
@@ -60,6 +60,13 @@ scratch allocation outside the nonce loop.
 *Falsified by:* a conforming evaluation strategy on plausible hardware in
 which the matrix stage falls materially below the claimed share — e.g., a
 hash-stage bottleneck inversion, or a matvec shortcut (see A1).
+
+*Current finding:* falsified for the active n = 1024 profile on the balanced
+RTX 5090 exact path. Across 75 sustained samples, GEMM accounted for
+11.06-12.21% of sequential device time; the best mean overlapped pipeline
+reached 33.43 million attempts/s. This is a C2 economic falsification for the
+active profile, not proof of permanent electronic advantage over a complete
+photonic miner.
 
 **C3 — Exact-consensus compatibility of analog mining.** The
 boundary-flagged hybrid discipline (spec §7) lets an analog evaluator with
@@ -132,11 +139,16 @@ by the payoff of a success, not by our estimate of its likelihood.
      SHAKE, decoding, requantization, final hashing, and candidate checking;
      compare it with the complete photonic signal and digital-assist path.
      Do not assume that batching improves both substrates equally.
-- **Our confidence:** MODERATE. We know of no exact sub-quadratic algorithm
-  for dense unstructured matrix–vector products. But electronic GEMM
-  utilization and move (2)—exploiting bucket coarseness—are genuinely
-  unsettled. These are the results we most want found or ruled out. This is
-  priority 1.
+- **Measured result:** the bundled balanced exact CUDA path matches the C
+  oracle, reaches 33.43 million overlapped attempts/s, and leaves exact GEMM
+  at 11.06-12.21% of sequential device time. A 1,000-parent corpus found no
+  compressibility, and low-rank/column-skipping attacks produced zero exact
+  whole outputs in 1,280 vectors even at very high retained work. See the
+  [measurement report](cuda-rtx5090-baseline.md).
+- **Our confidence:** HIGH that C2 does not hold at the active parameters.
+  We know of no exact sub-quadratic attack on C1/C5 from the tested corpus,
+  and the complete photonic comparison remains open, but neither rescues the
+  failed stage balance. The profile is not eligible for consensus activation.
 
 ### A2 — Requantization structure leakage
 
@@ -218,18 +230,20 @@ by the payoff of a success, not by our estimate of its likelihood.
 
 ## 6. Open questions we most want answered
 
-- **OQ-1 (priority 1).** Does an exact optimized GPU pipeline, or an
-  amortized-exact or amortized-approximate evaluator, beat the complete
-  photonic pipeline at W ≈ 0.37σ after every digital and conversion cost is
-  included? (A1 moves 1–3.) A rigorous and reproducible comparison is the
-  result that most stabilizes—or changes—the design.
+- **OQ-1 (priority 1).** The balanced RTX 5090 baseline has established a
+  33.43-million-attempt/s mean overlapped electronic reference and falsified
+  C2 for the active profile.
+  Does a complete photonic pipeline beat its throughput or roughly 10-11
+  uJ/attempt board-energy result at W ≈ 0.37σ after every digital and conversion cost is
+  included? Can an amortized-exact or amortized-approximate evaluator improve
+  the electronic result further? (A1 moves 1–3.)
 - **OQ-2.** Does the δ ≈ 32·ρ advantage cap survive realistic *correlated*
   analog noise, or does crosstalk change the conclusion? (A3.)
 - **OQ-3.** A formal statement and proof (ROM) that non-uniform r does not
   bias d beyond generic search. (A2, and spec OI-2.)
-- **OQ-4.** Distributional analysis of SHAKE-derived M — rank, spectrum,
-  low-rank approximability — settling C5 and thereby A1-structure, A6. (Spec
-  OI-3.)
+- **OQ-4.** Independently reproduce and extend the initial 1,000-parent
+  rank, spectrum, compressibility, and approximation corpus, especially with
+  new exact preprocessing attacks. (Spec OI-3.)
 - **OQ-5.** A concrete electronic architecture that keeps pace across the era
   schedule, or an argument that none can. (A5, C4.)
 

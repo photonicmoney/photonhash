@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define PH_VERSION_STR "photonhash-ref 0.2.2-experimental"
+#define PH_VERSION_STR "photonhash-ref 0.2.3-falsified"
 
 /* Domain-separation tags (spec 5.1, 5.2, 5.4). ASCII, no trailing NUL. */
 static const char TAG_MATRIX[] = "LASER/PhotonHash/v1/matrix";

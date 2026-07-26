@@ -1,5 +1,5 @@
 PhotonHash test vectors — Appendix A (draft)
-generator: photonhash-ref 0.2.2-experimental
+generator: photonhash-ref 0.2.3-falsified
 parameters: n = 1024, entries 4-bit signed [-8,7], shift = 8 (spec v0.2 era 0), header = 80 bytes, nonce = 8-byte LE
 domain tags: LASER/PhotonHash/v1/{matrix,vector,final}
 convention: nibble k = byte[k>>1], even k low nibble, odd k high nibble

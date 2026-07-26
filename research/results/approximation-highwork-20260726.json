@@ -1,0 +1,478 @@
+{
+  "corpus": {
+    "chi_square_15df": 16.31336669921875,
+    "elapsed_seconds": 0.09055219998117536,
+    "entries": 5242880,
+    "entry_histogram_-8_to_7": [
+      327619,
+      327944,
+      327534,
+      327779,
+      326997,
+      328663,
+      326983,
+      327396,
+      328646,
+      327845,
+      326912,
+      328858,
+      327534,
+      327485,
+      327251,
+      327434
+    ],
+    "entry_stddev_mean": 4.609167120970858,
+    "matrices": 5,
+    "matrix_mean_mean": -0.5006122589111328,
+    "matrix_mean_stddev": 0.004946796562807063,
+    "max_centered_row_mean_abs_max": 0.6005859375,
+    "max_row_norm_z_max": 4.059959888458252,
+    "zlib_ratio_mean": 1.0003166198730469,
+    "zlib_ratio_min": 1.0003166198730469
+  },
+  "deep_analysis": [
+    {
+      "centered_singular_max": 292.29825140225387,
+      "column_sampling": [
+        {
+          "bucket_accuracy": 0.5229301452636719,
+          "column_fraction": 0.9375,
+          "columns": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.6474952697753906,
+          "column_fraction": 0.96875,
+          "columns": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7528190612792969,
+          "column_fraction": 0.984375,
+          "columns": 1008,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.831695556640625,
+          "column_fraction": 0.9921875,
+          "columns": 1016,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "condition_number": 10643.96351973709,
+      "index": 0,
+      "low_rank": [
+        {
+          "bucket_accuracy": 0.4158058166503906,
+          "frobenius_energy_fraction": 0.8946622575031173,
+          "rank": 512,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7588882446289062,
+          "frobenius_energy_fraction": 0.9872248131362455,
+          "rank": 768,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.915283203125,
+          "frobenius_energy_fraction": 0.9984404917242584,
+          "rank": 896,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9698829650878906,
+          "frobenius_energy_fraction": 0.9998078131009565,
+          "rank": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9896659851074219,
+          "frobenius_energy_fraction": 0.9999769662170829,
+          "rank": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "mean_bias_outlier_ratio": 1.918351008090316,
+      "rank_float64": 1024,
+      "singular_max": 560.7306452405503,
+      "singular_median": 119.28053003914857,
+      "singular_min": 0.052680624487371465,
+      "svd_seconds": 0.23934079997707158,
+      "top_to_median": 4.700940254511908
+    },
+    {
+      "centered_singular_max": 294.8192844608638,
+      "column_sampling": [
+        {
+          "bucket_accuracy": 0.5230140686035156,
+          "column_fraction": 0.9375,
+          "columns": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.6516532897949219,
+          "column_fraction": 0.96875,
+          "columns": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7556800842285156,
+          "column_fraction": 0.984375,
+          "columns": 1008,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.8360557556152344,
+          "column_fraction": 0.9921875,
+          "columns": 1016,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "condition_number": 4726.097582027275,
+      "index": 1,
+      "low_rank": [
+        {
+          "bucket_accuracy": 0.4169464111328125,
+          "frobenius_energy_fraction": 0.8949105300719358,
+          "rank": 512,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7600059509277344,
+          "frobenius_energy_fraction": 0.9871685782622361,
+          "rank": 768,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9148101806640625,
+          "frobenius_energy_fraction": 0.9984158993168543,
+          "rank": 896,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.969970703125,
+          "frobenius_energy_fraction": 0.9997985193332277,
+          "rank": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9894485473632812,
+          "frobenius_energy_fraction": 0.9999755361837647,
+          "rank": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "mean_bias_outlier_ratio": 1.879035440422149,
+      "rank_float64": 1024,
+      "singular_max": 553.975884021862,
+      "singular_median": 119.01579427420576,
+      "singular_min": 0.11721634486104543,
+      "svd_seconds": 0.24433380004484206,
+      "top_to_median": 4.6546417423012985
+    },
+    {
+      "centered_singular_max": 292.2342852710631,
+      "column_sampling": [
+        {
+          "bucket_accuracy": 0.5230369567871094,
+          "column_fraction": 0.9375,
+          "columns": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.6502418518066406,
+          "column_fraction": 0.96875,
+          "columns": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7549705505371094,
+          "column_fraction": 0.984375,
+          "columns": 1008,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.8328018188476562,
+          "column_fraction": 0.9921875,
+          "columns": 1016,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "condition_number": 6153.615197995411,
+      "index": 2,
+      "low_rank": [
+        {
+          "bucket_accuracy": 0.4158973693847656,
+          "frobenius_energy_fraction": 0.895242292782806,
+          "rank": 512,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.759918212890625,
+          "frobenius_energy_fraction": 0.9872436170093973,
+          "rank": 768,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9151878356933594,
+          "frobenius_energy_fraction": 0.998427944584939,
+          "rank": 896,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9706649780273438,
+          "frobenius_energy_fraction": 0.9998061417692463,
+          "rank": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9899330139160156,
+          "frobenius_energy_fraction": 0.9999757373266185,
+          "rank": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "mean_bias_outlier_ratio": 1.8788105220965283,
+      "rank_float64": 1024,
+      "singular_max": 549.0528500846318,
+      "singular_median": 119.29481839374594,
+      "singular_min": 0.08922443676092878,
+      "svd_seconds": 0.23185320000629872,
+      "top_to_median": 4.602486993797344
+    },
+    {
+      "centered_singular_max": 296.9781907511018,
+      "column_sampling": [
+        {
+          "bucket_accuracy": 0.5201263427734375,
+          "column_fraction": 0.9375,
+          "columns": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.6439285278320312,
+          "column_fraction": 0.96875,
+          "columns": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7516860961914062,
+          "column_fraction": 0.984375,
+          "columns": 1008,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.8293991088867188,
+          "column_fraction": 0.9921875,
+          "columns": 1016,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "condition_number": 5378.851796981527,
+      "index": 3,
+      "low_rank": [
+        {
+          "bucket_accuracy": 0.4160614013671875,
+          "frobenius_energy_fraction": 0.8949042962610976,
+          "rank": 512,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7582206726074219,
+          "frobenius_energy_fraction": 0.987223283578387,
+          "rank": 768,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9150962829589844,
+          "frobenius_energy_fraction": 0.9983925297238088,
+          "rank": 896,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9701309204101562,
+          "frobenius_energy_fraction": 0.9998009034236519,
+          "rank": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9898109436035156,
+          "frobenius_energy_fraction": 0.9999763906241109,
+          "rank": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "mean_bias_outlier_ratio": 1.8679148021222465,
+      "rank_float64": 1024,
+      "singular_max": 554.7299584114671,
+      "singular_median": 119.54008712939797,
+      "singular_min": 0.1031316681234399,
+      "svd_seconds": 0.23893969994969666,
+      "top_to_median": 4.640535001542966
+    },
+    {
+      "centered_singular_max": 292.8595137744408,
+      "column_sampling": [
+        {
+          "bucket_accuracy": 0.5229835510253906,
+          "column_fraction": 0.9375,
+          "columns": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.6498527526855469,
+          "column_fraction": 0.96875,
+          "columns": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7547035217285156,
+          "column_fraction": 0.984375,
+          "columns": 1008,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.8325767517089844,
+          "column_fraction": 0.9921875,
+          "columns": 1016,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "condition_number": 23223.01878790175,
+      "index": 4,
+      "low_rank": [
+        {
+          "bucket_accuracy": 0.41506195068359375,
+          "frobenius_energy_fraction": 0.8946441578382509,
+          "rank": 512,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.7585334777832031,
+          "frobenius_energy_fraction": 0.9871812412639229,
+          "rank": 768,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9142341613769531,
+          "frobenius_energy_fraction": 0.9984114058898493,
+          "rank": 896,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9702301025390625,
+          "frobenius_energy_fraction": 0.9998027962147668,
+          "rank": 960,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        },
+        {
+          "bucket_accuracy": 0.9900588989257812,
+          "frobenius_energy_fraction": 0.99997739148096,
+          "rank": 992,
+          "vectors": 256,
+          "whole_vector_exact": 0
+        }
+      ],
+      "mean_bias_outlier_ratio": 1.9121355982336214,
+      "rank_float64": 1024,
+      "singular_max": 559.9871015694979,
+      "singular_median": 119.20275133521446,
+      "singular_min": 0.02411344996461995,
+      "svd_seconds": 0.24345589999575168,
+      "top_to_median": 4.697769936490287
+    }
+  ],
+  "independent_derivation": {
+    "computed_checksum": "e2493d9a3fe8b30f7710e3f9991e0420ef740dafeed5aad96148f1b6679b0acf",
+    "known_matrix_mean": -0.49692821502685547,
+    "match": true,
+    "published_checksum": "e2493d9a3fe8b30f7710e3f9991e0420ef740dafeed5aad96148f1b6679b0acf"
+  },
+  "interpretation": {
+    "note": "Bucket accuracy is not a partial proof: one wrong bucket changes the final SHAKE input. Whole-vector exact counts are therefore the attack-relevant empirical field.",
+    "random_missing_bucket_probability": "2^(-4 * unknown_rows)",
+    "whole_vector_exact_required_before_final_hash": true
+  },
+  "partial_row_attack": [
+    {
+      "computed_rows": 128,
+      "random_guess_log2_success": -3584,
+      "unknown_rows": 896,
+      "work_fraction": 0.125
+    },
+    {
+      "computed_rows": 256,
+      "random_guess_log2_success": -3072,
+      "unknown_rows": 768,
+      "work_fraction": 0.25
+    },
+    {
+      "computed_rows": 512,
+      "random_guess_log2_success": -2048,
+      "unknown_rows": 512,
+      "work_fraction": 0.5
+    },
+    {
+      "computed_rows": 768,
+      "random_guess_log2_success": -1024,
+      "unknown_rows": 256,
+      "work_fraction": 0.75
+    },
+    {
+      "computed_rows": 896,
+      "random_guess_log2_success": -512,
+      "unknown_rows": 128,
+      "work_fraction": 0.875
+    }
+  ],
+  "profile": {
+    "n": 1024,
+    "vectors_per_deep_matrix": 256
+  },
+  "tool": "ph_matrix_analysis.py"
+}
