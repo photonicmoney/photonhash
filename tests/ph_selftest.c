@@ -201,28 +201,51 @@ int main(void)
         free(x); free(y); free(r);
     }
 
-    /* Target semantics. */
+    /* Target semantics, including strict equality and LE carry ordering. */
     {
-        uint8_t d[32], lo[32], hi[32];
-        ph_hash(d, NULL, &M, header, sizeof header, 7);
-        memcpy(lo, d, 32);
-        memcpy(hi, d, 32);
-        /* hi = d + 1, lo = d (equal must not pass) */
-        for (int i = 0; i < 32; i++) { if (++hi[i]) break; }
-        CHECK(ph_meets_target(d, hi) == 1, "d < d+1 meets target");
-        CHECK(ph_meets_target(d, lo) == 0, "d == target does not meet target");
-        CHECK(ph_meets_target(hi, lo) == 0, "d+1 > d does not meet target");
+        uint8_t zero[32] = {0}, one[32] = {0};
+        uint8_t byte0_ff[32] = {0}, byte1_one[32] = {0};
+        one[0] = 1;
+        byte0_ff[0] = 0xFF;
+        byte1_one[1] = 1;
+        CHECK(ph_meets_target(zero, one) == 1, "zero < one meets target");
+        CHECK(ph_meets_target(one, one) == 0,
+              "digest equal to target is rejected");
+        CHECK(ph_meets_target(one, zero) == 0,
+              "digest greater than target is rejected");
+        CHECK(ph_meets_target(byte0_ff, byte1_one) == 1,
+              "target comparison is little-endian across a carry");
+        CHECK(ph_meets_target(byte1_one, byte0_ff) == 0,
+              "little-endian target ordering is not byte-lexicographic");
     }
 
-    /* One-shot verify agrees with manual pipeline. */
+    /* Empty headers and the maximum nonce are valid, deterministic inputs. */
+    {
+        uint8_t d1[32], d2[32], d3[32];
+        uint8_t one_byte = 0;
+        int rc1 = ph_hash(d1, NULL, &M, NULL, 0, UINT64_MAX);
+        int rc2 = ph_hash(d2, NULL, &M, NULL, 0, UINT64_MAX);
+        int rc3 = ph_hash(d3, NULL, &M, &one_byte, 1, UINT64_MAX);
+        CHECK(rc1 == 0 && rc2 == 0 && memcmp(d1, d2, 32) == 0,
+              "empty header at maximum nonce is deterministic");
+        CHECK(rc3 == 0 && memcmp(d1, d3, 32) != 0,
+              "one-byte and empty headers remain distinct");
+    }
+
+    /* Cached-matrix and one-shot verification agree. */
     {
         uint8_t d[32];
         uint8_t target_all_ff[32];
         memset(target_all_ff, 0xFF, 32);
         ph_hash(d, NULL, &M, header, sizeof header, 7);
-        int v = ph_verify(parent, 0, header, sizeof header, 7, target_all_ff);
+        int v = ph_verify_with_matrix(&M, header, sizeof header, 7,
+                                      target_all_ff);
+        CHECK(v == 1, "ph_verify_with_matrix accepts under max target");
+        v = ph_verify(parent, 0, header, sizeof header, 7, target_all_ff);
         CHECK(v == 1, "ph_verify accepts under max target");
         uint8_t target_zero[32] = {0};
+        v = ph_verify_with_matrix(&M, header, sizeof header, 7, target_zero);
+        CHECK(v == 0, "ph_verify_with_matrix rejects under zero target");
         v = ph_verify(parent, 0, header, sizeof header, 7, target_zero);
         CHECK(v == 0, "ph_verify rejects under zero target");
     }
@@ -249,6 +272,15 @@ int main(void)
               "null non-empty header is rejected");
         CHECK(ph_meets_target(NULL, header) == 0,
               "null digest cannot meet target");
+        CHECK(ph_verify_with_matrix(NULL, header, sizeof header, 0,
+                                    header) == -1,
+              "cached verify rejects a null matrix");
+        CHECK(ph_verify_with_matrix(&M, NULL, sizeof header, 0,
+                                    header) == -1,
+              "cached verify rejects a null non-empty header");
+        CHECK(ph_verify_with_matrix(&M, header, sizeof header, 0,
+                                    NULL) == -1,
+              "cached verify rejects a null target");
         CHECK(ph_verify(NULL, 0, header, sizeof header, 0, header) == -1,
               "null verification parent is rejected");
     }

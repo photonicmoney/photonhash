@@ -53,8 +53,10 @@ without breaking SHAKE256 generically.
 
 **C2 — Matrix-stage dominance.** The matrix–vector product accounts for the
 overwhelming majority of marginal per-attempt cost (design target ≥ 90% on
-mining-relevant hardware; measured 89–95% on commodity CPUs at genesis
-parameters).
+mining-relevant hardware). Earlier subtraction-derived scalar estimates
+spanned roughly 80–95%, but included omitted pipeline overhead and are not
+stage-level evidence. The current benchmark times each stage directly with
+scratch allocation outside the nonce loop.
 *Falsified by:* a conforming evaluation strategy on plausible hardware in
 which the matrix stage falls materially below the claimed share — e.g., a
 hash-stage bottleneck inversion, or a matvec shortcut (see A1).
@@ -124,15 +126,17 @@ by the payoff of a success, not by our estimate of its likelihood.
      to beat honest miners after accounting for the digital re-check of
      candidate wins. This is the sharpest version and directly attacks the
      §7 economics.
-  3. Batched-nonce MX as matrix–matrix: demonstrate that Strassen-family or
-     better exponents yield a *real* per-attempt advantage after the exact-r
-     constraint, rather than merely improving constant factors equally for
-     all miners.
+  3. Build an exact end-to-end CUDA baseline for distinct nonce vectors
+     X = [x₁…x_k], using at minimum INT8 inputs with `int32` accumulation
+     and packed INT4 where a suitable exact path exists. Include on-device
+     SHAKE, decoding, requantization, final hashing, and candidate checking;
+     compare it with the complete photonic signal and digital-assist path.
+     Do not assume that batching improves both substrates equally.
 - **Our confidence:** MODERATE. We know of no exact sub-quadratic algorithm
-  for dense unstructured matrix–vector products, and Strassen-type gains are
-  matrix–matrix and available to everyone. But move (2) — exploiting bucket
-  coarseness — is genuinely unsettled and is the single result we most want
-  found or ruled out. This is priority 1.
+  for dense unstructured matrix–vector products. But electronic GEMM
+  utilization and move (2)—exploiting bucket coarseness—are genuinely
+  unsettled. These are the results we most want found or ruled out. This is
+  priority 1.
 
 ### A2 — Requantization structure leakage
 
@@ -214,10 +218,11 @@ by the payoff of a success, not by our estimate of its likelihood.
 
 ## 6. Open questions we most want answered
 
-- **OQ-1 (priority 1).** Is there an amortized-exact or
-  amortized-approximate evaluator that beats honest per-attempt cost at
-  W ≈ 0.37σ? (A1 moves 1–2.) A rigorous no is the result that most
-  stabilizes the design; a yes is the result that most changes it.
+- **OQ-1 (priority 1).** Does an exact optimized GPU pipeline, or an
+  amortized-exact or amortized-approximate evaluator, beat the complete
+  photonic pipeline at W ≈ 0.37σ after every digital and conversion cost is
+  included? (A1 moves 1–3.) A rigorous and reproducible comparison is the
+  result that most stabilizes—or changes—the design.
 - **OQ-2.** Does the δ ≈ 32·ρ advantage cap survive realistic *correlated*
   analog noise, or does crosstalk change the conclusion? (A3.)
 - **OQ-3.** A formal statement and proof (ROM) that non-uniform r does not

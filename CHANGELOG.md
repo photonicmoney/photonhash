@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- Replaced the subtraction-derived matrix-share estimate with direct,
+  allocation-free stage timing over batches of distinct nonces.
+- Added `ph_verify_with_matrix` for callers that cache a parent-derived matrix.
+- Expanded self-tests for target boundaries, little-endian ordering, empty
+  headers, the maximum nonce, cached verification, and malformed arguments.
+- Made optimized exact GPU batching and full-system photonic accounting an
+  explicit evidence requirement rather than assuming substrate symmetry.
+
 ## v0.2.2-experimental — 2026-07-25
 
 - Prepared the reference implementation as a standalone public-review

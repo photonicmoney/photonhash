@@ -26,7 +26,7 @@ jobs:
       - name: Build, test, and reproduce vectors
         env:
           CC: ${{ matrix.cc }}
-        run: make CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' test check-vectors
+        run: make CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' all test check-vectors
 
   sanitizers:
     name: ubuntu / ASan + UBSan
@@ -52,4 +52,4 @@ jobs:
             make
             mingw-w64-ucrt-x86_64-gcc
       - name: Build, test, and reproduce vectors
-        run: make CC=gcc CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' test check-vectors
+        run: make CC=gcc CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' all test check-vectors

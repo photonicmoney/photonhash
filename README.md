@@ -71,6 +71,13 @@ byte-for-byte match, including release metadata. CI is configured to perform
 the same check with GCC and Clang on Linux, Clang on macOS, UCRT64 GCC on
 Windows, and an ASan/UBSan job on Linux.
 
+`make bench` measures each scalar stage directly over batches of distinct
+nonces. Scratch buffers are allocated once, outside the measured nonce loop,
+and the staged benchmark must reproduce `ph_hash` before timing begins. It
+reports SHAKE generation, nibble decoding, exact matvec, requantization and
+packing, final hashing, scalar MAC throughput, and effective matrix-read
+bandwidth separately.
+
 ## Construction summary
 
 For each block template, PhotonHash derives a signed 4-bit matrix `M` from the
@@ -92,13 +99,19 @@ implementation claiming conformance must match the golden vectors exactly;
 
 ## Evidence and non-claims
 
-Scalar measurements reported in the
-[specification](docs/spec-v0.2.md#6-cost-profile-why-the-matrix-dominates) place
-the matrix stage at roughly 80–95% of attempt cost depending on compiler, CPU,
-and dimension. A July 2026 UCRT64 measurement gave 82.7% at `n = 1024` and
-92.0% at `n = 2048`. The 90% figure is a design target, not a universal
-measured property. Reproduce the benchmark on the hardware being evaluated;
-these figures are context, not portable evidence.
+The 90% matrix-share figure is a design target, not a measured property.
+Earlier scalar estimates spanning roughly 80–95% used subtraction against a
+hash-only baseline that omitted allocation, vector decoding, requantization,
+and packing costs. Those estimates are historical context, not stage-level
+evidence. Use the direct benchmark in this tree and record the CPU, compiler,
+flags, dimension, and batch size with every result.
+
+The economically relevant comparison is an exact, aggressively optimized
+electronic miner—at minimum batched INT8 inputs with `int32` accumulation,
+plus packed INT4 kernels where the target exposes a suitable exact path—
+against a complete photonic system including modulation, detection, ADC,
+guard-band classification, digital row recomputation, SHAKE generation, and
+candidate rechecking. No such end-to-end comparison is claimed here.
 
 This repository does **not** demonstrate an optical energy advantage, prove
 resistance to cross-nonce amortization, establish analog correctness under

@@ -120,11 +120,22 @@ int ph_meets_target(const uint8_t d[PH_DIGEST_LEN],
                     const uint8_t target[PH_DIGEST_LEN]);
 
 /*
+ * Verify with a caller-owned matrix already derived for the claimed parent.
+ * This is the normal path for miners, nodes validating sibling candidates,
+ * and DoS measurements that must not charge matrix setup to every attempt.
+ * Returns 1 valid, 0 invalid, -1 on error.
+ */
+int ph_verify_with_matrix(const ph_matrix_t *M,
+                          const uint8_t *header, size_t header_len,
+                          uint64_t nonce,
+                          const uint8_t target[PH_DIGEST_LEN]);
+
+/*
  * Full verification of a claimed solution: derives M for prev_block_hash
  * at the dimension implied by height, evaluates the pipeline, checks the
  * target. Returns 1 valid, 0 invalid, -1 on error.
- * (A verifier at a fixed tip should instead derive M once and call
- * ph_hash + ph_meets_target directly; this helper is for one-shot use.)
+ * A verifier at a fixed tip should derive M once and call
+ * ph_verify_with_matrix; this helper is for one-shot use.
  */
 int ph_verify(const uint8_t prev_block_hash[PH_DIGEST_LEN],
               uint64_t height,

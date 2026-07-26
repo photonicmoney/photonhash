@@ -384,6 +384,20 @@ int ph_meets_target(const uint8_t d[PH_DIGEST_LEN],
     return 0; /* equal does not beat the target */
 }
 
+int ph_verify_with_matrix(const ph_matrix_t *M,
+                          const uint8_t *header, size_t header_len,
+                          uint64_t nonce,
+                          const uint8_t target[PH_DIGEST_LEN])
+{
+    if (!M || !target || (header_len != 0 && !header))
+        return -1;
+
+    uint8_t d[PH_DIGEST_LEN];
+    if (ph_hash(d, NULL, M, header, header_len, nonce) != 0)
+        return -1;
+    return ph_meets_target(d, target);
+}
+
 int ph_verify(const uint8_t prev_block_hash[PH_DIGEST_LEN],
               uint64_t height,
               const uint8_t *header, size_t header_len,
@@ -396,12 +410,9 @@ int ph_verify(const uint8_t prev_block_hash[PH_DIGEST_LEN],
     ph_matrix_t M;
     if (ph_matrix_derive(&M, ph_dim_for_height(height), prev_block_hash) != 0)
         return -1;
-    uint8_t d[PH_DIGEST_LEN];
-    int rc = ph_hash(d, NULL, &M, header, header_len, nonce);
+    int rc = ph_verify_with_matrix(&M, header, header_len, nonce, target);
     ph_matrix_free(&M);
-    if (rc != 0)
-        return -1;
-    return ph_meets_target(d, target);
+    return rc;
 }
 
 const char *ph_version(void)

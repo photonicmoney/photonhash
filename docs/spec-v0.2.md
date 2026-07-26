@@ -220,8 +220,10 @@ valid  ⟺  little_endian_uint256(d) < target
 Verification is the pipeline run once: derive M from the claimed parent (or
 reuse the cached M for that parent — verifiers at a given tip cache M exactly
 like miners), derive x, compute y = Mx exactly, requantize, hash, compare.
-Cost: one n×n integer matrix–vector product plus three SHAKE256 calls —
-~1 ms-class on commodity CPUs at n = 1024, dominated by the matvec.
+The reference API exposes `ph_verify_with_matrix` for the cached path and
+`ph_verify` as a one-shot convenience function that derives and frees M.
+Cost after matrix setup is one n×n integer matrix–vector product plus three
+SHAKE256 calls.
 Light-client note: because M depends only on the parent hash, a verifier
 checking k blocks in a chain performs k matvecs; batch verification across
 blocks sharing a parent (uncles) reuses M.
@@ -230,19 +232,27 @@ blocks sharing a parent (uncles) reuses M.
 
 Per attempt at genesis parameters:
 
-| Stage              | Work                        | Share of cost (GPU est.) ⚠ |
-|--------------------|-----------------------------|-----------------------------|
-| Vector SHAKE256    | 544 B output                | ~2%                         |
-| Matrix–vector      | n² = 1,048,576 MACs (4-bit) | ~97%                        |
-| Requantize + final | n/2 = 512 B hashed          | ~1%                         |
+| Stage                  | Work                                      |
+|------------------------|-------------------------------------------|
+| Input binding          | tagged SHAKE256 over header and nonce     |
+| Vector expansion       | n/2 = 512 SHAKE256 output bytes           |
+| Nibble decoding        | n signed entries                          |
+| Matrix–vector          | n² = 1,048,576 exact signed MACs          |
+| Requantize and pack    | n components into n/2 bytes               |
+| Final digest           | tagged SHAKE256 over 32 + n/2 bytes       |
 
-R3 targets a matvec share ≥ 90% on mining-relevant hardware, but current
-scalar CPU measurements at n = 1024 span roughly 80–95% depending on compiler
-and microarchitecture. A July 2026 UCRT64 measurement produced 82.7% at
-n = 1024 and 92.0% at n = 2048. The target is therefore not a universal
-property of the genesis parameters. The hardness schedule is intended to
-raise the share as n grows; it does not constitute evidence of an optical
-energy advantage.
+R3 targets a matvec share ≥ 90% on mining-relevant hardware, but no universal
+share is currently established. Earlier scalar estimates spanning roughly
+80–95% inferred matrix cost by subtracting a hash-only baseline from the full
+pipeline. That baseline omitted allocation, vector decoding, requantization,
+and packing, so the inferred value overattributed cost to the matvec.
+
+The reference benchmark now allocates scratch buffers once and times input
+binding, vector expansion, decoding, the exact scalar matvec loop,
+requantization and packing, and final hashing directly over batches of
+distinct nonces. Results must identify CPU, compiler, flags, dimension, and
+batch size. Even a correct scalar stage share does not establish mining
+economics or optical advantage.
 
 ## 7. Analog evaluation: boundary-flagged hybrid discipline
 
@@ -377,10 +387,16 @@ gains apply to matrix–matrix, not matrix–vector. Status: OPEN, priority 1.
 
 **A2 — Batched nonces as matrix–matrix.** A miner evaluating k nonces batches
 X = [x₁…x_k] and computes MX, converting the workload to matrix–matrix where
-Strassen-type and better hardware utilization apply. This is not an attack but
-an optimization available to all miners equally (GPUs and photonic meshes both
-batch natively); it rescales the cost unit without changing relative
-economics. Noted so implementers do not mistake it for a break.
+Strassen-type methods, tensor-core kernels, and better hardware utilization
+may apply. GPUs and photonic systems can both batch in principle, but that
+fact does not establish equal constant factors, energy costs, or end-to-end
+economics. The required comparison is an exact optimized electronic pipeline
+(at minimum INT8 inputs with int32 accumulation, plus packed INT4 where an
+exact native path exists) against a complete photonic pipeline including
+modulation, detection, ADC, guard-band classification, digital row
+recomputation, SHAKE generation, and candidate rechecking. Status: OPEN,
+priority 1; no photonic-advantage claim should be inferred until this baseline
+exists.
 
 **A3 — Precision cheating.** Covered by Section 7: consensus admits only
 digitally exact solutions, so under-precision strategies are self-punishing
@@ -427,8 +443,11 @@ generic search (target sizing accounts for the quadratic speedup).
 - **Digital reference (shared review oracle):** portable C, exact integer
   matvec, constant output across platforms; disagreements between prose and
   implementation are review findings to resolve before any future freeze.
-- **GPU miner:** int4/int8 tensor-core matvec with batched nonces (A2);
-  vector-derivation SHAKE on-device to avoid PCIe streaming.
+- **Required GPU baseline:** exact batched INT8 inputs with `int32`
+  accumulation, plus packed INT4 kernels where the device exposes a suitable
+  exact path (A2); generate vectors with on-device SHAKE and include decoding,
+  requantization, final hashing, and candidate verification in throughput and
+  energy measurements.
 - **Photonic target profile:** matrix programmed to mesh once per template
   (per R5); vectors modulated at line rate; candidate-check discipline of
   Section 7 implemented in the driver, not the device.

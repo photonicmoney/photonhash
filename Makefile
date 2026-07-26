@@ -35,7 +35,7 @@ bench: ph_bench
 
 sanitize: CFLAGS := -O1 -g -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror -fsanitize=address,undefined -fno-omit-frame-pointer
 sanitize: LDFLAGS := -fsanitize=address,undefined
-sanitize: clean test check-vectors
+sanitize: clean all test check-vectors
 
 clean:
 	rm -f $(BINS) $(addsuffix .exe,$(BINS)) $(OBJ) photonhash_test_vectors.generated.txt
