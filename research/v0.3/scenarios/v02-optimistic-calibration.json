@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "name": "v0.2 RTX 5090 optimistic zero-overhead calibration",
+  "candidate_family": "falsified-v0.2-calibration",
+  "energy_unit": "normalized",
+  "notes": [
+    "This is a mathematical calibration, not a photonic system model.",
+    "It treats the measured 12.12138792 percent GEMM time share as an energy-share proxy.",
+    "It assumes a 20x matrix acceleration and zero new conversion, optical, control, or support cost.",
+    "The resulting value must equal the optimistic Amdahl upper bound and cannot pass admission."
+  ],
+  "electronic_components": {
+    "measured_non_matrix_proxy": {
+      "energy": 0.8787861208,
+      "photonic_accelerable": false,
+      "evidence": {
+        "class": "placeholder",
+        "source": "docs/cuda-rtx5090-baseline.md",
+        "basis": "Measured time share used only as a normalized energy proxy."
+      }
+    },
+    "measured_gemm_proxy": {
+      "energy": 0.1212138792,
+      "photonic_accelerable": true,
+      "evidence": {
+        "class": "placeholder",
+        "source": "research/results/cuda-rtx5090-20260726-summary.json",
+        "basis": "Measured batch-32768 GEMM time share used only as a normalized energy proxy."
+      }
+    }
+  },
+  "photonic_components": {
+    "optical_matrix": {
+      "energy": 0.00606069396,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Exactly 1/20 of the electronic matrix proxy."
+      }
+    },
+    "laser": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Optimistically assumed free."
+      }
+    },
+    "modulation": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Optimistically assumed free."
+      }
+    },
+    "detection": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Optimistically assumed free."
+      }
+    },
+    "conversion": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Optimistically assumed free."
+      }
+    },
+    "feedback": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Optimistically assumed free."
+      }
+    },
+    "digital_assist": {
+      "energy": 0.8787861208,
+      "evidence": {
+        "class": "placeholder",
+        "source": "docs/cuda-rtx5090-baseline.md",
+        "basis": "All non-matrix work retained at its normalized electronic proxy cost."
+      }
+    },
+    "hashing": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Already included in the aggregated digital-assist proxy."
+      }
+    },
+    "recheck": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Optimistically assumed free."
+      }
+    },
+    "control_and_calibration": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "placeholder",
+        "source": "charter thought experiment",
+        "basis": "Optimistically assumed free."
+      }
+    }
+  },
+  "amdahl_acceleration": 20.0,
+  "equal_power_throughput_ratio": 1.130218973,
+  "physical_path_evidence": "placeholder",
+  "consensus_suitability": {
+    "bounded_verification": false,
+    "gpu_accessible_genesis": true,
+    "bounded_memory": true,
+    "two_independent_implementations": false,
+    "frozen_vectors": true,
+    "non_consensus_testnet": false
+  }
+}

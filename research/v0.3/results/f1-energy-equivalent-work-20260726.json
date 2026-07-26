@@ -1,0 +1,76 @@
+{
+  "tool": "ph_v03_recurrent_fused_cutlass.exe",
+  "measured_utc_date": "2026-07-26",
+  "status": "research_only",
+  "candidate": "F1-D distinct resident-matrix sequence",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "compute_capability": "12.0",
+    "driver": "595.79",
+    "measurement_boundary": "NVML GPU board power"
+  },
+  "method": {
+    "matrix_equivalent_work": 134217728,
+    "resident_matrix_bank_mib": 128,
+    "description": "Each nonlinear stage uses a distinct parent-derived resident matrix; n^2 * rounds is equal across points.",
+    "power": "Read-only 10 ms NVML board-power samples integrated over host-observed sustained CUDA time.",
+    "excluded": [
+      "matrix derivation and upload",
+      "allocation",
+      "CPU differential validation",
+      "initial and final hash wrapper"
+    ],
+    "gpu_settings_changed": false
+  },
+  "profiles": [
+    {
+      "n": 1024,
+      "batch": 32768,
+      "rounds": 128,
+      "fused_us_attempt": 0.472295115,
+      "projected_accelerable_share_with_v02_time_proxy": 0.942413039,
+      "average_board_w": 477.769951,
+      "integrated_uj_attempt": 240.619680173,
+      "counter_uj_attempt": 301.676484727
+    },
+    {
+      "n": 2048,
+      "batch": 32768,
+      "rounds": 32,
+      "fused_us_attempt": 0.408080855,
+      "projected_accelerable_share_with_v02_time_proxy": 0.933949871,
+      "average_board_w": 510.414278,
+      "integrated_uj_attempt": 223.233008899,
+      "counter_uj_attempt": 269.009331597
+    },
+    {
+      "n": 4096,
+      "batch": 8192,
+      "rounds": 8,
+      "fused_us_attempt": 0.436146877,
+      "projected_accelerable_share_with_v02_time_proxy": 0.937936402,
+      "average_board_w": 497.689393,
+      "integrated_uj_attempt": 215.596390862,
+      "counter_uj_attempt": 260.682169596
+    },
+    {
+      "n": 8192,
+      "batch": 4096,
+      "rounds": 2,
+      "fused_us_attempt": 0.410390628,
+      "projected_accelerable_share_with_v02_time_proxy": 0.934297191,
+      "average_board_w": 500.071878,
+      "integrated_uj_attempt": 210.255959040,
+      "counter_uj_attempt": 253.961369704
+    }
+  ],
+  "interpretation": {
+    "result": "Distinct matrices impose no useful electronic penalty at this resident 128 MiB bank size.",
+    "physical_cost_shift": "A feed-forward optical design must program or physically instantiate the whole stage bank, while recurrent R1 reuses one matrix.",
+    "not_established": [
+      "feed-forward optical stage energy",
+      "nonlinear all-optical exactness",
+      "complete-system photonic advantage"
+    ]
+  }
+}

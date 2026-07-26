@@ -1,0 +1,211 @@
+{
+  "candidate": "R1-F provisional wrap-requantized recurrence",
+  "independent_matrix_derivation": {
+    "checksum": "e2493d9a3fe8b30f7710e3f9991e0420ef740dafeed5aad96148f1b6679b0acf",
+    "known_v02_checksum_match": true,
+    "parent": "b192df942126d485d17d689f0b22d0eeeb63e27e2102c50e6baa89b16f2d0d9d"
+  },
+  "limitations": [
+    "No short repeat in a finite sample is not proof of a long cycle.",
+    "Gaussian integer perturbation is not a physical photonic noise model.",
+    "Partial-column results cover one round; adaptive recurrence attacks remain open.",
+    "The transition is provisional and has no consensus status."
+  ],
+  "one_round_additive_noise_probe": [
+    {
+      "bucket_accuracy": 0.999755859375,
+      "sigma_in_quantization_scales": 0.001,
+      "vectors": 64,
+      "whole_states_exact": 50
+    },
+    {
+      "bucket_accuracy": 0.9962158203125,
+      "sigma_in_quantization_scales": 0.005,
+      "vectors": 64,
+      "whole_states_exact": 2
+    },
+    {
+      "bucket_accuracy": 0.9921417236328125,
+      "sigma_in_quantization_scales": 0.01,
+      "vectors": 64,
+      "whole_states_exact": 0
+    },
+    {
+      "bucket_accuracy": 0.959014892578125,
+      "sigma_in_quantization_scales": 0.05,
+      "vectors": 64,
+      "whole_states_exact": 0
+    }
+  ],
+  "one_round_partial_column_attack": [
+    {
+      "bucket_accuracy": 0.2050018310546875,
+      "column_fraction": 0.5,
+      "columns": 512,
+      "vectors": 64,
+      "whole_states_exact": 0
+    },
+    {
+      "bucket_accuracy": 0.2867431640625,
+      "column_fraction": 0.75,
+      "columns": 768,
+      "vectors": 64,
+      "whole_states_exact": 0
+    },
+    {
+      "bucket_accuracy": 0.4306640625,
+      "column_fraction": 0.9,
+      "columns": 922,
+      "vectors": 64,
+      "whole_states_exact": 0
+    },
+    {
+      "bucket_accuracy": 0.7985687255859375,
+      "column_fraction": 0.99,
+      "columns": 1014,
+      "vectors": 64,
+      "whole_states_exact": 0
+    }
+  ],
+  "profile": {
+    "n": 1024,
+    "offset": 65536,
+    "quantization_scale": 256,
+    "rounds": 128,
+    "shift": 8,
+    "vectors": 64
+  },
+  "recurrence": {
+    "elapsed_seconds": 4.101199600030668,
+    "final_packed_zlib_ratio": 0.99365234375,
+    "final_symbol_histogram_-8_to_7": [
+      4449,
+      3936,
+      3314,
+      3200,
+      3229,
+      3252,
+      3416,
+      3500,
+      3590,
+      3749,
+      4223,
+      4687,
+      5243,
+      5560,
+      5212,
+      4976
+    ],
+    "minimum_decision_margin_scale": 0.0,
+    "repeat_event_count": 0,
+    "repeat_events": [],
+    "selected_round_metrics": [
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.015350341796875,
+        "paired_avalanche_min": 0.0087890625,
+        "round": 1,
+        "symbol_entropy_bits": 3.466629595636703,
+        "symbol_mean": -1.7556304931640625,
+        "symbol_stddev": 5.8211506086328475,
+        "unique_vector_states": 64
+      },
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.302642822265625,
+        "paired_avalanche_min": 0.048828125,
+        "round": 2,
+        "symbol_entropy_bits": 3.7832558822085036,
+        "symbol_mean": -2.3881683349609375,
+        "symbol_stddev": 4.400214009242288,
+        "unique_vector_states": 64
+      },
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.75518798828125,
+        "paired_avalanche_min": 0.6396484375,
+        "round": 4,
+        "symbol_entropy_bits": 3.4106432421626147,
+        "symbol_mean": -2.5572662353515625,
+        "symbol_stddev": 2.682325709725477,
+        "unique_vector_states": 64
+      },
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.83795166015625,
+        "paired_avalanche_min": 0.5205078125,
+        "round": 8,
+        "symbol_entropy_bits": 3.9249080511287997,
+        "symbol_mean": -0.823638916015625,
+        "symbol_stddev": 3.9636132222844798,
+        "unique_vector_states": 64
+      },
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.930328369140625,
+        "paired_avalanche_min": 0.8447265625,
+        "round": 16,
+        "symbol_entropy_bits": 3.97839990196189,
+        "symbol_mean": 0.06146240234375,
+        "symbol_stddev": 4.42630428672986,
+        "unique_vector_states": 64
+      },
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.920745849609375,
+        "paired_avalanche_min": 0.826171875,
+        "round": 32,
+        "symbol_entropy_bits": 3.989940009809441,
+        "symbol_mean": -0.0970458984375,
+        "symbol_stddev": 4.475817298777281,
+        "unique_vector_states": 64
+      },
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.93023681640625,
+        "paired_avalanche_min": 0.78515625,
+        "round": 64,
+        "symbol_entropy_bits": 3.958683138794774,
+        "symbol_mean": 0.1533966064453125,
+        "symbol_stddev": 4.919091635975412,
+        "unique_vector_states": 64
+      },
+      {
+        "decision_margin_median_scale": 0.25,
+        "decision_margin_min_scale": 0.0,
+        "decision_margin_p01_scale": 0.00390625,
+        "fixed_vectors": 0,
+        "paired_avalanche_mean": 0.9256591796875,
+        "paired_avalanche_min": 0.7998046875,
+        "round": 128,
+        "symbol_entropy_bits": 3.973512694552161,
+        "symbol_mean": 0.13885498046875,
+        "symbol_stddev": 4.769632695733658,
+        "unique_vector_states": 64
+      }
+    ]
+  },
+  "status": "research_only",
+  "tool": "ph_v03_recurrence_analysis.py"
+}

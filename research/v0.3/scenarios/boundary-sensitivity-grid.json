@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "name": "R1 discrete-boundary sensitivity grid",
+  "defaults": {
+    "architecture": "R1 sensitivity only",
+    "n": 8192,
+    "rounds": 2,
+    "boundary_count": 2,
+    "residue_steps": 256,
+    "electronic_energy_uJ": 247.0,
+    "electronic_latency_us": 0.451,
+    "matrix_energy_uJ": 33.554432,
+    "matrix_latency_us": 0.25,
+    "matrix_lane_multiplier": 1.0,
+    "boundary_energy_fJ_per_lane_decision": 10000.0,
+    "boundary_latency_ps": 200.0,
+    "fixed_energy_uJ": 18.0,
+    "fixed_latency_us": 0.05,
+    "assist_energy_pJ_per_lane": 1000.0,
+    "guard_band_buckets": 0.0,
+    "assist_success_probability": 1.0,
+    "redundancy": 1,
+    "noise": {
+      "independent_sigma_buckets": 0.001,
+      "common_sigma_buckets": 0.0,
+      "drift_sigma_per_boundary_buckets": 0.0,
+      "temperature_sigma_buckets": 0.0,
+      "component_offset_sigma_buckets": 0.0,
+      "decision_threshold_bias_buckets": -0.001953125,
+      "residual_lane_error_floor": 0.0
+    },
+    "calibration_failure_probability_per_boundary": 0.0,
+    "evidence": [
+      {
+        "class": "sensitivity",
+        "source": "docs/v0.3-boundary-model.md",
+        "supports": "parameter sensitivity, not a physical claim"
+      }
+    ],
+    "evidence_blockers": [
+      "Synthetic sensitivity point; not an experimentally measured complete boundary."
+    ]
+  },
+  "profiles": [
+    {
+      "id": "noise-independent-0.0001",
+      "noise": {"independent_sigma_buckets": 0.0001}
+    },
+    {
+      "id": "noise-independent-0.0005",
+      "noise": {"independent_sigma_buckets": 0.0005}
+    },
+    {
+      "id": "noise-independent-0.001"
+    },
+    {
+      "id": "noise-independent-0.0025",
+      "noise": {"independent_sigma_buckets": 0.0025}
+    },
+    {
+      "id": "noise-independent-0.005",
+      "noise": {"independent_sigma_buckets": 0.005}
+    },
+    {
+      "id": "guard-0.0025",
+      "guard_band_buckets": 0.0025
+    },
+    {
+      "id": "guard-0.005",
+      "guard_band_buckets": 0.005
+    },
+    {
+      "id": "guard-0.01",
+      "guard_band_buckets": 0.01
+    },
+    {
+      "id": "guard-0.02",
+      "guard_band_buckets": 0.02
+    },
+    {
+      "id": "assist-success-0.99999999",
+      "guard_band_buckets": 0.01,
+      "assist_success_probability": 0.99999999
+    },
+    {
+      "id": "assist-success-0.999999",
+      "guard_band_buckets": 0.01,
+      "assist_success_probability": 0.999999
+    },
+    {
+      "id": "assist-success-0.9999",
+      "guard_band_buckets": 0.01,
+      "assist_success_probability": 0.9999
+    },
+    {
+      "id": "correlated-common-0.001",
+      "guard_band_buckets": 0.005,
+      "noise": {
+        "independent_sigma_buckets": 0.0001,
+        "common_sigma_buckets": 0.001
+      }
+    },
+    {
+      "id": "correlated-drift-r8",
+      "n": 4096,
+      "rounds": 8,
+      "boundary_count": 8,
+      "guard_band_buckets": 0.01,
+      "noise": {
+        "independent_sigma_buckets": 0.0001,
+        "common_sigma_buckets": 0.0005,
+        "drift_sigma_per_boundary_buckets": 0.001
+      }
+    },
+    {
+      "id": "correlated-drift-r32",
+      "n": 2048,
+      "rounds": 32,
+      "boundary_count": 32,
+      "guard_band_buckets": 0.01,
+      "noise": {
+        "independent_sigma_buckets": 0.0001,
+        "common_sigma_buckets": 0.0005,
+        "drift_sigma_per_boundary_buckets": 0.001
+      }
+    }
+  ]
+}

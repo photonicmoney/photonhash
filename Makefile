@@ -6,6 +6,7 @@ CUDA_CFLAGS ?= -O3 -std=c++17
 LDFLAGS  ?=
 LDLIBS   ?=
 CUDA_LDLIBS ?= -lcublas
+PYTHON   ?= python3
 
 OBJ = photonhash.o
 BINS = ph_selftest ph_vectors ph_bench
@@ -42,6 +43,17 @@ bench: ph_bench
 cuda-bench: ph_cuda_bench
 	./ph_cuda_bench
 
+v03-model-test:
+	$(PYTHON) -m unittest tests.test_v03_model -v
+
+v03-analysis-test:
+	$(PYTHON) -m unittest tests.test_v03_recurrence -v
+
+v03-boundary-test:
+	$(PYTHON) -m unittest tests.test_v03_boundary_sim -v
+
+v03-test: v03-model-test v03-analysis-test v03-boundary-test
+
 sanitize: CFLAGS := -O1 -g -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror -fsanitize=address,undefined -fno-omit-frame-pointer
 sanitize: LDFLAGS := -fsanitize=address,undefined
 sanitize: clean all test check-vectors
@@ -50,4 +62,4 @@ clean:
 	rm -f $(BINS) $(addsuffix .exe,$(BINS)) ph_cuda_bench ph_cuda_bench.exe $(OBJ) photonhash_test_vectors.generated.txt
 	rm -rf $(addsuffix .dSYM,$(BINS))
 
-.PHONY: all test vectors check-vectors bench cuda-bench sanitize clean
+.PHONY: all test vectors check-vectors bench cuda-bench v03-model-test v03-analysis-test v03-boundary-test v03-test sanitize clean

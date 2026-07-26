@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "name": "PhotonHash v0.3 R1 boundary phase-one screen",
+  "notes": [
+    "All results are research-only and use the frozen R1 equal-work electronic baseline.",
+    "The simulator enumerates the 256 exact accumulator residues in every provisional R1 bucket.",
+    "Matrix energy ranges are transfers from much smaller photonic systems, not measurements of an R1 miner.",
+    "Evidence blockers remain dispositive even when a numerical envelope crosses 3x or 5x."
+  ],
+  "defaults": {
+    "architecture": "R1 recurrent same-matrix",
+    "n": 8192,
+    "rounds": 2,
+    "boundary_count": 2,
+    "residue_steps": 256,
+    "electronic_energy_uJ": {
+      "low": 236.969652179,
+      "mode": 247.0,
+      "high": 269.830356552
+    },
+    "electronic_latency_us": {
+      "low": 0.445,
+      "mode": 0.451,
+      "high": 0.470
+    },
+    "matrix_energy_uJ": {
+      "low": 18.522071,
+      "mode": 33.554432,
+      "high": 134.217728
+    },
+    "matrix_latency_us": {
+      "low": 0.05,
+      "mode": 0.25,
+      "high": 1.0
+    },
+    "matrix_lane_multiplier": 1.0,
+    "boundary_energy_fJ_per_lane_decision": {
+      "low": 1000.0,
+      "mode": 10000.0,
+      "high": 100000.0
+    },
+    "boundary_latency_ps": {
+      "low": 20.0,
+      "mode": 200.0,
+      "high": 2000.0
+    },
+    "fixed_energy_uJ": {
+      "low": 12.0,
+      "mode": 18.0,
+      "high": 32.0
+    },
+    "fixed_latency_us": {
+      "low": 0.02,
+      "mode": 0.05,
+      "high": 0.2
+    },
+    "assist_energy_pJ_per_lane": {
+      "low": 100.0,
+      "mode": 1000.0,
+      "high": 10000.0
+    },
+    "guard_band_buckets": 0.0,
+    "assist_success_probability": 1.0,
+    "redundancy": 1,
+    "noise": {
+      "independent_sigma_buckets": {
+        "low": 0.0002,
+        "mode": 0.001,
+        "high": 0.003
+      },
+      "common_sigma_buckets": {
+        "low": 0.0001,
+        "mode": 0.0005,
+        "high": 0.002
+      },
+      "drift_sigma_per_boundary_buckets": {
+        "low": 0.00001,
+        "mode": 0.0001,
+        "high": 0.001
+      },
+      "temperature_sigma_buckets": {
+        "low": 0.00001,
+        "mode": 0.0002,
+        "high": 0.001
+      },
+      "component_offset_sigma_buckets": {
+        "low": 0.00001,
+        "mode": 0.0002,
+        "high": 0.001
+      },
+      "decision_threshold_bias_buckets": {
+        "low": -0.001953125,
+        "mode": -0.0015,
+        "high": -0.0005
+      },
+      "residual_lane_error_floor": {
+        "low": 0.0,
+        "mode": 0.0,
+        "high": 0.000000001
+      }
+    },
+    "calibration_failure_probability_per_boundary": {
+      "low": 0.0,
+      "mode": 0.0,
+      "high": 0.000001
+    },
+    "evidence": [
+      {
+        "class": "measured_component",
+        "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+        "supports": "RTX 5090 electronic energy and latency baseline"
+      },
+      {
+        "class": "literature_model",
+        "source": "https://www.nature.com/articles/s41467-026-68452-x",
+        "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+      },
+      {
+        "class": "literature_model",
+        "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+        "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+      },
+      {
+        "class": "measured_component",
+        "source": "https://www.nature.com/articles/s41377-025-02175-4",
+        "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+      }
+    ],
+    "evidence_blockers": [
+      "No R1-scale photonic matrix or complete boundary has been measured.",
+      "No cited device reports byte-exact 4-bit wrap regeneration error over 16384 or more linked decisions.",
+      "The matrix-energy transfer omits demonstrated R1 tiling, fanout, storage, and calibration scaling.",
+      "Latency, temperature, correlated drift, and residual-error ranges are engineering sweeps rather than a representative prototype."
+    ]
+  },
+  "profiles": [
+    {
+      "id": "r1-lowres-unassisted-n8192-r2",
+      "boundary_energy_fJ_per_lane_decision": {
+        "low": 15.2,
+        "mode": 100.0,
+        "high": 1000.0
+      },
+      "assist_energy_pJ_per_lane": 0.0
+    },
+    {
+      "id": "r1-lowres-selective-n8192-r2",
+      "guard_band_buckets": {
+        "low": 0.005,
+        "mode": 0.01,
+        "high": 0.02
+      },
+      "assist_success_probability": {
+        "low": 0.9999999,
+        "mode": 0.99999999,
+        "high": 1.0
+      }
+    },
+    {
+      "id": "r1-lowres-selective-n4096-r8",
+      "n": 4096,
+      "rounds": 8,
+      "boundary_count": 8,
+      "electronic_energy_uJ": {
+        "low": 254.018658206,
+        "mode": 260.0,
+        "high": 275.0
+      },
+      "electronic_latency_us": {
+        "low": 0.420,
+        "mode": 0.430,
+        "high": 0.455
+      },
+      "guard_band_buckets": {
+        "low": 0.005,
+        "mode": 0.01,
+        "high": 0.02
+      },
+      "assist_success_probability": {
+        "low": 0.9999999,
+        "mode": 0.99999999,
+        "high": 1.0
+      }
+    },
+    {
+      "id": "r1-lowres-selective-n2048-r32",
+      "n": 2048,
+      "rounds": 32,
+      "boundary_count": 32,
+      "electronic_energy_uJ": {
+        "low": 266.830356552,
+        "mode": 270.0,
+        "high": 285.0
+      },
+      "electronic_latency_us": {
+        "low": 0.443,
+        "mode": 0.451,
+        "high": 0.475
+      },
+      "guard_band_buckets": {
+        "low": 0.005,
+        "mode": 0.01,
+        "high": 0.02
+      },
+      "assist_success_probability": {
+        "low": 0.9999999,
+        "mode": 0.99999999,
+        "high": 1.0
+      }
+    },
+    {
+      "id": "r1-lowres-selective-n1024-r128",
+      "n": 1024,
+      "rounds": 128,
+      "boundary_count": 128,
+      "electronic_energy_uJ": {
+        "low": 259.852189662,
+        "mode": 265.0,
+        "high": 280.0
+      },
+      "electronic_latency_us": {
+        "low": 0.515,
+        "mode": 0.525,
+        "high": 0.550
+      },
+      "guard_band_buckets": {
+        "low": 0.005,
+        "mode": 0.01,
+        "high": 0.02
+      },
+      "assist_success_probability": {
+        "low": 0.9999999,
+        "mode": 0.99999999,
+        "high": 1.0
+      }
+    },
+    {
+      "id": "r1-full-adc-digital-roundtrip-n8192-r2",
+      "guard_band_buckets": 0.49,
+      "assist_success_probability": {
+        "low": 0.99999999,
+        "mode": 0.999999999,
+        "high": 1.0
+      },
+      "boundary_energy_fJ_per_lane_decision": {
+        "low": 10000.0,
+        "mode": 100000.0,
+        "high": 1000000.0
+      },
+      "assist_energy_pJ_per_lane": {
+        "low": 100.0,
+        "mode": 1000.0,
+        "high": 10000.0
+      },
+      "noise": {
+        "residual_lane_error_floor": {
+          "low": 0.0,
+          "mode": 0.0,
+          "high": 0.0000000001
+        }
+      },
+      "evidence_blockers": [
+        "No complete detector-to-ADC-to-digital-wrap-to-driver-to-modulator loop has been measured at R1 width, rate, and error probability.",
+        "Component energy figures do not establish complete loop energy, routing, clocking, reference, or calibration cost.",
+        "The assumed digital-roundtrip success probability has no representative prototype evidence."
+      ]
+    },
+    {
+      "id": "r1-three-lane-majority-n8192-r2",
+      "redundancy": 3,
+      "matrix_lane_multiplier": 3.0,
+      "boundary_energy_fJ_per_lane_decision": {
+        "low": 15.2,
+        "mode": 100.0,
+        "high": 1000.0
+      },
+      "assist_energy_pJ_per_lane": 0.0,
+      "evidence_blockers": [
+        "Three independent full matrix lanes have not been built or measured.",
+        "Majority-of-correct-lanes is optimistic because wrong 4-bit symbols need not agree on one alternative.",
+        "Correlated optical and calibration errors are not removed by lane replication."
+      ]
+    },
+    {
+      "id": "f1-all-optical-n8192-r2",
+      "architecture": "F1 distinct-matrix feed-forward all-optical nonlinear stages",
+      "boundary_energy_fJ_per_lane_decision": {
+        "low": 4.0,
+        "mode": 30.0,
+        "high": 120.0
+      },
+      "boundary_latency_ps": {
+        "low": 1.05,
+        "mode": 4.0,
+        "high": 1000.0
+      },
+      "assist_energy_pJ_per_lane": 0.0,
+      "noise": {
+        "independent_sigma_buckets": {
+          "low": 0.0025,
+          "mode": 0.01,
+          "high": 0.05
+        },
+        "common_sigma_buckets": {
+          "low": 0.001,
+          "mode": 0.005,
+          "high": 0.02
+        },
+        "drift_sigma_per_boundary_buckets": {
+          "low": 0.0001,
+          "mode": 0.001,
+          "high": 0.01
+        }
+      },
+      "evidence_blockers": [
+        "Measured nonlinear activators implement smooth neural-network transfer functions, not the exact R1 wrap map.",
+        "No device reports the required whole-trajectory symbolic error rate or deterministic tie rule.",
+        "The demonstrated nonlinear devices are single or shallow stages, not an 8192-wide exact feed-forward pipeline.",
+        "Distinct optical matrices require a physical stage bank whose area, loss, programming, and calibration are unmeasured."
+      ]
+    },
+    {
+      "id": "f1-all-optical-n4096-r8",
+      "architecture": "F1 distinct-matrix feed-forward all-optical nonlinear stages",
+      "n": 4096,
+      "rounds": 8,
+      "boundary_count": 8,
+      "electronic_energy_uJ": {
+        "low": 224.596390862,
+        "mode": 235.0,
+        "high": 250.0
+      },
+      "electronic_latency_us": {
+        "low": 0.455,
+        "mode": 0.470,
+        "high": 0.500
+      },
+      "boundary_energy_fJ_per_lane_decision": {
+        "low": 4.0,
+        "mode": 30.0,
+        "high": 120.0
+      },
+      "boundary_latency_ps": {
+        "low": 1.05,
+        "mode": 4.0,
+        "high": 1000.0
+      },
+      "assist_energy_pJ_per_lane": 0.0,
+      "noise": {
+        "independent_sigma_buckets": {
+          "low": 0.0025,
+          "mode": 0.01,
+          "high": 0.05
+        },
+        "common_sigma_buckets": {
+          "low": 0.001,
+          "mode": 0.005,
+          "high": 0.02
+        },
+        "drift_sigma_per_boundary_buckets": {
+          "low": 0.0001,
+          "mode": 0.001,
+          "high": 0.01
+        }
+      },
+      "evidence_blockers": [
+        "Measured nonlinear activators do not implement consensus-exact regeneration.",
+        "Eight linked 4096-wide nonlinear stages have no measured symbolic-yield evidence.",
+        "The distinct-matrix optical stage bank has no grounded complete energy, area, loss, or calibration model."
+      ]
+    },
+    {
+      "id": "r1-selective-projected-5x-envelope",
+      "matrix_energy_uJ": {
+        "low": 18.0,
+        "mode": 20.0,
+        "high": 25.0
+      },
+      "fixed_energy_uJ": {
+        "low": 9.0,
+        "mode": 10.0,
+        "high": 12.0
+      },
+      "guard_band_buckets": {
+        "low": 0.01,
+        "mode": 0.02,
+        "high": 0.03
+      },
+      "assist_success_probability": {
+        "low": 0.99999999,
+        "mode": 0.999999999,
+        "high": 1.0
+      },
+      "boundary_energy_fJ_per_lane_decision": {
+        "low": 100.0,
+        "mode": 1000.0,
+        "high": 10000.0
+      },
+      "assist_energy_pJ_per_lane": {
+        "low": 100.0,
+        "mode": 500.0,
+        "high": 1000.0
+      },
+      "evidence_blockers": [
+        "This is an explicit engineering target envelope, not a measured system.",
+        "The 138 fJ/MAC literature projection has not been demonstrated at R1 dimensions or exactness.",
+        "No complete selective-assistance boundary has demonstrated the assumed energy and success probability.",
+        "Control, calibration, tiling, and remodulation are constrained to a target budget rather than measured."
+      ]
+    },
+    {
+      "id": "sensitivity-unassisted-64-residues",
+      "architecture": "non-R1 precision sensitivity",
+      "residue_steps": 64,
+      "boundary_energy_fJ_per_lane_decision": 100.0,
+      "assist_energy_pJ_per_lane": 0.0,
+      "evidence_blockers": [
+        "Sensitivity case changes the accumulator residue lattice and is not the R1 exact operation."
+      ]
+    },
+    {
+      "id": "sensitivity-unassisted-1024-residues",
+      "architecture": "non-R1 precision sensitivity",
+      "residue_steps": 1024,
+      "boundary_energy_fJ_per_lane_decision": 100.0,
+      "assist_energy_pJ_per_lane": 0.0,
+      "evidence_blockers": [
+        "Sensitivity case changes the accumulator residue lattice and is not the R1 exact operation."
+      ]
+    }
+  ]
+}

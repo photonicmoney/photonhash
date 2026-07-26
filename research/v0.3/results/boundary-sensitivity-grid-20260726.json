@@ -1,0 +1,1487 @@
+{
+  "decision_summary": {
+    "evidence_qualified_3x_survivors": [],
+    "evidence_qualified_5x_paths": [],
+    "interpretation": "No evaluated boundary is evidence-qualified for the 3x gate.",
+    "resolved": true
+  },
+  "governing_metric": "nominal complete energy divided by byte-exact trajectory yield",
+  "name": "R1 discrete-boundary sensitivity grid",
+  "results": [
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 4.775874955760316,
+        "p05": 4.775874955760316,
+        "p95": 4.775874955760316
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.775874955760316,
+        "p05": 4.775874955760316,
+        "p95": 4.775874955760316
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 1.0,
+        "p05": 1.0,
+        "p95": 1.0
+      },
+      "id": "noise-independent-0.0001",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 51.718272,
+        "p05": 51.718272,
+        "p95": 51.718272
+      },
+      "nominal_energy_uJ": {
+        "median": 51.718272,
+        "p05": 51.718272,
+        "p95": 51.718272
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3288948069241013,
+        "p05": 3.3288948069241013,
+        "p95": 3.3288948069241013
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 4.747297204151187,
+        "p05": 4.747297204151187,
+        "p95": 4.747297204151187
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.747297204151187,
+        "p05": 4.747297204151187,
+        "p95": 4.747297204151187
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.9940162270005288,
+        "p05": 0.9940162270005288,
+        "p95": 0.9940162270005288
+      },
+      "id": "noise-independent-0.0005",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 52.02960534765242,
+        "p05": 52.02960534765242,
+        "p95": 52.02960534765242
+      },
+      "nominal_energy_uJ": {
+        "median": 51.718272,
+        "p05": 51.718272,
+        "p95": 51.718272
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 3.6631752986515664e-07,
+        "p05": 3.6631752986515664e-07,
+        "p95": 3.6631752986515664e-07
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.308975456060349,
+        "p05": 3.308975456060349,
+        "p95": 3.308975456060349
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 0.18484396739477807,
+        "p05": 0.18484396739477807,
+        "p95": 0.18484396739477807
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 0.18484396739477807,
+        "p05": 0.18484396739477807,
+        "p95": 0.18484396739477807
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.038703686571992975,
+        "p05": 0.038703686571992975,
+        "p95": 0.038703686571992975
+      },
+      "id": "noise-independent-0.001",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 1336.2621646854884,
+        "p05": 1336.2621646854884,
+        "p95": 1336.2621646854884
+      },
+      "nominal_energy_uJ": {
+        "median": 51.718272,
+        "p05": 51.718272,
+        "p95": 51.718272
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.00019845567269571873,
+        "p05": 0.00019845567269571873,
+        "p95": 0.00019845567269571873
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 0.1288405012383255,
+        "p05": 0.1288405012383255,
+        "p95": 0.1288405012383255
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 1.1309473318815338e-12,
+        "p05": 1.1309473318815338e-12,
+        "p95": 1.1309473318815338e-12
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 1.1309473318815338e-12,
+        "p05": 1.1309473318815338e-12,
+        "p95": 1.1309473318815338e-12
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 2.3680421752195725e-13,
+        "p05": 2.3680421752195725e-13,
+        "p95": 2.3680421752195725e-13
+      },
+      "id": "noise-independent-0.0025",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 218400975038396.5,
+        "p05": 218400975038396.5,
+        "p95": 218400975038396.5
+      },
+      "nominal_energy_uJ": {
+        "median": 51.718272,
+        "p05": 51.718272,
+        "p95": 51.718272
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0017728128575743574,
+        "p05": 0.0017728128575743574,
+        "p95": 0.0017728128575743574
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 7.882963299665688e-13,
+        "p05": 7.882963299665688e-13,
+        "p95": 7.882963299665688e-13
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 9.417875610600242e-28,
+        "p05": 9.417875610600242e-28,
+        "p95": 9.417875610600242e-28
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 9.417875610600242e-28,
+        "p05": 9.417875610600242e-28,
+        "p95": 9.417875610600242e-28
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 1.9719686335675682e-28,
+        "p05": 1.9719686335675682e-28,
+        "p95": 1.9719686335675682e-28
+      },
+      "id": "noise-independent-0.005",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 2.6226721419211614e+29,
+        "p05": 2.6226721419211614e+29,
+        "p95": 2.6226721419211614e+29
+      },
+      "nominal_energy_uJ": {
+        "median": 51.718272,
+        "p05": 51.718272,
+        "p95": 51.718272
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.003886066724129167,
+        "p05": 0.003886066724129167,
+        "p95": 0.003886066724129167
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 6.564476143700293e-28,
+        "p05": 6.564476143700293e-28,
+        "p95": 6.564476143700293e-28
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.005532454168819889,
+        "p05": 0.005532454168819889,
+        "p95": 0.005532454168819889
+      },
+      "complete_system_advantage": {
+        "median": 4.764935419841136,
+        "p05": 4.764935419841136,
+        "p95": 4.764935419841136
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.09064372910194506,
+          "p05": 0.09064372910194506,
+          "p95": 0.09064372910194506
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.764935419841136,
+        "p05": 4.764935419841136,
+        "p95": 4.764935419841136
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.9994580470492405,
+        "p05": 0.9994580470492405,
+        "p95": 0.9994580470492405
+      },
+      "id": "guard-0.0025",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 51.83700894906043,
+        "p05": 51.83700894906043,
+        "p95": 51.83700894906043
+      },
+      "nominal_energy_uJ": {
+        "median": 51.80891572910194,
+        "p05": 51.80891572910194,
+        "p95": 51.80891572910194
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 3.308714910995464e-08,
+        "p05": 3.308714910995464e-08,
+        "p95": 3.308714910995464e-08
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3270907025607204,
+        "p05": 3.3270907025607204,
+        "p95": 3.3270907025607204
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.009327433512580332,
+        "p05": 0.009327433512580332,
+        "p95": 0.009327433512580332
+      },
+      "complete_system_advantage": {
+        "median": 4.76180445072931,
+        "p05": 4.76180445072931,
+        "p95": 4.76180445072931
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.15282067067011615,
+          "p05": 0.15282067067011615,
+          "p95": 0.15282067067011615
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.76180445072931,
+        "p05": 4.76180445072931,
+        "p95": 4.76180445072931
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.9999999997708073,
+        "p05": 0.9999999997708073,
+        "p95": 0.9999999997708073
+      },
+      "id": "guard-0.005",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 51.87109268255859,
+        "p05": 51.87109268255859,
+        "p95": 51.87109268255859
+      },
+      "nominal_energy_uJ": {
+        "median": 51.871092670670116,
+        "p05": 51.871092670670116,
+        "p95": 51.871092670670116
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 1.4020035132844555e-14,
+        "p05": 1.4020035132844555e-14,
+        "p95": 1.4020035132844555e-14
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3288948061611427,
+        "p05": 3.3288948061611427,
+        "p95": 3.3288948061611427
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.020255907133061316,
+        "p05": 0.020255907133061316,
+        "p95": 0.020255907133061316
+      },
+      "complete_system_advantage": {
+        "median": 4.745423879842817,
+        "p05": 4.745423879842817,
+        "p95": 4.745423879842817
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.3318727824680766,
+          "p05": 0.3318727824680766,
+          "p95": 0.3318727824680766
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.745423879842817,
+        "p05": 4.745423879842817,
+        "p95": 4.745423879842817
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 1.0,
+        "p05": 1.0,
+        "p95": 1.0
+      },
+      "id": "guard-0.01",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 52.050144782468074,
+        "p05": 52.050144782468074,
+        "p95": 52.050144782468074
+      },
+      "nominal_energy_uJ": {
+        "median": 52.050144782468074,
+        "p05": 52.050144782468074,
+        "p95": 52.050144782468074
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3288948069241013,
+        "p05": 3.3288948069241013,
+        "p95": 3.3288948069241013
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.03954011306522247,
+        "p05": 0.03954011306522247,
+        "p95": 0.03954011306522247
+      },
+      "complete_system_advantage": {
+        "median": 4.71679222146091,
+        "p05": 4.71679222146091,
+        "p95": 4.71679222146091
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.647825212460605,
+          "p05": 0.647825212460605,
+          "p95": 0.647825212460605
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.71679222146091,
+        "p05": 4.71679222146091,
+        "p95": 4.71679222146091
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 1.0,
+        "p05": 1.0,
+        "p95": 1.0
+      },
+      "id": "guard-0.02",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 52.3660972124606,
+        "p05": 52.3660972124606,
+        "p95": 52.3660972124606
+      },
+      "nominal_energy_uJ": {
+        "median": 52.3660972124606,
+        "p05": 52.3660972124606,
+        "p95": 52.3660972124606
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3288948069241013,
+        "p05": 3.3288948069241013,
+        "p95": 3.3288948069241013
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.020255907133061316,
+        "p05": 0.020255907133061316,
+        "p95": 0.020255907133061316
+      },
+      "complete_system_advantage": {
+        "median": 4.745408131106588,
+        "p05": 4.745408131106588,
+        "p95": 4.745408131106588
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.3318727824680766,
+          "p05": 0.3318727824680766,
+          "p95": 0.3318727824680766
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.745408131106588,
+        "p05": 4.745408131106588,
+        "p95": 4.745408131106588
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.9999966812793487,
+        "p05": 0.9999966812793487,
+        "p95": 0.9999966812793487
+      },
+      "id": "assist-success-0.99999999",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 52.05031752293174,
+        "p05": 52.05031752293174,
+        "p95": 52.05031752293174
+      },
+      "nominal_energy_uJ": {
+        "median": 52.050144782468074,
+        "p05": 52.050144782468074,
+        "p95": 52.050144782468074
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3288837592521596,
+        "p05": 3.3288837592521596,
+        "p95": 3.3288837592521596
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.020255907133061316,
+        "p05": 0.020255907133061316,
+        "p95": 0.020255907133061316
+      },
+      "complete_system_advantage": {
+        "median": 4.743849264105843,
+        "p05": 4.743849264105843,
+        "p95": 4.743849264105843
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.3318727824680766,
+          "p05": 0.3318727824680766,
+          "p95": 0.3318727824680766
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.743849264105843,
+        "p05": 4.743849264105843,
+        "p95": 4.743849264105843
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.9996681822790031,
+        "p05": 0.9996681822790031,
+        "p95": 0.9996681822790031
+      },
+      "id": "assist-success-0.999999",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 52.06742167566668,
+        "p05": 52.06742167566668,
+        "p95": 52.06742167566668
+      },
+      "nominal_energy_uJ": {
+        "median": 52.050144782468074,
+        "p05": 52.050144782468074,
+        "p95": 52.050144782468074
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3277902206358294,
+        "p05": 3.3277902206358294,
+        "p95": 3.3277902206358294
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.020255907133061316,
+        "p05": 0.020255907133061316,
+        "p95": 0.020255907133061316
+      },
+      "complete_system_advantage": {
+        "median": 4.590520645854196,
+        "p05": 4.590520645854196,
+        "p95": 4.590520645854196
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.3318727824680766,
+          "p05": 0.3318727824680766,
+          "p95": 0.3318727824680766
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.590520645854196,
+        "p05": 4.590520645854196,
+        "p95": 4.590520645854196
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.9673573451158693,
+        "p05": 0.9673573451158693,
+        "p95": 0.9673573451158693
+      },
+      "id": "assist-success-0.9999",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 53.806532865301754,
+        "p05": 53.806532865301754,
+        "p95": 53.806532865301754
+      },
+      "nominal_energy_uJ": {
+        "median": 52.050144782468074,
+        "p05": 52.050144782468074,
+        "p95": 52.050144782468074
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.220230842596103,
+        "p05": 3.220230842596103,
+        "p95": 3.220230842596103
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.00972530274059296,
+        "p05": 0.00781250003743197,
+        "p95": 0.01171761127930284
+      },
+      "complete_system_advantage": {
+        "median": 4.761209141832821,
+        "p05": 4.758212185307229,
+        "p95": 4.764084098410746
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.16384,
+          "p05": 0.16384,
+          "p95": 0.16384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.15933936010187505,
+          "p05": 0.1280000006132854,
+          "p95": 0.19198134320009774
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.761209141832821,
+        "p05": 4.758212185307229,
+        "p95": 4.764084098410746
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 1.0,
+        "p05": 0.9999999999990905,
+        "p95": 1.0
+      },
+      "id": "correlated-common-0.001",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 51.877611360101874,
+        "p05": 51.84627200061328,
+        "p95": 51.9102533432001
+      },
+      "nominal_energy_uJ": {
+        "median": 51.877611360101874,
+        "p05": 51.84627200061328,
+        "p95": 51.9102533432001
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 9.540979117872439e-18,
+        "p05": 0.0,
+        "p95": 4.0766001685454967e-17
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.5013315579227697,
+        "p05": 1.5013315579227697,
+        "p95": 1.5013315579227697
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.3288948069241013,
+        "p05": 3.3288948069210735,
+        "p95": 3.3288948069241013
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.019994289038524023,
+        "p05": 0.019531359915284797,
+        "p95": 0.020776570169785666
+      },
+      "complete_system_advantage": {
+        "median": 4.70087486871401,
+        "p05": 5.25080795488003e-14,
+        "p95": 4.70277957781019
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.32768,
+          "p05": 0.32768,
+          "p95": 0.32768
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 0.6551728632143552,
+          "p05": 0.6400036017040523,
+          "p95": 0.6808066513235367
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.70087486871401,
+        "p05": 5.25080795488003e-14,
+        "p95": 4.70277957781019
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 0.9999999999995453,
+        "p05": 1.1168770267089334e-14,
+        "p95": 1.0
+      },
+      "id": "correlated-drift-r8",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 52.54352506408253,
+        "p05": 52.5221299261943,
+        "p95": 4704037971345753.0
+      },
+      "nominal_energy_uJ": {
+        "median": 52.53728486321435,
+        "p05": 52.52211560170405,
+        "p95": 52.562918651323535
+      },
+      "profile": {
+        "boundary_count": 8,
+        "logical_decisions": 32768,
+        "n": 4096,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 8
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 1.3010426069826053e-17,
+        "p05": 0.0,
+        "p95": 0.0009765625000000117
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.4953580901856764,
+        "p05": 1.4953580901856764,
+        "p95": 1.4953580901856764
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.315649867372498,
+        "p05": 3.7031731654805485e-14,
+        "p95": 3.3156498673740056
+      }
+    },
+    {
+      "architecture": "R1 sensitivity only",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.020002204609417103,
+        "p05": 0.019718597293459667,
+        "p95": 0.020344061946704184
+      },
+      "complete_system_advantage": {
+        "median": 6.8646709380986105e-183,
+        "p05": 2.2508741081867204e-273,
+        "p95": 9.409482976848067e-105
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.65536,
+          "p05": 0.65536,
+          "p95": 0.65536
+        },
+        "fixed_control_hash_recheck": {
+          "median": 18.0,
+          "p05": 18.0,
+          "p95": 18.0
+        },
+        "matrix": {
+          "median": 33.554432,
+          "p05": 33.554432,
+          "p95": 33.554432
+        },
+        "selective_assist": {
+          "median": 1.3108644812827592,
+          "p05": 1.2922779922241727,
+          "p95": 1.3332684437392053
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 6.8646709380986105e-183,
+        "p05": 2.2508741081867204e-273,
+        "p95": 9.409482976848067e-105
+      },
+      "evidence": [
+        {
+          "class": "sensitivity",
+          "source": "docs/v0.3-boundary-model.md",
+          "supports": "parameter sensitivity, not a physical claim"
+        }
+      ],
+      "evidence_blockers": [
+        "Synthetic sensitivity point; not an experimentally measured complete boundary."
+      ],
+      "exact_output_yield": {
+        "median": 1.4871225904046016e-183,
+        "p05": 4.878635114061773e-274,
+        "p95": 2.0392464697727708e-105
+      },
+      "id": "correlated-drift-r32",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 3.691159670004119e+184,
+        "p05": 2.6250113912500915e+106,
+        "p95": 1.0973514649336853e+275
+      },
+      "nominal_energy_uJ": {
+        "median": 53.52065648128276,
+        "p05": 53.50206999222417,
+        "p95": 53.54306044373921
+      },
+      "profile": {
+        "boundary_count": 32,
+        "logical_decisions": 65536,
+        "n": 2048,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 32
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.006342661263319237,
+        "p05": 0.003657650828130375,
+        "p95": 0.009446953007434348
+      },
+      "samples": 2000,
+      "single_lane_latency_ratio": {
+        "median": 1.4719321148825066,
+        "p05": 1.4719321148825066,
+        "p95": 1.4719321148825066
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 4.853533258500658e-183,
+        "p05": 1.5922438361820407e-273,
+        "p95": 6.655504144167006e-105
+      }
+    }
+  ],
+  "samples_per_profile": 2000,
+  "schema_version": 1,
+  "seed": 23,
+  "status": "research_only",
+  "tool": "ph_v03_boundary_sim.py"
+}

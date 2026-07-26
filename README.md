@@ -1,4 +1,4 @@
-# PhotonHash v0.2.3-falsified
+# PhotonHash
 
 PhotonHash is an experimental proof-of-work construction built around a dense,
 deterministic matrix-vector product. This repository contains the portable C11
@@ -9,6 +9,23 @@ reimplement it.
 > failed its R3 hardware-economic requirement and MUST NOT be activated in
 > Laser consensus. This release is preserved for reproduction, independent
 > review, and successor-design work. Do not use it to secure assets of value.
+
+Successor research now lives on the non-consensus v0.3 research branch. It
+starts from a frozen [hardware-economics charter](docs/v0.3-charter.md), an
+explicit [inter-round boundary model](docs/v0.3-boundary-model.md), and a
+an exact-yield-aware complete-system energy model.
+
+> **V0.3 BOUNDARY PHASE: NEGATIVE RESULT.** R1 recovered 93--94% conditional
+> electronic headroom, but no evaluated nonlinear boundary is an
+> evidence-qualified 3x complete-system survivor. R1 is archived as a
+> conditional architecture, feed-forward does not advance, and no v0.3
+> specification will be written from these probes. Research reopens only if a
+> measured physical primitive plausibly fits the published exactness, energy,
+> latency, and scaling budget.
+
+See the [boundary-phase decision](docs/v0.3-boundary-phase-1.md),
+[machine-readable evidence](research/v0.3/evidence/boundary-evidence.json),
+and [v0.3 workspace](research/v0.3/README.md).
 
 This release's reference profile uses a fixed 1024 × 1024 matrix at every
 height. The larger-dimension schedule discussed in the specification is
@@ -50,6 +67,13 @@ byte-level pipeline and parameter profile. See the
 | [`docs/adversarial-brief.md`](docs/adversarial-brief.md) | Claims, attack surfaces, and review targets |
 | [`docs/cuda-rtx5090-baseline.md`](docs/cuda-rtx5090-baseline.md) | RTX 5090 methodology, results, and limitations |
 | [`docs/v0.2-profile-decision.md`](docs/v0.2-profile-decision.md) | Evidence-based non-activation decision |
+| [`docs/v0.3-charter.md`](docs/v0.3-charter.md) | Frozen successor admission gates |
+| [`docs/v0.3-boundary-phase-1.md`](docs/v0.3-boundary-phase-1.md) | Boundary-phase evidence and negative decision |
+| [`docs/release-notes-v0.3-boundary-phase-1-negative.md`](docs/release-notes-v0.3-boundary-phase-1-negative.md) | Frozen boundary-phase release summary |
+| [`tools/ph_v03_model.py`](tools/ph_v03_model.py) | Uncertainty-aware complete-system economics model |
+| [`tools/ph_v03_boundary_sim.py`](tools/ph_v03_boundary_sim.py) | Exact-yield boundary and failed-trajectory simulator |
+| [`tools/ph_v03_recurrent_fused_cutlass.cu`](tools/ph_v03_recurrent_fused_cutlass.cu) | Exact fused electronic adversary for R1 and F1 |
+| [`tools/ph_v03_recurrence_analysis.py`](tools/ph_v03_recurrence_analysis.py) | Independent cycle, diffusion, margin, and approximation probe |
 
 The implementation has no runtime dependencies beyond a C11 implementation
 and the C standard library. The repository expects a POSIX-style `make`;
@@ -147,6 +171,14 @@ No published independent audit is claimed for this release. Passing build,
 sanitizer, and vector-reproduction checks—when recorded by CI—are
 implementation-validation evidence, not cryptographic validation.
 
+The v0.3 boundary phase also does not establish a photonic advantage. Its best
+evidence-informed R1 selective-assistance profile reaches 1.86x at the
+conservative tail and 3.11x at the median. A full digital regeneration loop
+reaches about 1.10x conservatively. Unassisted and all-optical paths lose
+byte-exact trajectories. A projected 7.17x envelope is retained only as a
+device target because its decisive scaling and boundary assumptions are not
+experimentally demonstrated.
+
 ## Review posture
 
 The most valuable contributions are attacks, independent implementations,
@@ -156,9 +188,10 @@ assumptions. Start with the
 severity tiers, and reporting expectations.
 
 The v0.2 profile and vectors are frozen only as a falsified research artifact.
-Any successor construction requires resolution of the listed high-priority
-questions plus at least two independent implementations matching a new,
-expanded vector set before consensus consideration.
+The v0.3 boundary phase is frozen as a second negative research artifact.
+Construction work is paused: successor research requires a measured,
+consensus-exact nonlinear boundary that fits the published complete energy and
+scaling budget before another hash construction or specification is justified.
 
 Implementation vulnerabilities should follow the [security policy](SECURITY.md);
 normal research findings and changes should follow the
@@ -175,6 +208,8 @@ GitHub private vulnerability reporting for exploitable implementation issues.
 - construction/specification: v0.2 falsified research profile;
 - reference release: v0.2.3-falsified;
 - reference profile: fixed `n = 1024`;
+- successor research freeze: v0.3-boundary-phase-1-negative;
+- successor consensus status: no specification and no Laser activation;
 - release date: 2026-07-26.
 
 Any change to consensus-visible output requires a new version and new vectors.

@@ -1,0 +1,93 @@
+{
+  "tool": "ph_v03_recurrent_fused_cutlass.exe",
+  "measured_utc_date": "2026-07-26",
+  "status": "research_only",
+  "candidate": "R1-F provisional wrap-requantized recurrence",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "compute_capability": "12.0",
+    "driver": "595.79",
+    "measurement_boundary": "NVML GPU board power"
+  },
+  "method": {
+    "matrix_equivalent_work": 134217728,
+    "description": "Four n^2 * rounds points with approximately equal logical MAC count.",
+    "power": "Read-only 10 ms NVML board-power samples integrated over host-observed sustained CUDA time.",
+    "counter": "Independent NVML cumulative-energy counter retained as a cross-check.",
+    "excluded": [
+      "matrix derivation and upload",
+      "allocation",
+      "CPU differential validation",
+      "initial and final hash wrapper"
+    ],
+    "gpu_settings_changed": false
+  },
+  "profiles": [
+    {
+      "n": 1024,
+      "batch": 32768,
+      "rounds": 128,
+      "repeats": 5,
+      "fused_us_attempt": 0.492744730,
+      "projected_accelerable_share_with_v02_time_proxy": 0.944670747,
+      "energy_loops": 186,
+      "energy_wall_seconds": 3.122120300,
+      "average_board_w": 489.701171,
+      "integrated_uj_attempt": 250.852189662,
+      "counter_uj_attempt": 305.745114562
+    },
+    {
+      "n": 2048,
+      "batch": 32768,
+      "rounds": 32,
+      "repeats": 5,
+      "fused_us_attempt": 0.421676756,
+      "projected_accelerable_share_with_v02_time_proxy": 0.935943073,
+      "energy_loops": 218,
+      "energy_wall_seconds": 3.218814500,
+      "average_board_w": 572.195620,
+      "integrated_uj_attempt": 257.830356552,
+      "counter_uj_attempt": 268.775449980
+    },
+    {
+      "n": 4096,
+      "batch": 8192,
+      "rounds": 8,
+      "repeats": 5,
+      "fused_us_attempt": 0.398763281,
+      "projected_accelerable_share_with_v02_time_proxy": 0.932510690,
+      "energy_loops": 919,
+      "energy_wall_seconds": 3.244335500,
+      "average_board_w": 568.563340,
+      "integrated_uj_attempt": 245.018658206,
+      "counter_uj_attempt": 259.729229716
+    },
+    {
+      "n": 8192,
+      "batch": 4096,
+      "rounds": 2,
+      "repeats": 5,
+      "fused_us_attempt": 0.421620312,
+      "projected_accelerable_share_with_v02_time_proxy": 0.935935047,
+      "energy_loops": 1738,
+      "energy_wall_seconds": 3.090935700,
+      "average_board_w": 525.045313,
+      "integrated_uj_attempt": 227.969652179,
+      "counter_uj_attempt": 260.500575374
+    }
+  ],
+  "interpretation": {
+    "integrated_energy_range_uj_attempt": [
+      227.969652179,
+      257.830356552
+    ],
+    "best_measured_core_throughput_m_attempts_s": 2.508,
+    "result": "The equivalent-work frontier is roughly flat electronically. Larger dimensions trade matrix size for fewer nonlinear feedback boundaries.",
+    "not_established": [
+      "complete electronic miner energy",
+      "physical photonic feedback energy",
+      "photonic advantage",
+      "consensus suitability"
+    ]
+  }
+}

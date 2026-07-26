@@ -1,6 +1,37 @@
 # Changelog
 
-## Unreleased
+## v0.3-boundary-phase-1-negative - 2026-07-26
+
+- Opened the non-consensus v0.3 hardware-economics research branch with a
+  frozen four-gate charter and explicit inter-round boundary taxonomy.
+- Added an uncertainty-aware component-complete energy model that separates
+  Amdahl screening from complete photonic-system advantage and blocks
+  placeholder scenarios from admission.
+- Implemented exact cuBLAS and fused CUTLASS recurrent electronic adversaries,
+  CPU differential checks, read-only NVML board-energy measurements, and
+  reproducible parameter sweeps.
+- Measured a roughly 134-million-MAC equal-work frontier across n=1024 to
+  n=8192. Conditional electronic headroom reached about 93--94%, while the
+  first complete-system uncertainty screen remained below the 3x survival
+  gate.
+- Added independent recurrence vectors, cycle, diffusion, decision-margin,
+  additive-noise, compressibility, and partial-column probes.
+- Added an exact-residue boundary simulator that charges nominal energy through
+  complete byte-exact trajectory yield and sweeps independent noise, shared
+  offset, drift, temperature, component variation, guard bands, selective
+  assistance, redundancy, full digital regeneration, and feed-forward stages.
+- Evaluated 5,000-sample boundary profiles and a 2,000-sample sensitivity grid.
+  The best evidence-informed R1 selective-assistance profile reached 1.86x
+  conservatively and 3.11x at the median; a full digital roundtrip reached
+  1.10x conservatively.
+- Rejected unassisted and all-optical boundaries because exact trajectory yield
+  collapses, and rejected three-lane replication because matrix-energy
+  multiplication erases the advantage.
+- Preserved a projected 7.17x R1 envelope strictly as an unproven device target,
+  not an admission result.
+- Archived R1 as a conditional architecture, rejected feed-forward as a
+  superior alternative, paused construction work, and confirmed that no v0.3
+  specification or Laser consensus change begins from this phase.
 
 ## v0.2.3-falsified — 2026-07-26
 

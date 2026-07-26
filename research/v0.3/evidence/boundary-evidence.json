@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "research_only",
+  "as_of": "2026-07-26",
+  "scope": "PhotonHash v0.3 boundary phase one",
+  "records": [
+    {
+      "id": "r1-fused-rtx5090",
+      "class": "measured_component",
+      "primary_source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+      "observed": "Bit-exact fused same-matrix recurrence at four equal-work points; 227.97 to 257.83 uJ per core attempt at the NVML board boundary.",
+      "supports": "Electronic adversary and equal-work dimension/round frontier.",
+      "does_not_support": "Photonic energy, photonic exactness, or complete miner economics."
+    },
+    {
+      "id": "f1-fused-rtx5090",
+      "class": "measured_component",
+      "primary_source": "research/v0.3/results/f1-energy-equivalent-work-20260726.json",
+      "observed": "Distinct resident matrices imposed no useful RTX 5090 penalty at a 128 MiB matrix-bank size.",
+      "supports": "Strong fused electronic baseline for the feed-forward comparison.",
+      "does_not_support": "A physically scalable optical stage bank."
+    },
+    {
+      "id": "luan-2026-photonic-mmm",
+      "class": "literature_model",
+      "primary_source": "https://www.nature.com/articles/s41467-026-68452-x",
+      "observed": "A 16 by 16 optical tensor processor reported about 250 fJ/MAC complete-system accounting, a projected 138 fJ/MAC with chip-scale modulators, measured residual standard deviation around 0.0025 for its demonstrated MMM, and explicit ADC/DAC scaling terms.",
+      "supports": "Matrix-energy and analog-error sensitivity ranges.",
+      "does_not_support": "An 8192 by 8192 R1 transform, an exact wrap boundary, linked-round symbolic yield, or the projected scaling at R1 size."
+    },
+    {
+      "id": "alqadasi-2020-comparator",
+      "class": "literature_model",
+      "primary_source": "https://doi.org/10.1049/iet-cds.2019.0361",
+      "observed": "A StrongARM comparator study reported 15.2 fJ per comparison and 3 GHz operation.",
+      "supports": "An optimistic lower bound for the comparator element alone.",
+      "does_not_support": "Photodetection, threshold references, latching, routing, drive, remodulation, multi-threshold 4-bit conversion, or R1 error probability."
+    },
+    {
+      "id": "liu-2026-all-optical-activation",
+      "class": "measured_component",
+      "primary_source": "https://www.nature.com/articles/s41377-025-02175-4",
+      "observed": "Graphene-silicon photonic-crystal activators demonstrated a 4 fJ saturable-absorption threshold at 1.05 ps and a 30 fJ reconfigurable nonlinear-activation threshold around 4 ps.",
+      "supports": "Energy and latency plausibility for a physical all-optical nonlinearity.",
+      "does_not_support": "A hard consensus threshold, a 4-bit wrap transfer, deterministic ties, symbolic BER, or thousands of linked exact decisions."
+    },
+    {
+      "id": "bandyopadhyay-2024-ficonn",
+      "class": "measured_component",
+      "primary_source": "https://www.nature.com/articles/s41566-024-01567-z",
+      "observed": "A monolithic photonic neural network integrated linear and nonlinear functions for six neurons and three layers with 410 ps latency.",
+      "supports": "Physical feasibility of shallow integrated feed-forward nonlinear stages.",
+      "does_not_support": "Large exact state width, exact discrete regeneration, deep symbolic yield, or R1 energy."
+    },
+    {
+      "id": "pai-2023-lighthash",
+      "class": "measured_component",
+      "primary_source": "https://doi.org/10.1364/OPTICA.476173",
+      "observed": "LightHash experimentally studied robust low-bit photonic hashing and hardware-agnostic repetition to mitigate systematic error.",
+      "supports": "The need to include systematic error, correlation, repetition energy, and digitally verifiable thresholds.",
+      "does_not_support": "R1 recurrence, a large exact feedback boundary, or byte-exact yield across 16384 to 131072 linked decisions."
+    },
+    {
+      "id": "wu-2025-deep-photonic-cascading",
+      "class": "measured_component",
+      "primary_source": "https://pubmed.ncbi.nlm.nih.gov/40962813/",
+      "observed": "An end-to-end on-chip photonic network demonstrated cascaded optoelectronic nonlinear activation at 64-channel scale.",
+      "supports": "Feed-forward cascadability as an active experimental direction.",
+      "does_not_support": "Consensus-exact behavior, R1 width, or a complete exact-attempt energy budget."
+    }
+  ],
+  "conclusion": "No primary source demonstrates the complete exact nonlinear boundary required for an evidence-qualified R1 or feed-forward survivor."
+}

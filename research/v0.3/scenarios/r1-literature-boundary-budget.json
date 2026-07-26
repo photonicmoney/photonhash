@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "name": "R1 equal-work literature and boundary-budget screen",
+  "candidate_family": "recurrent-same-matrix",
+  "energy_unit": "uJ",
+  "notes": [
+    "This scenario is a rejection and budget screen, not a photonic advantage claim.",
+    "Electronic recurrence energy is measured on the RTX 5090 across four approximately equal-work configurations.",
+    "The optical aggregate spans 250 to 1000 fJ per MAC over 134217728 MACs.",
+    "Feedback, digital assist, recheck, control, and throughput remain placeholders and block admission."
+  ],
+  "electronic_components": {
+    "fused_recurrent_core": {
+      "energy": {
+        "low": 227.969652179,
+        "mode": 245.018658206,
+        "high": 257.830356552
+      },
+      "photonic_accelerable": true,
+      "evidence": {
+        "class": "measured_component",
+        "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+        "basis": "Read-only NVML board-power integration over exact fused CUDA recurrence."
+      }
+    },
+    "initial_and_final_hash_wrapper": {
+      "energy": {
+        "low": 9.0,
+        "mode": 9.56950352,
+        "high": 12.0
+      },
+      "photonic_accelerable": false,
+      "evidence": {
+        "class": "measured_component",
+        "source": "research/results/cuda-rtx5090-20260726-summary.json",
+        "basis": "Conservative proxy from the measured complete v0.2 board energy; the v0.3 wrapper is not implemented."
+      }
+    }
+  },
+  "photonic_components": {
+    "optical_matrix": {
+      "energy": {
+        "low": 33.554432,
+        "mode": 67.108864,
+        "high": 134.217728
+      },
+      "evidence": {
+        "class": "literature_model",
+        "source": "https://www.nature.com/articles/s41467-026-68452-x",
+        "basis": "Aggregate 250 to 1000 fJ/MAC screen multiplied by 134217728 MACs; scaling and tiling uncertainty are not measurements of R1."
+      }
+    },
+    "laser": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "literature_model",
+        "source": "https://www.nature.com/articles/s41467-026-68452-x",
+        "basis": "Included in the aggregate optical-matrix range to avoid double counting."
+      }
+    },
+    "modulation": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "literature_model",
+        "source": "https://www.nature.com/articles/s41467-026-68452-x",
+        "basis": "Included in the aggregate optical-matrix range to avoid double counting."
+      }
+    },
+    "detection": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "literature_model",
+        "source": "https://www.nature.com/articles/s41467-026-68452-x",
+        "basis": "Included in the aggregate optical-matrix range to avoid double counting."
+      }
+    },
+    "conversion": {
+      "energy": 0.0,
+      "evidence": {
+        "class": "literature_model",
+        "source": "https://www.nature.com/articles/s41467-026-68452-x",
+        "basis": "Matrix-engine conversion is included in the aggregate; recurrence regeneration is charged under feedback."
+      }
+    },
+    "feedback": {
+      "energy": {
+        "low": 0.0,
+        "mode": 20.0,
+        "high": 100.0
+      },
+      "evidence": {
+        "class": "placeholder",
+        "source": "docs/v0.3-boundary-model.md",
+        "basis": "Unmeasured detection-to-regeneration-to-next-state boundary budget."
+      }
+    },
+    "digital_assist": {
+      "energy": {
+        "low": 0.0,
+        "mode": 5.0,
+        "high": 30.0
+      },
+      "evidence": {
+        "class": "placeholder",
+        "source": "docs/v0.3-boundary-model.md",
+        "basis": "Unmeasured exact low-bit decision and state-routing budget."
+      }
+    },
+    "hashing": {
+      "energy": {
+        "low": 9.0,
+        "mode": 9.56950352,
+        "high": 12.0
+      },
+      "evidence": {
+        "class": "measured_component",
+        "source": "research/results/cuda-rtx5090-20260726-summary.json",
+        "basis": "Conservative electronic wrapper proxy retained on the photonic system."
+      }
+    },
+    "recheck": {
+      "energy": {
+        "low": 0.0,
+        "mode": 10.0,
+        "high": 100.0
+      },
+      "evidence": {
+        "class": "placeholder",
+        "source": "research/v0.3/results/r1-structure-n1024-r128-20260726.json",
+        "basis": "Exact threshold hits and uncertain optical decisions require an unmeasured correction strategy."
+      }
+    },
+    "control_and_calibration": {
+      "energy": {
+        "low": 0.0,
+        "mode": 10.0,
+        "high": 50.0
+      },
+      "evidence": {
+        "class": "placeholder",
+        "source": "docs/v0.3-charter.md",
+        "basis": "Unmeasured tiled-system programming, drift, and calibration budget."
+      }
+    }
+  },
+  "amdahl_acceleration": {
+    "low": 5.0,
+    "mode": 20.0,
+    "high": 100.0
+  },
+  "equal_power_throughput_ratio": {
+    "low": 1.0,
+    "mode": 2.5,
+    "high": 6.0
+  },
+  "physical_path_evidence": "literature_model",
+  "consensus_suitability": {
+    "bounded_verification": false,
+    "gpu_accessible_genesis": true,
+    "bounded_memory": true,
+    "two_independent_implementations": false,
+    "frozen_vectors": false,
+    "non_consensus_testnet": false
+  }
+}

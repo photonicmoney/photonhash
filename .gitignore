@@ -34,5 +34,7 @@ Thumbs.db
 *.orig
 *.swp
 *~
+__pycache__/
+*.py[cod]
 /.spec-*.patch
 /.apply-patch.*

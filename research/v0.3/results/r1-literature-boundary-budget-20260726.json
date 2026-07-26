@@ -1,0 +1,232 @@
+{
+  "candidate_family": "recurrent-same-matrix",
+  "complete_system_advantage": {
+    "mean": 1.3450262734033203,
+    "median": 1.3010074409356092,
+    "p05": 0.9533469746488404,
+    "p95": 1.8880489487610905
+  },
+  "component_energy": {
+    "electronic.fused_recurrent_core": {
+      "mean": 243.62723625848,
+      "median": 243.93407915579957,
+      "p05": 233.07058580793972,
+      "p95": 253.4936568867498
+    },
+    "electronic.initial_and_final_hash_wrapper": {
+      "mean": 10.190278423031389,
+      "median": 10.090999453130173,
+      "p05": 9.294194469715544,
+      "p95": 11.393144717195243
+    },
+    "photonic.control_and_calibration": {
+      "mean": 20.02057893631091,
+      "median": 18.401056357684165,
+      "p05": 5.0523811386254645,
+      "p95": 40.06582737269784
+    },
+    "photonic.conversion": {
+      "mean": 0.0,
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "photonic.detection": {
+      "mean": 0.0,
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "photonic.digital_assist": {
+      "mean": 11.682830048900238,
+      "median": 10.646708844034091,
+      "p05": 2.744493260095483,
+      "p95": 23.89075154350941
+    },
+    "photonic.feedback": {
+      "mean": 39.982243975248196,
+      "median": 36.80808948138878,
+      "p05": 9.99542703072944,
+      "p95": 79.7440054710059
+    },
+    "photonic.hashing": {
+      "mean": 10.189037499391286,
+      "median": 10.090677626239906,
+      "p05": 9.290360987370109,
+      "p95": 11.394320600702134
+    },
+    "photonic.laser": {
+      "mean": 0.0,
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "photonic.modulation": {
+      "mean": 0.0,
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "photonic.optical_matrix": {
+      "mean": 78.31331755410305,
+      "median": 76.0644511907505,
+      "p05": 46.55441914052964,
+      "p95": 115.7459004528206
+    },
+    "photonic.recheck": {
+      "mean": 36.687585554241025,
+      "median": 32.916323322566065,
+      "p05": 7.092945499406351,
+      "p95": 78.79178668079982
+    }
+  },
+  "consensus_checks": {
+    "bounded_memory": true,
+    "bounded_verification": false,
+    "frozen_vectors": false,
+    "gpu_accessible_genesis": true,
+    "non_consensus_testnet": false,
+    "two_independent_implementations": false
+  },
+  "disposition": "research_only",
+  "electronic_attempt_energy": {
+    "mean": 253.81751468151137,
+    "median": 254.11797013900372,
+    "p05": 243.21985954106526,
+    "p95": 263.7405547291017
+  },
+  "electronic_headroom": {
+    "mean": 0.9598351133076202,
+    "median": 0.9601521104632571,
+    "p05": 0.9550481130209113,
+    "p95": 0.9636229668984347
+  },
+  "energy_unit": "uJ",
+  "equal_power_throughput_ratio": {
+    "mean": 3.1691846243418538,
+    "median": 3.042816075052276,
+    "p05": 1.6082499330666142,
+    "p95": 5.074436572997219
+  },
+  "evidence": {
+    "distinct_sources": 6,
+    "minimum_component_class": "placeholder",
+    "physical_path_class": "literature_model",
+    "placeholder_components": [
+      "photonic.feedback",
+      "photonic.digital_assist",
+      "photonic.recheck",
+      "photonic.control_and_calibration"
+    ]
+  },
+  "gates": {
+    "gate1_electronic_headroom": {
+      "serious_90_percent": true,
+      "survival_80_percent": true
+    },
+    "gate2_system_economics": {
+      "credible_5x_and_2x_throughput_numeric": false,
+      "credible_pass": false,
+      "evidence_eligible": false,
+      "strong_10x_and_2x_throughput_numeric": false,
+      "strong_pass": false,
+      "survival_3x_and_2x_throughput_numeric": false,
+      "survival_pass": false
+    },
+    "gate3_physical_grounding": false,
+    "gate4_consensus_suitability": false
+  },
+  "optimistic_amdahl_upper_bound": {
+    "mean": 14.886275253100974,
+    "median": 15.289418275019546,
+    "p05": 8.954767913287299,
+    "p95": 19.556209639347546
+  },
+  "photonic_attempt_energy": {
+    "mean": 196.8755935681947,
+    "median": 195.09368812973116,
+    "p05": 134.59586238407792,
+    "p95": 265.16843673597276
+  },
+  "photonic_energy_budgets": {
+    "for_10x": {
+      "mean": 25.381751468151137,
+      "median": 25.411797013900372,
+      "p05": 24.321985954106527,
+      "p95": 26.37405547291017
+    },
+    "for_3x": {
+      "mean": 84.60583822717047,
+      "median": 84.70599004633458,
+      "p05": 81.0732865136884,
+      "p95": 87.9135182430339
+    },
+    "for_5x": {
+      "mean": 50.763502936302274,
+      "median": 50.823594027800745,
+      "p05": 48.643971908213054,
+      "p95": 52.74811094582034
+    }
+  },
+  "samples": 100000,
+  "scenario": "R1 equal-work literature and boundary-budget screen",
+  "seed": 3,
+  "sensitivity": [
+    {
+      "component": "photonic.recheck",
+      "pearson_r_with_system_advantage": -0.5337340907107644
+    },
+    {
+      "component": "photonic.feedback",
+      "pearson_r_with_system_advantage": -0.5173433223367386
+    },
+    {
+      "component": "photonic.optical_matrix",
+      "pearson_r_with_system_advantage": -0.5123350992483631
+    },
+    {
+      "component": "photonic.control_and_calibration",
+      "pearson_r_with_system_advantage": -0.27063476018467775
+    },
+    {
+      "component": "photonic.digital_assist",
+      "pearson_r_with_system_advantage": -0.16427635246817812
+    },
+    {
+      "component": "electronic.fused_recurrent_core",
+      "pearson_r_with_system_advantage": 0.10422196149316237
+    },
+    {
+      "component": "photonic.hashing",
+      "pearson_r_with_system_advantage": -0.015084456135545108
+    },
+    {
+      "component": "electronic.initial_and_final_hash_wrapper",
+      "pearson_r_with_system_advantage": 0.0095189235684042
+    },
+    {
+      "component": "photonic.laser",
+      "pearson_r_with_system_advantage": 0.0
+    },
+    {
+      "component": "photonic.modulation",
+      "pearson_r_with_system_advantage": 0.0
+    },
+    {
+      "component": "photonic.detection",
+      "pearson_r_with_system_advantage": 0.0
+    },
+    {
+      "component": "photonic.conversion",
+      "pearson_r_with_system_advantage": 0.0
+    }
+  ],
+  "threshold_probabilities": {
+    "advantage_ge_10": 0.0,
+    "advantage_ge_3": 0.0001,
+    "advantage_ge_5": 0.0,
+    "headroom_ge_0_80": 1.0,
+    "headroom_ge_0_90": 1.0,
+    "throughput_ge_2": 0.86669
+  }
+}

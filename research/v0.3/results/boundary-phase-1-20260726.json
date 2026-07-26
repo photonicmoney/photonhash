@@ -1,0 +1,1400 @@
+{
+  "decision_summary": {
+    "evidence_qualified_3x_survivors": [],
+    "evidence_qualified_5x_paths": [],
+    "interpretation": "No evaluated boundary is evidence-qualified for the 3x gate.",
+    "resolved": true
+  },
+  "governing_metric": "nominal complete energy divided by byte-exact trajectory yield",
+  "name": "PhotonHash v0.3 R1 boundary phase-one screen",
+  "results": [
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 6.760458600315564e-10,
+        "p05": 5.472464200718387e-19,
+        "p95": 0.2789401446171655
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.00538101478392669,
+          "p05": 0.0012950419903569666,
+          "p95": 0.012731618523493414
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.088828009442224,
+          "p05": 14.345045043441258,
+          "p95": 28.16791318632972
+        },
+        "matrix": {
+          "median": 57.904093936876905,
+          "p05": 27.812531416408802,
+          "p95": 110.98934130196207
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 6.760458600315564e-10,
+        "p05": 5.472464200718387e-19,
+        "p95": 0.2789401446171655
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "No R1-scale photonic matrix or complete boundary has been measured.",
+        "No cited device reports byte-exact 4-bit wrap regeneration error over 16384 or more linked decisions.",
+        "The matrix-energy transfer omits demonstrated R1 tiling, fanout, storage, and calibration scaling.",
+        "Latency, temperature, correlated drift, and residual-error ranges are engineering sweeps rather than a representative prototype."
+      ],
+      "exact_output_yield": {
+        "median": 2.160759194965182e-10,
+        "p05": 1.6764858930244853e-19,
+        "p95": 0.08773947292028317
+      },
+      "id": "r1-lowres-unassisted-n8192-r2",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 376348075764.16644,
+        "p05": 896.1939215055575,
+        "p95": 4.7714585430501727e+20
+      },
+      "nominal_energy_uJ": {
+        "median": 78.79422094972382,
+        "p05": 46.94765193369835,
+        "p95": 131.62161500413535
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.001357407711275127,
+        "p05": 0.00014851003927723871,
+        "p95": 0.0026339749795163403
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9252518579680152,
+        "p05": 0.5025441779803627,
+        "p95": 1.988537327824808
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 4.777921887737094e-10,
+        "p05": 3.577041848255155e-19,
+        "p95": 0.18444980436994896
+      }
+    },
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.022560157490885656,
+        "p05": 0.013681535165781768,
+        "p95": 0.03443265874936477
+      },
+      "complete_system_advantage": {
+        "median": 3.111995157042967,
+        "p05": 1.8604632143635118,
+        "p95": 5.069070403873724
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.5399304604324848,
+          "p05": 0.12388598804396947,
+          "p95": 1.298145154017198
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.27083392570943,
+          "p05": 14.475220089568584,
+          "p95": 28.345330113828485
+        },
+        "matrix": {
+          "median": 57.80106476285036,
+          "p05": 27.87385672220477,
+          "p95": 110.82212134740966
+        },
+        "selective_assist": {
+          "median": 1.2195936317737965,
+          "p05": 0.2717951404460191,
+          "p95": 3.261476498943116
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 3.111995157042967,
+        "p05": 1.8604632143635118,
+        "p95": 5.069070403873724
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "No R1-scale photonic matrix or complete boundary has been measured.",
+        "No cited device reports byte-exact 4-bit wrap regeneration error over 16384 or more linked decisions.",
+        "The matrix-energy transfer omits demonstrated R1 tiling, fanout, storage, and calibration scaling.",
+        "Latency, temperature, correlated drift, and residual-error ranges are engineering sweeps rather than a representative prototype."
+      ],
+      "exact_output_yield": {
+        "median": 0.9999784571368968,
+        "p05": 0.9982468265502846,
+        "p95": 0.9999928913937238
+      },
+      "id": "r1-lowres-selective-n8192-r2",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 80.61332219932581,
+        "p05": 49.70492102831762,
+        "p95": 134.25379510333903
+      },
+      "nominal_energy_uJ": {
+        "median": 80.46243189521147,
+        "p05": 49.686617736398915,
+        "p95": 133.50307505381502
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 3.8163916471489756e-17,
+        "p05": 0.0,
+        "p95": 1.0641944808535697e-07
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9173594638722389,
+        "p05": 0.4981266176416432,
+        "p95": 1.987592345067406
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 2.0072654592433175,
+        "p05": 1.087567272475473,
+        "p95": 4.370530863121785
+      }
+    },
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.022663371835960035,
+        "p05": 0.013969175353686315,
+        "p95": 0.034723468738166584
+      },
+      "complete_system_advantage": {
+        "median": 3.0535820811019314,
+        "p05": 0.9258080138585477,
+        "p95": 5.022447768172311
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 1.0964239549802013,
+          "p05": 0.24987836937706553,
+          "p95": 2.5644902223604777
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.13477085703755,
+          "p05": 14.528081821930856,
+          "p95": 28.258945155074
+        },
+        "matrix": {
+          "median": 57.41369510226886,
+          "p05": 27.85757257530007,
+          "p95": 107.92943312682227
+        },
+        "selective_assist": {
+          "median": 2.437732916487757,
+          "p05": 0.5196643195881774,
+          "p95": 6.580557839354811
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 3.0535820811019314,
+        "p05": 0.9258080138585477,
+        "p95": 5.022447768172311
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "No R1-scale photonic matrix or complete boundary has been measured.",
+        "No cited device reports byte-exact 4-bit wrap regeneration error over 16384 or more linked decisions.",
+        "The matrix-energy transfer omits demonstrated R1 tiling, fanout, storage, and calibration scaling.",
+        "Latency, temperature, correlated drift, and residual-error ranges are engineering sweeps rather than a representative prototype."
+      ],
+      "exact_output_yield": {
+        "median": 0.9999450037981139,
+        "p05": 0.29541093261092277,
+        "p95": 0.9999833381624106
+      },
+      "id": "r1-lowres-selective-n4096-r8",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 85.85240785257635,
+        "p05": 52.651416555759766,
+        "p95": 282.5604290577001
+      },
+      "nominal_energy_uJ": {
+        "median": 82.40762187570854,
+        "p05": 51.70613189368635,
+        "p95": 134.04427016916594
+      },
+      "profile": {
+        "boundary_count": 8,
+        "logical_decisions": 32768,
+        "n": 4096,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 8
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 3.226151984447867e-15,
+        "p05": 7.806255641895632e-18,
+        "p95": 3.720653782161767e-05
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.8738553417221224,
+        "p05": 0.4771797602081888,
+        "p95": 1.8508071226542404
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 1.900876938920627,
+        "p05": 0.5675406028398364,
+        "p95": 4.15435470875528
+      }
+    },
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.022600493228677705,
+        "p05": 0.013997484028797667,
+        "p95": 0.03427525249599534
+      },
+      "complete_system_advantage": {
+        "median": 1.0660852950311508e-09,
+        "p05": 3.7572719540026416e-121,
+        "p95": 4.1632996754572105
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 2.1304087158886107,
+          "p05": 0.49311987662728857,
+          "p95": 5.185153192165445
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.20859086742264,
+          "p05": 14.365556861441867,
+          "p95": 28.341366022141415
+        },
+        "matrix": {
+          "median": 57.91860754637332,
+          "p05": 27.434116564912355,
+          "p95": 110.78026431146512
+        },
+        "selective_assist": {
+          "median": 4.843838162181405,
+          "p05": 1.0181041313766954,
+          "p95": 13.059762867419392
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 1.0660852950311508e-09,
+        "p05": 3.7572719540026416e-121,
+        "p95": 4.1632996754572105
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "No R1-scale photonic matrix or complete boundary has been measured.",
+        "No cited device reports byte-exact 4-bit wrap regeneration error over 16384 or more linked decisions.",
+        "The matrix-energy transfer omits demonstrated R1 tiling, fanout, storage, and calibration scaling.",
+        "Latency, temperature, correlated drift, and residual-error ranges are engineering sweeps rather than a representative prototype."
+      ],
+      "exact_output_yield": {
+        "median": 3.656825922472504e-10,
+        "p05": 1.3635471493293267e-121,
+        "p95": 0.9999337825651549
+      },
+      "id": "r1-lowres-selective-n2048-r32",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 273468747471.58496,
+        "p05": 65.90338273475575,
+        "p95": 7.30258513546911e+122
+      },
+      "nominal_energy_uJ": {
+        "median": 86.76532024280618,
+        "p05": 54.3530183372426,
+        "p95": 140.53372147743755
+      },
+      "profile": {
+        "boundary_count": 32,
+        "logical_decisions": 65536,
+        "n": 2048,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 32
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0003310321629129353,
+        "p05": 1.984089975648473e-17,
+        "p95": 0.0042049166311400755
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.878490047935692,
+        "p05": 0.49057610843211913,
+        "p95": 1.8293951851564008
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 6.879507899589205e-10,
+        "p05": 2.7457392548431228e-121,
+        "p95": 2.905593659634745
+      }
+    },
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0227070636889159,
+        "p05": 0.01390590789482276,
+        "p95": 0.034441212110238734
+      },
+      "complete_system_advantage": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 2.0012459886678817e-11
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 4.295981799011494,
+          "p05": 1.0046378144751105,
+          "p95": 10.33135166301743
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.13122751804439,
+          "p05": 14.50330312568842,
+          "p95": 28.225355302994874
+        },
+        "matrix": {
+          "median": 58.12848259651764,
+          "p05": 27.974917228903557,
+          "p95": 109.65667154197354
+        },
+        "selective_assist": {
+          "median": 9.68388271865841,
+          "p05": 2.121945576853185,
+          "p95": 26.27520364974717
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 2.0012459886678817e-11
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "No R1-scale photonic matrix or complete boundary has been measured.",
+        "No cited device reports byte-exact 4-bit wrap regeneration error over 16384 or more linked decisions.",
+        "The matrix-energy transfer omits demonstrated R1 tiling, fanout, storage, and calibration scaling.",
+        "Latency, temperature, correlated drift, and residual-error ranges are engineering sweeps rather than a representative prototype."
+      ],
+      "exact_output_yield": {
+        "median": 5e-324,
+        "p05": 5e-324,
+        "p95": 6.4916968944777525e-12
+      },
+      "id": "r1-lowres-selective-n1024-r128",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": Infinity,
+        "p05": 13374623035175.912,
+        "p95": Infinity
+      },
+      "nominal_energy_uJ": {
+        "median": 95.78551847258402,
+        "p05": 60.619910847932985,
+        "p95": 147.83710767509956
+      },
+      "profile": {
+        "boundary_count": 128,
+        "logical_decisions": 131072,
+        "n": 1024,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 128
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.009337937366113014,
+        "p05": 0.00019602037382812136,
+        "p95": 0.03184579210085349
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.8888544909551817,
+        "p05": 0.5246272491107284,
+        "p95": 1.7630982032376874
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 1e-323,
+        "p05": 5e-324,
+        "p95": 1.2031921666127958e-11
+      }
+    },
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.9799994139026412,
+        "p05": 0.9797257710892167,
+        "p95": 0.9802233692719076
+      },
+      "complete_system_advantage": {
+        "median": 1.7437620645805592,
+        "p05": 1.1038480016778993,
+        "p95": 3.0492951456198463
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 5.337416750352096,
+          "p05": 1.2837605742392533,
+          "p95": 12.977592673912609
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.132948207260473,
+          "p05": 14.354027250280348,
+          "p95": 28.404356054417413
+        },
+        "matrix": {
+          "median": 57.57522763868295,
+          "p05": 28.242612451841804,
+          "p95": 110.42858534668603
+        },
+        "selective_assist": {
+          "median": 53.36011618660679,
+          "p05": 12.150255896832252,
+          "p95": 126.9210107452496
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 1.7437620645805592,
+        "p05": 1.1038480016778993,
+        "p95": 3.0492951456198463
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "No complete detector-to-ADC-to-digital-wrap-to-driver-to-modulator loop has been measured at R1 width, rate, and error probability.",
+        "Component energy figures do not establish complete loop energy, routing, clocking, reference, or calibration cost.",
+        "The assumed digital-roundtrip success probability has no representative prototype evidence."
+      ],
+      "exact_output_yield": {
+        "median": 0.9999443083424241,
+        "p05": 0.9998718626410741,
+        "p95": 0.999987040376453
+      },
+      "id": "r1-full-adc-digital-roundtrip-n8192-r2",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 144.008131886985,
+        "p05": 82.25271245357689,
+        "p95": 228.3758629150946
+      },
+      "nominal_energy_uJ": {
+        "median": 144.0049351056287,
+        "p05": 82.25002799554237,
+        "p95": 228.37084349351076
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 5.551115123125783e-17
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9142641112025275,
+        "p05": 0.4972148154733832,
+        "p95": 1.9875201403759484
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 2.007793558178679,
+        "p05": 1.0950166367002963,
+        "p95": 4.355687598641531
+      }
+    },
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 1.1273360417040375,
+        "p05": 0.598901745600202,
+        "p95": 2.1872936569676553
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.016208644368582832,
+          "p05": 0.0039050608659322453,
+          "p95": 0.03919412628823341
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.11102387043975,
+          "p05": 14.419767536493048,
+          "p95": 28.558993219991244
+        },
+        "matrix": {
+          "median": 172.29441432259807,
+          "p05": 83.96536888709133,
+          "p95": 328.9374487164264
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 1.1273360417040375,
+        "p05": 0.598901745600202,
+        "p95": 2.1872936569676553
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "Three independent full matrix lanes have not been built or measured.",
+        "Majority-of-correct-lanes is optimistic because wrong 4-bit symbols need not agree on one alternative.",
+        "Correlated optical and calibration errors are not removed by lane replication."
+      ],
+      "exact_output_yield": {
+        "median": 0.9020412463234291,
+        "p05": 0.6693193792751793,
+        "p95": 0.9982821927218536
+      },
+      "id": "r1-three-lane-majority-n8192-r2",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 222.33678509353973,
+        "p05": 115.90238538541026,
+        "p95": 422.5709085258814
+      },
+      "nominal_energy_uJ": {
+        "median": 193.01618141045952,
+        "p05": 104.97606153682068,
+        "p95": 350.2205073387279
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 3,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0013617600707638289,
+        "p05": 0.00016222394966702858,
+        "p95": 0.002656098950500896
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9082455297488956,
+        "p05": 0.5017134173901342,
+        "p95": 1.9519366689669218
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 1.7555427251012952,
+        "p05": 0.922107460271849,
+        "p95": 3.7726091319046366
+      }
+    },
+    {
+      "architecture": "F1 distinct-matrix feed-forward all-optical nonlinear stages",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 2.5223639599526605e-132,
+        "p05": 1.1815970321802236e-246,
+        "p95": 2.0437997412298588e-55
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.0007915024273974609,
+          "p05": 0.0002736037445410247,
+          "p95": 0.0015871843726751908
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.17200766543999,
+          "p05": 14.36050137330289,
+          "p95": 28.236898815253777
+        },
+        "matrix": {
+          "median": 58.026454336331966,
+          "p05": 27.944689977662534,
+          "p95": 109.62748787728681
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 2.5223639599526605e-132,
+        "p05": 1.1815970321802236e-246,
+        "p95": 2.0437997412298588e-55
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "Measured nonlinear activators implement smooth neural-network transfer functions, not the exact R1 wrap map.",
+        "No device reports the required whole-trajectory symbolic error rate or deterministic tie rule.",
+        "The demonstrated nonlinear devices are single or shallow stages, not an 8192-wide exact feed-forward pipeline.",
+        "Distinct optical matrices require a physical stage bank whose area, loss, programming, and calibration are unmeasured."
+      ],
+      "exact_output_yield": {
+        "median": 1.1058295419825617e-132,
+        "p05": 3.231217319751514e-247,
+        "p95": 5.5692119019450815e-56
+      },
+      "id": "f1-all-optical-n8192-r2",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 1.0164465624833392e+134,
+        "p05": 1.2208724846784456e+57,
+        "p95": 2.0500388519468642e+248
+      },
+      "nominal_energy_uJ": {
+        "median": 79.06482835047373,
+        "p05": 47.51214303346431,
+        "p95": 131.2070601834053
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.01837208359138065,
+        "p05": 0.007735273135358045,
+        "p95": 0.03404212396601175
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9141248443853947,
+        "p05": 0.49980074742038494,
+        "p95": 1.9767788365487586
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 1.9457679079471688e-132,
+        "p05": 5.347553538022124e-247,
+        "p95": 1.2615933674675366e-55
+      }
+    },
+    {
+      "architecture": "F1 distinct-matrix feed-forward all-optical nonlinear stages",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 8.402591151048363e-161
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.0015592588988956916,
+          "p05": 0.000534351570786597,
+          "p95": 0.0031983744834294197
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.213062143230758,
+          "p05": 14.475679823303174,
+          "p95": 28.147394693419095
+        },
+        "matrix": {
+          "median": 57.915135947233765,
+          "p05": 27.630821234808877,
+          "p95": 109.44733219332082
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 8.402591151048363e-161
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "Measured nonlinear activators do not implement consensus-exact regeneration.",
+        "Eight linked 4096-wide nonlinear stages have no measured symbolic-yield evidence.",
+        "The distinct-matrix optical stage bank has no grounded complete energy, area, loss, or calibration model."
+      ],
+      "exact_output_yield": {
+        "median": 5e-324,
+        "p05": 5e-324,
+        "p95": 2.2915394657938726e-161
+      },
+      "id": "f1-all-optical-n4096-r8",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": Infinity,
+        "p05": 2.6753033278047257e+162,
+        "p95": Infinity
+      },
+      "nominal_energy_uJ": {
+        "median": 78.88699386029249,
+        "p05": 47.33897298538061,
+        "p95": 130.74984617138554
+      },
+      "profile": {
+        "boundary_count": 8,
+        "logical_decisions": 32768,
+        "n": 4096,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 8
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.023689683985431087,
+        "p05": 0.011208697957029931,
+        "p95": 0.04011064492949734
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9504080945606092,
+        "p05": 0.521017718231815,
+        "p95": 2.093993416536041
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 2e-323,
+        "p05": 5e-324,
+        "p95": 4.372865582314025e-161
+      }
+    },
+    {
+      "architecture": "R1 recurrent same-matrix",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.03976594767392298,
+        "p05": 0.026234934757096005,
+        "p95": 0.053559253446377915
+      },
+      "complete_system_advantage": {
+        "median": 7.932238475413541,
+        "p05": 7.173555630935567,
+        "p95": 8.666031254258947
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": true,
+        "numeric_survival_3x": true,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.052898328756136176,
+          "p05": 0.012305886590023745,
+          "p95": 0.12844987868034047
+        },
+        "fixed_control_hash_recheck": {
+          "median": 10.262409972168326,
+          "p05": 9.375180746374786,
+          "p95": 11.481389774993833
+        },
+        "matrix": {
+          "median": 20.82402158767459,
+          "p05": 18.85881539133664,
+          "p95": 23.710625854629182
+        },
+        "selective_assist": {
+          "median": 0.3343517371959005,
+          "p05": 0.1424664367846047,
+          "p95": 0.6091122521102641
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 7.932238475413541,
+        "p05": 7.173555630935567,
+        "p95": 8.666031254258947
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "This is an explicit engineering target envelope, not a measured system.",
+        "The 138 fJ/MAC literature projection has not been demonstrated at R1 dimensions or exactness.",
+        "No complete selective-assistance boundary has demonstrated the assumed energy and success probability.",
+        "Control, calibration, tiling, and remodulation are constrained to a target budget rather than measured."
+      ],
+      "exact_output_yield": {
+        "median": 0.9999920005882085,
+        "p05": 0.999983846764375,
+        "p95": 0.9999974098059049
+      },
+      "id": "r1-selective-projected-5x-envelope",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 31.63024865867669,
+        "p05": 29.32751866802842,
+        "p95": 34.649951691553824
+      },
+      "nominal_energy_uJ": {
+        "median": 31.63001999428803,
+        "p05": 29.3271892015713,
+        "p95": 34.64945648206627
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 256,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 1.734723475976807e-17,
+        "p05": 0.0,
+        "p95": 3.8510861166685117e-16
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9256406126906374,
+        "p05": 0.5065857628125042,
+        "p95": 1.951855630084588
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 2.0339792860765638,
+        "p05": 1.1156450327539265,
+        "p95": 4.272662495603594
+      }
+    },
+    {
+      "architecture": "non-R1 precision sensitivity",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 1.2153357864343653e-24,
+        "p05": 2.538720885937673e-62,
+        "p95": 1.1836750060547259
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.0016384,
+          "p05": 0.0016384,
+          "p95": 0.0016384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.29202475711938,
+          "p05": 14.374683716723583,
+          "p95": 28.38840501365518
+        },
+        "matrix": {
+          "median": 57.61175929912123,
+          "p05": 27.51582386352647,
+          "p95": 109.40954409972022
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 1.2153357864343653e-24,
+        "p05": 2.538720885937673e-62,
+        "p95": 1.1836750060547259
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "Sensitivity case changes the accumulator residue lattice and is not the R1 exact operation."
+      ],
+      "exact_output_yield": {
+        "median": 3.4868000663992358e-25,
+        "p05": 8.996192080157937e-63,
+        "p95": 0.38916959540413965
+      },
+      "id": "sensitivity-unassisted-64-residues",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 2.1884063762544377e+26,
+        "p05": 212.05725965317373,
+        "p95": 1.0264628204550737e+64
+      },
+      "nominal_energy_uJ": {
+        "median": 78.57161020118266,
+        "p05": 47.18034493972539,
+        "p95": 129.95610612855617
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 64,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.0034305421528714186,
+        "p05": 5.759781071495995e-05,
+        "p95": 0.008676401224608332
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9148499569597043,
+        "p05": 0.5033348973908689,
+        "p95": 2.0005181917292845
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 8.353510437151185e-25,
+        "p05": 1.574904529027279e-62,
+        "p95": 0.7242356584250763
+      }
+    },
+    {
+      "architecture": "non-R1 precision sensitivity",
+      "assist_fraction_of_lane_decisions": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0
+      },
+      "complete_system_advantage": {
+        "median": 4.9815931327500415e-12,
+        "p05": 3.58372426926894e-20,
+        "p95": 4.642753215719371e-06
+      },
+      "decision": {
+        "credible_serious_path": false,
+        "evidence_qualified": false,
+        "numeric_serious_5x": false,
+        "numeric_survival_3x": false,
+        "survives_boundary_phase": false
+      },
+      "energy_components_uJ": {
+        "boundary": {
+          "median": 0.0016384,
+          "p05": 0.0016384,
+          "p95": 0.0016384
+        },
+        "fixed_control_hash_recheck": {
+          "median": 20.172485957395914,
+          "p05": 14.384163760754348,
+          "p95": 28.238785034826034
+        },
+        "matrix": {
+          "median": 58.13120770306733,
+          "p05": 27.46389394272601,
+          "p95": 108.40457769093848
+        },
+        "selective_assist": {
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        }
+      },
+      "equal_power_valid_throughput_ratio": {
+        "median": 4.9815931327500415e-12,
+        "p05": 3.58372426926894e-20,
+        "p95": 4.642753215719371e-06
+      },
+      "evidence": [
+        {
+          "class": "measured_component",
+          "source": "research/v0.3/results/r1-energy-equivalent-work-20260726.json",
+          "supports": "RTX 5090 electronic energy and latency baseline"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://www.nature.com/articles/s41467-026-68452-x",
+          "supports": "250 fJ/MAC small-system total, projected 138 fJ/MAC, measured analog residuals, and explicit ADC/DAC terms"
+        },
+        {
+          "class": "literature_model",
+          "source": "https://doi.org/10.1049/iet-cds.2019.0361",
+          "supports": "15.2 fJ comparator energy and 3 GHz circuit result, not a complete optical boundary"
+        },
+        {
+          "class": "measured_component",
+          "source": "https://www.nature.com/articles/s41377-025-02175-4",
+          "supports": "4 fJ saturable-absorption and 30 fJ nonlinear-activation thresholds, not exact symbolic regeneration"
+        }
+      ],
+      "evidence_blockers": [
+        "Sensitivity case changes the accumulator residue lattice and is not the R1 exact operation."
+      ],
+      "exact_output_yield": {
+        "median": 1.5050033479496992e-12,
+        "p05": 1.0325874859926957e-20,
+        "p95": 1.4708837906102667e-06
+      },
+      "id": "sensitivity-unassisted-1024-residues",
+      "joules_per_valid_exact_attempt_uJ": {
+        "median": 52219282174457.0,
+        "p05": 54841135.23768948,
+        "p95": 6.9132538173009e+21
+      },
+      "nominal_energy_uJ": {
+        "median": 78.59782445137213,
+        "p05": 47.395417325428305,
+        "p95": 129.98621309995642
+      },
+      "profile": {
+        "boundary_count": 2,
+        "logical_decisions": 16384,
+        "n": 8192,
+        "redundancy": 1,
+        "residue_steps": 1024,
+        "rounds": 2
+      },
+      "raw_wrong_unassisted_lane_probability": {
+        "median": 0.001660227618583754,
+        "p05": 0.0008193431693389042,
+        "p95": 0.0028047249817150788
+      },
+      "samples": 5000,
+      "single_lane_latency_ratio": {
+        "median": 0.9173356226530861,
+        "p05": 0.5033669328391607,
+        "p95": 1.9839099589512144
+      },
+      "status": "research_only",
+      "valid_throughput_m_attempts_s": {
+        "median": 3.287752550714439e-12,
+        "p05": 2.0940029293533667e-20,
+        "p95": 2.9756465811126383e-06
+      }
+    }
+  ],
+  "samples_per_profile": 5000,
+  "schema_version": 1,
+  "seed": 17,
+  "status": "research_only",
+  "tool": "ph_v03_boundary_sim.py"
+}
