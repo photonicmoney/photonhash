@@ -2,6 +2,8 @@
 
 Status: boundary phase one complete; no candidate is selected
 
+External platform priority: **Q.ANT NPU Gen 2**, for boundary evaluation only
+
 | ID | Family | Nonlinear boundary | Optical amortization hypothesis | Primary electronic attack | Primary physical kill test |
 |---|---|---|---|---|---|
 | R1 | recurrent same-matrix | exact low-bit wrap regeneration; round variation remains open | program one matrix once and reuse it across many rounds | persistent batched GEMM with fused requantization; short-cycle and state-reuse analysis | measured detection-to-regeneration-to-remodulation loop |
@@ -28,6 +30,20 @@ The identifiers name experiments, not protocol versions.
 The decision record is
 [v0.3 boundary phase one](../../../docs/v0.3-boundary-phase-1.md). No v0.3
 specification work begins from these probes.
+
+## External platform queue
+
+Q.ANT is the primary external candidate for a representative R1 boundary
+experiment because its available TFLN NPU combines matrix-vector arithmetic,
+native nonlinear processing, photodetection, CMOS, and optical modulation in a
+commercial system. It is not a selected construction or evidence-qualified
+boundary.
+
+The [Q.ANT boundary-platform audit](../../../docs/v0.3-qant-boundary-audit.md)
+must resolve whether native operations can be chained without a general
+conversion/re-encoding loop and whether the low-level interface can support an
+exact guard-band plus selective-assistance experiment. Existing NPU evaluation
+precedes any custom laboratory build.
 
 ## Shared seed and wrapper
 

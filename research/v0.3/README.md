@@ -1,9 +1,15 @@
 # PhotonHash v0.3 research workspace
 
-Status: **phase one frozen as a negative result; construction work paused**
+Status: **phase one frozen as a negative result; Q.ANT platform evaluation queued**
 
 This directory is deliberately separate from the frozen v0.2 profile. Nothing
 here is a consensus proposal.
+
+PhotonHash v0.4.0-shadow.1 does not supersede or reinterpret this result. It
+uses the feed-forward LF2-K8 launch objective and makes no claim that a
+photonic miner already passes the v0.3 complete-system superiority gates.
+Current shadownet work lives in
+[research/launch](../launch/README.md).
 
 ## Research order
 
@@ -109,6 +115,19 @@ The current decision is
 boundary is an evidence-qualified 3x survivor. R1 remains an archived
 conditional architecture; feed-forward is rejected as a superior alternative.
 No v0.3 specification work has started.
+
+## External platform evaluation
+
+Q.ANT is the primary external candidate for the next boundary experiment. The
+[Q.ANT audit and existing-NPU protocol](../../docs/v0.3-qant-boundary-audit.md)
+requires direct evaluation of its native matrix and nonlinear operations,
+detector/CMOS path, chaining boundary, and complete optical-electronic-optical
+energy before any custom laboratory build is proposed.
+
+This queue does not promote R1. Public evidence supports an existing NPU,
+matrix-vector access, and a weighted sinusoidal optical nonlinearity, but does
+not establish an exact wrap transition or show that recurrent state avoids a
+general conversion loop.
 
 ## Safety boundary
 

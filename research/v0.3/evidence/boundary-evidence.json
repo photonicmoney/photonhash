@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "research_only",
   "as_of": "2026-07-26",
-  "scope": "PhotonHash v0.3 boundary phase one",
+  "scope": "PhotonHash v0.3 boundary evidence and post-freeze platform audit",
   "records": [
     {
       "id": "r1-fused-rtx5090",
@@ -67,6 +67,38 @@
       "observed": "An end-to-end on-chip photonic network demonstrated cascaded optoelectronic nonlinear activation at 64-channel scale.",
       "supports": "Feed-forward cascadability as an active experimental direction.",
       "does_not_support": "Consensus-exact behavior, R1 width, or a complete exact-attempt energy budget."
+    },
+    {
+      "id": "qant-gen2-public-platform",
+      "class": "literature_model",
+      "primary_source": "https://qant.com/photonic-computing/",
+      "observed": "Q.ANT publicly specifies a Gen-2 TFLN NPU with native nonlinear processing, matrix-vector access through C/C++ and Python, a Linux driver, PCIe Gen4 x8, 8 GOPS throughput, and a 150 W NPU power specification.",
+      "supports": "An existing commercial platform for a representative matrix and nonlinear-boundary experiment.",
+      "does_not_support": "An exact R1 wrap transition, operation-normalized complete energy, raw detector access, or conversion-free recurrent chaining."
+    },
+    {
+      "id": "qant-2026-weighted-sinusoid",
+      "class": "literature_model",
+      "primary_source": "https://qant.com/wp-content/uploads/2026/05/20260515_Whitepaper-Use-Cases.pdf",
+      "observed": "Q.ANT describes nonlinear operation through controlled PIC modulation as a weighted sinusoidal function of an input vector.",
+      "supports": "A physically implemented smooth nonlinear transfer relevant to boundary experiments.",
+      "does_not_support": "A stable public cosine API, a hard threshold, deterministic ties, low-bit wrap, or consensus-exact symbolic output."
+    },
+    {
+      "id": "qant-lrz-2026-operational-evaluation",
+      "class": "literature_model",
+      "primary_source": "https://www.lrz.de/en/news/detail/photonic-computers-in-real-world-test",
+      "observed": "LRZ reports photodetection into digital electrical signals when further processing is required, on-card CMOS, continuous photonic-classical exchange, 16-bit conversion with detector noise, and Gen-1/Gen-2 workload and power evaluation.",
+      "supports": "The existence of a hybrid detector/CMOS architecture and the need to audit the complete conversion path.",
+      "does_not_support": "Per-boundary energy, exact error probability, raw intermediate access, or proof that recurrent native operations avoid full conversion."
+    },
+    {
+      "id": "qant-2026-recurrent-demo",
+      "class": "literature_model",
+      "primary_source": "https://qant.com/press-releases/q-ant-runs-generative-ai-on-photonic-hardware/",
+      "observed": "Q.ANT reports executing the TiRex xLSTM recurrent model and an iterative diffusion workload on its Gen-2 NPU.",
+      "supports": "Software-level recurrence and repeated matrix-work execution on the available platform.",
+      "does_not_support": "Optical state residency between recurrent steps, a conversion-free feedback path, or consensus-exact recurrence."
     }
   ],
   "conclusion": "No primary source demonstrates the complete exact nonlinear boundary required for an evidence-qualified R1 or feed-forward survivor."
