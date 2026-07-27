@@ -1,0 +1,45 @@
+{
+  "status": "frozen_for_hardening_non_consensus",
+  "candidate": "LF2-K8",
+  "freeze_date": "2026-07-26",
+  "consensus_status": "not_integrated",
+  "parameters": {
+    "dimension": 4096,
+    "matrix_passes": 8,
+    "matrix_entry_domain": [-8, 7],
+    "vector_entry_domain": [-8, 7],
+    "accumulator": "exact signed int32",
+    "requantization_shift": 9,
+    "requantization_offset": 262144,
+    "requantization_output_bits": 4,
+    "combiner": "row-wise bitwise XOR after exact requantization",
+    "final_digest": "SHAKE256-256"
+  },
+  "domain_tags": {
+    "matrix": "LASER/PhotonHash/v1/matrix",
+    "vector": "LASER/PhotonHash/v1/vector",
+    "additional_matrix_parent": "LASER/PhotonHash/launch-LF2/matrix",
+    "final": "LASER/PhotonHash/launch-LF2/final"
+  },
+  "candidate_file_sha256": {
+    "include/photonhash_launch.h": "ff6bb5d8a01e50c0c8d7adf0794ba66139b5bdda631264e0157ccd45937af1ed",
+    "src/photonhash_launch.c": "067e463f127c69fe265bc90c8d808f6ed3ea9915aef88607ca85f04a8cd51e43",
+    "tools/ph_cuda_bench.cu": "4ce7ce8c5ab858c6f7ed2e5573edbc9af58e022df3e10eef7414669eb61f0a1b",
+    "docs/launch-profile-lf2-vectors.txt": "8ca0e8a52cec98a08e148b347d5a7563b6132afc6857a86616ae394aeb0e9be6",
+    "docs/launch-profile-lf2-first-pass.md": "adcb02cb518c468cd36ae83d89c8ff710e5829824be0e460334b08ea11c1eaab",
+    "docs/launch-profile-charter.md": "a683172bca3c8f28deae79429fdb285cd0b00eb1542557cd7d3e2c50ff2a4346"
+  },
+  "change_control": {
+    "parameter_tuning": "closed",
+    "permitted_work": [
+      "independent implementations",
+      "test and vector expansion without semantic changes",
+      "electronic optimization and attacks",
+      "cross-hardware measurement",
+      "ASIC and FPGA analysis",
+      "non-consensus testnet engineering"
+    ],
+    "semantic_change_policy": "Any output-changing change creates a new candidate identifier and repeats every launch gate."
+  },
+  "claim_boundary": "Measured RTX 5090 GEMM-time share supports a matrix-centric launch claim only. No photonic energy advantage is established."
+}

@@ -1,5 +1,64 @@
 # Changelog
 
+## v0.4.0-shadow.1 — 2026-07-27
+
+- Gave the frozen LF2-K8 construction a distinct non-consensus shadownet
+  version without changing the archived v0.2 oracle or v0.3 negative result.
+- Added a byte-exact candidate specification and made the root README describe
+  the current shadow candidate instead of presenting v0.2 as current.
+- Added a bounded two-parent verifier cache, known-parent-only matrix
+  preparation, unknown-parent fast rejection, eviction tests, and explicit
+  concurrency rules.
+- Added compact multi-parent vectors covering zero, maximum, patterned, and
+  SHAKE-derived parents; headers from zero through 4096 bytes; bank and fold
+  commitments; and nonce boundaries.
+- Extended the independently structured Rust implementation to reproduce both
+  the original full-state and v0.4 compact vector suites.
+- Added deterministic API fuzz smoke, an LLVM libFuzzer target, canonical
+  shadownet work and solution validation, and a frozen work-ID vector.
+- Extended Make and CI coverage across the legacy and shadow C suites, Rust,
+  protocol tests, Linux, macOS, Windows, GCC, Clang, ASan, and UBSan.
+- Documented shadownet isolation, roles, logging, reorgs, stale work, rate
+  limits, readiness gates, evidence requirements, and remaining electronic
+  adversaries.
+- Preserved the distinction between measured RTX 5090 GEMM-time share and any
+  unmeasured photonic energy advantage. Laser consensus remains unchanged.
+
+## Unreleased launch-profile research
+
+- Opened a separate non-consensus launch charter that requires substantial
+  matrix centrality but reserves 3x and 5x for measured complete-system
+  photonic-superiority claims.
+- Rejected the LF1 dimension-only family after its RTX 5090 GEMM share peaked
+  below 40%.
+- Implemented LF2 as one nonce vector evaluated by a stacked bank of
+  independently parent-derived matrices, followed by exact requantization,
+  XOR folding, and one final SHAKE256.
+- Selected `n=4096, K=8` as the provisional engineering point after a `K=4`
+  through `K=16` sweep. Three sustained parent datasets measured
+  61.55--61.98% exact GEMM time.
+- Measured 2.14 ms cached verification and 497 ms cold matrix-bank setup on an
+  AMD Ryzen 7 9800X3D.
+- Added an independent fold screen; tested omission and simple aggregate
+  collapse strategies produced no exact 4096-nibble states.
+- Added a separate portable allocation-reusing LF2 research API, deterministic
+  matrix/fold/digest vectors, strict target and malformed-input tests, and a
+  CUDA differential adversary. Frozen v0.2 behavior and Laser consensus remain
+  unchanged.
+- Froze LF2-K8 for hardening and closed parameter tuning.
+- Added an independently structured RustCrypto implementation that reproduces
+  every frozen matrix checksum, intermediate state, fold, digest, and target
+  rule without linking the C implementation.
+- Expanded adversarial coverage to matrix compression and correlation,
+  sampled rank, pass/row/column omission, coefficient truncation, and an exact
+  64 MiB bit-sliced CPU circuit.
+- Added a transparent FPGA roofline and ASIC sensitivity model plus a local
+  parent-transition soak. These are not hardware benchmarks or public-testnet
+  evidence.
+- Recorded an explicit no-go for consensus and go only for a public
+  non-consensus shadow testnet. RTX 5090 GEMM-time share remains distinct from
+  any unmeasured photonic energy advantage.
+
 ## v0.3-boundary-phase-1-negative - 2026-07-26
 
 - Opened the non-consensus v0.3 hardware-economics research branch with a

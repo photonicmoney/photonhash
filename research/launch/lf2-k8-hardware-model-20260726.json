@@ -1,0 +1,133 @@
+{
+  "status": "roofline_and_sensitivity_model_not_hardware_benchmark",
+  "profile": {
+    "candidate": "LF2-K8",
+    "n": 4096,
+    "passes": 8,
+    "exact_macs_per_attempt": 134217728,
+    "packed_matrix_bank_mib": 64.0,
+    "unpacked_matrix_bank_mib": 128.0,
+    "assumed_parent_lifetime_s": 10.0
+  },
+  "measured_reference": {
+    "hardware": "RTX 5090",
+    "serialized_attempts_s": 1801994.897,
+    "logical_exact_tmac_s_end_to_end": 241.85966094293403,
+    "board_energy_uj_per_attempt_interval": [
+      253.60227,
+      306.523561
+    ],
+    "scope": "measured LF2 pipeline; logical MAC rate is not a vendor peak"
+  },
+  "fpga_rooflines": [
+    {
+      "name": "Altera Agilex 7 M vendor peak",
+      "evidence_class": "vendor_peak_not_lf2_measurement",
+      "hbm_gb_s": 1000.0,
+      "no_weight_reuse_attempts_s": 14901.161193847656,
+      "weight_reuse_attempts_s": {
+        "8": 119209.28955078125,
+        "64": 953674.31640625,
+        "512": 7629394.53125,
+        "8192": 122070312.5
+      },
+      "published_int8_tops": 88.6,
+      "compute_ceiling_attempts_s": {
+        "if_one_mac_is_two_vendor_ops": 330060.7204437256,
+        "if_one_mac_is_one_vendor_op": 660121.4408874512
+      }
+    },
+    {
+      "name": "AMD Versal HBM bandwidth envelope",
+      "evidence_class": "vendor_peak_not_lf2_measurement",
+      "hbm_gb_s": 819.0,
+      "no_weight_reuse_attempts_s": 12204.05101776123,
+      "weight_reuse_attempts_s": {
+        "8": 97632.40814208984,
+        "64": 781059.2651367188,
+        "512": 6248474.12109375,
+        "8192": 99975585.9375
+      }
+    }
+  ],
+  "asic_energy_sensitivity": [
+    {
+      "assumed_pj_per_exact_int8_mac": 0.01,
+      "matrix_only_uj_per_attempt": 1.34217728,
+      "fraction_of_measured_rtx5090_board_energy_interval": [
+        0.004378708362976378,
+        0.005292449787614283
+      ],
+      "warning": "assumption sweep only; excludes SRAM/HBM, SHAKE, fold, control, I/O, cooling, and yield"
+    },
+    {
+      "assumed_pj_per_exact_int8_mac": 0.03,
+      "matrix_only_uj_per_attempt": 4.02653184,
+      "fraction_of_measured_rtx5090_board_energy_interval": [
+        0.013136125088929135,
+        0.015877349362842845
+      ],
+      "warning": "assumption sweep only; excludes SRAM/HBM, SHAKE, fold, control, I/O, cooling, and yield"
+    },
+    {
+      "assumed_pj_per_exact_int8_mac": 0.1,
+      "matrix_only_uj_per_attempt": 13.421772800000001,
+      "fraction_of_measured_rtx5090_board_energy_interval": [
+        0.04378708362976379,
+        0.05292449787614283
+      ],
+      "warning": "assumption sweep only; excludes SRAM/HBM, SHAKE, fold, control, I/O, cooling, and yield"
+    },
+    {
+      "assumed_pj_per_exact_int8_mac": 0.3,
+      "matrix_only_uj_per_attempt": 40.2653184,
+      "fraction_of_measured_rtx5090_board_energy_interval": [
+        0.13136125088929135,
+        0.15877349362842846
+      ],
+      "warning": "assumption sweep only; excludes SRAM/HBM, SHAKE, fold, control, I/O, cooling, and yield"
+    },
+    {
+      "assumed_pj_per_exact_int8_mac": 1.0,
+      "matrix_only_uj_per_attempt": 134.217728,
+      "fraction_of_measured_rtx5090_board_energy_interval": [
+        0.43787083629763784,
+        0.5292449787614283
+      ],
+      "warning": "assumption sweep only; excludes SRAM/HBM, SHAKE, fold, control, I/O, cooling, and yield"
+    }
+  ],
+  "matrix_lifetime": {
+    "rust_matrix_derivation_ms": 227.0,
+    "portable_c_matrix_derivation_ms": 497.0,
+    "cpu_bitslice_pack_ms": 1276.0,
+    "rust_matrix_derivation_fraction_of_10s_tip_lifetime": 0.0227,
+    "portable_c_matrix_derivation_fraction_of_10s_tip_lifetime": 0.0497,
+    "cpu_bitslice_pack_fraction_of_10s_tip_lifetime": 0.1276
+  },
+  "interpretation": [
+    "A 64 MiB packed bank must be streamed, cached in HBM, or tiled into on-chip memory.",
+    "Without weight reuse, HBM bandwidth caps attempts far below the RTX 5090 result.",
+    "With batched vector reuse, compute and routing become the likely FPGA limits.",
+    "Vendor INT8 TOPS do not prove exact LF2 accumulation and epilogue sustain that peak.",
+    "A purpose-built electronic ASIC could plausibly undercut GPU energy; post-layout evidence is required.",
+    "Security does not rely on ASIC resistance, but accessibility and photonic comparisons must include ASICs."
+  ],
+  "sources": [
+    {
+      "claim": "Agilex 7 M advertises up to 88.6 INT8 TOPS and 1 TB/s HBM bandwidth",
+      "url": "https://www.intel.com/content/www/us/en/products/details/fpga/agilex/7/m-series.html"
+    },
+    {
+      "claim": "Versal HBM advertises up to 819 GB/s and 32 GB HBM2e",
+      "url": "https://www.amd.com/en/products/adaptive-socs-and-fpgas/versal/hbm-series.html"
+    },
+    {
+      "claim": "Versal DSP INT8 mode provides a three-element dot-product unit",
+      "url": "https://docs.amd.com/r/en-US/am004-versal-dsp-engine/Dot-Product-Unit"
+    }
+  ],
+  "reproducibility": {
+    "command": "python tools/ph_lf2_hardware_model.py --output research/launch/lf2-k8-hardware-model-20260726.json"
+  }
+}

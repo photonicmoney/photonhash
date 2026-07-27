@@ -1,0 +1,119 @@
+{
+  "elapsed_seconds": 1.0432472999673337,
+  "folded_bucket_histogram": [
+    4109,
+    4140,
+    4238,
+    4118,
+    4101,
+    4094,
+    4079,
+    4098,
+    4121,
+    4045,
+    4063,
+    4035,
+    4020,
+    4056,
+    4147,
+    4072
+  ],
+  "folded_entropy_bits_per_nibble": 3.9998885062555187,
+  "folded_zlib_ratio_mean": 1.00537109375,
+  "independent_derivation": "hashlib.shaKE256",
+  "interpretation": {
+    "exact_fold_required_before_final_shake": true,
+    "limitation": "This tests omission and simple aggregate-collapse attacks. It does not prove that no circuit can compute the folded quantized products more cheaply than separate products.",
+    "one_unknown_uniform_nibble_probability": "2^-4",
+    "whole_vector_guess_probability": "2^-16384"
+  },
+  "linear_collapse_candidates": [
+    {
+      "candidate": "single_offset",
+      "nibble_accuracy": 0.0655975341796875,
+      "vectors": 16,
+      "whole_vector_exact": 0
+    },
+    {
+      "candidate": "summed_offsets",
+      "nibble_accuracy": 0.0655975341796875,
+      "vectors": 16,
+      "whole_vector_exact": 0
+    },
+    {
+      "candidate": "zero_offset",
+      "nibble_accuracy": 0.0655975341796875,
+      "vectors": 16,
+      "whole_vector_exact": 0
+    }
+  ],
+  "pairwise_bucket_equality": {
+    "maximum": 0.1079254150390625,
+    "mean": 0.1048126220703125,
+    "minimum": 0.1017913818359375,
+    "uniform_expectation": 0.0625
+  },
+  "pass_bucket_histogram": [
+    67178,
+    75845,
+    75188,
+    65057,
+    49521,
+    32936,
+    18939,
+    9533,
+    4364,
+    2250,
+    2277,
+    4688,
+    10130,
+    20124,
+    34453,
+    51805
+  ],
+  "pass_omission": [
+    {
+      "empirical_independent_log2_probability": -12194.961108808668,
+      "missing_passes": 1,
+      "nibble_accuracy": 0.126983642578125,
+      "random_exact_log2_probability": -16384,
+      "vectors": 16,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.875
+    },
+    {
+      "empirical_independent_log2_probability": -13409.410419375314,
+      "missing_passes": 2,
+      "nibble_accuracy": 0.1033935546875,
+      "random_exact_log2_probability": -16384,
+      "vectors": 16,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.75
+    },
+    {
+      "empirical_independent_log2_probability": -15492.485802540965,
+      "missing_passes": 4,
+      "nibble_accuracy": 0.0726776123046875,
+      "random_exact_log2_probability": -16384,
+      "vectors": 16,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.5
+    },
+    {
+      "empirical_independent_log2_probability": -16132.623594865414,
+      "missing_passes": 7,
+      "nibble_accuracy": 0.065216064453125,
+      "random_exact_log2_probability": -16384,
+      "vectors": 16,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.125
+    }
+  ],
+  "profile": {
+    "logical_macs": 134217728,
+    "n": 4096,
+    "passes": 8,
+    "vectors": 16
+  },
+  "tool": "ph_launch_fold_analysis.py"
+}

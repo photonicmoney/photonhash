@@ -1,0 +1,11 @@
+{
+  "protocol": "photonhash-shadow/1",
+  "type": "work",
+  "network": "laser-public-shadow",
+  "work_id": "f717ba59a47bbde3c569c411fbab878885fc04d9167ea9c10aaa129441b70202",
+  "parent_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+  "height_hint": 42,
+  "header_hex": "a0b1c2",
+  "shadow_target_le": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "issued_at_ms": 1785123456789
+}

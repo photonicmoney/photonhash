@@ -2,10 +2,11 @@
  * ph_cuda_bench.cu - exact batched CUDA baseline for PhotonHash.
  *
  * This is an adversarial electronic-miner benchmark, not production mining
- * code. It keeps the parent-derived matrix resident on the GPU and measures:
+ * code. It supports the frozen single-matrix v0.2 path and the non-consensus
+ * LF2 parent-derived matrix bank. It keeps all matrices resident and measures:
  *   1. on-device SHAKE256 input binding and signed-vector expansion,
- *   2. exact batched INT8 x INT8 -> INT32 GEMM through cuBLAS,
- *   3. on-device requantization, final SHAKE256, and target comparison.
+ *   2. one exact tall INT8 x INT8 -> INT32 GEMM through cuBLAS,
+ *   3. on-device requantization/folding, final SHAKE256, and target comparison.
  *
  * Every stage is differentially checked against the portable C oracle before
  * timing. The matrix upload and allocations are reported separately and are
@@ -54,11 +55,15 @@ enum {
 
 static const char H_TAG_VECTOR[] = "LASER/PhotonHash/v1/vector";
 static const char H_TAG_FINAL[]  = "LASER/PhotonHash/v1/final";
+static const char H_TAG_LF2_FINAL[] =
+    "LASER/PhotonHash/launch-LF2/final";
 
 __device__ __constant__ char D_TAG_VECTOR[] =
     "LASER/PhotonHash/v1/vector";
 __device__ __constant__ char D_TAG_FINAL[] =
     "LASER/PhotonHash/v1/final";
+__device__ __constant__ char D_TAG_LF2_FINAL[] =
+    "LASER/PhotonHash/launch-LF2/final";
 
 __device__ __constant__ uint64_t D_KECCAK_RC[24] = {
     0x0000000000000001ULL, 0x0000000000008082ULL,
@@ -784,13 +789,21 @@ __global__ void derive_vectors_register_kernel(
 
     int8_t *x = x_out + (size_t)k * n;
     uint32_t packed_count = n / 2u;
-    PH_DECODE_REG_BLOCK(0u);
-    d_keccakf_registers(s);
-    PH_DECODE_REG_BLOCK(136u);
-    d_keccakf_registers(s);
-    PH_DECODE_REG_BLOCK(272u);
-    d_keccakf_registers(s);
-    PH_DECODE_REG_BLOCK(408u);
+    if (n == PH_GENESIS_N) {
+        PH_DECODE_REG_BLOCK(0u);
+        d_keccakf_registers(s);
+        PH_DECODE_REG_BLOCK(136u);
+        d_keccakf_registers(s);
+        PH_DECODE_REG_BLOCK(272u);
+        d_keccakf_registers(s);
+        PH_DECODE_REG_BLOCK(408u);
+    } else {
+        for (uint32_t base = 0; base < packed_count; base += 136u) {
+            PH_DECODE_REG_BLOCK(base);
+            if (base + 136u < packed_count)
+                d_keccakf_registers(s);
+        }
+    }
 }
 
 __global__ void finalize_register_kernel(
@@ -810,11 +823,124 @@ __global__ void finalize_register_kernel(
     const size_t message_len =
         (sizeof H_TAG_FINAL - 1u) + PH_DIGEST_LEN + n / 2u;
     d_reg_state_t s = {};
-    PH_ABSORB_REG_BLOCK(0u);
-    PH_ABSORB_REG_BLOCK(1u);
-    PH_ABSORB_REG_BLOCK(2u);
-    PH_ABSORB_REG_BLOCK(3u);
-    PH_ABSORB_REG_BLOCK(4u);
+    if (n == PH_GENESIS_N) {
+        PH_ABSORB_REG_BLOCK(0u);
+        PH_ABSORB_REG_BLOCK(1u);
+        PH_ABSORB_REG_BLOCK(2u);
+        PH_ABSORB_REG_BLOCK(3u);
+        PH_ABSORB_REG_BLOCK(4u);
+    } else {
+        uint32_t blocks = (uint32_t)(message_len / 136u) + 1u;
+        for (uint32_t block = 0; block < blocks; block++)
+            PH_ABSORB_REG_BLOCK(block);
+    }
+
+    uint8_t *dk = digest_out + (size_t)k * PH_DIGEST_LEN;
+    d_store64_le(dk, s.a0);
+    d_store64_le(dk + 8u, s.a1);
+    d_store64_le(dk + 16u, s.a2);
+    d_store64_le(dk + 24u, s.a3);
+    int meets = 0;
+    for (int i = PH_DIGEST_LEN - 1; i >= 0; i--) {
+        if (dk[i] < target[i]) {
+            meets = 1;
+            break;
+        }
+        if (dk[i] > target[i])
+            break;
+    }
+    meets_out[k] = (uint8_t)meets;
+}
+
+__global__ void fold_lf2_outputs_kernel(
+    uint8_t *folded, const int32_t *y, uint32_t n, uint32_t count,
+    uint32_t passes)
+{
+    size_t item = (size_t)blockIdx.x * blockDim.x + threadIdx.x;
+    size_t packed_n = n / 2u;
+    size_t total = (size_t)count * packed_n;
+    if (item >= total)
+        return;
+    uint32_t nonce = (uint32_t)(item / packed_n);
+    uint32_t ri = (uint32_t)(item % packed_n);
+    unsigned log2n = 0;
+    for (uint32_t v = n; (v >>= 1) != 0; )
+        log2n++;
+    unsigned shift = 8u + (log2n - 9u) / 2u;
+    int32_t offset = 64 * (int32_t)n;
+    const int32_t *yk = y + (size_t)nonce * passes * n;
+    uint8_t packed = 0;
+    for (uint32_t pass = 0; pass < passes; pass++) {
+        const int32_t *yp = yk + (size_t)pass * n;
+        uint8_t lo = (uint8_t)(
+            (((uint32_t)(yp[2u * ri] + offset)) >> shift) & 0x0fu);
+        uint8_t hi = (uint8_t)(
+            (((uint32_t)(yp[2u * ri + 1u] + offset)) >> shift) & 0x0fu);
+        packed ^= (uint8_t)(lo | (uint8_t)(hi << 4));
+    }
+    folded[item] = packed;
+}
+
+__device__ __forceinline__ uint64_t d_lf2_packed_input_word(
+    unsigned block, unsigned lane, const uint8_t *folded, const uint8_t *h,
+    size_t message_len)
+{
+    uint64_t word = 0;
+    const size_t tag_len = sizeof H_TAG_LF2_FINAL - 1u;
+    #pragma unroll
+    for (unsigned j = 0; j < 8u; j++) {
+        size_t i = (size_t)block * 136u + lane * 8u + j;
+        uint8_t v = 0;
+        if (i < message_len) {
+            if (i < tag_len)
+                v = (uint8_t)D_TAG_LF2_FINAL[i];
+            else if (i - tag_len < PH_DIGEST_LEN)
+                v = h[i - tag_len];
+            else
+                v = folded[i - tag_len - PH_DIGEST_LEN];
+        }
+        if (i == message_len)
+            v ^= 0x1fu;
+        if (block == message_len / 136u && lane == 16u && j == 7u)
+            v ^= 0x80u;
+        word |= (uint64_t)v << (8u * j);
+    }
+    return word;
+}
+
+__global__ void finalize_lf2_register_kernel(
+    uint8_t *digest_out, uint8_t *meets_out, const uint8_t *folded,
+    const uint8_t *h_in, const uint8_t *target, uint32_t n, uint32_t count)
+{
+    uint32_t k = blockIdx.x * blockDim.x + threadIdx.x;
+    if (k >= count)
+        return;
+    const uint8_t *rk = folded + (size_t)k * (n / 2u);
+    const uint8_t *hk = h_in + (size_t)k * PH_DIGEST_LEN;
+    const size_t message_len =
+        (sizeof H_TAG_LF2_FINAL - 1u) + PH_DIGEST_LEN + n / 2u;
+    d_reg_state_t s = {};
+    uint32_t blocks = (uint32_t)(message_len / 136u) + 1u;
+    for (uint32_t block = 0; block < blocks; block++) {
+        s.a0 ^= d_lf2_packed_input_word(block, 0u, rk, hk, message_len);
+        s.a1 ^= d_lf2_packed_input_word(block, 1u, rk, hk, message_len);
+        s.a2 ^= d_lf2_packed_input_word(block, 2u, rk, hk, message_len);
+        s.a3 ^= d_lf2_packed_input_word(block, 3u, rk, hk, message_len);
+        s.a4 ^= d_lf2_packed_input_word(block, 4u, rk, hk, message_len);
+        s.a5 ^= d_lf2_packed_input_word(block, 5u, rk, hk, message_len);
+        s.a6 ^= d_lf2_packed_input_word(block, 6u, rk, hk, message_len);
+        s.a7 ^= d_lf2_packed_input_word(block, 7u, rk, hk, message_len);
+        s.a8 ^= d_lf2_packed_input_word(block, 8u, rk, hk, message_len);
+        s.a9 ^= d_lf2_packed_input_word(block, 9u, rk, hk, message_len);
+        s.a10 ^= d_lf2_packed_input_word(block, 10u, rk, hk, message_len);
+        s.a11 ^= d_lf2_packed_input_word(block, 11u, rk, hk, message_len);
+        s.a12 ^= d_lf2_packed_input_word(block, 12u, rk, hk, message_len);
+        s.a13 ^= d_lf2_packed_input_word(block, 13u, rk, hk, message_len);
+        s.a14 ^= d_lf2_packed_input_word(block, 14u, rk, hk, message_len);
+        s.a15 ^= d_lf2_packed_input_word(block, 15u, rk, hk, message_len);
+        s.a16 ^= d_lf2_packed_input_word(block, 16u, rk, hk, message_len);
+        d_keccakf_registers(s);
+    }
 
     uint8_t *dk = digest_out + (size_t)k * PH_DIGEST_LEN;
     d_store64_le(dk, s.a0);
@@ -1080,7 +1206,7 @@ static void launch_vectors(int8_t *d_x, uint8_t *d_h,
 
 static void launch_gemm(cublasHandle_t handle, const int8_t *d_m,
                         const int8_t *d_x, int32_t *d_y,
-                        uint32_t n, uint32_t batch)
+                        uint32_t n, uint32_t rows, uint32_t batch)
 {
     const int alpha = 1;
     const int beta = 0;
@@ -1091,25 +1217,35 @@ static void launch_gemm(cublasHandle_t handle, const int8_t *d_m,
      */
     check_cublas(cublasGemmEx(
         handle, CUBLAS_OP_T, CUBLAS_OP_N,
-        (int)n, (int)batch, (int)n,
+        (int)rows, (int)batch, (int)n,
         &alpha,
         d_m, CUDA_R_8I, (int)n,
         d_x, CUDA_R_8I, (int)n,
         &beta,
-        d_y, CUDA_R_32I, (int)n,
+        d_y, CUDA_R_32I, (int)rows,
         CUBLAS_COMPUTE_32I, (cublasGemmAlgo_t)PH_CUBLAS_ALGO),
         "exact INT8 GEMM");
 }
 
 static void launch_final(uint8_t *d_digest, uint8_t *d_meets,
-                         const int32_t *d_y, const uint8_t *d_h,
+                         uint8_t *d_folded, const int32_t *d_y,
+                         const uint8_t *d_h,
                          const uint8_t *d_target,
                          uint32_t n, uint32_t batch, int shake_mode,
+                         uint32_t passes,
                          cudaStream_t stream = 0)
 {
     unsigned work_items = shake_mode == SHAKE_WARP ? batch * 32u : batch;
     unsigned blocks = (work_items + CUDA_THREADS - 1u) / CUDA_THREADS;
-    if (shake_mode == SHAKE_WARP) {
+    if (passes > 1u) {
+        size_t fold_items = (size_t)batch * (n / 2u);
+        unsigned fold_blocks = (unsigned)(
+            (fold_items + CUDA_THREADS - 1u) / CUDA_THREADS);
+        fold_lf2_outputs_kernel<<<fold_blocks, CUDA_THREADS, 0, stream>>>(
+            d_folded, d_y, n, batch, passes);
+        finalize_lf2_register_kernel<<<blocks, CUDA_THREADS, 0, stream>>>(
+            d_digest, d_meets, d_folded, d_h, d_target, n, batch);
+    } else if (shake_mode == SHAKE_WARP) {
         finalize_warp_kernel<<<blocks, CUDA_THREADS, 0, stream>>>(
             d_digest, d_meets, d_y, d_h, d_target, n, batch);
     } else if (shake_mode == SHAKE_REGISTER) {
@@ -1125,18 +1261,20 @@ static void launch_final(uint8_t *d_digest, uint8_t *d_meets,
     check_cuda(cudaGetLastError(), "finalize_kernel launch");
 }
 
-static int validate_pipeline(const ph_matrix_t *matrix,
+static int validate_pipeline(const std::vector<ph_matrix_t> &matrices,
                              const uint8_t *header, size_t header_len,
                              const uint8_t target[PH_DIGEST_LEN],
                              const int8_t *d_x, const int32_t *d_y,
                              const uint8_t *d_h, const uint8_t *d_digest,
                              const uint8_t *d_meets, uint32_t batch,
-                             uint64_t first_nonce)
+                             uint64_t first_nonce, uint32_t validation_nonces,
+                             uint32_t passes)
 {
-    uint32_t count = std::min(batch, (uint32_t)VALIDATION_NONCES);
+    uint32_t count = std::min(batch, validation_nonces);
+    const ph_matrix_t *matrix = &matrices[0];
     uint32_t n = matrix->n;
     std::vector<int8_t> got_x((size_t)count * n);
-    std::vector<int32_t> got_y((size_t)count * n);
+    std::vector<int32_t> got_y((size_t)count * passes * n);
     std::vector<uint8_t> got_h((size_t)count * PH_DIGEST_LEN);
     std::vector<uint8_t> got_d((size_t)count * PH_DIGEST_LEN);
     std::vector<uint8_t> got_meets(count);
@@ -1154,6 +1292,9 @@ static int validate_pipeline(const ph_matrix_t *matrix,
     std::vector<int8_t> ref_x(n);
     std::vector<int32_t> ref_y(n);
     std::vector<uint8_t> ref_r(n / 2u);
+    std::vector<int8_t> permuted_x(n);
+    std::vector<int32_t> pass_y(n);
+    std::vector<uint8_t> folded_r(n / 2u);
     uint8_t ref_h[PH_DIGEST_LEN], ref_d[PH_DIGEST_LEN];
     for (uint32_t k = 0; k < count; k++) {
         if (ph_hash_trace(ref_d, ref_h, ref_x.data(), ref_y.data(),
@@ -1172,10 +1313,63 @@ static int validate_pipeline(const ph_matrix_t *matrix,
             std::fprintf(stderr, "GPU x mismatch at nonce %u\n", k);
             return 0;
         }
-        if (std::memcmp(ref_y.data(), got_y.data() + (size_t)k * n,
-                        (size_t)n * sizeof(int32_t)) != 0) {
-            std::fprintf(stderr, "GPU y mismatch at nonce %u\n", k);
-            return 0;
+        if (passes == 1u) {
+            if (std::memcmp(ref_y.data(), got_y.data() + (size_t)k * n,
+                            (size_t)n * sizeof(int32_t)) != 0) {
+                std::fprintf(stderr, "GPU y mismatch at nonce %u\n", k);
+                return 0;
+            }
+        } else {
+            std::fill(folded_r.begin(), folded_r.end(), 0u);
+            unsigned log2n = 0;
+            for (uint32_t v = n; (v >>= 1) != 0; )
+                log2n++;
+            unsigned shift = 8u + (log2n - 9u) / 2u;
+            int32_t offset = 64 * (int32_t)n;
+            for (uint32_t pass = 0; pass < passes; pass++) {
+                for (uint32_t i = 0; i < n; i++)
+                    permuted_x[i] = ref_x[i];
+                for (uint32_t i = 0; i < n; i++) {
+                    const int8_t *row =
+                        matrices[pass].m + (size_t)i * n;
+                    int32_t acc = 0;
+                    for (uint32_t j = 0; j < n; j++)
+                        acc += (int32_t)row[j] * (int32_t)permuted_x[j];
+                    pass_y[i] = acc;
+                }
+                const int32_t *got_pass = got_y.data() +
+                    ((size_t)k * passes + pass) * n;
+                if (std::memcmp(pass_y.data(), got_pass,
+                                (size_t)n * sizeof(int32_t)) != 0) {
+                    uint32_t first_bad = 0;
+                    while (first_bad < n &&
+                           pass_y[first_bad] == got_pass[first_bad])
+                        first_bad++;
+                    std::fprintf(stderr,
+                                 "GPU LF2 y mismatch at nonce %u pass %u "
+                                 "row %u: expected %d got %d\n",
+                                 k, pass, first_bad,
+                                 first_bad < n ? pass_y[first_bad] : 0,
+                                 first_bad < n ? got_pass[first_bad] : 0);
+                    return 0;
+                }
+                for (uint32_t i = 0; i < n; i += 2u) {
+                    uint8_t lo = (uint8_t)(
+                        (((uint32_t)(pass_y[i] + offset)) >> shift) & 0x0fu);
+                    uint8_t hi = (uint8_t)(
+                        (((uint32_t)(pass_y[i + 1u] + offset)) >> shift) &
+                         0x0fu);
+                    folded_r[i / 2u] ^=
+                        (uint8_t)(lo | (uint8_t)(hi << 4));
+                }
+            }
+            ph_shake256_t c;
+            ph_shake256_init(&c);
+            ph_shake256_absorb(&c, H_TAG_LF2_FINAL,
+                               sizeof H_TAG_LF2_FINAL - 1u);
+            ph_shake256_absorb(&c, ref_h, PH_DIGEST_LEN);
+            ph_shake256_absorb(&c, folded_r.data(), folded_r.size());
+            ph_shake256_squeeze(&c, ref_d, PH_DIGEST_LEN);
         }
         if (std::memcmp(ref_d, got_d.data() + (size_t)k * PH_DIGEST_LEN,
                         PH_DIGEST_LEN) != 0) {
@@ -1187,8 +1381,9 @@ static int validate_pipeline(const ph_matrix_t *matrix,
             return 0;
         }
     }
-    std::printf("validation:          %u/%u nonces match h_in, x, y, d, target\n",
-                count, count);
+    std::printf(
+        "validation:          %u/%u nonces match h_in, x, %u-pass y, d, target\n",
+        count, count, passes);
     return 1;
 }
 
@@ -1209,9 +1404,25 @@ int main(int argc, char **argv)
         shake_mode = SHAKE_REGISTER;
     uint32_t dataset =
         argc > 4 ? (uint32_t)std::strtoul(argv[4], nullptr, 10) : 0u;
-    if (batch == 0 || iterations == 0 || batch > (1u << 20)) {
-        std::fprintf(stderr, "usage: %s [batch 1..1048576] [iterations > 0]\n",
-                     argv[0]);
+    uint32_t requested_n =
+        argc > 5 ? (uint32_t)std::strtoul(argv[5], nullptr, 10) : PH_GENESIS_N;
+    uint32_t validation_nonces =
+        argc > 6 ? (uint32_t)std::strtoul(argv[6], nullptr, 10)
+                 : (uint32_t)VALIDATION_NONCES;
+    uint32_t passes =
+        argc > 7 ? (uint32_t)std::strtoul(argv[7], nullptr, 10) : 1u;
+    if (batch == 0 || iterations == 0 || batch > (1u << 20) ||
+        requested_n < 1024u || requested_n > 16384u ||
+        (requested_n & (requested_n - 1u)) != 0u ||
+        validation_nonces == 0 || validation_nonces > VALIDATION_NONCES ||
+        passes == 0 || passes > 32u) {
+        std::fprintf(
+            stderr,
+            "usage: %s [batch 1..1048576] [iterations > 0] "
+            "[register|direct|warp|thread] [dataset] "
+            "[power-of-two n 1024..16384] [validation nonces 1..%u] "
+            "[LF2 passes 1..32]\n",
+            argv[0], (unsigned)VALIDATION_NONCES);
         return 2;
     }
     if (argc > 3 && std::strcmp(argv[3], "register") != 0 &&
@@ -1220,6 +1431,10 @@ int main(int argc, char **argv)
         std::strcmp(argv[3], "thread") != 0) {
         std::fprintf(stderr,
                      "kernel must be register, direct, warp, or thread\n");
+        return 2;
+    }
+    if (passes > 1u && shake_mode != SHAKE_REGISTER) {
+        std::fprintf(stderr, "LF2 multi-pass mode requires register SHAKE\n");
         return 2;
     }
 
@@ -1236,34 +1451,70 @@ int main(int argc, char **argv)
     std::snprintf(label, sizeof label, "cuda-bench-target-%u", dataset);
     ph_shake256(target, sizeof target, label, std::strlen(label));
 
-    ph_matrix_t matrix = {};
-    if (ph_matrix_derive(&matrix, PH_GENESIS_N, parent) != 0) {
+    std::vector<ph_matrix_t> matrices(passes);
+    if (ph_matrix_derive(&matrices[0], requested_n, parent) != 0) {
         std::fprintf(stderr, "matrix derivation failed\n");
         return 1;
     }
-    uint32_t n = matrix.n;
-    size_t matrix_bytes = (size_t)n * n;
+    uint32_t n = matrices[0].n;
+    static const char matrix_tag[] =
+        "LASER/PhotonHash/launch-LF2/matrix";
+    for (uint32_t pass = 1; pass < passes; pass++) {
+        uint8_t pass_parent[PH_DIGEST_LEN];
+        uint8_t pass_le[4] = {
+            (uint8_t)pass, (uint8_t)(pass >> 8),
+            (uint8_t)(pass >> 16), (uint8_t)(pass >> 24)
+        };
+        ph_shake256_t c;
+        ph_shake256_init(&c);
+        ph_shake256_absorb(&c, matrix_tag, sizeof matrix_tag - 1u);
+        ph_shake256_absorb(&c, parent, sizeof parent);
+        ph_shake256_absorb(&c, pass_le, sizeof pass_le);
+        ph_shake256_squeeze(&c, pass_parent, sizeof pass_parent);
+        if (ph_matrix_derive(&matrices[pass], requested_n, pass_parent) != 0) {
+            std::fprintf(stderr, "matrix derivation failed at pass %u\n", pass);
+            return 1;
+        }
+    }
+    size_t one_matrix_bytes = (size_t)n * n;
+    size_t matrix_bytes = one_matrix_bytes * passes;
+    std::vector<int8_t> matrix_bank(matrix_bytes);
+    for (uint32_t pass = 0; pass < passes; pass++)
+        std::memcpy(matrix_bank.data() + (size_t)pass * one_matrix_bytes,
+                    matrices[pass].m, one_matrix_bytes);
     size_t x_bytes = (size_t)batch * n;
-    size_t y_bytes = (size_t)batch * n * sizeof(int32_t);
+    size_t y_bytes = (size_t)batch * passes * n * sizeof(int32_t);
     size_t h_bytes = (size_t)batch * PH_DIGEST_LEN;
     size_t d_bytes = (size_t)batch * PH_DIGEST_LEN;
+    size_t fold_bytes = (size_t)batch * (n / 2u);
 
     int8_t *d_m = nullptr, *d_x = nullptr;
     int32_t *d_y = nullptr;
-    uint8_t *d_h = nullptr, *d_digest = nullptr;
+    uint8_t *d_h = nullptr, *d_digest = nullptr, *d_folded = nullptr;
     uint8_t *d_meets = nullptr, *d_header = nullptr, *d_target = nullptr;
     check_cuda(cudaMalloc((void **)&d_m, matrix_bytes), "cudaMalloc M");
     check_cuda(cudaMalloc((void **)&d_x, x_bytes), "cudaMalloc X");
     check_cuda(cudaMalloc((void **)&d_y, y_bytes), "cudaMalloc Y");
     check_cuda(cudaMalloc((void **)&d_h, h_bytes), "cudaMalloc h_in");
     check_cuda(cudaMalloc((void **)&d_digest, d_bytes), "cudaMalloc digest");
+    check_cuda(cudaMalloc((void **)&d_folded, fold_bytes),
+               "cudaMalloc folded output");
     check_cuda(cudaMalloc((void **)&d_meets, batch), "cudaMalloc meets");
     check_cuda(cudaMalloc((void **)&d_header, sizeof header), "cudaMalloc header");
     check_cuda(cudaMalloc((void **)&d_target, sizeof target), "cudaMalloc target");
 
     auto upload_start = std::chrono::steady_clock::now();
-    check_cuda(cudaMemcpy(d_m, matrix.m, matrix_bytes, cudaMemcpyHostToDevice),
+    check_cuda(cudaMemcpy(d_m, matrix_bank.data(), matrix_bytes,
+                          cudaMemcpyHostToDevice),
                "upload M");
+    std::vector<int8_t> matrix_check(matrix_bytes);
+    check_cuda(cudaMemcpy(matrix_check.data(), d_m, matrix_bytes,
+                          cudaMemcpyDeviceToHost),
+               "read back M for validation");
+    if (std::memcmp(matrix_check.data(), matrix_bank.data(), matrix_bytes) != 0) {
+        std::fprintf(stderr, "resident matrix bank differs after upload\n");
+        return 1;
+    }
     check_cuda(cudaMemcpy(d_header, header, sizeof header,
                           cudaMemcpyHostToDevice), "upload header");
     check_cuda(cudaMemcpy(d_target, target, sizeof target,
@@ -1278,20 +1529,21 @@ int main(int argc, char **argv)
     for (unsigned warmup = 0; warmup < 3; warmup++) {
         launch_vectors(d_x, d_h, d_header, sizeof header,
                        (uint64_t)warmup * batch, n, batch, shake_mode);
-        launch_gemm(handle, d_m, d_x, d_y, n, batch);
-        launch_final(d_digest, d_meets, d_y, d_h, d_target, n, batch,
-                     shake_mode);
+        launch_gemm(handle, d_m, d_x, d_y, n, n * passes, batch);
+        launch_final(d_digest, d_meets, d_folded, d_y, d_h, d_target, n, batch,
+                     shake_mode, passes);
     }
     check_cuda(cudaDeviceSynchronize(), "warmup synchronize");
 
     launch_vectors(d_x, d_h, d_header, sizeof header, 0, n, batch,
                    shake_mode);
-    launch_gemm(handle, d_m, d_x, d_y, n, batch);
-    launch_final(d_digest, d_meets, d_y, d_h, d_target, n, batch,
-                 shake_mode);
+    launch_gemm(handle, d_m, d_x, d_y, n, n * passes, batch);
+    launch_final(d_digest, d_meets, d_folded, d_y, d_h, d_target, n, batch,
+                 shake_mode, passes);
     check_cuda(cudaDeviceSynchronize(), "validation synchronize");
-    if (!validate_pipeline(&matrix, header, sizeof header, target,
-                           d_x, d_y, d_h, d_digest, d_meets, batch, 0))
+    if (!validate_pipeline(matrices, header, sizeof header, target,
+                            d_x, d_y, d_h, d_digest, d_meets, batch, 0,
+                            validation_nonces, passes))
         return 1;
 
     cudaEvent_t e0, e1, e2, e3;
@@ -1311,10 +1563,10 @@ int main(int argc, char **argv)
         launch_vectors(d_x, d_h, d_header, sizeof header,
                        first_nonce, n, batch, shake_mode);
         check_cuda(cudaEventRecord(e1), "record e1");
-        launch_gemm(handle, d_m, d_x, d_y, n, batch);
+        launch_gemm(handle, d_m, d_x, d_y, n, n * passes, batch);
         check_cuda(cudaEventRecord(e2), "record e2");
-        launch_final(d_digest, d_meets, d_y, d_h, d_target, n, batch,
-                     shake_mode);
+        launch_final(d_digest, d_meets, d_folded, d_y, d_h, d_target, n, batch,
+                     shake_mode, passes);
         check_cuda(cudaEventRecord(e3), "record e3");
         check_cuda(cudaEventSynchronize(e3), "synchronize e3");
         check_cuda(cudaEventElapsedTime(&ms, e0, e1), "elapsed vectors");
@@ -1340,6 +1592,7 @@ int main(int argc, char **argv)
     std::vector<int32_t *> pipeline_y(pipeline_depth, nullptr);
     std::vector<uint8_t *> pipeline_h(pipeline_depth, nullptr);
     std::vector<uint8_t *> pipeline_digest(pipeline_depth, nullptr);
+    std::vector<uint8_t *> pipeline_folded(pipeline_depth, nullptr);
     std::vector<uint8_t *> pipeline_meets(pipeline_depth, nullptr);
     std::vector<cudaStream_t> pipeline_stream(pipeline_depth, nullptr);
     std::vector<cublasHandle_t> pipeline_handle(pipeline_depth, nullptr);
@@ -1347,6 +1600,7 @@ int main(int argc, char **argv)
     pipeline_y[0] = d_y;
     pipeline_h[0] = d_h;
     pipeline_digest[0] = d_digest;
+    pipeline_folded[0] = d_folded;
     pipeline_meets[0] = d_meets;
     pipeline_handle[0] = handle;
     for (unsigned slot = 0; slot < pipeline_depth; slot++) {
@@ -1368,6 +1622,8 @@ int main(int argc, char **argv)
                        "cudaMalloc pipeline h");
             check_cuda(cudaMalloc((void **)&pipeline_digest[slot], d_bytes),
                        "cudaMalloc pipeline digest");
+            check_cuda(cudaMalloc((void **)&pipeline_folded[slot], fold_bytes),
+                       "cudaMalloc pipeline folded output");
             check_cuda(cudaMalloc((void **)&pipeline_meets[slot], batch),
                        "cudaMalloc pipeline meets");
         }
@@ -1379,21 +1635,24 @@ int main(int argc, char **argv)
                        sizeof header, pipeline_first + (uint64_t)slot * batch,
                        n, batch, shake_mode, pipeline_stream[slot]);
         launch_gemm(pipeline_handle[slot], d_m, pipeline_x[slot],
-                    pipeline_y[slot], n, batch);
+                    pipeline_y[slot], n, n * passes, batch);
         launch_final(pipeline_digest[slot], pipeline_meets[slot],
+                     pipeline_folded[slot],
                      pipeline_y[slot], pipeline_h[slot], d_target, n, batch,
-                     shake_mode, pipeline_stream[slot]);
+                     shake_mode, passes, pipeline_stream[slot]);
     }
     for (unsigned slot = 0; slot < pipeline_depth; slot++)
         check_cuda(cudaStreamSynchronize(pipeline_stream[slot]),
                    "pipeline warmup synchronize");
 
-    for (unsigned slot = 0; slot < pipeline_depth; slot++) {
+    unsigned validation_slots = passes > 1u ? 1u : pipeline_depth;
+    for (unsigned slot = 0; slot < validation_slots; slot++) {
         if (!validate_pipeline(
-                &matrix, header, sizeof header, target,
+                matrices, header, sizeof header, target,
                 pipeline_x[slot], pipeline_y[slot], pipeline_h[slot],
                 pipeline_digest[slot], pipeline_meets[slot], batch,
-                pipeline_first + (uint64_t)slot * batch))
+                pipeline_first + (uint64_t)slot * batch,
+                validation_nonces, passes))
             return 1;
     }
 
@@ -1411,10 +1670,11 @@ int main(int argc, char **argv)
                        sizeof header, pipeline_first, n, batch, shake_mode,
                        pipeline_stream[slot]);
         launch_gemm(pipeline_handle[slot], d_m, pipeline_x[slot],
-                    pipeline_y[slot], n, batch);
+                    pipeline_y[slot], n, n * passes, batch);
         launch_final(pipeline_digest[slot], pipeline_meets[slot],
+                     pipeline_folded[slot],
                      pipeline_y[slot], pipeline_h[slot], d_target, n, batch,
-                     shake_mode, pipeline_stream[slot]);
+                     shake_mode, passes, pipeline_stream[slot]);
         pipeline_first += batch;
     }
     for (unsigned slot = 0; slot < pipeline_depth; slot++)
@@ -1428,13 +1688,14 @@ int main(int argc, char **argv)
     double attempts = (double)batch * iterations;
     double device_ms = (double)vector_ms + gemm_ms + final_ms;
     double device_s = device_ms / 1000.0;
-    double macs = attempts * (double)n * n;
+    double macs = attempts * passes * (double)n * n;
     std::printf("\n%s\n", ph_version());
     std::printf("device:              %s (cc %d.%d, %zu MiB global)\n",
                 props.name, props.major, props.minor,
                 (size_t)props.totalGlobalMem >> 20);
-    std::printf("profile:             n=%u batch=%u iterations=%u dataset=%u\n",
-                n, batch, iterations, dataset);
+    std::printf(
+        "profile:             n=%u passes=%u batch=%u iterations=%u dataset=%u\n",
+        n, passes, batch, iterations, dataset);
     const char *shake_name = shake_mode == SHAKE_REGISTER ?
         "register-per-state" : (shake_mode == SHAKE_DIRECT ? "direct-lane" :
         (shake_mode == SHAKE_WARP ? "warp-per-state" : "thread-per-state"));
@@ -1448,13 +1709,14 @@ int main(int argc, char **argv)
     std::printf("CUDA build/runtime:  nvcc %d.%d, runtime %d, driver %d\n",
                 __CUDACC_VER_MAJOR__, __CUDACC_VER_MINOR__,
                 runtime_version, driver_version);
-    std::printf("resident matrix:     %.3f MiB, upload %.3f ms (excluded)\n",
+    std::printf("resident matrix bank: %.3f MiB, upload+check %.3f ms (excluded)\n",
                 matrix_bytes / (1024.0 * 1024.0), upload_ms);
     std::printf("scratch/output:      %.3f MiB\n",
-                (x_bytes + y_bytes + h_bytes + d_bytes + batch) /
+                (x_bytes + y_bytes +
+                 h_bytes + d_bytes + fold_bytes + batch) /
                 (1024.0 * 1024.0));
     std::printf("\nGPU stage timings:\n");
-    std::printf("vector SHAKE+decode: %9.3f us/attempt  %6.2f%%\n",
+    std::printf("vector SHAKE+expand: %9.3f us/attempt  %6.2f%%\n",
                 vector_ms * 1000.0 / attempts,
                 100.0 * vector_ms / device_ms);
     std::printf("exact INT8 GEMM:     %9.3f us/attempt  %6.2f%%\n",
@@ -1531,6 +1793,7 @@ int main(int argc, char **argv)
             cudaFree(pipeline_y[slot]);
             cudaFree(pipeline_h[slot]);
             cudaFree(pipeline_digest[slot]);
+            cudaFree(pipeline_folded[slot]);
             cudaFree(pipeline_meets[slot]);
         }
     }
@@ -1540,9 +1803,11 @@ int main(int argc, char **argv)
     cudaFree(d_y);
     cudaFree(d_h);
     cudaFree(d_digest);
+    cudaFree(d_folded);
     cudaFree(d_meets);
     cudaFree(d_header);
     cudaFree(d_target);
-    ph_matrix_free(&matrix);
+    for (uint32_t pass = 0; pass < passes; pass++)
+        ph_matrix_free(&matrices[pass]);
     return 0;
 }

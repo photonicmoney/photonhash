@@ -1,0 +1,327 @@
+{
+  "coefficient_bit_drop_attacks": [
+    {
+      "dropped_coefficient_bits": 1,
+      "independent_log2_exact_estimate": -15565.51399680305,
+      "nibble_accuracy": 0.07178497314453125,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "dropped_coefficient_bits": 2,
+      "independent_log2_exact_estimate": -15837.991778724641,
+      "nibble_accuracy": 0.06855010986328125,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "dropped_coefficient_bits": 3,
+      "independent_log2_exact_estimate": -16158.25741416237,
+      "nibble_accuracy": 0.06493377685546875,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    }
+  ],
+  "cold_setup_amortization": {
+    "future_parent_precomputation": "not available under SHAKE preimage assumption",
+    "matrix_is_parent_dependent": true,
+    "note": "Setup is paid once after a new parent and approaches zero per nonce at mining batch scale. It must not be charged per attempt.",
+    "setup_fraction_by_block_interval_seconds": {
+      "10": {
+        "bitslice_pack_1.276s_fraction": 0.1276,
+        "portable_c_0.497s_fraction": 0.0497,
+        "rust_0.227s_fraction": 0.0227
+      },
+      "120": {
+        "bitslice_pack_1.276s_fraction": 0.010633333333333333,
+        "portable_c_0.497s_fraction": 0.004141666666666667,
+        "rust_0.227s_fraction": 0.0018916666666666667
+      },
+      "30": {
+        "bitslice_pack_1.276s_fraction": 0.04253333333333333,
+        "portable_c_0.497s_fraction": 0.016566666666666667,
+        "rust_0.227s_fraction": 0.007566666666666667
+      },
+      "60": {
+        "bitslice_pack_1.276s_fraction": 0.021266666666666666,
+        "portable_c_0.497s_fraction": 0.008283333333333334,
+        "rust_0.227s_fraction": 0.0037833333333333334
+      },
+      "600": {
+        "bitslice_pack_1.276s_fraction": 0.002126666666666667,
+        "portable_c_0.497s_fraction": 0.0008283333333333334,
+        "rust_0.227s_fraction": 0.00037833333333333333
+      }
+    }
+  },
+  "elapsed_seconds": 121.04707920004148,
+  "fold": {
+    "entropy_bits_per_nibble": 3.999831678881197,
+    "histogram": [
+      8400,
+      8165,
+      8315,
+      8131,
+      8300,
+      8189,
+      8148,
+      8310,
+      7930,
+      7980,
+      8140,
+      8177,
+      8295,
+      8143,
+      8106,
+      8343
+    ],
+    "modal_probability": 0.0640869140625
+  },
+  "limitations": [
+    "No finite corpus proves SHAKE-derived matrices are random.",
+    "Sampled minors are structural tripwires, not full 4096-rank proofs.",
+    "The independence exponents are estimates and are not used as formal security bounds.",
+    "Custom GPU, FPGA, or ASIC circuits may improve exact evaluation even when these approximations fail."
+  ],
+  "matrix_bank": {
+    "chi_square_15df": 10.868119478225708,
+    "cross_matrix_correlation_abs_max": 0.002909030937896218,
+    "cross_matrix_correlation_abs_mean": 0.0008508797104915184,
+    "cross_matrix_correlation_sample_entries": 1000000,
+    "entry_histogram_-8_to_7": [
+      8382164,
+      8387622,
+      8390731,
+      8385955,
+      8390473,
+      8389324,
+      8386952,
+      8386643,
+      8389533,
+      8388683,
+      8389931,
+      8389469,
+      8389187,
+      8390664,
+      8392802,
+      8387595
+    ],
+    "packed_zlib_ratio_mean": 1.0003052949905396,
+    "packed_zlib_ratio_min": 1.0003052949905396,
+    "sampled_minors": [
+      {
+        "condition_number": 953.4349397244176,
+        "dimension": 512,
+        "matrix": 0,
+        "rank": 512,
+        "top_quarter_frobenius_energy": 0.625474830792117,
+        "top_to_median_singular": 3.433530188870657
+      },
+      {
+        "condition_number": 2367.165200089139,
+        "dimension": 512,
+        "matrix": 1,
+        "rank": 512,
+        "top_quarter_frobenius_energy": 0.6274854487202471,
+        "top_to_median_singular": 3.5179203844060067
+      }
+    ]
+  },
+  "pass_omission": [
+    {
+      "best_constant_guess": 2,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -11377.905096882863,
+      "missing_passes": 1,
+      "nibble_accuracy": 0.14581298828125,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.875
+    },
+    {
+      "best_constant_guess": 0,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -13259.582412807242,
+      "missing_passes": 2,
+      "nibble_accuracy": 0.106048583984375,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.75
+    },
+    {
+      "best_constant_guess": 2,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -14778.716860694969,
+      "missing_passes": 3,
+      "nibble_accuracy": 0.08200836181640625,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.625
+    },
+    {
+      "best_constant_guess": 0,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -15443.066498099555,
+      "missing_passes": 4,
+      "nibble_accuracy": 0.0732879638671875,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.5
+    },
+    {
+      "best_constant_guess": 0,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -15816.328009164716,
+      "missing_passes": 5,
+      "nibble_accuracy": 0.0688018798828125,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.375
+    },
+    {
+      "best_constant_guess": 3,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -16006.773084197719,
+      "missing_passes": 6,
+      "nibble_accuracy": 0.066619873046875,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.25
+    },
+    {
+      "best_constant_guess": 1,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -16195.869641557696,
+      "missing_passes": 7,
+      "nibble_accuracy": 0.06452178955078125,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.125
+    }
+  ],
+  "profile": {
+    "exact_macs_per_attempt": 134217728,
+    "n": 4096,
+    "packed_matrix_bank_bytes": 67108864,
+    "passes": 8,
+    "unpacked_int8_bank_bytes": 134217728,
+    "vectors": 32
+  },
+  "row_omission": [
+    {
+      "efficiency_upper_bound": 0.0641025641025641,
+      "log2_exact_guess": -3.963826387446515,
+      "missing_rows": 1,
+      "modal_nibble_probability": 0.0640869140625,
+      "work_fraction": 0.999755859375
+    },
+    {
+      "efficiency_upper_bound": 0.004109138969566744,
+      "log2_exact_guess": -7.92765277489303,
+      "missing_rows": 2,
+      "modal_nibble_probability": 0.0640869140625,
+      "work_fraction": 0.99951171875
+    },
+    {
+      "efficiency_upper_bound": 1.688502710085045e-05,
+      "log2_exact_guess": -15.85530554978606,
+      "missing_rows": 4,
+      "modal_nibble_probability": 0.0640869140625,
+      "work_fraction": 0.9990234375
+    },
+    {
+      "efficiency_upper_bound": 2.8510441262503723e-10,
+      "log2_exact_guess": -31.71061109957212,
+      "missing_rows": 8,
+      "modal_nibble_probability": 0.0640869140625,
+      "work_fraction": 0.998046875
+    },
+    {
+      "efficiency_upper_bound": 8.128483739011067e-20,
+      "log2_exact_guess": -63.42122219914424,
+      "missing_rows": 16,
+      "modal_nibble_probability": 0.0640869140625,
+      "work_fraction": 0.99609375
+    },
+    {
+      "efficiency_upper_bound": 4.36594690701805e-77,
+      "log2_exact_guess": -253.68488879657696,
+      "missing_rows": 64,
+      "modal_nibble_probability": 0.0640869140625,
+      "work_fraction": 0.984375
+    },
+    {
+      "efficiency_upper_bound": 3.639023211956743e-306,
+      "log2_exact_guess": -1014.7395551863078,
+      "missing_rows": 256,
+      "modal_nibble_probability": 0.0640869140625,
+      "work_fraction": 0.9375
+    }
+  ],
+  "selected_column_attacks": [
+    {
+      "column_fraction": 0.5,
+      "columns": 2048,
+      "independent_log2_exact_estimate": -16029.14775418372,
+      "mean_per_pass_bucket_accuracy": 0.20894145965576172,
+      "nibble_accuracy": 0.06636810302734375,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.75,
+      "columns": 3072,
+      "independent_log2_exact_estimate": -15473.905096882863,
+      "mean_per_pass_bucket_accuracy": 0.2891225814819336,
+      "nibble_accuracy": 0.072906494140625,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.875,
+      "columns": 3584,
+      "independent_log2_exact_estimate": -14204.966591989376,
+      "mean_per_pass_bucket_accuracy": 0.39203643798828125,
+      "nibble_accuracy": 0.09037017822265625,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.9375,
+      "columns": 3840,
+      "independent_log2_exact_estimate": -12718.05058920996,
+      "mean_per_pass_bucket_accuracy": 0.5134487152099609,
+      "nibble_accuracy": 0.1162261962890625,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.96875,
+      "columns": 3968,
+      "independent_log2_exact_estimate": -10903.1031063115,
+      "mean_per_pass_bucket_accuracy": 0.6374664306640625,
+      "nibble_accuracy": 0.15801239013671875,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.984375,
+      "columns": 4032,
+      "independent_log2_exact_estimate": -8938.155721834006,
+      "mean_per_pass_bucket_accuracy": 0.7409400939941406,
+      "nibble_accuracy": 0.22034454345703125,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.9921875,
+      "columns": 4064,
+      "independent_log2_exact_estimate": -7054.891730592001,
+      "mean_per_pass_bucket_accuracy": 0.8181047439575195,
+      "nibble_accuracy": 0.30304718017578125,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    }
+  ],
+  "tool": "ph_lf2_adversarial.py"
+}

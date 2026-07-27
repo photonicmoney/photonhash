@@ -1,0 +1,70 @@
+{
+  "status": "provisional_launch_candidate_not_consensus",
+  "date": "2026-07-26",
+  "candidate": {
+    "name": "LF2-K8",
+    "dimension": 4096,
+    "matrix_passes": 8,
+    "logical_macs_per_attempt": 134217728,
+    "resident_matrix_bank_mib": 128,
+    "construction": "one nonce vector, eight independent parent-derived matrices, exact requantization, XOR fold, one final SHAKE256"
+  },
+  "rtx5090": {
+    "device": "NVIDIA GeForce RTX 5090",
+    "compute_capability": "12.0",
+    "cuda_build_runtime_driver": "13.2 / 13020 / 13020",
+    "batch": 8192,
+    "short_three_parent_screen": {
+      "iterations_per_parent": 256,
+      "matrix_share_percent_mean": 61.739087,
+      "matrix_share_percent_min": 61.549779,
+      "matrix_share_percent_max": 61.982850,
+      "device_attempts_per_second_mean": 1805986.898,
+      "pipeline_attempts_per_second_mean": 1965039.269
+    },
+    "long_power_runs": {
+      "iterations_per_parent": 1024,
+      "parents": 2,
+      "matrix_share_percent_mean": 61.793667,
+      "serialized_device_attempts_per_second_mean": 1801994.897,
+      "measured_board_energy_uj_per_attempt_interval": [253.602270, 306.523561],
+      "note": "The interval spans sampled-power integration and the independent NVML total-energy counter across serialized and eight-stream runs. It is board energy, not matrix-stage energy."
+    },
+    "amdahl_headroom_from_mean_share": {
+      "free_matrix_upper_bound": 2.613633,
+      "ten_x_matrix_acceleration": 2.250487,
+      "twenty_x_matrix_acceleration": 2.418504
+    }
+  },
+  "cached_cpu_verifier": {
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "compiler_flags": "GCC -O3 -march=native",
+    "cold_parent_matrix_setup_ms": 497,
+    "cached_verification_ms_per_attempt": 2.140,
+    "attempts": 5
+  },
+  "fold_screen": {
+    "vectors": 16,
+    "folded_entropy_bits_per_nibble": 3.9998885062555187,
+    "folded_zlib_ratio_mean": 1.00537109375,
+    "one_missing_pass_nibble_accuracy": 0.126983642578125,
+    "one_missing_pass_whole_vectors_exact": 0,
+    "one_missing_pass_empirical_independent_log2_probability": -12194.961108808668,
+    "best_simple_linear_collapse_nibble_accuracy": 0.0655975341796875,
+    "simple_linear_collapse_whole_vectors_exact": 0,
+    "limitation": "This is evidence against tested omission and simple aggregate-collapse attacks, not a security proof or an independent implementation."
+  },
+  "decision": {
+    "lf1_dimension_only": "rejected_below_40_percent",
+    "lf2_k4": "launch_threshold_but_insufficient_margin",
+    "lf2_k8": "advance_as_first_provisional_launch_candidate",
+    "consensus": "do_not_specify_or_activate_yet",
+    "required_next": [
+      "review and stabilize the separate portable candidate API and research vectors",
+      "commission an independently written implementation",
+      "deepen folded-work cryptanalysis and fused electronic attacks",
+      "run a non-consensus public testnet",
+      "model the eight-pass optical detection and matrix-programming path without claiming current superiority"
+    ]
+  }
+}

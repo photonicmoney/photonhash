@@ -23,10 +23,10 @@ jobs:
             cc: clang
     steps:
       - uses: actions/checkout@v7
-      - name: Build, test, and reproduce vectors
+      - name: Build, test, and reproduce legacy and shadow vectors
         env:
           CC: ${{ matrix.cc }}
-        run: make CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' all test check-vectors
+        run: make CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' shadow-ci
 
   sanitizers:
     name: ubuntu / ASan + UBSan
@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Run sanitizer suite
-        run: make CC=clang sanitize
+        run: make CC=clang sanitize && make CC=clang sanitize-shadow
 
   windows:
     name: windows / UCRT64 GCC
@@ -51,5 +51,5 @@ jobs:
           install: >-
             make
             mingw-w64-ucrt-x86_64-gcc
-      - name: Build, test, and reproduce vectors
-        run: make CC=gcc CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' all test check-vectors
+      - name: Build, test, and reproduce legacy and shadow vectors
+        run: make CC=gcc PYTHON=python CFLAGS='-O2 -std=c11 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Werror' shadow-ci

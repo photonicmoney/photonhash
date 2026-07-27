@@ -1,0 +1,21 @@
+{
+  "status": "local_non_consensus_harness_not_public_testnet_evidence",
+  "date": "2026-07-26",
+  "candidate": "LF2-K8",
+  "command": "./ph_lf2_shadow_soak.exe 12 2",
+  "compiler": "GCC -O3 -march=native -std=c11 with strict warnings and -Werror",
+  "host": "AMD Ryzen 7 9800X3D",
+  "tips": 12,
+  "attempts_per_tip": 2,
+  "cold_setup_mean_ms": 480.417,
+  "cold_setup_max_ms": 493.0,
+  "cached_attempt_mean_ms": 2.625,
+  "stale_parent_digest_collisions": 0,
+  "transcript": "e11b3df565217bcf9ebbaf8c2dd222cdf7b10cbde040db34757a1dcaa6a21b0e",
+  "limitations": [
+    "Deterministic local parents, not public network traffic.",
+    "No difficulty adjustment, network propagation, verifier flood, or real reorg.",
+    "No GPU matrix derivation or upload timing.",
+    "No Laser consensus code was imported or changed."
+  ]
+}
