@@ -1,5 +1,7 @@
 # PhotonHash v0.4.0-shadow.1
 
+<img src="lasercoin-regnet.png" alt="Laser regnet" width="150">
+
 PhotonHash is an experimental, exact, matrix-centric proof-of-work candidate
 for Laser. This repository contains the frozen LF2-K8 shadownet candidate,
 portable and optimized implementations, independent vectors, adversarial
