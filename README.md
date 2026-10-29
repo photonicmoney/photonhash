@@ -16,10 +16,41 @@ tools, and the historical experiments that led to it.
 
 > **CLAIM BOUNDARY**
 >
-> LF2-K8 measured 61.55 to 61.98 percent exact GEMM time in the tested RTX
-> 5090 pipeline. This supports a matrix-centric implementation claim. It is
+> The frozen historical LF2-K8 pipeline measured 61.55 to 61.98 percent GEMM
+> time on RTX 5090. This supports a matrix-centric implementation claim. It is
 > not matrix-energy attribution and does not demonstrate that a photonic miner
 > currently beats a GPU.
+
+## New research results: LF2 packing and ChaCha20
+
+The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
+**LF3-K8-C20-experiment.1**, a separately named experimental hash that uses
+ChaCha20 to expand each header/nonce binding into the matrix input vector.
+C20 retains the eight matrices, exact quantizer and full 2048-byte fold.
+
+| Result on RTX 5090 | Observed paired device-throughput gain |
+|---|---:|
+| Packed LF2 versus fastest tested int32 LF2 | **14.6-34.3%** |
+| Experimental C20 versus fastest tested already-packed LF2 | **A further 19.1-25.3%** |
+| Experimental C20 versus fastest tested int32 LF2 | **41.5-63.7%** |
+
+Packing preserves LF2's hash and cuts the GEMM output buffer **8x**: 1 GiB to
+128 MiB at batch 8192. C20 changes the hash. Its GEMM-plus-epilogue stage takes
+**84.4-87.2%** of sampled device time, including quantization and stores.
+That percentage is not pure matrix time or energy attribution.
+
+These are **exploratory device timings**, using 24 configurations and five
+completed conditions on a shared Windows desktop GPU. Choices were selected
+from the same three/seven-round samples, with outliers retained. Extra
+padding-boundary tests and independent timing confirmation remain incomplete
+after a CUDA initialization stall. No sustained miner, energy, optical
+advantage or consensus-security result is claimed. Neither change is activated.
+
+Read the [ChaCha20 construction and reference vector](docs/lf3-k8-c20-experiment-1.md),
+the [complete comparison and limitations](docs/lf2-gpu-comparison-2026-10-29.md),
+and the [published synthetic records and analysis](research/launch/lf2-c20-gpu-2026-10-29/README.md).
+The measured kernel implementation currently remains local; this publication
+provides the byte rule, measurement evidence and CPU-only checking tools.
 
 ## What changed
 
@@ -102,7 +133,7 @@ The complete byte construction is in the
 
 ### Electronic performance
 
-On the measured RTX 5090, batch 8192:
+In the frozen historical RTX 5090 pipeline, batch 8192:
 
 | Measurement | Result |
 |---|---:|
@@ -231,6 +262,9 @@ oracle before timing.
 | [src/photonhash_shadow.c](src/photonhash_shadow.c) | Known-parent preparation, eviction, and prepared verification |
 | [independent/rust-lf2](independent/rust-lf2) | Independently structured Rust implementation |
 | [docs/spec-v0.4-shadow.md](docs/spec-v0.4-shadow.md) | Byte-exact candidate specification |
+| [docs/lf3-k8-c20-experiment-1.md](docs/lf3-k8-c20-experiment-1.md) | Separate ChaCha20 experiment and exact byte rule |
+| [docs/lf2-gpu-comparison-2026-10-29.md](docs/lf2-gpu-comparison-2026-10-29.md) | Packed LF2 / C20 results, methods and limitations |
+| [research/launch/lf2-c20-gpu-2026-10-29](research/launch/lf2-c20-gpu-2026-10-29/README.md) | Synthetic benchmark records, manifest and analysis |
 | [docs/launch-profile-lf2-vectors.txt](docs/launch-profile-lf2-vectors.txt) | Original full folded-state LF2 vectors |
 | [docs/v0.4-shadow-vectors.txt](docs/v0.4-shadow-vectors.txt) | Compact multi-parent shadow vectors |
 | [docs/shadownet-protocol.md](docs/shadownet-protocol.md) | Non-consensus work and solution protocol |
@@ -264,7 +298,7 @@ At minimum:
 
 1. clean public CI across Linux, macOS, and Windows;
 2. an implementation written by a separate human reviewer;
-3. packed-INT4 and fused electronic GPU adversaries;
+3. broader packed-INT4/native-Blackwell tuning and independent fused-GPU reproduction;
 4. AMD and mid-range commodity GPU measurements;
 5. FPGA synthesis and stronger ASIC analysis;
 6. GPU-native matrix setup and parent-transition measurements;
