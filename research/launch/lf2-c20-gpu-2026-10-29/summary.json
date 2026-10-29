@@ -1,0 +1,3075 @@
+{
+  "files": [
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 1322.953983,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 128,
+        "header_bytes": 0,
+        "parent": 0,
+        "rounds": 0,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 24,
+      "otherOutput": []
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-long-p0.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 1642.885537,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 128,
+        "header_bytes": 4096,
+        "parent": 0,
+        "rounds": 0,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 24,
+      "otherOutput": []
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 1464.743502,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 128,
+        "header_bytes": 1,
+        "parent": 1,
+        "rounds": 0,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 24,
+      "otherOutput": []
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 4615.232212,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 4096,
+        "header_bytes": 184,
+        "parent": 0,
+        "rounds": 7,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 48,
+      "otherOutput": []
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 3967.290738,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 184,
+        "parent": 0,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 48,
+      "otherOutput": []
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p1.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 3539.241177,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 184,
+        "parent": 1,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 48,
+      "otherOutput": []
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h80-p0.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 3602.383691,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 80,
+        "parent": 0,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 48,
+      "otherOutput": []
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h80-p1.jsonl",
+      "complete": true,
+      "gpuEventWindowsMs": 3651.066685,
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 80,
+        "parent": 1,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "validationCount": 48,
+      "otherOutput": []
+    }
+  ],
+  "cases": [
+    {
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 4096,
+        "header_bytes": 184,
+        "parent": 0,
+        "rounds": 7,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "variants": {
+        "c20_fused_cublas": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.06064,
+            "gemm_with_epilogue_ms": 1.370368,
+            "fold_ms": 0.657152,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.59888005
+          },
+          "medianDeviceUsPerAttempt": 0.6344921997070313,
+          "medianDeviceAttemptsPerSecond": 1576063.5047392817,
+          "medianAbsoluteDeviationTotalMs": 0.29311991000000015,
+          "minTotalMs": 1.91686404,
+          "maxTotalMs": 2.89199996,
+          "medianCompositeGemmStagePercent": 61.13494492772443,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cublas_autotune": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.060576,
+            "gemm_with_epilogue_ms": 1.36403203,
+            "fold_ms": 0.65510398,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.30713606
+          },
+          "medianDeviceUsPerAttempt": 0.5632656396484375,
+          "medianDeviceAttemptsPerSecond": 1775361.267596849,
+          "medianAbsoluteDeviationTotalMs": 0.07014417999999978,
+          "minTotalMs": 2.19132805,
+          "maxTotalMs": 2.6367681,
+          "medianCompositeGemmStagePercent": 61.97520403209368,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.060576,
+            "gemm_with_epilogue_ms": 1.79414403,
+            "fold_ms": 0.66326398,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.62944007
+          },
+          "medianDeviceUsPerAttempt": 0.6419531420898437,
+          "medianDeviceAttemptsPerSecond": 1557746.0945896364,
+          "medianAbsoluteDeviationTotalMs": 0.22819208999999985,
+          "minTotalMs": 2.26067209,
+          "maxTotalMs": 40.18124771,
+          "medianCompositeGemmStagePercent": 68.29310134146512,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.060896,
+            "gemm_with_epilogue_ms": 1.74089599,
+            "fold_ms": 0.059104,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.01417589
+          },
+          "medianDeviceUsPerAttempt": 0.4917421606445313,
+          "medianDeviceAttemptsPerSecond": 2033586.0538972095,
+          "medianAbsoluteDeviationTotalMs": 0.3734399100000001,
+          "minTotalMs": 1.64073598,
+          "maxTotalMs": 9.94134426,
+          "medianCompositeGemmStagePercent": 84.94724239545232,
+          "includesPackingInGemmStage": true
+        },
+        "c20_fused_cutlass256_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.060704,
+            "gemm_with_epilogue_ms": 1.39680004,
+            "fold_ms": 0.65100801,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.26403189
+          },
+          "medianDeviceUsPerAttempt": 0.5527421606445313,
+          "medianDeviceAttemptsPerSecond": 1809161.795861453,
+          "medianAbsoluteDeviationTotalMs": 0.014431960000000021,
+          "minTotalMs": 2.24959993,
+          "maxTotalMs": 20.61868858,
+          "medianCompositeGemmStagePercent": 61.59312609221231,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass256_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.060576,
+            "gemm_with_epilogue_ms": 1.344576,
+            "fold_ms": 0.059136,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 1.61673605
+          },
+          "medianDeviceUsPerAttempt": 0.39471094970703124,
+          "medianDeviceAttemptsPerSecond": 2533499.5158919105,
+          "medianAbsoluteDeviationTotalMs": 0.02547204000000014,
+          "minTotalMs": 1.59126401,
+          "maxTotalMs": 11.3011837,
+          "medianCompositeGemmStagePercent": 84.36865168590096,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cublas": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.048128,
+            "gemm_with_epilogue_ms": 1.36412799,
+            "fold_ms": 0.66377598,
+            "final_hash_ms": 0.15644801,
+            "total_ms": 2.23356795
+          },
+          "medianDeviceUsPerAttempt": 0.5453046752929687,
+          "medianDeviceAttemptsPerSecond": 1833837.2020425885,
+          "medianAbsoluteDeviationTotalMs": 0.01065587999999984,
+          "minTotalMs": 1.90563202,
+          "maxTotalMs": 2.69840002,
+          "medianCompositeGemmStagePercent": 61.244162770076855,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cublas_autotune": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.042144,
+            "gemm_with_epilogue_ms": 1.36812794,
+            "fold_ms": 0.356096,
+            "final_hash_ms": 0.15155201,
+            "total_ms": 2.23139191
+          },
+          "medianDeviceUsPerAttempt": 0.5447734155273438,
+          "medianDeviceAttemptsPerSecond": 1835625.5490771227,
+          "medianAbsoluteDeviationTotalMs": 0.3226878700000002,
+          "minTotalMs": 1.90256,
+          "maxTotalMs": 2.68592,
+          "medianCompositeGemmStagePercent": 71.10251135312421,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.047136,
+            "gemm_with_epilogue_ms": 1.82355201,
+            "fold_ms": 0.65942401,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 2.39916801
+          },
+          "medianDeviceUsPerAttempt": 0.5857343774414062,
+          "medianDeviceAttemptsPerSecond": 1707258.5091696018,
+          "medianAbsoluteDeviationTotalMs": 0.39526391000000016,
+          "minTotalMs": 1.996032,
+          "maxTotalMs": 18.49440002,
+          "medianCompositeGemmStagePercent": 68.95769963864426,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.047936,
+            "gemm_with_epilogue_ms": 1.84201598,
+            "fold_ms": 0.057568,
+            "final_hash_ms": 0.153376,
+            "total_ms": 2.10550404
+          },
+          "medianDeviceUsPerAttempt": 0.514039072265625,
+          "medianDeviceAttemptsPerSecond": 1945377.411861912,
+          "medianAbsoluteDeviationTotalMs": 0.38768005000000016,
+          "minTotalMs": 1.61583996,
+          "maxTotalMs": 13.25651169,
+          "medianCompositeGemmStagePercent": 87.4857490180831,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cutlass256_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.046496,
+            "gemm_with_epilogue_ms": 1.77545595,
+            "fold_ms": 0.64508802,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.62438393
+          },
+          "medianDeviceUsPerAttempt": 0.6407187329101562,
+          "medianDeviceAttemptsPerSecond": 1560747.2493553944,
+          "medianAbsoluteDeviationTotalMs": 0.08127999000000008,
+          "minTotalMs": 2.20345592,
+          "maxTotalMs": 15.19737625,
+          "medianCompositeGemmStagePercent": 68.45846323737058,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass256_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.048288,
+            "gemm_with_epilogue_ms": 1.72243202,
+            "fold_ms": 0.059136,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 1.98755205
+          },
+          "medianDeviceUsPerAttempt": 0.48524219970703125,
+          "medianDeviceAttemptsPerSecond": 2060826.532819606,
+          "medianAbsoluteDeviationTotalMs": 0.38809609999999983,
+          "minTotalMs": 1.59740806,
+          "maxTotalMs": 2.53129601,
+          "medianCompositeGemmStagePercent": 83.71066787273566,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cublas": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.791008,
+            "gemm_with_epilogue_ms": 1.76211202,
+            "fold_ms": 0.65535998,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 3.36966395
+          },
+          "medianDeviceUsPerAttempt": 0.8226718627929688,
+          "medianDeviceAttemptsPerSecond": 1215551.4795473893,
+          "medianAbsoluteDeviationTotalMs": 0.07801605,
+          "minTotalMs": 3.22751999,
+          "maxTotalMs": 3.47980809,
+          "medianCompositeGemmStagePercent": 52.293405103497044,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cublas_autotune": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.792768,
+            "gemm_with_epilogue_ms": 1.36192,
+            "fold_ms": 0.66150397,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 3.28937602
+          },
+          "medianDeviceUsPerAttempt": 0.8030703173828125,
+          "medianDeviceAttemptsPerSecond": 1245220.9705109966,
+          "medianAbsoluteDeviationTotalMs": 0.30678391000000005,
+          "minTotalMs": 2.966784,
+          "maxTotalMs": 37.82979202,
+          "medianCompositeGemmStagePercent": 45.76753717156355,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.79139203,
+            "gemm_with_epilogue_ms": 1.75190401,
+            "fold_ms": 0.66351998,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 3.35353589
+          },
+          "medianDeviceUsPerAttempt": 0.8187343481445312,
+          "medianDeviceAttemptsPerSecond": 1221397.3949746517,
+          "medianAbsoluteDeviationTotalMs": 0.2262718699999997,
+          "minTotalMs": 2.73920012,
+          "maxTotalMs": 3.80310392,
+          "medianCompositeGemmStagePercent": 52.816584645885605,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.995296,
+            "gemm_with_epilogue_ms": 1.37833595,
+            "fold_ms": 0.05936,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 2.66233611
+          },
+          "medianDeviceUsPerAttempt": 0.6499844018554688,
+          "medianDeviceAttemptsPerSecond": 1538498.4580327838,
+          "medianAbsoluteDeviationTotalMs": 0.2785599200000002,
+          "minTotalMs": 2.38089609,
+          "maxTotalMs": 13.36457634,
+          "medianCompositeGemmStagePercent": 57.89147858191494,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cutlass256_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.79328001,
+            "gemm_with_epilogue_ms": 1.40268803,
+            "fold_ms": 0.64713597,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 3.18051195
+          },
+          "medianDeviceUsPerAttempt": 0.7764921752929688,
+          "medianDeviceAttemptsPerSecond": 1287842.9838944639,
+          "medianAbsoluteDeviationTotalMs": 0.18137597999999988,
+          "minTotalMs": 2.99571204,
+          "maxTotalMs": 3.64044809,
+          "medianCompositeGemmStagePercent": 46.769737818855866,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass256_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.79161602,
+            "gemm_with_epilogue_ms": 1.34022403,
+            "fold_ms": 0.059392,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.62326407
+          },
+          "medianDeviceUsPerAttempt": 0.6404453295898437,
+          "medianDeviceAttemptsPerSecond": 1561413.5255548253,
+          "medianAbsoluteDeviationTotalMs": 0.07484794000000017,
+          "minTotalMs": 2.33769608,
+          "maxTotalMs": 2.82387209,
+          "medianCompositeGemmStagePercent": 57.08634431789193,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cublas": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.45008001,
+            "gemm_with_epilogue_ms": 1.83686399,
+            "fold_ms": 0.65024,
+            "final_hash_ms": 0.153632,
+            "total_ms": 3.09283209
+          },
+          "medianDeviceUsPerAttempt": 0.7550859594726562,
+          "medianDeviceAttemptsPerSecond": 1324352.5289470209,
+          "medianAbsoluteDeviationTotalMs": 0.3098878800000002,
+          "minTotalMs": 2.30742407,
+          "maxTotalMs": 32.37020874,
+          "medianCompositeGemmStagePercent": 59.39100269746619,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cublas_autotune": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.455488,
+            "gemm_with_epilogue_ms": 1.37625599,
+            "fold_ms": 0.657408,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 2.97980809
+          },
+          "medianDeviceUsPerAttempt": 0.7274922094726562,
+          "medianDeviceAttemptsPerSecond": 1374585.1666574944,
+          "medianAbsoluteDeviationTotalMs": 0.48019195000000003,
+          "minTotalMs": 2.30396795,
+          "maxTotalMs": 29.9128952,
+          "medianCompositeGemmStagePercent": 52.36041719290138,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.44764799,
+            "gemm_with_epilogue_ms": 1.75487995,
+            "fold_ms": 0.66044801,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.02054405
+          },
+          "medianDeviceUsPerAttempt": 0.7374375122070312,
+          "medianDeviceAttemptsPerSecond": 1356047.1001904442,
+          "medianAbsoluteDeviationTotalMs": 0.1329281299999998,
+          "minTotalMs": 2.71254396,
+          "maxTotalMs": 3.1671679,
+          "medianCompositeGemmStagePercent": 59.63642628065467,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.449536,
+            "gemm_with_epilogue_ms": 1.38531196,
+            "fold_ms": 0.057312,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.03756809
+          },
+          "medianDeviceUsPerAttempt": 0.4974531469726563,
+          "medianDeviceAttemptsPerSecond": 2010239.569466363,
+          "medianAbsoluteDeviationTotalMs": 0.018272159999999982,
+          "minTotalMs": 2.01929593,
+          "maxTotalMs": 2.44928002,
+          "medianCompositeGemmStagePercent": 68.39560656840595,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cutlass256_i32": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.44998401,
+            "gemm_with_epilogue_ms": 1.39856005,
+            "fold_ms": 0.64304,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 2.72150397
+          },
+          "medianDeviceUsPerAttempt": 0.6644296801757813,
+          "medianDeviceAttemptsPerSecond": 1505050.1653319285,
+          "medianAbsoluteDeviationTotalMs": 0.38038397,
+          "minTotalMs": 2.34112,
+          "maxTotalMs": 22.11641693,
+          "medianCompositeGemmStagePercent": 58.215290572386586,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass256_q4": {
+          "rounds": 7,
+          "medianMs": {
+            "vector_ms": 0.45174399,
+            "gemm_with_epilogue_ms": 1.33939195,
+            "fold_ms": 0.0592,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.27964807
+          },
+          "medianDeviceUsPerAttempt": 0.5565547045898437,
+          "medianDeviceAttemptsPerSecond": 1796768.5687554395,
+          "medianAbsoluteDeviationTotalMs": 0.15391993000000026,
+          "minTotalMs": 1.99456,
+          "maxTotalMs": 2.45248008,
+          "medianCompositeGemmStagePercent": 66.80648874897936,
+          "includesPackingInGemmStage": true
+        }
+      },
+      "fastestTestedLf2Int32Baseline": "lf2_warp_cutlass256_i32",
+      "fastestTestedLf2Packed": "lf2_warp_cutlass128_q4",
+      "fastestTestedC20": "c20_fused_cutlass256_q4",
+      "comparisons": [
+        {
+          "candidate": "lf2_warp_cutlass128_q4",
+          "baseline": "lf2_warp_cutlass256_i32",
+          "medianPairedDeviceSpeedup": 1.3046841870551247,
+          "pairedSpeedups": [
+            1.5633013631637438,
+            1.3046841870551247,
+            1.094684350185842,
+            1.1269129920547223,
+            1.4158740003929808,
+            1.1558575041063426,
+            10.854320421753364
+          ],
+          "candidateFasterRounds": 7,
+          "roundCount": 7,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_fused_cutlass256_q4",
+          "baseline": "lf2_warp_cutlass256_i32",
+          "medianPairedDeviceSpeedup": 1.548488868867337,
+          "pairedSpeedups": [
+            1.983811649205841,
+            1.6664792921891767,
+            1.3206378033787973,
+            0.2408158333007188,
+            1.548488868867337,
+            1.4480533170519703,
+            13.722040376075842
+          ],
+          "candidateFasterRounds": 6,
+          "roundCount": 7,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_fused_cutlass256_q4",
+          "baseline": "lf2_warp_cutlass128_q4",
+          "medianPairedDeviceSpeedup": 1.2527957052729786,
+          "pairedSpeedups": [
+            1.2689886262179713,
+            1.277304736827293,
+            1.2064096861845113,
+            0.21369514327954867,
+            1.0936629025164304,
+            1.2527957052729786,
+            1.2642007829965312
+          ],
+          "candidateFasterRounds": 6,
+          "roundCount": 7,
+          "selectionAndComparisonUseSameSamples": true
+        }
+      ],
+      "matchedEpilogueControls": [
+        {
+          "packed": "c20_fused_cutlass128_q4",
+          "control": "c20_fused_cutlass128_i32",
+          "medianTotalSpeedup": 1.3054669570093997,
+          "medianGemmEpilogueTimeRatio": 0.9703212010242009
+        },
+        {
+          "packed": "c20_fused_cutlass256_q4",
+          "control": "c20_fused_cutlass256_i32",
+          "medianTotalSpeedup": 1.4003719964059687,
+          "medianGemmEpilogueTimeRatio": 0.9626116562825986
+        },
+        {
+          "packed": "c20_two_stage_cutlass128_q4",
+          "control": "c20_two_stage_cutlass128_i32",
+          "medianTotalSpeedup": 1.1394744272255113,
+          "medianGemmEpilogueTimeRatio": 1.0101252774249088
+        },
+        {
+          "packed": "c20_two_stage_cutlass256_q4",
+          "control": "c20_two_stage_cutlass256_i32",
+          "medianTotalSpeedup": 1.3204101648558084,
+          "medianGemmEpilogueTimeRatio": 0.970135034890615
+        },
+        {
+          "packed": "lf2_register_cutlass128_q4",
+          "control": "lf2_register_cutlass128_i32",
+          "medianTotalSpeedup": 1.2596215321588378,
+          "medianGemmEpilogueTimeRatio": 0.7867645385434103
+        },
+        {
+          "packed": "lf2_register_cutlass256_q4",
+          "control": "lf2_register_cutlass256_i32",
+          "medianTotalSpeedup": 1.2124253849899298,
+          "medianGemmEpilogueTimeRatio": 0.9554683588481182
+        },
+        {
+          "packed": "lf2_warp_cutlass128_q4",
+          "control": "lf2_warp_cutlass128_i32",
+          "medianTotalSpeedup": 1.4824260670474083,
+          "medianGemmEpilogueTimeRatio": 0.7894055430971217
+        },
+        {
+          "packed": "lf2_warp_cutlass256_q4",
+          "control": "lf2_warp_cutlass256_i32",
+          "medianTotalSpeedup": 1.193826365488073,
+          "medianGemmEpilogueTimeRatio": 0.9576935577417645
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 184,
+        "parent": 0,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "variants": {
+        "c20_fused_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103584,
+            "gemm_with_epilogue_ms": 2.65023994,
+            "fold_ms": 1.294016,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.20348787
+          },
+          "medianDeviceUsPerAttempt": 0.5131210778808594,
+          "medianDeviceAttemptsPerSecond": 1948857.7708206875,
+          "medianAbsoluteDeviationTotalMs": 0.6246719299999999,
+          "minTotalMs": 3.57881594,
+          "maxTotalMs": 35.24614334,
+          "medianCompositeGemmStagePercent": 63.04859254893009,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103584,
+            "gemm_with_epilogue_ms": 2.65529609,
+            "fold_ms": 1.29510403,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.21984005
+          },
+          "medianDeviceUsPerAttempt": 0.5151171936035156,
+          "medianDeviceAttemptsPerSecond": 1941305.8084985944,
+          "medianAbsoluteDeviationTotalMs": 0.0020160699999998144,
+          "minTotalMs": 3.57168007,
+          "maxTotalMs": 4.22185612,
+          "medianCompositeGemmStagePercent": 63.11746247348877,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.10336,
+            "gemm_with_epilogue_ms": 3.27788806,
+            "fold_ms": 1.63302398,
+            "final_hash_ms": 0.15974399,
+            "total_ms": 5.1739521
+          },
+          "medianDeviceUsPerAttempt": 0.6315859497070313,
+          "medianDeviceAttemptsPerSecond": 1583315.7790540813,
+          "medianAbsoluteDeviationTotalMs": 1.3680000300000001,
+          "minTotalMs": 3.80595207,
+          "maxTotalMs": 58.42969513,
+          "medianCompositeGemmStagePercent": 63.35366073450893,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103552,
+            "gemm_with_epilogue_ms": 2.74745607,
+            "fold_ms": 0.18176,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.17126393
+          },
+          "medianDeviceUsPerAttempt": 0.3871171789550781,
+          "medianDeviceAttemptsPerSecond": 2583197.167067706,
+          "medianAbsoluteDeviationTotalMs": 0.07471989999999984,
+          "minTotalMs": 3.09654403,
+          "maxTotalMs": 3.46079993,
+          "medianCompositeGemmStagePercent": 87.20018466944434,
+          "includesPackingInGemmStage": true
+        },
+        "c20_fused_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.105632,
+            "gemm_with_epilogue_ms": 3.07820797,
+            "fold_ms": 1.31251204,
+            "final_hash_ms": 0.15872,
+            "total_ms": 4.63664007
+          },
+          "medianDeviceUsPerAttempt": 0.5659961022949219,
+          "medianDeviceAttemptsPerSecond": 1766796.6191734178,
+          "medianAbsoluteDeviationTotalMs": 0.35737610000000064,
+          "minTotalMs": 4.27926397,
+          "maxTotalMs": 31.52396774,
+          "medianCompositeGemmStagePercent": 63.22283479044178,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103648,
+            "gemm_with_epilogue_ms": 2.61023998,
+            "fold_ms": 0.17792,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.04742408
+          },
+          "medianDeviceUsPerAttempt": 0.372000009765625,
+          "medianDeviceAttemptsPerSecond": 2688171.972441722,
+          "medianAbsoluteDeviationTotalMs": 0.0009598699999999738,
+          "minTotalMs": 2.96137595,
+          "maxTotalMs": 3.04838395,
+          "medianCompositeGemmStagePercent": 85.65293052353908,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05648,
+            "gemm_with_epilogue_ms": 2.66240001,
+            "fold_ms": 1.29049599,
+            "final_hash_ms": 0.15644801,
+            "total_ms": 4.40214396
+          },
+          "medianDeviceUsPerAttempt": 0.5373710888671875,
+          "medianDeviceAttemptsPerSecond": 1860911.427349141,
+          "medianAbsoluteDeviationTotalMs": 0.2293758299999995,
+          "minTotalMs": 4.16441584,
+          "maxTotalMs": 4.63151979,
+          "medianCompositeGemmStagePercent": 63.8537591385206,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05648,
+            "gemm_with_epilogue_ms": 2.65939212,
+            "fold_ms": 1.29305601,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.16662407
+          },
+          "medianDeviceUsPerAttempt": 0.5086211022949219,
+          "medianDeviceAttemptsPerSecond": 1966100.0998345406,
+          "medianAbsoluteDeviationTotalMs": 0.004096029999999473,
+          "minTotalMs": 3.53379202,
+          "maxTotalMs": 4.1707201,
+          "medianCompositeGemmStagePercent": 63.86158375864159,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05648,
+            "gemm_with_epilogue_ms": 2.85062408,
+            "fold_ms": 1.32809603,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.38982391
+          },
+          "medianDeviceUsPerAttempt": 0.5358671765136718,
+          "medianDeviceAttemptsPerSecond": 1866134.0791685653,
+          "medianAbsoluteDeviationTotalMs": 0.00822401000000017,
+          "minTotalMs": 3.76726389,
+          "maxTotalMs": 4.39804792,
+          "medianCompositeGemmStagePercent": 64.86711354214661,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.058304,
+            "gemm_with_epilogue_ms": 2.7339201,
+            "fold_ms": 0.180448,
+            "final_hash_ms": 0.155232,
+            "total_ms": 3.13011193
+          },
+          "medianDeviceUsPerAttempt": 0.38209374145507813,
+          "medianDeviceAttemptsPerSecond": 2617158.805563864,
+          "medianAbsoluteDeviationTotalMs": 0.0018238999999997674,
+          "minTotalMs": 3.12828803,
+          "maxTotalMs": 3.33411193,
+          "medianCompositeGemmStagePercent": 87.36075654772748,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05648,
+            "gemm_with_epilogue_ms": 3.06668806,
+            "fold_ms": 1.27382398,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.579072
+          },
+          "medianDeviceUsPerAttempt": 0.55896875,
+          "medianDeviceAttemptsPerSecond": 1789008.7773243138,
+          "medianAbsoluteDeviationTotalMs": 0.011487960000000186,
+          "minTotalMs": 3.58998394,
+          "maxTotalMs": 4.59055996,
+          "medianCompositeGemmStagePercent": 67.63026922754756,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.056608,
+            "gemm_with_epilogue_ms": 2.61433601,
+            "fold_ms": 0.17792,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.00640011
+          },
+          "medianDeviceUsPerAttempt": 0.3669922009277344,
+          "medianDeviceAttemptsPerSecond": 2724853.545857541,
+          "medianAbsoluteDeviationTotalMs": 0.0061440500000000675,
+          "minTotalMs": 3.00025606,
+          "maxTotalMs": 3.46633601,
+          "medianCompositeGemmStagePercent": 87.06883505136558,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79206401,
+            "gemm_with_epilogue_ms": 2.66115189,
+            "fold_ms": 1.29721606,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.90729618
+          },
+          "medianDeviceUsPerAttempt": 0.5990351782226563,
+          "medianDeviceAttemptsPerSecond": 1669351.043735045,
+          "medianAbsoluteDeviationTotalMs": 0.013344290000000036,
+          "minTotalMs": 4.89395189,
+          "maxTotalMs": 5.48380804,
+          "medianCompositeGemmStagePercent": 54.22847516002183,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79161602,
+            "gemm_with_epilogue_ms": 2.65705609,
+            "fold_ms": 1.29740798,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.90489578
+          },
+          "medianDeviceUsPerAttempt": 0.5987421606445313,
+          "medianDeviceAttemptsPerSecond": 1670168.005078387,
+          "medianAbsoluteDeviationTotalMs": 0.005056379999999194,
+          "minTotalMs": 4.25055981,
+          "maxTotalMs": 4.90995216,
+          "medianCompositeGemmStagePercent": 54.204356035925215,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79376,
+            "gemm_with_epilogue_ms": 2.84963202,
+            "fold_ms": 1.32809603,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 5.13020802
+          },
+          "medianDeviceUsPerAttempt": 0.6262460961914063,
+          "medianDeviceAttemptsPerSecond": 1596816.341182204,
+          "medianAbsoluteDeviationTotalMs": 0.003071790000000796,
+          "minTotalMs": 5.12713623,
+          "maxTotalMs": 5.43228817,
+          "medianCompositeGemmStagePercent": 55.57940909247111,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79171199,
+            "gemm_with_epilogue_ms": 2.73305607,
+            "fold_ms": 0.18019199,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.86172795
+          },
+          "medianDeviceUsPerAttempt": 0.47140233764648437,
+          "medianDeviceAttemptsPerSecond": 2121330.167755603,
+          "medianAbsoluteDeviationTotalMs": 0.001760009999999923,
+          "minTotalMs": 3.85942411,
+          "maxTotalMs": 3.86348796,
+          "medianCompositeGemmStagePercent": 70.78444871921577,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79148799,
+            "gemm_with_epilogue_ms": 2.7318399,
+            "fold_ms": 1.29737604,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.98479986
+          },
+          "medianDeviceUsPerAttempt": 0.6084960766601563,
+          "medianDeviceAttemptsPerSecond": 1643395.9697631672,
+          "medianAbsoluteDeviationTotalMs": 0.00080013000000001,
+          "minTotalMs": 4.3241601,
+          "maxTotalMs": 4.98559999,
+          "medianCompositeGemmStagePercent": 54.906114726138675,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79372799,
+            "gemm_with_epilogue_ms": 2.61193609,
+            "fold_ms": 0.178176,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.74265599
+          },
+          "medianDeviceUsPerAttempt": 0.45686718627929684,
+          "medianDeviceAttemptsPerSecond": 2188819.9241095628,
+          "medianAbsoluteDeviationTotalMs": 0.0064320499999999114,
+          "minTotalMs": 3.73622394,
+          "maxTotalMs": 4.39084816,
+          "medianCompositeGemmStagePercent": 69.85619603946972,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.83030403,
+            "gemm_with_epilogue_ms": 3.88095999,
+            "fold_ms": 1.63635194,
+            "final_hash_ms": 0.15974399,
+            "total_ms": 6.16166401
+          },
+          "medianDeviceUsPerAttempt": 0.7521562512207032,
+          "medianDeviceAttemptsPerSecond": 1329510.9870815563,
+          "medianAbsoluteDeviationTotalMs": 0.2962560700000001,
+          "minTotalMs": 5.86540794,
+          "maxTotalMs": 47.29635239,
+          "medianCompositeGemmStagePercent": 62.985582850694904,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82448,
+            "gemm_with_epilogue_ms": 2.6448319,
+            "fold_ms": 0.679712,
+            "final_hash_ms": 0.15360001,
+            "total_ms": 4.29974413
+          },
+          "medianDeviceUsPerAttempt": 0.5248711096191406,
+          "medianDeviceAttemptsPerSecond": 1905229.6490954221,
+          "medianAbsoluteDeviationTotalMs": 0.01126432999999949,
+          "minTotalMs": 4.2884798,
+          "maxTotalMs": 4.933568,
+          "medianCompositeGemmStagePercent": 61.44440134394695,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82752001,
+            "gemm_with_epilogue_ms": 2.85164809,
+            "fold_ms": 1.32809603,
+            "final_hash_ms": 0.15974399,
+            "total_ms": 5.59814405
+          },
+          "medianDeviceUsPerAttempt": 0.6833671936035156,
+          "medianDeviceAttemptsPerSecond": 1463342.1231809852,
+          "medianAbsoluteDeviationTotalMs": 0.24166393999999958,
+          "minTotalMs": 5.16499186,
+          "maxTotalMs": 5.83980799,
+          "medianCompositeGemmStagePercent": 55.21108585057867,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82883197,
+            "gemm_with_epilogue_ms": 3.08124804,
+            "fold_ms": 0.096224,
+            "final_hash_ms": 0.15360001,
+            "total_ms": 4.40927982
+          },
+          "medianDeviceUsPerAttempt": 0.5382421655273437,
+          "medianDeviceAttemptsPerSecond": 1857899.7782907777,
+          "medianAbsoluteDeviationTotalMs": 0.1300802299999999,
+          "minTotalMs": 3.82332802,
+          "maxTotalMs": 4.53936005,
+          "medianCompositeGemmStagePercent": 72.06873188976341,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.825504,
+            "gemm_with_epilogue_ms": 2.71875191,
+            "fold_ms": 1.30128002,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.99708796
+          },
+          "medianDeviceUsPerAttempt": 0.6099960888671875,
+          "medianDeviceAttemptsPerSecond": 1639354.7733348284,
+          "medianAbsoluteDeviationTotalMs": 0.007967950000000279,
+          "minTotalMs": 4.98912001,
+          "maxTotalMs": 5.33296013,
+          "medianCompositeGemmStagePercent": 54.283777306173334,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82448,
+            "gemm_with_epilogue_ms": 2.61203194,
+            "fold_ms": 0.178176,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.77135992
+          },
+          "medianDeviceUsPerAttempt": 0.460371083984375,
+          "medianDeviceAttemptsPerSecond": 2172160.7520292043,
+          "medianAbsoluteDeviationTotalMs": 0.0020480200000001503,
+          "minTotalMs": 3.7693119,
+          "maxTotalMs": 4.4256959,
+          "medianCompositeGemmStagePercent": 69.29052780163934,
+          "includesPackingInGemmStage": true
+        }
+      },
+      "fastestTestedLf2Int32Baseline": "lf2_warp_cublas_autotune",
+      "fastestTestedLf2Packed": "lf2_register_cutlass256_q4",
+      "fastestTestedC20": "c20_two_stage_cutlass256_q4",
+      "comparisons": [
+        {
+          "candidate": "lf2_register_cutlass256_q4",
+          "baseline": "lf2_warp_cublas_autotune",
+          "medianPairedDeviceSpeedup": 1.1458386267555412,
+          "pairedSpeedups": [
+            1.150826127943498,
+            1.1458386267555412,
+            1.1236025069015367
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_two_stage_cutlass256_q4",
+          "baseline": "lf2_warp_cublas_autotune",
+          "medianPairedDeviceSpeedup": 1.4264501207725142,
+          "pairedSpeedups": [
+            1.2404291210072274,
+            1.4264501207725142,
+            1.6443823131549646
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_two_stage_cutlass256_q4",
+          "baseline": "lf2_register_cutlass256_q4",
+          "medianPairedDeviceSpeedup": 1.2448961725190995,
+          "pairedSpeedups": [
+            1.0778597138942685,
+            1.2448961725190995,
+            1.4634911394862744
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        }
+      ],
+      "matchedEpilogueControls": [
+        {
+          "packed": "c20_fused_cutlass128_q4",
+          "control": "c20_fused_cutlass128_i32",
+          "medianTotalSpeedup": 1.6315110360429699,
+          "medianGemmEpilogueTimeRatio": 0.8381787357314454
+        },
+        {
+          "packed": "c20_fused_cutlass256_q4",
+          "control": "c20_fused_cutlass256_i32",
+          "medianTotalSpeedup": 1.5214948587004669,
+          "medianGemmEpilogueTimeRatio": 0.84797388787217
+        },
+        {
+          "packed": "c20_two_stage_cutlass128_q4",
+          "control": "c20_two_stage_cutlass128_i32",
+          "medianTotalSpeedup": 1.4024494996254016,
+          "medianGemmEpilogueTimeRatio": 0.9590601998984027
+        },
+        {
+          "packed": "c20_two_stage_cutlass256_q4",
+          "control": "c20_two_stage_cutlass256_i32",
+          "medianTotalSpeedup": 1.5231079804610572,
+          "medianGemmEpilogueTimeRatio": 0.852494925747355
+        },
+        {
+          "packed": "lf2_register_cutlass128_q4",
+          "control": "lf2_register_cutlass128_i32",
+          "medianTotalSpeedup": 1.3284747362900073,
+          "medianGemmEpilogueTimeRatio": 0.9590908758808795
+        },
+        {
+          "packed": "lf2_register_cutlass256_q4",
+          "control": "lf2_register_cutlass256_i32",
+          "medianTotalSpeedup": 1.33188833633625,
+          "medianGemmEpilogueTimeRatio": 0.9561087712350932
+        },
+        {
+          "packed": "lf2_warp_cutlass128_q4",
+          "control": "lf2_warp_cutlass128_i32",
+          "medianTotalSpeedup": 1.2696277574871626,
+          "medianGemmEpilogueTimeRatio": 1.080514826077295
+        },
+        {
+          "packed": "lf2_warp_cutlass256_q4",
+          "control": "lf2_warp_cutlass256_i32",
+          "medianTotalSpeedup": 1.3250095631286234,
+          "medianGemmEpilogueTimeRatio": 0.960746705277717
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 184,
+        "parent": 1,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "variants": {
+        "c20_fused_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103616,
+            "gemm_with_epilogue_ms": 2.64608002,
+            "fold_ms": 1.29395199,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.19942379
+          },
+          "medianDeviceUsPerAttempt": 0.5126249743652344,
+          "medianDeviceAttemptsPerSecond": 1950743.8185942173,
+          "medianAbsoluteDeviationTotalMs": 0.0001597399999999638,
+          "minTotalMs": 4.19926405,
+          "maxTotalMs": 5.44838381,
+          "medianCompositeGemmStagePercent": 62.96406869667232,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.10368,
+            "gemm_with_epilogue_ms": 2.63583994,
+            "fold_ms": 1.67395198,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.65958405
+          },
+          "medianDeviceUsPerAttempt": 0.5687968811035157,
+          "medianDeviceAttemptsPerSecond": 1758096.8412835046,
+          "medianAbsoluteDeviationTotalMs": 0.38153599999999965,
+          "minTotalMs": 4.19231987,
+          "maxTotalMs": 5.04112005,
+          "medianCompositeGemmStagePercent": 61.56980788426175,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103552,
+            "gemm_with_epilogue_ms": 2.84784007,
+            "fold_ms": 0.69388801,
+            "final_hash_ms": 0.15155201,
+            "total_ms": 3.79900789
+          },
+          "medianDeviceUsPerAttempt": 0.4637460803222656,
+          "medianDeviceAttemptsPerSecond": 2156352.4575886047,
+          "medianAbsoluteDeviationTotalMs": 0.004127979999999809,
+          "minTotalMs": 3.79487991,
+          "maxTotalMs": 4.4255681,
+          "medianCompositeGemmStagePercent": 75.01916322684974,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103584,
+            "gemm_with_epilogue_ms": 2.72287989,
+            "fold_ms": 0.18403199,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.16390395
+          },
+          "medianDeviceUsPerAttempt": 0.38621874389648436,
+          "medianDeviceAttemptsPerSecond": 2589206.2873779717,
+          "medianAbsoluteDeviationTotalMs": 0.003007890000000124,
+          "minTotalMs": 3.16089606,
+          "maxTotalMs": 3.16720009,
+          "medianCompositeGemmStagePercent": 86.00454668463969,
+          "includesPackingInGemmStage": true
+        },
+        "c20_fused_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103552,
+            "gemm_with_epilogue_ms": 2.70956802,
+            "fold_ms": 1.291008,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.26959991
+          },
+          "medianDeviceUsPerAttempt": 0.5211913952636719,
+          "medianDeviceAttemptsPerSecond": 1918680.947320893,
+          "medianAbsoluteDeviationTotalMs": 0.007552149999999536,
+          "minTotalMs": 3.63923192,
+          "maxTotalMs": 4.27715206,
+          "medianCompositeGemmStagePercent": 63.629757758731074,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.103808,
+            "gemm_with_epilogue_ms": 2.94732809,
+            "fold_ms": 0.16748799,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 3.37631989
+          },
+          "medianDeviceUsPerAttempt": 0.41214842407226565,
+          "medianDeviceAttemptsPerSecond": 2426310.381389839,
+          "medianAbsoluteDeviationTotalMs": 0.4272959300000001,
+          "minTotalMs": 2.94902396,
+          "maxTotalMs": 3.89321589,
+          "medianCompositeGemmStagePercent": 88.2938885989926,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05648,
+            "gemm_with_epilogue_ms": 2.64479995,
+            "fold_ms": 1.29455996,
+            "final_hash_ms": 0.155424,
+            "total_ms": 4.15433598
+          },
+          "medianDeviceUsPerAttempt": 0.5071210913085937,
+          "medianDeviceAttemptsPerSecond": 1971915.6176674955,
+          "medianAbsoluteDeviationTotalMs": 0.002048010000000211,
+          "minTotalMs": 4.13385582,
+          "maxTotalMs": 4.15638399,
+          "medianCompositeGemmStagePercent": 63.66360262464857,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.058464,
+            "gemm_with_epilogue_ms": 2.64505601,
+            "fold_ms": 1.30636799,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.15427208
+          },
+          "medianDeviceUsPerAttempt": 0.507113291015625,
+          "medianDeviceAttemptsPerSecond": 1971945.9491926199,
+          "medianAbsoluteDeviationTotalMs": 0.0040640800000000254,
+          "minTotalMs": 4.150208,
+          "maxTotalMs": 5.01449585,
+          "medianCompositeGemmStagePercent": 63.36376586426511,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.056416,
+            "gemm_with_epilogue_ms": 2.83833599,
+            "fold_ms": 1.32604802,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.37961578
+          },
+          "medianDeviceUsPerAttempt": 0.5346210668945313,
+          "medianDeviceAttemptsPerSecond": 1870483.7162679143,
+          "medianAbsoluteDeviationTotalMs": 0.2159681400000002,
+          "minTotalMs": 3.75276804,
+          "maxTotalMs": 4.59558392,
+          "medianCompositeGemmStagePercent": 64.78449531935881,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.056544,
+            "gemm_with_epilogue_ms": 2.73494411,
+            "fold_ms": 0.184512,
+            "final_hash_ms": 0.155424,
+            "total_ms": 3.12316799
+          },
+          "medianDeviceUsPerAttempt": 0.38124609252929686,
+          "medianDeviceAttemptsPerSecond": 2622977.702842043,
+          "medianAbsoluteDeviationTotalMs": 0.08806395,
+          "minTotalMs": 3.03510404,
+          "maxTotalMs": 3.93519998,
+          "medianCompositeGemmStagePercent": 87.24167379802071,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.056352,
+            "gemm_with_epilogue_ms": 2.70627189,
+            "fold_ms": 1.30044794,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.21977615
+          },
+          "medianDeviceUsPerAttempt": 0.515109393310547,
+          "medianDeviceAttemptsPerSecond": 1941335.205660139,
+          "medianAbsoluteDeviationTotalMs": 0.008287909999999954,
+          "minTotalMs": 3.58188796,
+          "maxTotalMs": 4.22806406,
+          "medianCompositeGemmStagePercent": 64.15733426997069,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.058304,
+            "gemm_with_epilogue_ms": 2.59795189,
+            "fold_ms": 0.17792,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.98880005
+          },
+          "medianDeviceUsPerAttempt": 0.3648437561035156,
+          "medianDeviceAttemptsPerSecond": 2740899.311748874,
+          "medianAbsoluteDeviationTotalMs": 0.00080013000000001,
+          "minTotalMs": 2.98799992,
+          "maxTotalMs": 3.53977609,
+          "medianCompositeGemmStagePercent": 86.85331526275905,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79305601,
+            "gemm_with_epilogue_ms": 3.0079999,
+            "fold_ms": 1.30358398,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 5.59337616
+          },
+          "medianDeviceUsPerAttempt": 0.68278517578125,
+          "medianDeviceAttemptsPerSecond": 1464589.5011645346,
+          "medianAbsoluteDeviationTotalMs": 0.025631899999999597,
+          "minTotalMs": 5.26054382,
+          "maxTotalMs": 5.61900806,
+          "medianCompositeGemmStagePercent": 53.77789395805628,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79068798,
+            "gemm_with_epilogue_ms": 2.64889598,
+            "fold_ms": 1.29513597,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.89238405
+          },
+          "medianDeviceUsPerAttempt": 0.5972148498535157,
+          "medianDeviceAttemptsPerSecond": 1674439.2746517926,
+          "medianAbsoluteDeviationTotalMs": 0.0017919500000003197,
+          "minTotalMs": 4.8905921,
+          "maxTotalMs": 5.598176,
+          "medianCompositeGemmStagePercent": 54.14325516820372,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79171199,
+            "gemm_with_epilogue_ms": 2.84163189,
+            "fold_ms": 1.329952,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 5.1198082
+          },
+          "medianDeviceUsPerAttempt": 0.6249765869140624,
+          "medianDeviceAttemptsPerSecond": 1600059.9397453992,
+          "medianAbsoluteDeviationTotalMs": 0.004960059999999267,
+          "minTotalMs": 5.11484814,
+          "maxTotalMs": 5.88268805,
+          "medianCompositeGemmStagePercent": 55.50270203481451,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79206401,
+            "gemm_with_epilogue_ms": 3.57360005,
+            "fold_ms": 0.18204799,
+            "final_hash_ms": 0.15577599,
+            "total_ms": 4.69791985
+          },
+          "medianDeviceUsPerAttempt": 0.5734765441894532,
+          "medianDeviceAttemptsPerSecond": 1743750.4813965696,
+          "medianAbsoluteDeviationTotalMs": 0.8423037600000001,
+          "minTotalMs": 3.85561609,
+          "maxTotalMs": 11.05926418,
+          "medianCompositeGemmStagePercent": 71.34565158746393,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78943998,
+            "gemm_with_epilogue_ms": 2.71238399,
+            "fold_ms": 1.29638398,
+            "final_hash_ms": 0.156672,
+            "total_ms": 4.95078421
+          },
+          "medianDeviceUsPerAttempt": 0.6043437756347656,
+          "medianDeviceAttemptsPerSecond": 1654687.3490169751,
+          "medianAbsoluteDeviationTotalMs": 0.6346564299999997,
+          "minTotalMs": 4.31612778,
+          "maxTotalMs": 5.60102415,
+          "medianCompositeGemmStagePercent": 59.96274627739285,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.79171199,
+            "gemm_with_epilogue_ms": 2.60198402,
+            "fold_ms": 0.177984,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.72937608
+          },
+          "medianDeviceUsPerAttempt": 0.455246103515625,
+          "medianDeviceAttemptsPerSecond": 2196614.078138239,
+          "medianAbsoluteDeviationTotalMs": 0.004096030000000361,
+          "minTotalMs": 3.72528005,
+          "maxTotalMs": 4.18505621,
+          "medianCompositeGemmStagePercent": 69.76995519314856,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82307202,
+            "gemm_with_epilogue_ms": 3.12505603,
+            "fold_ms": 1.284096,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 5.40444803
+          },
+          "medianDeviceUsPerAttempt": 0.6597226599121094,
+          "medianDeviceAttemptsPerSecond": 1515788.4680408332,
+          "medianAbsoluteDeviationTotalMs": 0.09337616000000004,
+          "minTotalMs": 5.31107187,
+          "maxTotalMs": 24.52176094,
+          "medianCompositeGemmStagePercent": 57.82377798163414,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82243198,
+            "gemm_with_epilogue_ms": 2.64582396,
+            "fold_ms": 1.29228795,
+            "final_hash_ms": 0.157728,
+            "total_ms": 4.92025614
+          },
+          "medianDeviceUsPerAttempt": 0.6006172045898438,
+          "medianDeviceAttemptsPerSecond": 1664953.971278414,
+          "medianAbsoluteDeviationTotalMs": 0.4116797399999994,
+          "minTotalMs": 4.27926397,
+          "maxTotalMs": 5.33193588,
+          "medianCompositeGemmStagePercent": 57.304214431025756,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.822528,
+            "gemm_with_epilogue_ms": 3.15980792,
+            "fold_ms": 1.33014405,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 5.15059185
+          },
+          "medianDeviceUsPerAttempt": 0.6287343566894531,
+          "medianDeviceAttemptsPerSecond": 1590496.828048994,
+          "medianAbsoluteDeviationTotalMs": 0.33270406999999924,
+          "minTotalMs": 4.81788778,
+          "maxTotalMs": 5.99955177,
+          "medianCompositeGemmStagePercent": 56.71410249369347,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82140797,
+            "gemm_with_epilogue_ms": 2.72675204,
+            "fold_ms": 0.18223999,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.88803196
+          },
+          "medianDeviceUsPerAttempt": 0.47461327636718753,
+          "medianDeviceAttemptsPerSecond": 2106978.56506303,
+          "medianAbsoluteDeviationTotalMs": 0.006079909999999966,
+          "minTotalMs": 3.88195205,
+          "maxTotalMs": 4.60003185,
+          "medianCompositeGemmStagePercent": 70.13626069904701,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82332802,
+            "gemm_with_epilogue_ms": 2.71651196,
+            "fold_ms": 1.30556798,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 5.00310421
+          },
+          "medianDeviceUsPerAttempt": 0.6107304943847657,
+          "medianDeviceAttemptsPerSecond": 1637383.4435881157,
+          "medianAbsoluteDeviationTotalMs": 0.020416260000000186,
+          "minTotalMs": 4.98268795,
+          "maxTotalMs": 5.4190402,
+          "medianCompositeGemmStagePercent": 54.29652963394901,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.82137603,
+            "gemm_with_epilogue_ms": 2.97123194,
+            "fold_ms": 0.17408,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.12566423
+          },
+          "medianDeviceUsPerAttempt": 0.5036211218261719,
+          "medianDeviceAttemptsPerSecond": 1985619.6586313085,
+          "medianAbsoluteDeviationTotalMs": 0.26191998000000005,
+          "minTotalMs": 3.75286388,
+          "maxTotalMs": 4.38758421,
+          "medianCompositeGemmStagePercent": 72.01826843771046,
+          "includesPackingInGemmStage": true
+        }
+      },
+      "fastestTestedLf2Int32Baseline": "lf2_register_cublas_autotune",
+      "fastestTestedLf2Packed": "lf2_register_cutlass256_q4",
+      "fastestTestedC20": "c20_two_stage_cutlass256_q4",
+      "comparisons": [
+        {
+          "candidate": "lf2_register_cutlass256_q4",
+          "baseline": "lf2_register_cublas_autotune",
+          "medianPairedDeviceSpeedup": 1.313292956324183,
+          "pairedSpeedups": [
+            1.313292956324183,
+            1.3376584970647263,
+            1.3113700509389228
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_two_stage_cutlass256_q4",
+          "baseline": "lf2_register_cublas_autotune",
+          "medianPairedDeviceSpeedup": 1.6373441034094809,
+          "pairedSpeedups": [
+            1.6373441034094809,
+            1.87305136052845,
+            1.3816105809110655
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_two_stage_cutlass256_q4",
+          "baseline": "lf2_register_cutlass256_q4",
+          "medianPairedDeviceSpeedup": 1.2467470380655163,
+          "pairedSpeedups": [
+            1.2467470380655163,
+            1.400246299514081,
+            1.0535627071259188
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        }
+      ],
+      "matchedEpilogueControls": [
+        {
+          "packed": "c20_fused_cutlass128_q4",
+          "control": "c20_fused_cutlass128_i32",
+          "medianTotalSpeedup": 1.2007342669173,
+          "medianGemmEpilogueTimeRatio": 0.9561210682733318
+        },
+        {
+          "packed": "c20_fused_cutlass256_q4",
+          "control": "c20_fused_cutlass256_i32",
+          "medianTotalSpeedup": 1.2645720930193023,
+          "medianGemmEpilogueTimeRatio": 1.0877483304515825
+        },
+        {
+          "packed": "c20_two_stage_cutlass128_q4",
+          "control": "c20_two_stage_cutlass128_i32",
+          "medianTotalSpeedup": 1.4022991379339798,
+          "medianGemmEpilogueTimeRatio": 0.9635730652169899
+        },
+        {
+          "packed": "c20_two_stage_cutlass256_q4",
+          "control": "c20_two_stage_cutlass256_i32",
+          "medianTotalSpeedup": 1.4118629816002581,
+          "medianGemmEpilogueTimeRatio": 0.9599744577031394
+        },
+        {
+          "packed": "lf2_register_cutlass128_q4",
+          "control": "lf2_register_cutlass128_i32",
+          "medianTotalSpeedup": 1.0898032242929814,
+          "medianGemmEpilogueTimeRatio": 1.2575872556103669
+        },
+        {
+          "packed": "lf2_register_cutlass256_q4",
+          "control": "lf2_register_cutlass256_i32",
+          "medianTotalSpeedup": 1.3275100455945434,
+          "medianGemmEpilogueTimeRatio": 0.9592978094521196
+        },
+        {
+          "packed": "lf2_warp_cutlass128_q4",
+          "control": "lf2_warp_cutlass128_i32",
+          "medianTotalSpeedup": 1.324729812663371,
+          "medianGemmEpilogueTimeRatio": 0.8629486693608895
+        },
+        {
+          "packed": "lf2_warp_cutlass256_q4",
+          "control": "lf2_warp_cutlass256_i32",
+          "medianTotalSpeedup": 1.2126784757760085,
+          "medianGemmEpilogueTimeRatio": 1.0937672956168394
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 80,
+        "parent": 0,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "variants": {
+        "c20_fused_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.060576,
+            "gemm_with_epilogue_ms": 2.98092794,
+            "fold_ms": 1.66784,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.85350418
+          },
+          "medianDeviceUsPerAttempt": 0.5924687719726562,
+          "medianDeviceAttemptsPerSecond": 1687852.6722521542,
+          "medianAbsoluteDeviationTotalMs": 0.33052825999999946,
+          "minTotalMs": 4.52297592,
+          "maxTotalMs": 34.34102249,
+          "medianCompositeGemmStagePercent": 61.418056510255234,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.060576,
+            "gemm_with_epilogue_ms": 2.98396802,
+            "fold_ms": 1.29817605,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.50451183
+          },
+          "medianDeviceUsPerAttempt": 0.5498671667480469,
+          "medianDeviceAttemptsPerSecond": 1818621.0424493435,
+          "medianAbsoluteDeviationTotalMs": 0.18147229999999936,
+          "minTotalMs": 4.1440959,
+          "maxTotalMs": 4.68598413,
+          "medianCompositeGemmStagePercent": 66.24398231406131,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.060576,
+            "gemm_with_epilogue_ms": 2.83344007,
+            "fold_ms": 1.33292794,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.37961578
+          },
+          "medianDeviceUsPerAttempt": 0.5346210668945313,
+          "medianDeviceAttemptsPerSecond": 1870483.7162679143,
+          "medianAbsoluteDeviationTotalMs": 0.002048010000000211,
+          "minTotalMs": 4.37756777,
+          "maxTotalMs": 5.00937605,
+          "medianCompositeGemmStagePercent": 64.58064045061049,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.06048,
+            "gemm_with_epilogue_ms": 2.71468806,
+            "fold_ms": 0.182016,
+            "final_hash_ms": 0.15360001,
+            "total_ms": 3.11190391
+          },
+          "medianDeviceUsPerAttempt": 0.3798710827636719,
+          "medianDeviceAttemptsPerSecond": 2632472.028996551,
+          "medianAbsoluteDeviationTotalMs": 0.0009281599999999557,
+          "minTotalMs": 3.0350399,
+          "maxTotalMs": 3.11283207,
+          "medianCompositeGemmStagePercent": 87.20958917645692,
+          "includesPackingInGemmStage": true
+        },
+        "c20_fused_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.060512,
+            "gemm_with_epilogue_ms": 2.72287989,
+            "fold_ms": 1.31148803,
+            "final_hash_ms": 0.15974399,
+            "total_ms": 4.44790411
+          },
+          "medianDeviceUsPerAttempt": 0.5429570446777343,
+          "medianDeviceAttemptsPerSecond": 1841766.3235100633,
+          "medianAbsoluteDeviationTotalMs": 0.19734429999999925,
+          "minTotalMs": 4.25055981,
+          "maxTotalMs": 4.91100788,
+          "medianCompositeGemmStagePercent": 61.42869353327123,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.060448,
+            "gemm_with_epilogue_ms": 2.59795189,
+            "fold_ms": 0.16768,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 3.3873601
+          },
+          "medianDeviceUsPerAttempt": 0.41349610595703123,
+          "medianDeviceAttemptsPerSecond": 2418402.4603702454,
+          "medianAbsoluteDeviationTotalMs": 0.2776961400000002,
+          "minTotalMs": 3.10966396,
+          "maxTotalMs": 3.74563193,
+          "medianCompositeGemmStagePercent": 83.54445764615673,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05008,
+            "gemm_with_epilogue_ms": 2.63967991,
+            "fold_ms": 1.29664004,
+            "final_hash_ms": 0.15539201,
+            "total_ms": 4.14179182
+          },
+          "medianDeviceUsPerAttempt": 0.5055898217773437,
+          "medianDeviceAttemptsPerSecond": 1977887.9180846903,
+          "medianAbsoluteDeviationTotalMs": 0.6332483299999998,
+          "minTotalMs": 3.4815681,
+          "maxTotalMs": 4.77504015,
+          "medianCompositeGemmStagePercent": 63.73280031249856,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.050336,
+            "gemm_with_epilogue_ms": 3.03619194,
+            "fold_ms": 1.29408002,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.53215981
+          },
+          "medianDeviceUsPerAttempt": 0.5532421643066405,
+          "medianDeviceAttemptsPerSecond": 1807526.7297337428,
+          "medianAbsoluteDeviationTotalMs": 0.034751899999999836,
+          "minTotalMs": 4.49740791,
+          "maxTotalMs": 5.15171194,
+          "medianCompositeGemmStagePercent": 66.64532392837812,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.050336,
+            "gemm_with_epilogue_ms": 2.83321595,
+            "fold_ms": 1.33014405,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.37139177
+          },
+          "medianDeviceUsPerAttempt": 0.5336171594238281,
+          "medianDeviceAttemptsPerSecond": 1874002.7046351878,
+          "medianAbsoluteDeviationTotalMs": 0.0020475399999995147,
+          "minTotalMs": 4.36934423,
+          "maxTotalMs": 4.63196802,
+          "medianCompositeGemmStagePercent": 64.82951195197954,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.0488,
+            "gemm_with_epilogue_ms": 3.13532805,
+            "fold_ms": 0.17632,
+            "final_hash_ms": 0.159456,
+            "total_ms": 3.64342403
+          },
+          "medianDeviceUsPerAttempt": 0.44475390991210934,
+          "medianDeviceAttemptsPerSecond": 2248434.4211782566,
+          "medianAbsoluteDeviationTotalMs": 0.13164805999999984,
+          "minTotalMs": 3.51177597,
+          "maxTotalMs": 3.78467202,
+          "medianCompositeGemmStagePercent": 89.28041187092012,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05056,
+            "gemm_with_epilogue_ms": 2.96943998,
+            "fold_ms": 1.72646403,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.72758389
+          },
+          "medianDeviceUsPerAttempt": 0.5770976428222656,
+          "medianDeviceAttemptsPerSecond": 1732809.018434996,
+          "medianAbsoluteDeviationTotalMs": 0.911232,
+          "minTotalMs": 3.81635189,
+          "maxTotalMs": 5.70979214,
+          "medianCompositeGemmStagePercent": 66.15162193977869,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.050752,
+            "gemm_with_epilogue_ms": 2.96144009,
+            "fold_ms": 0.17584001,
+            "final_hash_ms": 0.157728,
+            "total_ms": 3.53011203
+          },
+          "medianDeviceUsPerAttempt": 0.4309218786621094,
+          "medianDeviceAttemptsPerSecond": 2320606.238663763,
+          "medianAbsoluteDeviationTotalMs": 0.027647969999999855,
+          "minTotalMs": 3.35148811,
+          "maxTotalMs": 3.55776,
+          "medianCompositeGemmStagePercent": 88.3619452852542,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78489602,
+            "gemm_with_epilogue_ms": 2.63881612,
+            "fold_ms": 1.289024,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.8704319
+          },
+          "medianDeviceUsPerAttempt": 0.5945351440429687,
+          "medianDeviceAttemptsPerSecond": 1681986.3552552701,
+          "medianAbsoluteDeviationTotalMs": 0.28649616000000044,
+          "minTotalMs": 4.22428799,
+          "maxTotalMs": 5.15692806,
+          "medianCompositeGemmStagePercent": 54.18033090658757,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78451198,
+            "gemm_with_epilogue_ms": 2.64089608,
+            "fold_ms": 1.59231997,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 5.17523193
+          },
+          "medianDeviceUsPerAttempt": 0.6317421789550781,
+          "medianDeviceAttemptsPerSecond": 1582924.2265476594,
+          "medianAbsoluteDeviationTotalMs": 0.07676791999999999,
+          "minTotalMs": 5.09846401,
+          "maxTotalMs": 5.33487988,
+          "medianCompositeGemmStagePercent": 50.90709258319173,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78438401,
+            "gemm_with_epilogue_ms": 2.82934403,
+            "fold_ms": 1.32604802,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 5.09932804
+          },
+          "medianDeviceUsPerAttempt": 0.6224765673828124,
+          "medianDeviceAttemptsPerSecond": 1606486.1753824335,
+          "medianAbsoluteDeviationTotalMs": 0.003935809999999762,
+          "minTotalMs": 5.09539223,
+          "maxTotalMs": 5.10345602,
+          "medianCompositeGemmStagePercent": 55.52373560847543,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78659201,
+            "gemm_with_epilogue_ms": 3.03907204,
+            "fold_ms": 0.17609601,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.15945578
+          },
+          "medianDeviceUsPerAttempt": 0.5077460668945313,
+          "medianDeviceAttemptsPerSecond": 1969488.421872344,
+          "medianAbsoluteDeviationTotalMs": 0.29385613999999993,
+          "minTotalMs": 3.85222411,
+          "maxTotalMs": 4.45331192,
+          "medianCompositeGemmStagePercent": 73.06417475605427,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77328002,
+            "gemm_with_epilogue_ms": 2.70646405,
+            "fold_ms": 0.66230398,
+            "final_hash_ms": 0.151584,
+            "total_ms": 4.29360008
+          },
+          "medianDeviceUsPerAttempt": 0.524121103515625,
+          "medianDeviceAttemptsPerSecond": 1907955.99202616,
+          "medianAbsoluteDeviationTotalMs": 0.016416070000000005,
+          "minTotalMs": 4.27718401,
+          "maxTotalMs": 5.41520023,
+          "medianCompositeGemmStagePercent": 63.03484254639757,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78447998,
+            "gemm_with_epilogue_ms": 2.59340811,
+            "fold_ms": 0.178176,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.71244788
+          },
+          "medianDeviceUsPerAttempt": 0.4531796728515625,
+          "medianDeviceAttemptsPerSecond": 2206630.3056084923,
+          "medianAbsoluteDeviationTotalMs": 0.0004799300000000173,
+          "minTotalMs": 3.71196795,
+          "maxTotalMs": 3.7180481,
+          "medianCompositeGemmStagePercent": 69.8661234399936,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77807999,
+            "gemm_with_epilogue_ms": 3.59200001,
+            "fold_ms": 1.62713599,
+            "final_hash_ms": 0.15974399,
+            "total_ms": 5.81801605
+          },
+          "medianDeviceUsPerAttempt": 0.7102070373535156,
+          "medianDeviceAttemptsPerSecond": 1408040.117042991,
+          "medianAbsoluteDeviationTotalMs": 0.23817587000000007,
+          "minTotalMs": 5.57984018,
+          "maxTotalMs": 36.84563065,
+          "medianCompositeGemmStagePercent": 61.73925921019073,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77766401,
+            "gemm_with_epilogue_ms": 2.62249589,
+            "fold_ms": 1.29065597,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.85043192
+          },
+          "medianDeviceUsPerAttempt": 0.592093740234375,
+          "medianDeviceAttemptsPerSecond": 1688921.756889642,
+          "medianAbsoluteDeviationTotalMs": 0.008704179999999617,
+          "minTotalMs": 4.22192001,
+          "maxTotalMs": 4.8591361,
+          "medianCompositeGemmStagePercent": 54.23120541941602,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77936,
+            "gemm_with_epilogue_ms": 2.83036804,
+            "fold_ms": 1.33116806,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 5.10028791
+          },
+          "medianDeviceUsPerAttempt": 0.6225937390136719,
+          "medianDeviceAttemptsPerSecond": 1606183.8360023093,
+          "medianAbsoluteDeviationTotalMs": 0.005983829999999912,
+          "minTotalMs": 5.09430408,
+          "maxTotalMs": 5.4148159,
+          "medianCompositeGemmStagePercent": 55.49539339630469,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.7784,
+            "gemm_with_epilogue_ms": 2.71651196,
+            "fold_ms": 0.18223999,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.83279991
+          },
+          "medianDeviceUsPerAttempt": 0.46787108276367184,
+          "medianDeviceAttemptsPerSecond": 2137340.89761028,
+          "medianAbsoluteDeviationTotalMs": 0.0020480200000001503,
+          "minTotalMs": 3.82879996,
+          "maxTotalMs": 3.83484793,
+          "medianCompositeGemmStagePercent": 70.84329054370342,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77734399,
+            "gemm_with_epilogue_ms": 2.70208001,
+            "fold_ms": 1.30355203,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.9284482
+          },
+          "medianDeviceUsPerAttempt": 0.6016172119140625,
+          "medianDeviceAttemptsPerSecond": 1662186.487016339,
+          "medianAbsoluteDeviationTotalMs": 0.6267523800000001,
+          "minTotalMs": 4.30169582,
+          "maxTotalMs": 5.57667208,
+          "medianCompositeGemmStagePercent": 54.57815403233821,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.777376,
+            "gemm_with_epilogue_ms": 2.59360003,
+            "fold_ms": 0.178176,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.7058239
+          },
+          "medianDeviceUsPerAttempt": 0.45237108154296873,
+          "medianDeviceAttemptsPerSecond": 2210574.549967148,
+          "medianAbsoluteDeviationTotalMs": 0.002079970000000042,
+          "minTotalMs": 3.70374393,
+          "maxTotalMs": 4.07548809,
+          "medianCompositeGemmStagePercent": 70.02644024582985,
+          "includesPackingInGemmStage": true
+        }
+      },
+      "fastestTestedLf2Int32Baseline": "lf2_register_cutlass256_i32",
+      "fastestTestedLf2Packed": "lf2_warp_cutlass256_q4",
+      "fastestTestedC20": "c20_fused_cutlass128_q4",
+      "comparisons": [
+        {
+          "candidate": "lf2_warp_cutlass256_q4",
+          "baseline": "lf2_register_cutlass256_i32",
+          "medianPairedDeviceSpeedup": 1.1541789694863807,
+          "pairedSpeedups": [
+            1.1541789694863807,
+            1.0535180045146444,
+            1.4620881822140441
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_fused_cutlass128_q4",
+          "baseline": "lf2_register_cutlass256_i32",
+          "medianPairedDeviceSpeedup": 1.4146766505441988,
+          "pairedSpeedups": [
+            1.3744588951655643,
+            1.4146766505441988,
+            1.7396377665821208
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_fused_cutlass128_q4",
+          "baseline": "lf2_warp_cutlass256_q4",
+          "medianPairedDeviceSpeedup": 1.190854218888783,
+          "pairedSpeedups": [
+            1.190854218888783,
+            1.3428120302471147,
+            1.1898309470963526
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        }
+      ],
+      "matchedEpilogueControls": [
+        {
+          "packed": "c20_fused_cutlass128_q4",
+          "control": "c20_fused_cutlass128_i32",
+          "medianTotalSpeedup": 1.4073750047121474,
+          "medianGemmEpilogueTimeRatio": 0.9580891047397377
+        },
+        {
+          "packed": "c20_fused_cutlass256_q4",
+          "control": "c20_fused_cutlass256_i32",
+          "medianTotalSpeedup": 1.3130886527239898,
+          "medianGemmEpilogueTimeRatio": 0.954119166086316
+        },
+        {
+          "packed": "c20_two_stage_cutlass128_q4",
+          "control": "c20_two_stage_cutlass128_i32",
+          "medianTotalSpeedup": 1.1998031889799003,
+          "medianGemmEpilogueTimeRatio": 1.106632217710055
+        },
+        {
+          "packed": "c20_two_stage_cutlass256_q4",
+          "control": "c20_two_stage_cutlass256_i32",
+          "medianTotalSpeedup": 1.3392163902515013,
+          "medianGemmEpilogueTimeRatio": 0.9973059263518099
+        },
+        {
+          "packed": "lf2_register_cutlass128_q4",
+          "control": "lf2_register_cutlass128_i32",
+          "medianTotalSpeedup": 1.225960392347289,
+          "medianGemmEpilogueTimeRatio": 1.0741260192384594
+        },
+        {
+          "packed": "lf2_register_cutlass256_q4",
+          "control": "lf2_register_cutlass256_i32",
+          "medianTotalSpeedup": 1.156541510826544,
+          "medianGemmEpilogueTimeRatio": 0.9582274370132497
+        },
+        {
+          "packed": "lf2_warp_cutlass128_q4",
+          "control": "lf2_warp_cutlass128_i32",
+          "medianTotalSpeedup": 1.3306950609900217,
+          "medianGemmEpilogueTimeRatio": 0.9597734010591781
+        },
+        {
+          "packed": "lf2_warp_cutlass256_q4",
+          "control": "lf2_warp_cutlass256_i32",
+          "medianTotalSpeedup": 1.3299196974794187,
+          "medianGemmEpilogueTimeRatio": 0.9598531577160812
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "type": "metadata",
+        "device": "NVIDIA GeForce RTX 5090",
+        "compute": "12.0",
+        "runtime": 13040,
+        "driver": 13040,
+        "batch": 8192,
+        "header_bytes": 80,
+        "parent": 1,
+        "rounds": 3,
+        "gpu_event_budget_ms": 5000,
+        "cutlass": "3.9.2/ad7b2f5e",
+        "energy_measured": false,
+        "graph_replay": true,
+        "common_primer_graph_replays": 2,
+        "paced": true
+      },
+      "variants": {
+        "c20_fused_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.058496,
+            "gemm_with_epilogue_ms": 2.63174391,
+            "fold_ms": 1.29814398,
+            "final_hash_ms": 0.15568,
+            "total_ms": 4.13382387
+          },
+          "medianDeviceUsPerAttempt": 0.5046171716308593,
+          "medianDeviceAttemptsPerSecond": 1981700.2991953793,
+          "medianAbsoluteDeviationTotalMs": 0.012320040000000532,
+          "minTotalMs": 3.77216005,
+          "maxTotalMs": 4.14614391,
+          "medianCompositeGemmStagePercent": 63.47449502783901,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.062784,
+            "gemm_with_epilogue_ms": 3.31423998,
+            "fold_ms": 1.30534399,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.83283186
+          },
+          "medianDeviceUsPerAttempt": 0.5899452954101562,
+          "medianDeviceAttemptsPerSecond": 1695072.4207483602,
+          "medianAbsoluteDeviationTotalMs": 0.6825919200000001,
+          "minTotalMs": 4.15023994,
+          "maxTotalMs": 30.81222343,
+          "medianCompositeGemmStagePercent": 63.28308791708077,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.060416,
+            "gemm_with_epilogue_ms": 2.82624006,
+            "fold_ms": 1.32790399,
+            "final_hash_ms": 0.155616,
+            "total_ms": 4.36931181
+          },
+          "medianDeviceUsPerAttempt": 0.5333632580566406,
+          "medianDeviceAttemptsPerSecond": 1874894.8017971737,
+          "medianAbsoluteDeviationTotalMs": 0.37254428999999956,
+          "minTotalMs": 3.7375679,
+          "maxTotalMs": 4.7418561,
+          "medianCompositeGemmStagePercent": 64.66189809419896,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.060576,
+            "gemm_with_epilogue_ms": 3.38847995,
+            "fold_ms": 0.18198401,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.77635193
+          },
+          "medianDeviceUsPerAttempt": 0.46098046020507816,
+          "medianDeviceAttemptsPerSecond": 2169289.343750332,
+          "medianAbsoluteDeviationTotalMs": 0.6664960400000002,
+          "minTotalMs": 3.10985589,
+          "maxTotalMs": 12.48153591,
+          "medianCompositeGemmStagePercent": 87.26114958336542,
+          "includesPackingInGemmStage": true
+        },
+        "c20_fused_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.058592,
+            "gemm_with_epilogue_ms": 2.68815994,
+            "fold_ms": 1.30022395,
+            "final_hash_ms": 0.156672,
+            "total_ms": 4.2011838
+          },
+          "medianDeviceUsPerAttempt": 0.5128398193359375,
+          "medianDeviceAttemptsPerSecond": 1949926.5897388256,
+          "medianAbsoluteDeviationTotalMs": 0.00972843000000001,
+          "minTotalMs": 3.55939198,
+          "maxTotalMs": 4.21091223,
+          "medianCompositeGemmStagePercent": 63.91318324865679,
+          "includesPackingInGemmStage": false
+        },
+        "c20_fused_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.058528,
+            "gemm_with_epilogue_ms": 2.58464003,
+            "fold_ms": 0.17792,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.97135997
+          },
+          "medianDeviceUsPerAttempt": 0.3627148400878906,
+          "medianDeviceAttemptsPerSecond": 2756986.7275286745,
+          "medianAbsoluteDeviationTotalMs": 0.007296080000000149,
+          "minTotalMs": 2.89071989,
+          "maxTotalMs": 2.97865605,
+          "medianCompositeGemmStagePercent": 86.81277314239378,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05008,
+            "gemm_with_epilogue_ms": 2.63456011,
+            "fold_ms": 1.30073595,
+            "final_hash_ms": 0.15539201,
+            "total_ms": 4.12563181
+          },
+          "medianDeviceUsPerAttempt": 0.5036171643066406,
+          "medianDeviceAttemptsPerSecond": 1985635.2620085117,
+          "medianAbsoluteDeviationTotalMs": 0.6440637099999997,
+          "minTotalMs": 3.4815681,
+          "maxTotalMs": 4.88726377,
+          "medianCompositeGemmStagePercent": 69.13971005088601,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.050304,
+            "gemm_with_epilogue_ms": 2.63379192,
+            "fold_ms": 1.30636799,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.12972784
+          },
+          "medianDeviceUsPerAttempt": 0.5041171679687501,
+          "medianDeviceAttemptsPerSecond": 1983665.8291748348,
+          "medianAbsoluteDeviationTotalMs": 0.004127979999999809,
+          "minTotalMs": 4.12559986,
+          "maxTotalMs": 4.8639679,
+          "medianCompositeGemmStagePercent": 63.343806929448554,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.050272,
+            "gemm_with_epilogue_ms": 3.18348789,
+            "fold_ms": 1.32908797,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 5.04828787
+          },
+          "medianDeviceUsPerAttempt": 0.6162460778808594,
+          "medianDeviceAttemptsPerSecond": 1622728.3805826232,
+          "medianAbsoluteDeviationTotalMs": 0.29983996999999984,
+          "minTotalMs": 4.36294413,
+          "maxTotalMs": 5.34812784,
+          "medianCompositeGemmStagePercent": 64.88682700596489,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.044192,
+            "gemm_with_epilogue_ms": 2.73289609,
+            "fold_ms": 0.0944,
+            "final_hash_ms": 0.151328,
+            "total_ms": 3.02281594
+          },
+          "medianDeviceUsPerAttempt": 0.36899608642578124,
+          "medianDeviceAttemptsPerSecond": 2710055.8428311055,
+          "medianAbsoluteDeviationTotalMs": 0.00617599000000002,
+          "minTotalMs": 3.01663995,
+          "maxTotalMs": 4.04985619,
+          "medianCompositeGemmStagePercent": 90.40894795599098,
+          "includesPackingInGemmStage": true
+        },
+        "c20_two_stage_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.050304,
+            "gemm_with_epilogue_ms": 2.6960001,
+            "fold_ms": 1.30230403,
+            "final_hash_ms": 0.157728,
+            "total_ms": 4.20755196
+          },
+          "medianDeviceUsPerAttempt": 0.5136171826171875,
+          "medianDeviceAttemptsPerSecond": 1946975.3618919065,
+          "medianAbsoluteDeviationTotalMs": 3.194000000039665e-05,
+          "minTotalMs": 4.20140791,
+          "maxTotalMs": 4.2075839,
+          "medianCompositeGemmStagePercent": 64.14459504361717,
+          "includesPackingInGemmStage": false
+        },
+        "c20_two_stage_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.05024,
+            "gemm_with_epilogue_ms": 2.58464003,
+            "fold_ms": 0.17788801,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 2.96639991
+          },
+          "medianDeviceUsPerAttempt": 0.36210936401367183,
+          "medianDeviceAttemptsPerSecond": 2761596.6317906207,
+          "medianAbsoluteDeviationTotalMs": 0.0019199800000002654,
+          "minTotalMs": 2.96444798,
+          "maxTotalMs": 2.96831989,
+          "medianCompositeGemmStagePercent": 87.0741741382867,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78182399,
+            "gemm_with_epilogue_ms": 2.63472009,
+            "fold_ms": 1.29312003,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.86195183
+          },
+          "medianDeviceUsPerAttempt": 0.5934999792480469,
+          "medianDeviceAttemptsPerSecond": 1684920.02521547,
+          "medianAbsoluteDeviationTotalMs": 0.0197443900000005,
+          "minTotalMs": 4.81910419,
+          "maxTotalMs": 4.88169622,
+          "medianCompositeGemmStagePercent": 54.064213959931394,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78179199,
+            "gemm_with_epilogue_ms": 2.62451196,
+            "fold_ms": 1.29312003,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.85712004
+          },
+          "medianDeviceUsPerAttempt": 0.5929101611328125,
+          "medianDeviceAttemptsPerSecond": 1686596.1583276002,
+          "medianAbsoluteDeviationTotalMs": 0.016128059999999778,
+          "minTotalMs": 4.20959997,
+          "maxTotalMs": 4.8732481,
+          "medianCompositeGemmStagePercent": 54.14967627032984,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78147203,
+            "gemm_with_epilogue_ms": 2.82934403,
+            "fold_ms": 1.329952,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 5.10048008
+          },
+          "medianDeviceUsPerAttempt": 0.6226171972656249,
+          "medianDeviceAttemptsPerSecond": 1606123.32006206,
+          "medianAbsoluteDeviationTotalMs": 0.00304030999999938,
+          "minTotalMs": 5.09743977,
+          "maxTotalMs": 17.4416008,
+          "medianCompositeGemmStagePercent": 55.50519785739421,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.76918399,
+            "gemm_with_epilogue_ms": 2.72896004,
+            "fold_ms": 0.093984,
+            "final_hash_ms": 0.15155201,
+            "total_ms": 3.74575996
+          },
+          "medianDeviceUsPerAttempt": 0.4572460888671875,
+          "medianDeviceAttemptsPerSecond": 2187006.131594188,
+          "medianAbsoluteDeviationTotalMs": 0.002048010000000211,
+          "minTotalMs": 3.74371195,
+          "maxTotalMs": 4.004704,
+          "medianCompositeGemmStagePercent": 72.85464282660547,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_register_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78223997,
+            "gemm_with_epilogue_ms": 3.00630403,
+            "fold_ms": 1.314592,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 5.50083208
+          },
+          "medianDeviceUsPerAttempt": 0.671488291015625,
+          "medianDeviceAttemptsPerSecond": 1489229.2440237512,
+          "medianAbsoluteDeviationTotalMs": 0.05817603999999932,
+          "minTotalMs": 4.9495039,
+          "maxTotalMs": 5.55900812,
+          "medianCompositeGemmStagePercent": 54.51600896809072,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_register_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.78240001,
+            "gemm_with_epilogue_ms": 2.58540797,
+            "fold_ms": 0.180224,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.70358396
+          },
+          "medianDeviceUsPerAttempt": 0.4520976513671875,
+          "medianDeviceAttemptsPerSecond": 2211911.51286874,
+          "medianAbsoluteDeviationTotalMs": 0.0019519400000000964,
+          "minTotalMs": 3.70163202,
+          "maxTotalMs": 3.70787191,
+          "medianCompositeGemmStagePercent": 69.80827214728514,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cublas": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77334398,
+            "gemm_with_epilogue_ms": 2.629632,
+            "fold_ms": 1.290048,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 4.85052776
+          },
+          "medianDeviceUsPerAttempt": 0.592105439453125,
+          "medianDeviceAttemptsPerSecond": 1688888.3860341003,
+          "medianAbsoluteDeviationTotalMs": 0.003967760000000098,
+          "minTotalMs": 4.84656,
+          "maxTotalMs": 5.55750418,
+          "medianCompositeGemmStagePercent": 54.190354602027,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cublas_autotune": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77430397,
+            "gemm_with_epilogue_ms": 2.63155198,
+            "fold_ms": 1.29308796,
+            "final_hash_ms": 0.157728,
+            "total_ms": 4.85983992
+          },
+          "medianDeviceUsPerAttempt": 0.5932421777343749,
+          "medianDeviceAttemptsPerSecond": 1685652.2302899228,
+          "medianAbsoluteDeviationTotalMs": 0.002079960000000547,
+          "minTotalMs": 4.85164785,
+          "maxTotalMs": 4.86191988,
+          "medianCompositeGemmStagePercent": 54.17264896247858,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77635199,
+            "gemm_with_epilogue_ms": 3.51625609,
+            "fold_ms": 1.32294405,
+            "final_hash_ms": 0.157728,
+            "total_ms": 5.76915216
+          },
+          "medianDeviceUsPerAttempt": 0.70424220703125,
+          "medianDeviceAttemptsPerSecond": 1419966.0145555947,
+          "medianAbsoluteDeviationTotalMs": 1.30966424,
+          "minTotalMs": 4.45948792,
+          "maxTotalMs": 29.63161659,
+          "medianCompositeGemmStagePercent": 60.94926936369797,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass128_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77225602,
+            "gemm_with_epilogue_ms": 2.71446395,
+            "fold_ms": 0.18223999,
+            "final_hash_ms": 0.15564799,
+            "total_ms": 3.82460809
+          },
+          "medianDeviceUsPerAttempt": 0.4668711047363281,
+          "medianDeviceAttemptsPerSecond": 2141918.807686254,
+          "medianAbsoluteDeviationTotalMs": 0.004096029999999917,
+          "minTotalMs": 3.82051206,
+          "maxTotalMs": 4.16761589,
+          "medianCompositeGemmStagePercent": 70.97364974720848,
+          "includesPackingInGemmStage": true
+        },
+        "lf2_warp_cutlass256_i32": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77430397,
+            "gemm_with_epilogue_ms": 2.6960001,
+            "fold_ms": 1.28921604,
+            "final_hash_ms": 0.15769599,
+            "total_ms": 4.9274559
+          },
+          "medianDeviceUsPerAttempt": 0.6014960815429687,
+          "medianDeviceAttemptsPerSecond": 1662521.221143755,
+          "medianAbsoluteDeviationTotalMs": 0.20275212000000042,
+          "minTotalMs": 4.29360008,
+          "maxTotalMs": 5.13020802,
+          "medianCompositeGemmStagePercent": 54.713835186226625,
+          "includesPackingInGemmStage": false
+        },
+        "lf2_warp_cutlass256_q4": {
+          "rounds": 3,
+          "medianMs": {
+            "vector_ms": 0.77529597,
+            "gemm_with_epilogue_ms": 2.58745599,
+            "fold_ms": 0.178176,
+            "final_hash_ms": 0.15360001,
+            "total_ms": 3.69148803
+          },
+          "medianDeviceUsPerAttempt": 0.4506210974121094,
+          "medianDeviceAttemptsPerSecond": 2219159.302001042,
+          "medianAbsoluteDeviationTotalMs": 0.002048010000000211,
+          "minTotalMs": 3.60953593,
+          "maxTotalMs": 3.69353604,
+          "medianCompositeGemmStagePercent": 70.05362779673865,
+          "includesPackingInGemmStage": true
+        }
+      },
+      "fastestTestedLf2Int32Baseline": "lf2_warp_cublas",
+      "fastestTestedLf2Packed": "lf2_warp_cutlass256_q4",
+      "fastestTestedC20": "c20_two_stage_cutlass256_q4",
+      "comparisons": [
+        {
+          "candidate": "lf2_warp_cutlass256_q4",
+          "baseline": "lf2_warp_cublas",
+          "medianPairedDeviceSpeedup": 1.342710003166529,
+          "pairedSpeedups": [
+            1.342710003166529,
+            1.5054915889839686,
+            1.3132477137003922
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_two_stage_cutlass256_q4",
+          "baseline": "lf2_warp_cublas",
+          "medianPairedDeviceSpeedup": 1.6348946018610857,
+          "pairedSpeedups": [
+            1.6348946018610857,
+            1.873484475665319,
+            1.6340987291635876
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        },
+        {
+          "candidate": "c20_two_stage_cutlass256_q4",
+          "baseline": "lf2_warp_cutlass256_q4",
+          "medianPairedDeviceSpeedup": 1.2443187314289095,
+          "pairedSpeedups": [
+            1.2176081194044093,
+            1.2444337048270744,
+            1.2443187314289095
+          ],
+          "candidateFasterRounds": 3,
+          "roundCount": 3,
+          "selectionAndComparisonUseSameSamples": true
+        }
+      ],
+      "matchedEpilogueControls": [
+        {
+          "packed": "c20_fused_cutlass128_q4",
+          "control": "c20_fused_cutlass128_i32",
+          "medianTotalSpeedup": 1.157019232050229,
+          "medianGemmEpilogueTimeRatio": 1.1989356452614999
+        },
+        {
+          "packed": "c20_fused_cutlass256_q4",
+          "control": "c20_fused_cutlass256_i32",
+          "medianTotalSpeedup": 1.413892575257383,
+          "medianGemmEpilogueTimeRatio": 0.9614904200975484
+        },
+        {
+          "packed": "c20_two_stage_cutlass128_q4",
+          "control": "c20_two_stage_cutlass128_i32",
+          "medianTotalSpeedup": 1.6700612839827753,
+          "medianGemmEpilogueTimeRatio": 0.8584597097367944
+        },
+        {
+          "packed": "c20_two_stage_cutlass256_q4",
+          "control": "c20_two_stage_cutlass256_i32",
+          "medianTotalSpeedup": 1.4184034815454132,
+          "medianGemmEpilogueTimeRatio": 0.9586943375855216
+        },
+        {
+          "packed": "lf2_register_cutlass128_q4",
+          "control": "lf2_register_cutlass128_i32",
+          "medianTotalSpeedup": 1.36166762805591,
+          "medianGemmEpilogueTimeRatio": 0.9645204015716674
+        },
+        {
+          "packed": "lf2_register_cutlass256_q4",
+          "control": "lf2_register_cutlass256_i32",
+          "medianTotalSpeedup": 1.485272681654016,
+          "medianGemmEpilogueTimeRatio": 0.8599955108332805
+        },
+        {
+          "packed": "lf2_warp_cutlass128_q4",
+          "control": "lf2_warp_cutlass128_i32",
+          "medianTotalSpeedup": 1.508429628406711,
+          "medianGemmEpilogueTimeRatio": 0.7719756128456502
+        },
+        {
+          "packed": "lf2_warp_cutlass256_q4",
+          "control": "lf2_warp_cutlass256_i32",
+          "medianTotalSpeedup": 1.334815624473256,
+          "medianGemmEpilogueTimeRatio": 0.9597388330957406
+        }
+      ]
+    }
+  ],
+  "summedGpuEventWindowsMs": 23805.797525,
+  "fixtureAnchors": [
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_register_cublas",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_register_cublas_autotune",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_register_cutlass128_i32",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_register_cutlass256_i32",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_register_cutlass128_q4",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_register_cutlass256_q4",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_warp_cublas",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_warp_cublas_autotune",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_warp_cutlass128_i32",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_warp_cutlass256_i32",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_warp_cutlass128_q4",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-empty-p0.jsonl",
+      "name": "lf2_warp_cutlass256_q4",
+      "frozenLf2Case": 0
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_register_cublas",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_register_cublas_autotune",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_register_cutlass128_i32",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_register_cutlass256_i32",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_register_cutlass128_q4",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_register_cutlass256_q4",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_warp_cublas",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_warp_cublas_autotune",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_warp_cutlass128_i32",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_warp_cutlass256_i32",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_warp_cutlass128_q4",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-boundary-one-p1.jsonl",
+      "name": "lf2_warp_cutlass256_q4",
+      "frozenLf2Case": 1
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_two_stage_cublas",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_two_stage_cublas_autotune",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass128_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass256_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass128_q4",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass256_q4",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_fused_cublas",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_fused_cublas_autotune",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_fused_cutlass128_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_fused_cutlass256_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_fused_cutlass128_q4",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b4096-h184-p0.jsonl",
+      "name": "c20_fused_cutlass256_q4",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_two_stage_cublas",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_two_stage_cublas_autotune",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass128_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass256_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass128_q4",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_two_stage_cutlass256_q4",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_fused_cublas",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_fused_cublas_autotune",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_fused_cutlass128_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_fused_cutlass256_i32",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_fused_cutlass128_q4",
+      "generatedC20Fixture": true
+    },
+    {
+      "file": "research/launch/lf2-c20-gpu-2026-10-29/gpu-comparison-b8192-h184-p0.jsonl",
+      "name": "c20_fused_cutlass256_q4",
+      "generatedC20Fixture": true
+    }
+  ],
+  "limits": [
+    "Shared desktop GPU, paced short bursts, ambient clocks; no exclusive stable laboratory conditions",
+    "Device graph throughput only; setup, transfer, host launch, validation and pacing are separate",
+    "Composite GEMM stage includes epilogue and output stores, not matrix-only energy or time",
+    "Best choices selected from same limited samples; small differences require independent confirmation",
+    "No optical, energy, full multistream-miner or consensus-security qualification"
+  ]
+}
