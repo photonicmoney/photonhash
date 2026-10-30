@@ -1,0 +1,205 @@
+{
+  "method": "Filter completion offsets to [1,duration-1], add endpoints 1 and duration-1, require every consecutive gap <=20 s. This covers every real-valued 20 s window with start in [1,duration-21], not only the driver integer-grid smoke check.",
+  "scenarios": {
+    "network-baseline-001": {
+      "all_legitimate_clients_covered_measured": true,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 0.06711023091338575,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 0.06703543697949499,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 0.0673680619802326,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 0.0668649390572682,
+          "continuous_interior_20s_coverage_measured": true
+        }
+      ]
+    },
+    "network-churn-001": {
+      "all_legitimate_clients_covered_measured": true,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 0.9705322369700298,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 0.9728253440698609,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 0.9732049510348588,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 0.9734746400499716,
+          "continuous_interior_20s_coverage_measured": true
+        }
+      ]
+    },
+    "network-cross-001": {
+      "all_legitimate_clients_covered_measured": false,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 58,
+          "continuous_interior_20s_coverage_measured": false
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 58,
+          "continuous_interior_20s_coverage_measured": false
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 58,
+          "continuous_interior_20s_coverage_measured": false
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 58,
+          "continuous_interior_20s_coverage_measured": false
+        }
+      ]
+    },
+    "network-cross-002": {
+      "all_legitimate_clients_covered_measured": true,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 2.592660653986968,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 2.627755637979135,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 2.585531317978166,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 2.6002904099877924,
+          "continuous_interior_20s_coverage_measured": true
+        }
+      ]
+    },
+    "network-junk-001": {
+      "all_legitimate_clients_covered_measured": true,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 0.06888547400012612,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 0.06816407002042979,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 0.06774197099730372,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 0.06847162602934986,
+          "continuous_interior_20s_coverage_measured": true
+        }
+      ]
+    },
+    "network-saturated-001": {
+      "all_legitimate_clients_covered_measured": true,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 3.1562662669457495,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 3.320361799094826,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 3.0451979460194707,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 3.034633267088793,
+          "continuous_interior_20s_coverage_measured": true
+        }
+      ]
+    },
+    "network-shared-001": {
+      "all_legitimate_clients_covered_measured": true,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 1.1589297479949892,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 1.1664274210343137,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 0.8429620569804683,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 0.5979262370383367,
+          "continuous_interior_20s_coverage_measured": true
+        }
+      ]
+    },
+    "network-slow-001": {
+      "all_legitimate_clients_covered_measured": true,
+      "clients": [
+        {
+          "client": 0,
+          "maximum_interior_gap_s_measured": 0.0694424300454557,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 1,
+          "maximum_interior_gap_s_measured": 0.06874737690668553,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 2,
+          "maximum_interior_gap_s_measured": 0.0690066390670836,
+          "continuous_interior_20s_coverage_measured": true
+        },
+        {
+          "client": 3,
+          "maximum_interior_gap_s_measured": 0.06850478891283274,
+          "continuous_interior_20s_coverage_measured": true
+        }
+      ]
+    }
+  }
+}

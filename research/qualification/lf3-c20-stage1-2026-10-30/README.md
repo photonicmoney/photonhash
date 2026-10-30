@@ -95,6 +95,10 @@ legitimate client completes a correct valid verification in every interior
 at most **20 s configured**, and has no logical submission deadline misses.
 Logical latency includes transport retries, not just successful socket RTT.
 Offered/retried/completed requests and per-client timestamps remain in evidence.
+The driver checks a one-second grid of window starts. The separate
+[continuous-window checker](analysis/continuous_liveness.py) additionally checks
+all real-valued interior window starts from the raw completion gaps; all
+successful mixed scenarios pass, while the failed cross-pod run remains false.
 The phases include malformed traffic, unknown parents, slow incomplete frames,
 valid-format admitted-parent cache churn and legitimate/hostile connections
 sharing one source address. The latter does not grant newcomers an identity.
