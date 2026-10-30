@@ -39,6 +39,13 @@ The [fixed GPU/energy assessment and decision memo](research/qualification/lf3-c
 recommend **REVISE**, distinguishing measured paced results from unresolved
 qualification gaps. No candidate freeze or activation is implied.
 
+The [remote verifier/telemetry follow-up](research/qualification/lf3-c20-verifier-2026-10-30/README.md)
+adds byte-checked OpenSSL bank generation, a bounded standalone admission lab,
+and a fail-closed telemetry regression. On its CPU-only cloud allocation,
+measured bank medians are 0.6355 s portable and 0.2838 s single-worker OpenSSL.
+Production admission, physical low-power hardware and energy calibration remain
+open; this is not a consensus candidate freeze.
+
 The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
 **LF3-K8-C20-experiment.1**, a separately named experimental hash that uses
 ChaCha20 to expand each header/nonce binding into the matrix input vector.

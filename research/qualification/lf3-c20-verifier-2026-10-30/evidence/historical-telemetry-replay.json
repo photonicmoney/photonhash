@@ -1,0 +1,16 @@
+{
+  "qualified": false,
+  "reasons": [
+    "timestamp gap invalid"
+  ],
+  "max_sampling_gap_s_measured": 9.370326242991723,
+  "samples_measured": 23771,
+  "event_seconds_measured": {
+    "cold_start": 600.23461651613,
+    "warm": 600.05679441835
+  },
+  "guard_s_configured": 2.0,
+  "sensor_accuracy": "OPEN: statistical acceptance does not calibrate NVML",
+  "historical_process_receipt_passed": true,
+  "source_run": "remote-energy-confirmation-paced50-retry2-4-001"
+}

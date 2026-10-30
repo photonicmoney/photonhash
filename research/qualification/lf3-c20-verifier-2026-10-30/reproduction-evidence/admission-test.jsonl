@@ -1,0 +1,14 @@
+{"type":"hostile_batch","mode":0,"requests_measured":1048576,"wall_s_measured":0.006906001,"cpu_s_measured":0.006902542,"derivations_measured":0,"hashes_measured":0,"occupancy_unchanged":true}
+{"type":"hostile_batch","mode":1,"requests_measured":1048576,"wall_s_measured":0.002538089,"cpu_s_measured":0.002537519,"derivations_measured":0,"hashes_measured":0,"occupancy_unchanged":true}
+{"type":"hostile_batch","mode":2,"requests_measured":1048576,"wall_s_measured":0.003104888,"cpu_s_measured":0.003104520,"derivations_measured":0,"hashes_measured":0,"occupancy_unchanged":true}
+{"type":"admitted_parent_churn","step":0,"wall_s_measured":0.275518257,"cpu_s_measured":0.539807362,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":1,"wall_s_measured":0.261481534,"cpu_s_measured":0.512083493,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":2,"wall_s_measured":0.272778703,"cpu_s_measured":0.522891439,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":3,"wall_s_measured":0.255527366,"cpu_s_measured":0.500189672,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":4,"wall_s_measured":0.271966021,"cpu_s_measured":0.523103339,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":5,"wall_s_measured":0.255261533,"cpu_s_measured":0.499618545,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":6,"wall_s_measured":0.270766122,"cpu_s_measured":0.523449468,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":7,"wall_s_measured":0.254793303,"cpu_s_measured":0.498741509,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":8,"wall_s_measured":0.272763200,"cpu_s_measured":0.527481972,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"admitted_parent_churn","step":9,"wall_s_measured":0.258695490,"cpu_s_measured":0.506135528,"cold_derivations_measured":1,"slots_measured":2}
+{"type":"complete","unknown_requests_measured":1048576,"oversized_requests_measured":1048576,"overquota_requests_measured":1048576,"first_cold_wall_s_measured":0.272698852,"cached_wall_s_measured":0.015411948,"peak_RSS_KiB_measured":290580,"bank_slots_configured":2,"bank_coefficient_bytes_bound_configured":268435456,"derivations_measured":11,"verifications_measured":14,"evictions_measured":9}
