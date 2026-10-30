@@ -1,0 +1,339 @@
+{
+  "approximation_caution_inferred": "Quantization is many-to-one. Inexact y can preserve q and XOR errors can cancel. No claim that every approximate y changes the fold is valid; energy per correct full fold must be measured.",
+  "coefficient_bit_drop_attacks": [
+    {
+      "dropped_coefficient_bits": 1,
+      "independent_log2_exact_estimate": -15568.026712430357,
+      "nibble_accuracy": 0.07175445556640625,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "dropped_coefficient_bits": 2,
+      "independent_log2_exact_estimate": -15956.905455874485,
+      "nibble_accuracy": 0.0671844482421875,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "dropped_coefficient_bits": 3,
+      "independent_log2_exact_estimate": -16179.8203414505,
+      "nibble_accuracy": 0.064697265625,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    }
+  ],
+  "cold_setup_amortization": {
+    "future_parent_precomputation": "not available under SHAKE preimage assumption",
+    "matrix_is_parent_dependent": true,
+    "note": "Setup is paid once after a new parent and approaches zero per nonce at mining batch scale. It must not be charged per attempt.",
+    "setup_fraction_by_block_interval_seconds": {
+      "10": {
+        "bitslice_pack_1.276s_fraction": 0.1276,
+        "portable_c_0.497s_fraction": 0.0497,
+        "rust_0.227s_fraction": 0.0227
+      },
+      "120": {
+        "bitslice_pack_1.276s_fraction": 0.010633333333333333,
+        "portable_c_0.497s_fraction": 0.004141666666666667,
+        "rust_0.227s_fraction": 0.0018916666666666667
+      },
+      "30": {
+        "bitslice_pack_1.276s_fraction": 0.04253333333333333,
+        "portable_c_0.497s_fraction": 0.016566666666666667,
+        "rust_0.227s_fraction": 0.007566666666666667
+      },
+      "60": {
+        "bitslice_pack_1.276s_fraction": 0.021266666666666666,
+        "portable_c_0.497s_fraction": 0.008283333333333334,
+        "rust_0.227s_fraction": 0.0037833333333333334
+      },
+      "600": {
+        "bitslice_pack_1.276s_fraction": 0.002126666666666667,
+        "portable_c_0.497s_fraction": 0.0008283333333333334,
+        "rust_0.227s_fraction": 0.00037833333333333333
+      }
+    }
+  },
+  "elapsed_seconds": 346.6717108619632,
+  "evidence_note": "All empirical frequencies/times are measured. Omission exponents, work fractions and hardware amortizations are inferred; independence is unproved.",
+  "fold": {
+    "entropy_bits_per_nibble": 3.999783442495705,
+    "histogram": [
+      8267,
+      8533,
+      8112,
+      8206,
+      8113,
+      8242,
+      8079,
+      8378,
+      8133,
+      8017,
+      7979,
+      8017,
+      8206,
+      8172,
+      8290,
+      8328
+    ],
+    "modal_probability": 0.06510162353515625
+  },
+  "limitations": [
+    "No finite corpus proves SHAKE-derived matrices are random.",
+    "Sampled minors are structural tripwires, not full 4096-rank proofs.",
+    "The independence exponents are estimates and are not used as formal security bounds.",
+    "Custom GPU, FPGA, or ASIC circuits may improve exact evaluation even when these approximations fail."
+  ],
+  "matrix_bank": {
+    "chi_square_15df": 10.868119478225708,
+    "cross_matrix_correlation_abs_max": 0.0029090309378962103,
+    "cross_matrix_correlation_abs_mean": 0.0008508797104915186,
+    "cross_matrix_correlation_sample_entries": 1000000,
+    "entry_histogram_-8_to_7": [
+      8382164,
+      8387622,
+      8390731,
+      8385955,
+      8390473,
+      8389324,
+      8386952,
+      8386643,
+      8389533,
+      8388683,
+      8389931,
+      8389469,
+      8389187,
+      8390664,
+      8392802,
+      8387595
+    ],
+    "packed_zlib_ratio_mean": 1.0003052949905396,
+    "packed_zlib_ratio_min": 1.0003052949905396,
+    "sampled_minors": [
+      {
+        "condition_number": 953.4349397244334,
+        "dimension": 512,
+        "matrix": 0,
+        "rank": 512,
+        "top_quarter_frobenius_energy": 0.6254748307921172,
+        "top_to_median_singular": 3.4335301888706584
+      },
+      {
+        "condition_number": 2367.165200089107,
+        "dimension": 512,
+        "matrix": 1,
+        "rank": 512,
+        "top_quarter_frobenius_energy": 0.6274854487202467,
+        "top_to_median_singular": 3.517920384406007
+      }
+    ]
+  },
+  "pass_entropy_bits_measured": [
+    3.4713253259999908,
+    3.471969430823852,
+    3.4719912809002116,
+    3.467259630312266,
+    3.472170358037154,
+    3.4691215788772123,
+    3.4693923840040948,
+    3.46804960633449
+  ],
+  "pass_omission": [
+    {
+      "best_constant_guess": 2,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -11425.090175854095,
+      "missing_passes": 1,
+      "nibble_accuracy": 0.1446533203125,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.875
+    },
+    {
+      "best_constant_guess": 0,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -13383.739616985495,
+      "missing_passes": 2,
+      "nibble_accuracy": 0.10384368896484375,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.75
+    },
+    {
+      "best_constant_guess": 2,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -14856.187681315076,
+      "missing_passes": 3,
+      "nibble_accuracy": 0.08094024658203125,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.625
+    },
+    {
+      "best_constant_guess": 0,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -15515.4827622869,
+      "missing_passes": 4,
+      "nibble_accuracy": 0.07239532470703125,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.5
+    },
+    {
+      "best_constant_guess": 1,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -15806.507034845865,
+      "missing_passes": 5,
+      "nibble_accuracy": 0.06891632080078125,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.375
+    },
+    {
+      "best_constant_guess": 3,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -16094.036748603143,
+      "missing_passes": 6,
+      "nibble_accuracy": 0.065643310546875,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.25
+    },
+    {
+      "best_constant_guess": 0,
+      "efficiency_upper_bound_from_exact_guess": 0.0,
+      "independent_log2_exact_estimate": -16134.006367514166,
+      "missing_passes": 7,
+      "nibble_accuracy": 0.0652008056640625,
+      "vectors": 32,
+      "whole_vector_exact": 0,
+      "work_fraction": 0.125
+    }
+  ],
+  "profile": {
+    "exact_macs_per_attempt": 134217728,
+    "n": 4096,
+    "packed_matrix_bank_bytes": 67108864,
+    "passes": 8,
+    "unpacked_int8_bank_bytes": 134217728,
+    "vectors": 32
+  },
+  "row_omission": [
+    {
+      "efficiency_upper_bound": 0.06511752136752136,
+      "log2_exact_guess": -3.941162667322184,
+      "missing_rows": 1,
+      "modal_nibble_probability": 0.06510162353515625,
+      "work_fraction": 0.999755859375
+    },
+    {
+      "efficiency_upper_bound": 0.004240291841914144,
+      "log2_exact_guess": -7.882325334644368,
+      "missing_rows": 2,
+      "modal_nibble_probability": 0.06510162353515625,
+      "work_fraction": 0.99951171875
+    },
+    {
+      "efficiency_upper_bound": 1.798007919557796e-05,
+      "log2_exact_guess": -15.764650669288736,
+      "missing_rows": 4,
+      "modal_nibble_probability": 0.06510162353515625,
+      "work_fraction": 0.9990234375
+    },
+    {
+      "efficiency_upper_bound": 3.232835567895261e-10,
+      "log2_exact_guess": -31.529301338577472,
+      "missing_rows": 8,
+      "modal_nibble_probability": 0.06510162353515625,
+      "work_fraction": 0.998046875
+    },
+    {
+      "efficiency_upper_bound": 1.0451265833657318e-19,
+      "log2_exact_guess": -63.058602677154944,
+      "missing_rows": 16,
+      "modal_nibble_probability": 0.06510162353515625,
+      "work_fraction": 0.99609375
+    },
+    {
+      "efficiency_upper_bound": 1.1932071926051231e-76,
+      "log2_exact_guess": -252.23441070861978,
+      "missing_rows": 64,
+      "modal_nibble_probability": 0.06510162353515625,
+      "work_fraction": 0.984375
+    },
+    {
+      "efficiency_upper_bound": 2.0301796766688325e-304,
+      "log2_exact_guess": -1008.9376428344791,
+      "missing_rows": 256,
+      "modal_nibble_probability": 0.06510162353515625,
+      "work_fraction": 0.9375
+    }
+  ],
+  "selected_column_attacks": [
+    {
+      "column_fraction": 0.5,
+      "columns": 2048,
+      "independent_log2_exact_estimate": -16149.931553133783,
+      "mean_per_pass_bucket_accuracy": 0.2086038589477539,
+      "nibble_accuracy": 0.06502532958984375,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.75,
+      "columns": 3072,
+      "independent_log2_exact_estimate": -15436.303550083405,
+      "mean_per_pass_bucket_accuracy": 0.2884378433227539,
+      "nibble_accuracy": 0.07337188720703125,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.875,
+      "columns": 3584,
+      "independent_log2_exact_estimate": -14259.596674361796,
+      "mean_per_pass_bucket_accuracy": 0.39220142364501953,
+      "nibble_accuracy": 0.08953857421875,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.9375,
+      "columns": 3840,
+      "independent_log2_exact_estimate": -12630.264534709142,
+      "mean_per_pass_bucket_accuracy": 0.5135574340820312,
+      "nibble_accuracy": 0.1179656982421875,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.96875,
+      "columns": 3968,
+      "independent_log2_exact_estimate": -10808.004655334777,
+      "mean_per_pass_bucket_accuracy": 0.6372003555297852,
+      "nibble_accuracy": 0.16057586669921875,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.984375,
+      "columns": 4032,
+      "independent_log2_exact_estimate": -8992.007609951852,
+      "mean_per_pass_bucket_accuracy": 0.7415485382080078,
+      "nibble_accuracy": 0.21834564208984375,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    },
+    {
+      "column_fraction": 0.9921875,
+      "columns": 4064,
+      "independent_log2_exact_estimate": -6989.792984792343,
+      "mean_per_pass_bucket_accuracy": 0.81964111328125,
+      "nibble_accuracy": 0.30640411376953125,
+      "vectors": 32,
+      "whole_vector_exact": 0
+    }
+  ],
+  "tool": "ph_lf3_adversarial.py"
+}

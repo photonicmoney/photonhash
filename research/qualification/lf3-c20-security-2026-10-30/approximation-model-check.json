@@ -1,0 +1,197 @@
+{
+  "pooled_small_noise_models": [
+    {
+      "error_model": "pm1_rate_0.001",
+      "P_pooled_measured": 0.92919921875,
+      "P_pooled_95CI_inferred": [
+        0.9172684942370045,
+        0.9395228491889241
+      ],
+      "P_model_average_inferred": 0.9378438733460643,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "pm1_rate_0.00164625805715",
+      "P_pooled_measured": 0.89990234375,
+      "P_pooled_95CI_inferred": [
+        0.8861457698767555,
+        0.912161522803376
+      ],
+      "P_model_average_inferred": 0.8996769130095161,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "pm1_rate_0.005",
+      "P_pooled_measured": 0.72607421875,
+      "P_pooled_95CI_inferred": [
+        0.7063496163354032,
+        0.7449523085863318
+      ],
+      "P_model_average_inferred": 0.7257207674657384,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "pm1_rate_0.01",
+      "P_pooled_measured": 0.5166015625,
+      "P_pooled_95CI_inferred": [
+        0.49494792068286986,
+        0.5381930414064152
+      ],
+      "P_model_average_inferred": 0.5277120944488092,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "pm1_rate_0.0108304246962",
+      "P_pooled_measured": 0.482421875,
+      "P_pooled_95CI_inferred": [
+        0.460833666808915,
+        0.5040759027436066
+      ],
+      "P_model_average_inferred": 0.49994304003914497,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "pm1_rate_0.02",
+      "P_pooled_measured": 0.26611328125,
+      "P_pooled_95CI_inferred": [
+        0.24742456199855115,
+        0.28567776621416796
+      ],
+      "P_model_average_inferred": 0.2780490458158046,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "pm1_rate_0.035977892078",
+      "P_pooled_measured": 0.10546875,
+      "P_pooled_95CI_inferred": [
+        0.09289654902495545,
+        0.11951823426497579
+      ],
+      "P_model_average_inferred": 0.1001983268439186,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "pm1_rate_0.05",
+      "P_pooled_measured": 0.04736328125,
+      "P_pooled_95CI_inferred": [
+        0.03898076622567865,
+        0.05744064975175484
+      ],
+      "P_model_average_inferred": 0.04087627352416855,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "gaussian_nearest_integer_sigma_0.158851996408",
+      "P_pooled_measured": 0.8935546875,
+      "P_pooled_95CI_inferred": [
+        0.8794531179999834,
+        0.9061826303518921
+      ],
+      "P_model_average_inferred": 0.9001129184423792,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "gaussian_nearest_integer_sigma_0.196222859239",
+      "P_pooled_measured": 0.50244140625,
+      "P_pooled_95CI_inferred": [
+        0.4808026261261052,
+        0.5240710447693778
+      ],
+      "P_model_average_inferred": 0.4998978179798238,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "gaussian_nearest_integer_sigma_0.238415713889",
+      "P_pooled_measured": 0.1123046875,
+      "P_pooled_95CI_inferred": [
+        0.09934948866341223,
+        0.12671157313387169
+      ],
+      "P_model_average_inferred": 0.1000622118582113,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "gaussian_nearest_integer_sigma_0.25",
+      "P_pooled_measured": 0.0517578125,
+      "P_pooled_95CI_inferred": [
+        0.04297464830440514,
+        0.062219375284897925
+      ],
+      "P_model_average_inferred": 0.054416148179715164,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "gaussian_nearest_integer_sigma_0.5",
+      "P_pooled_measured": 0.0,
+      "P_pooled_95CI_inferred": [
+        0,
+        0.0018722006050613785
+      ],
+      "P_model_average_inferred": 1.2774514717239735e-09,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "gaussian_nearest_integer_sigma_1",
+      "P_pooled_measured": 0.0,
+      "P_pooled_95CI_inferred": [
+        0,
+        0.0018722006050613785
+      ],
+      "P_model_average_inferred": 6.04343802466946e-22,
+      "model_inside_pooled_interval_inferred": true
+    },
+    {
+      "error_model": "gaussian_nearest_integer_sigma_2",
+      "P_pooled_measured": 0.0,
+      "P_pooled_95CI_inferred": [
+        0,
+        0.0018722006050613785
+      ],
+      "P_model_average_inferred": 1.2880979539023552e-44,
+      "model_inside_pooled_interval_inferred": true
+    }
+  ],
+  "individual_parent_predictions_outside_Wilson_interval": [
+    {
+      "error_model": "pm1_rate_0.01",
+      "parent": 0,
+      "P_measured": 0.490234375,
+      "P_model_inferred": 0.5282702156479744,
+      "CI_inferred": [
+        0.45970952633114714,
+        0.5208322198415095
+      ]
+    },
+    {
+      "error_model": "pm1_rate_0.0108304246962",
+      "parent": 0,
+      "P_measured": 0.458984375,
+      "P_model_inferred": 0.5000836909723348,
+      "CI_inferred": [
+        0.4286731442717905,
+        0.4896021896533673
+      ]
+    },
+    {
+      "error_model": "pm1_rate_0.02",
+      "parent": 0,
+      "P_measured": 0.2451171875,
+      "P_model_inferred": 0.27809598059272295,
+      "CI_inferred": [
+        0.21975520839775625,
+        0.27238436670858096
+      ]
+    },
+    {
+      "error_model": "pm1_rate_0.05",
+      "parent": 1,
+      "P_measured": 0.0625,
+      "P_model_inferred": 0.04088917678162161,
+      "CI_inferred": [
+        0.04924679278261251,
+        0.07902343575240298
+      ]
+    }
+  ],
+  "scope": "Heuristic approximate fit, not a formal bound; all original observations retained."
+}

@@ -1,0 +1,63 @@
+{
+  "status": "INFERRED sensitivity model only; no synthesis or silicon energy measured",
+  "proof_inferred": "q=(y>>9)&15 depends only on y modulo 8192. Reduction modulo 8192 commutes with every integer multiply/add; discarded high carries cannot alter bits 9..12.",
+  "exact_product_range_inferred": [
+    -56,
+    64
+  ],
+  "exact_sum_range_inferred": [
+    -229376,
+    262144
+  ],
+  "range_sufficient_signed_accumulator_bits_inferred": 20,
+  "range_note": "19 signed bits miss the attainable positive endpoint +262144; the full mathematical sum needs 20. The consensus nibble needs only 13 residue bits.",
+  "cases": [
+    {
+      "shared_int4_product_NAND_equivalents_assumed_inferred": 60,
+      "full_adder_NAND_equivalents_assumed_inferred": 9,
+      "clocked_bit_NAND_equivalents_assumed_inferred": 6,
+      "datapath_NAND_equivalents_inferred": {
+        "13": 255,
+        "20": 360,
+        "32": 540
+      },
+      "mod13_to_int32_cost_ratio_inferred": 0.4722222222222222,
+      "mod13_to_range_sufficient_int20_cost_ratio_inferred": 0.7083333333333334,
+      "energy_ratio_under_equal_activity_and_capacitance_proxy_inferred": 0.4722222222222222
+    },
+    {
+      "shared_int4_product_NAND_equivalents_assumed_inferred": 140,
+      "full_adder_NAND_equivalents_assumed_inferred": 9,
+      "clocked_bit_NAND_equivalents_assumed_inferred": 6,
+      "datapath_NAND_equivalents_inferred": {
+        "13": 335,
+        "20": 440,
+        "32": 620
+      },
+      "mod13_to_int32_cost_ratio_inferred": 0.5403225806451613,
+      "mod13_to_range_sufficient_int20_cost_ratio_inferred": 0.7613636363636364,
+      "energy_ratio_under_equal_activity_and_capacitance_proxy_inferred": 0.5403225806451613
+    },
+    {
+      "shared_int4_product_NAND_equivalents_assumed_inferred": 220,
+      "full_adder_NAND_equivalents_assumed_inferred": 9,
+      "clocked_bit_NAND_equivalents_assumed_inferred": 6,
+      "datapath_NAND_equivalents_inferred": {
+        "13": 415,
+        "20": 520,
+        "32": 700
+      },
+      "mod13_to_int32_cost_ratio_inferred": 0.5928571428571429,
+      "mod13_to_range_sufficient_int20_cost_ratio_inferred": 0.7980769230769231,
+      "energy_ratio_under_equal_activity_and_capacitance_proxy_inferred": 0.5928571428571429
+    }
+  ],
+  "measured_implementation_energy_saving": null,
+  "limitations": [
+    "NAND-equivalent counts are assumed proxies, not library mapping.",
+    "Gate area does not determine dynamic energy: switching, gating, capacitance, voltage and routing are unresolved.",
+    "SRAM/HBM, bank reload, SHAKE, expansion, quantization, fold and control are common system costs excluded here.",
+    "Electronic ASICs can exploit exact narrow residue arithmetic. GPU INT32 and analog photonic comparisons need mapped end-to-end evidence.",
+    "This is the owner's allowed exact-arithmetic hardware-economics category, not a work-omitting shortcut."
+  ]
+}

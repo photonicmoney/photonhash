@@ -1,0 +1,11 @@
+4fb92be149f0b14d36338341778f3a5a9bdb08f9319e9e395671412917d97d5d  research/qualification/lf3-c20-security-2026-10-30/README.md
+c55595b48b30070219fb92fda52f522a3bf25da59f5a83ffcfebe1f7845e6328  research/qualification/lf3-c20-security-2026-10-30/additional-checks.json
+031bae0dbb9a4681e3527eeebd0e1ca623dddc4bd6bde2ec987f24834ad6077f  research/qualification/lf3-c20-security-2026-10-30/approximation-extended.jsonl
+579a50e1a5504893ff46178c93f2ee9e251cfd14654410569a701a7822bfb368  research/qualification/lf3-c20-security-2026-10-30/approximation-model-check.json
+78c5364eef587747fb856d008957ff85c03be1f1371a9bb8b6a7037947f42078  research/qualification/lf3-c20-security-2026-10-30/approximation-study.py
+6f3940e776244d2a6aacba6bd7625bce3ea995a64a106626656b8f3921e374b4  research/qualification/lf3-c20-security-2026-10-30/approximation-tables.md
+b50435a832f10aa1bee98aa14082e5bc4a5836a606a39f2c0ba9f3f29cd2ad78  research/qualification/lf3-c20-security-2026-10-30/c20-adversarial.json
+d4d9ef92aa67c5947256111ff117c8232b39684f9bc8e082022d119f2a0768d9  research/qualification/lf3-c20-security-2026-10-30/modular-datapath-model.json
+4a37eb64d5bd3b16f5a5269059bcfed14fab664c2b20bef22667d629ca28e862  research/qualification/lf3-c20-security-2026-10-30/parent-screen-summary.json
+386910ad1dab28166b094040a68d45aa3aafd29eda2b61f06bef88a092d96207  research/qualification/lf3-c20-security-2026-10-30/parent-screen.json
+3619c29ebb7c530df596fa45fb205063a2578a55e282edd4eaf9f8e67307e64a  research/qualification/lf3-c20-security-2026-10-30/reviewer-approx.py
