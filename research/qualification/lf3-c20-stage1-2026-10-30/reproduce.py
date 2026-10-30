@@ -15,5 +15,6 @@ for name in controls:shutil.copyfile(package/'control'/name,root/'control'/name)
 env=dict(os.environ,LF3_STAGE1_ROOT=str(root))
 for name in controls:
     with (root/'evidence'/('reproduce-'+name+'.log')).open('x') as log:r=subprocess.run([sys.executable,str(root/'control'/name)],stdout=log,stderr=subprocess.STDOUT,env=env,timeout=600)
+    if r.returncode==40 or (root/'evidence/STOP.json').exists():raise SystemExit(40)
     if r.returncode:raise SystemExit('Failed '+name+'; retain results, do not replace the run')
 print('PUBLIC_STANDALONE_REPRODUCTION_COMPLETE')
