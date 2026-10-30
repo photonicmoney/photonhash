@@ -1,0 +1,524 @@
+{
+  "passed": true,
+  "mode_configured": "cold",
+  "duration_s_configured": 10,
+  "elapsed_s_measured": 0.783958065090701,
+  "legitimate_clients_configured": 32,
+  "records": [
+    {
+      "role": "legitimate",
+      "client": 0,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.435503605986014
+      ],
+      "logical_latency_s_measured": [
+        0.43521827296353877
+      ],
+      "p99_logical_latency_s_measured": 0.43521827296353877,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 1,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.5621843510307372
+      ],
+      "logical_latency_s_measured": [
+        0.5618353219470009
+      ],
+      "p99_logical_latency_s_measured": 0.5618353219470009,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 2,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.3068300180602819
+      ],
+      "logical_latency_s_measured": [
+        0.30642078805249184
+      ],
+      "p99_logical_latency_s_measured": 0.30642078805249184,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 3,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.2911203569965437
+      ],
+      "logical_latency_s_measured": [
+        0.29060575691983104
+      ],
+      "p99_logical_latency_s_measured": 0.29060575691983104,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 4,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.3225770150311291
+      ],
+      "logical_latency_s_measured": [
+        0.3219426029827446
+      ],
+      "p99_logical_latency_s_measured": 0.3219426029827446,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 5,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.4518144780304283
+      ],
+      "logical_latency_s_measured": [
+        0.4506541680311784
+      ],
+      "p99_logical_latency_s_measured": 0.4506541680311784,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 6,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.6888389260275289
+      ],
+      "logical_latency_s_measured": [
+        0.6874457730446011
+      ],
+      "p99_logical_latency_s_measured": 0.6874457730446011,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 7,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.5779256790410727
+      ],
+      "logical_latency_s_measured": [
+        0.5764627900207415
+      ],
+      "p99_logical_latency_s_measured": 0.5764627900207415,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 8,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.33833663107361645
+      ],
+      "logical_latency_s_measured": [
+        0.3366988970665261
+      ],
+      "p99_logical_latency_s_measured": 0.3366988970665261,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 9,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.5936984760919586
+      ],
+      "logical_latency_s_measured": [
+        0.5918628920335323
+      ],
+      "p99_logical_latency_s_measured": 0.5918628920335323,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 10,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.4680202309973538
+      ],
+      "logical_latency_s_measured": [
+        0.46614680893253535
+      ],
+      "p99_logical_latency_s_measured": 0.46614680893253535,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 11,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.7050709089962766
+      ],
+      "logical_latency_s_measured": [
+        0.7031447169138119
+      ],
+      "p99_logical_latency_s_measured": 0.7031447169138119,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 12,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.354374319082126
+      ],
+      "logical_latency_s_measured": [
+        0.35219079710077494
+      ],
+      "p99_logical_latency_s_measured": 0.35219079710077494,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 13,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.4836283370386809
+      ],
+      "logical_latency_s_measured": [
+        0.4813925960334018
+      ],
+      "p99_logical_latency_s_measured": 0.4813925960334018,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 14,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.6094913320848718
+      ],
+      "logical_latency_s_measured": [
+        0.6070423070341349
+      ],
+      "p99_logical_latency_s_measured": 0.6070423070341349,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 15,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.720882514026016
+      ],
+      "logical_latency_s_measured": [
+        0.7183812799630687
+      ],
+      "p99_logical_latency_s_measured": 0.7183812799630687,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 16,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.37079288507811725
+      ],
+      "logical_latency_s_measured": [
+        0.36823932209517807
+      ],
+      "p99_logical_latency_s_measured": 0.36823932209517807,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 17,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.49927463207859546
+      ],
+      "logical_latency_s_measured": [
+        0.4965946270385757
+      ],
+      "p99_logical_latency_s_measured": 0.4965946270385757,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 18,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.6252552450168878
+      ],
+      "logical_latency_s_measured": [
+        0.6225183439673856
+      ],
+      "p99_logical_latency_s_measured": 0.6225183439673856,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 19,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.7366886810632423
+      ],
+      "logical_latency_s_measured": [
+        0.7338229940505698
+      ],
+      "p99_logical_latency_s_measured": 0.7338229940505698,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 20,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.38718621199950576
+      ],
+      "logical_latency_s_measured": [
+        0.384273613919504
+      ],
+      "p99_logical_latency_s_measured": 0.384273613919504,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 21,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.5151814710116014
+      ],
+      "logical_latency_s_measured": [
+        0.5120522340293974
+      ],
+      "p99_logical_latency_s_measured": 0.5120522340293974,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 22,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.6410723680164665
+      ],
+      "logical_latency_s_measured": [
+        0.637904452974908
+      ],
+      "p99_logical_latency_s_measured": 0.637904452974908,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 23,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.7524590530665591
+      ],
+      "logical_latency_s_measured": [
+        0.7490748200798407
+      ],
+      "p99_logical_latency_s_measured": 0.7490748200798407,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 24,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.4032484369818121
+      ],
+      "logical_latency_s_measured": [
+        0.3998097409494221
+      ],
+      "p99_logical_latency_s_measured": 0.3998097409494221,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 25,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.5308221069863066
+      ],
+      "logical_latency_s_measured": [
+        0.5271809839177877
+      ],
+      "p99_logical_latency_s_measured": 0.5271809839177877,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 26,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.6569169129943475
+      ],
+      "logical_latency_s_measured": [
+        0.6532281279796734
+      ],
+      "p99_logical_latency_s_measured": 0.6532281279796734,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 27,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.7680882820859551
+      ],
+      "logical_latency_s_measured": [
+        0.7642062740633264
+      ],
+      "p99_logical_latency_s_measured": 0.7642062740633264,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 28,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.4191448710625991
+      ],
+      "logical_latency_s_measured": [
+        0.4152119350619614
+      ],
+      "p99_logical_latency_s_measured": 0.4152119350619614,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 29,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.5464567630551755
+      ],
+      "logical_latency_s_measured": [
+        0.5424479719949886
+      ],
+      "p99_logical_latency_s_measured": 0.5424479719949886,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 30,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.7837852030061185
+      ],
+      "logical_latency_s_measured": [
+        0.7795730839716271
+      ],
+      "p99_logical_latency_s_measured": 0.7795730839716271,
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 31,
+      "counts_measured": {
+        "wire_attempts": 1,
+        "valid_completed": 1
+      },
+      "completion_offsets_s_measured": [
+        0.6727335060713813
+      ],
+      "logical_latency_s_measured": [
+        0.668477570055984
+      ],
+      "p99_logical_latency_s_measured": 0.668477570055984,
+      "liveness_passed": true
+    }
+  ],
+  "mismatches": [],
+  "wire_scope": "Same protocol and scheduling for both roles; repeated canonical valid fixtures, no duplicate suppression in this isolated laboratory",
+  "liveness_scope": "Finite admitted-source/connection load; no unlimited-Sybil, physical-link or shared-NAT newcomer guarantee"
+}

@@ -1,0 +1,39 @@
+{
+  "type": "complete",
+  "elapsed_s_measured": 10.970289170974866,
+  "counts_measured": {
+    "accepted_TCP": 1,
+    "bytes_received": 262756,
+    "scheduled": 576,
+    "completed_native": 576,
+    "invalid": 556,
+    "valid": 20
+  },
+  "native_measured": {
+    "derivations": 5,
+    "verifications": 576,
+    "evictions": 3,
+    "resident": 2,
+    "high_water": 2,
+    "coefficient_bytes": 268435456,
+    "errors": 0
+  },
+  "connections_measured": 0,
+  "sources_measured": 0,
+  "pending_measured": 0,
+  "inflight_measured": 0,
+  "high_water_measured": {
+    "connections": 1,
+    "sources": 1,
+    "pending": 0
+  },
+  "rss_peak_KiB_measured": 302200,
+  "fatal": null,
+  "socket_buffers_bytes_measured": [
+    [
+      16384,
+      16384
+    ]
+  ],
+  "stopped_by_controller": true
+}

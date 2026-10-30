@@ -1,0 +1,15 @@
+{
+  "scope": "Isolated remote C20 matrix/epilogue attribution; no new hash or candidate activation",
+  "batch_configured": 8192,
+  "tile_configured": [128, 256, 64],
+  "profiles_configured": ["packed C20", "fused C20"],
+  "correctness_prerequisite": "Compare full h, 2048-byte fold and digest for at least 16 deterministic nonces under a nonzero parent against portable C; all batch folds against exact int32 GEMM; stop on any mismatch",
+  "observations_configured": [
+    "Uninstrumented CUDA-event windows, fixed kernel order ABBA, 20 windows per kernel after fixed warmup, at least 100 ms per window",
+    "Phase observers with identical tile/Mma, explicitly mainloop INCLUDING operand delivery and waits, quantization/fold register work, final epilogue/store; report clock64 and register/spill overhead",
+    "Nsight Compute hardware tensor-pipeline counters on unchanged kernels, if permitted, clock-control none, separate from event timing",
+    "If counters denied, preserve failure and report that pure multiply activity remains unmeasured; do not relabel a CUTLASS loop span as pure multiplication"
+  ],
+  "interpretation": "Overlapped hardware counters and kernel phases are not additive wall-time fractions. A photonic speedup claim needs actual memory, conversion and reload costs. Earlier 98.7 percent clock64 observer span includes operand delivery and is not a tensor-core utilization measurement.",
+  "safety": "One rented server GPU, at most two hours, unchanged clocks/power, stop at 80 C or telemetry gap over 2 seconds; no local research execution"
+}

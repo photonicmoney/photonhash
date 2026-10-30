@@ -1,0 +1,19 @@
+{
+  "model_measured": "AMD EPYC 9655 96-Core Processor",
+  "logical_affinity_measured": [
+    1,
+    42,
+    97,
+    138
+  ],
+  "architecture_measured": "x86_64",
+  "kernel_measured": "6.8.0-147-generic",
+  "gcc_measured": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "OpenSSL_measured": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "configured_vcpus": 4,
+  "configured_RAM_GiB": 8,
+  "scope": "Shared cloud allocation; not dedicated modest/low-power physical qualification",
+  "cpu.max_measured": "max 100000",
+  "memory.max_measured": "8000000000",
+  "cpuset.cpus.effective_measured": "1,42,97,138"
+}

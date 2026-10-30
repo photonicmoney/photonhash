@@ -1,0 +1,14 @@
+[
+  {
+    "port_private_control": 19504,
+    "connected": true,
+    "ssh_banner": true,
+    "elapsed_s_measured": 0.07542678399477154
+  },
+  {
+    "port_private_control": 19505,
+    "connected": true,
+    "ssh_banner": false,
+    "elapsed_s_measured": 0.034822560963220894
+  }
+]

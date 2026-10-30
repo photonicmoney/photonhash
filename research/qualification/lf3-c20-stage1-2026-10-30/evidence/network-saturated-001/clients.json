@@ -1,0 +1,1084 @@
+{
+  "passed": true,
+  "mode_configured": "saturated",
+  "duration_s_configured": 120,
+  "elapsed_s_measured": 122.78892569907475,
+  "legitimate_clients_configured": 4,
+  "records": [
+    {
+      "role": "hostile",
+      "client": 0,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 1,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 2,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 3,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 4,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 5,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 6,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 7,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 8,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 9,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 10,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 11,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 12,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 13,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 14,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 15,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 16,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 17,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 18,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 19,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 20,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 21,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 22,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 23,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 24,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 25,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 26,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 27,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 28,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 29,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 30,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 31,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 32,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 33,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 34,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 35,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 36,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 37,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 38,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 39,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 40,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 41,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 42,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 43,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 44,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 45,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 46,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 47,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 48,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 49,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 50,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 51,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 52,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 53,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 54,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 55,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 56,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 57,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 49,
+        "status_0": 49,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 58,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 51,
+        "status_0": 51,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 59,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 50,
+        "status_0": 50,
+        "transport_retries": 1
+      }
+    },
+    {
+      "role": "legitimate",
+      "client": 0,
+      "counts_measured": {
+        "wire_attempts": 52,
+        "valid_completed": 51,
+        "transport_retries": 1
+      },
+      "completion_offsets_s_measured": [
+        0.28674204205162823,
+        2.388333317008801,
+        4.6474608280695975,
+        6.876928493031301,
+        9.141392596065998,
+        11.41157212597318,
+        13.68318262603134,
+        15.938638780033216,
+        18.202386567019857,
+        20.4314981730422,
+        22.66937986703124,
+        24.895860112039372,
+        27.134474117076024,
+        29.36690644698683,
+        31.567391482996754,
+        33.80418587906752,
+        36.05497142998502,
+        38.29496700002346,
+        40.592293614987284,
+        42.90339795302134,
+        45.20561981201172,
+        47.45791126706172,
+        49.767457352019846,
+        52.04310853907373,
+        54.322338122990914,
+        56.5863618979929,
+        58.85658124904148,
+        61.12424798903521,
+        63.39239037001971,
+        65.64401892898604,
+        67.86462760099676,
+        70.1133475600509,
+        72.3678948560264,
+        74.65378735307604,
+        76.8972977619851,
+        79.14960421004798,
+        81.44584297400434,
+        83.67705291800667,
+        85.89371504704468,
+        88.13089289399795,
+        90.30732008605264,
+        93.46358635299839,
+        96.43275831302162,
+        99.42030513403006,
+        102.38575052202214,
+        105.35757838108111,
+        108.3666142760776,
+        111.347600855981,
+        114.39772602403536,
+        117.3981102880789,
+        120.40711469308008
+      ],
+      "logical_latency_s_measured": [
+        0.28636326803825796,
+        2.1015912749571726,
+        2.2591275110607967,
+        2.229467664961703,
+        2.2644641030346975,
+        2.270179529907182,
+        2.2716105000581592,
+        2.2554561540018767,
+        2.2637477869866416,
+        2.229111606022343,
+        2.2378816939890385,
+        2.2264802450081334,
+        2.238614005036652,
+        2.2324323299108073,
+        2.2004850360099226,
+        2.2367943960707635,
+        2.2507855509174988,
+        2.2399955700384453,
+        2.297326614963822,
+        2.311104338034056,
+        2.3022218589903787,
+        2.252291455049999,
+        2.3095460849581286,
+        2.2756511870538816,
+        2.2792295839171857,
+        2.264023775001988,
+        2.2702193510485813,
+        2.2676667399937287,
+        2.2681423809845,
+        2.251628558966331,
+        2.2206086720107123,
+        2.2487199590541422,
+        2.254547295975499,
+        2.2858924970496446,
+        2.24351040890906,
+        2.252306448062882,
+        2.296238763956353,
+        2.2312099440023303,
+        2.2166621290380135,
+        2.237177846953273,
+        2.176427192054689,
+        3.1562662669457495,
+        2.969171960023232,
+        2.9875468210084364,
+        2.9654453879920766,
+        2.971827859058976,
+        3.0090358949964866,
+        2.9809865799034014,
+        3.0501251680543646,
+        3.0003842640435323,
+        3.0090044050011784
+      ],
+      "p99_logical_latency_s_measured": 3.1562662669457495,
+      "empty_20s_interior_window_starts_measured": [],
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 1,
+      "counts_measured": {
+        "wire_attempts": 52,
+        "valid_completed": 51,
+        "transport_retries": 1
+      },
+      "completion_offsets_s_measured": [
+        0.5667768829734996,
+        2.900255438988097,
+        5.145895197056234,
+        7.376706519979052,
+        9.64911735302303,
+        11.907732948078774,
+        14.195597424986772,
+        16.43793262296822,
+        18.698918352019973,
+        20.928950592991896,
+        23.165085358079523,
+        25.386961542069912,
+        27.632351711043157,
+        29.86733409902081,
+        32.067064590984955,
+        34.30563012207858,
+        36.55134158907458,
+        38.799253051984124,
+        41.106926979031414,
+        43.42236500803847,
+        45.70775446202606,
+        47.97877096198499,
+        50.27888729807455,
+        52.55229707597755,
+        54.824680578080006,
+        57.09131172799971,
+        59.35880520497449,
+        61.632228814065456,
+        63.90227556298487,
+        66.13844741403591,
+        68.36505896807648,
+        70.61101114097983,
+        72.88088584807701,
+        75.16875920898747,
+        77.39613899798132,
+        79.65979816101026,
+        81.9496480920352,
+        84.17086097307038,
+        86.39076211501379,
+        88.6357840889832,
+        91.95614588807803,
+        94.93137095996644,
+        97.92772087198682,
+        100.90570447803475,
+        103.86586298700422,
+        106.85555892798584,
+        109.8524813259719,
+        112.87259742000606,
+        115.90418686100747,
+        118.8924102850724,
+        121.9337329560658
+      ],
+      "logical_latency_s_measured": [
+        0.5662809009663761,
+        2.3334785560145974,
+        2.245639758068137,
+        2.2308113229228184,
+        2.2724108330439776,
+        2.258615595055744,
+        2.2878644769079983,
+        2.242335197981447,
+        2.260985729051754,
+        2.230032240971923,
+        2.236134765087627,
+        2.221876183990389,
+        2.2453901689732447,
+        2.2349823879776523,
+        2.1997304919641465,
+        2.238565531093627,
+        2.245711466995999,
+        2.247911462909542,
+        2.30767392704729,
+        2.315438029007055,
+        2.285389453987591,
+        2.2710164999589324,
+        2.300116336089559,
+        2.273409777902998,
+        2.272383502102457,
+        2.2666311499197036,
+        2.267493476974778,
+        2.273423609090969,
+        2.2700467489194125,
+        2.23617185105104,
+        2.2266115540405735,
+        2.245952172903344,
+        2.2698747070971876,
+        2.287873360910453,
+        2.227379788993858,
+        2.263659163028933,
+        2.2898499310249463,
+        2.2212128810351714,
+        2.21990114194341,
+        2.245021973969415,
+        3.320361799094826,
+        2.975225071888417,
+        2.996349912020378,
+        2.9779836060479283,
+        2.960158508969471,
+        2.989695940981619,
+        2.9969223979860544,
+        3.020116094034165,
+        3.0315894410014153,
+        2.988223424064927,
+        3.041322670993395
+      ],
+      "p99_logical_latency_s_measured": 3.320361799094826,
+      "empty_20s_interior_window_starts_measured": [],
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 2,
+      "counts_measured": {
+        "wire_attempts": 52,
+        "valid_completed": 51,
+        "transport_retries": 1
+      },
+      "completion_offsets_s_measured": [
+        1.350635726004839,
+        3.64263363101054,
+        5.888355112983845,
+        8.126069474034011,
+        10.404363839072175,
+        12.66231909301132,
+        14.949238357017748,
+        17.206076145055704,
+        19.43776237498969,
+        21.67093218397349,
+        23.911808239063248,
+        26.13331541302614,
+        28.368230819003657,
+        30.58856475306675,
+        32.80733309406787,
+        35.06727754406165,
+        37.29000527900644,
+        39.555124936043285,
+        41.87392481404822,
+        44.19278826797381,
+        46.45273810601793,
+        48.74736653000582,
+        51.035611764062196,
+        53.30641043407377,
+        55.575241990038194,
+        57.8431110259844,
+        60.10857672803104,
+        62.38460991496686,
+        64.64802933402825,
+        66.87034239002969,
+        69.10926031600684,
+        71.34461329504848,
+        73.63308861898258,
+        75.91044745501131,
+        78.14122189197224,
+        80.4241839289898,
+        82.6854520450579,
+        84.90239437902346,
+        87.12927964399569,
+        89.38694699807093,
+        91.21058521606028,
+        94.19583506300114,
+        97.18202894204296,
+        100.16135688696522,
+        103.12574164604302,
+        106.10580265300814,
+        109.10661063704174,
+        112.11018209904432,
+        115.1553800450638,
+        118.13951928599272,
+        121.17845237301663
+      ],
+      "logical_latency_s_measured": [
+        1.3500523919938132,
+        2.291997905005701,
+        2.2457214819733053,
+        2.237714361050166,
+        2.278294365038164,
+        2.2579552539391443,
+        2.2869192640064284,
+        2.2568377880379558,
+        2.2316862299339846,
+        2.233169808983803,
+        2.240876055089757,
+        2.221507173962891,
+        2.2349154059775174,
+        2.220333934063092,
+        2.218768341001123,
+        2.2599444499937817,
+        2.222727734944783,
+        2.2651196570368484,
+        2.3187998780049384,
+        2.3188634539255872,
+        2.259949838044122,
+        2.294628423987888,
+        2.288245234056376,
+        2.2707986700115725,
+        2.268831555964425,
+        2.2678690359462053,
+        2.26546570204664,
+        2.2760331869358197,
+        2.2634194190613925,
+        2.2223130560014397,
+        2.238917925977148,
+        2.235352979041636,
+        2.288475323934108,
+        2.277358836028725,
+        2.230774436960928,
+        2.282962037017569,
+        2.261268116068095,
+        2.2169423339655623,
+        2.226885264972225,
+        2.257667354075238,
+        1.8236382179893553,
+        2.98524984694086,
+        2.9861938790418208,
+        2.979327944922261,
+        2.9643847590778023,
+        2.9800610069651157,
+        3.0008079840335995,
+        3.003571462002583,
+        3.0451979460194707,
+        2.9841392409289256,
+        3.0389330870239064
+      ],
+      "p99_logical_latency_s_measured": 3.0451979460194707,
+      "empty_20s_interior_window_starts_measured": [],
+      "liveness_passed": true
+    },
+    {
+      "role": "legitimate",
+      "client": 3,
+      "counts_measured": {
+        "wire_attempts": 52,
+        "valid_completed": 51,
+        "transport_retries": 1
+      },
+      "completion_offsets_s_measured": [
+        1.8661551730474457,
+        4.147400532965548,
+        6.382869058055803,
+        8.634148248005658,
+        10.914445250062272,
+        13.166654911008663,
+        15.439764913986437,
+        17.705656963051297,
+        19.932456893031485,
+        22.171142286038958,
+        24.408032577019185,
+        26.640246657072566,
+        28.871824532048777,
+        31.076382423983887,
+        33.30928118200973,
+        35.55835760105401,
+        37.790451709064655,
+        40.053079148055986,
+        42.38315180898644,
+        44.704194387071766,
+        46.949752682005055,
+        49.256853408995084,
+        51.53975292702671,
+        53.810026640072465,
+        56.08237756299786,
+        58.350517501006834,
+        60.617650710977614,
+        62.89037368807476,
+        65.14820404199418,
+        67.3642097240081,
+        69.61288948205765,
+        71.84798494097777,
+        74.13716403197031,
+        76.40351115097292,
+        78.6487084380351,
+        80.93233026203234,
+        83.1801438999828,
+        85.39295844302978,
+        87.62982889299747,
+        89.89438791002613,
+        92.70708683005068,
+        95.67655283701606,
+        98.67393885098863,
+        101.64667082100641,
+        104.61890425498132,
+        107.62206849397626,
+        110.59884673997294,
+        113.63348000706173,
+        116.65063114499208,
+        119.64962531102356,
+        122.69134950998705
+      ],
+      "logical_latency_s_measured": [
+        1.8653383050113916,
+        2.2812453599181026,
+        2.235468525090255,
+        2.251279189949855,
+        2.2802970020566136,
+        2.2522096609463915,
+        2.2731100029777735,
+        2.2658920490648597,
+        2.2267999299801886,
+        2.238685393007472,
+        2.2368902909802273,
+        2.2322140800533816,
+        2.2315778749762103,
+        2.20455789193511,
+        2.23289875802584,
+        2.249076419044286,
+        2.2320941080106422,
+        2.2626274389913306,
+        2.3300726609304547,
+        2.3210425780853257,
+        2.2455582949332893,
+        2.307100726990029,
+        2.282899518031627,
+        2.2702737130457535,
+        2.2723509229253978,
+        2.2681399380089715,
+        2.2671332099707797,
+        2.272722977097146,
+        2.2578303539194167,
+        2.216005682013929,
+        2.2486797580495477,
+        2.2350954589201137,
+        2.2891790909925476,
+        2.266347119002603,
+        2.245197287062183,
+        2.283621823997237,
+        2.2478136379504576,
+        2.2128145430469885,
+        2.2368704499676824,
+        2.2645590170286596,
+        2.812698920024559,
+        2.9694660069653764,
+        2.997386013972573,
+        2.972731970017776,
+        2.972233433974907,
+        3.003164238994941,
+        2.976778245996684,
+        3.034633267088793,
+        3.017151137930341,
+        2.99899416603148,
+        3.041724198963493
+      ],
+      "p99_logical_latency_s_measured": 3.041724198963493,
+      "empty_20s_interior_window_starts_measured": [],
+      "liveness_passed": true
+    }
+  ],
+  "mismatches": [],
+  "wire_scope": "Same protocol and scheduling for both roles; repeated canonical valid fixtures, no duplicate suppression in this isolated laboratory",
+  "liveness_scope": "Finite admitted-source/connection load; no unlimited-Sybil, physical-link or shared-NAT newcomer guarantee"
+}

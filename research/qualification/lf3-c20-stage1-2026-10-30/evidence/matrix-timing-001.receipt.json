@@ -1,0 +1,8 @@
+{
+  "passed_process": true,
+  "exit_code": 0,
+  "guard_reason": null,
+  "wall_seconds_measured": 14.651342390920036,
+  "maximum_temperature_C_measured": 52,
+  "clocks_power_unchanged": true
+}

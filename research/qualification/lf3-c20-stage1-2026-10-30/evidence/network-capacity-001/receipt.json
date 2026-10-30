@@ -1,0 +1,29 @@
+{
+  "negative_control_passed": true,
+  "universal_newcomer_guarantee": "FAIL by design: no identity under finite unauthenticated slots",
+  "records": [
+    {
+      "cycle_configured": 0,
+      "held_connections_configured": 64,
+      "universal_newcomer_liveness_failed_as_expected_measured": true,
+      "hold_setup_s_measured": 0.25140011799521744,
+      "recovery_s_measured": 0.28824040899053216
+    },
+    {
+      "cycle_configured": 1,
+      "held_connections_configured": 64,
+      "universal_newcomer_liveness_failed_as_expected_measured": true,
+      "hold_setup_s_measured": 0.251407198025845,
+      "recovery_s_measured": 0.01610566594172269
+    },
+    {
+      "cycle_configured": 2,
+      "held_connections_configured": 64,
+      "universal_newcomer_liveness_failed_as_expected_measured": true,
+      "hold_setup_s_measured": 0.25137994694523513,
+      "recovery_s_measured": 0.016771125025115907
+    }
+  ],
+  "correct_recovery_responses_measured": 3,
+  "server_exit_code": 0
+}

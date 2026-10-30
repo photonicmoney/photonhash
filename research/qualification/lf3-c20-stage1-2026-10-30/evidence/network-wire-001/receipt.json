@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "canonical_TCP_responses_measured": 560,
+  "strict_target_status_counts_measured": {
+    "0": 556,
+    "1": 4
+  },
+  "coalesced_valid_frames_measured": 16,
+  "header_lengths_bytes_configured": [
+    0,
+    1,
+    79,
+    80,
+    81,
+    100,
+    101,
+    102,
+    184,
+    215,
+    216,
+    217,
+    236,
+    237,
+    238,
+    351,
+    352,
+    353,
+    372,
+    373,
+    374,
+    487,
+    488,
+    489,
+    508,
+    509,
+    510,
+    4096
+  ],
+  "elapsed_s_measured": 10.736995868035592,
+  "server_exit_code": 0
+}

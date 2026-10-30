@@ -1,0 +1,505 @@
+{
+  "scope": "Isolated actual TCP service, not Laser network integration; role labels never sent",
+  "scenarios": {
+    "cold": {
+      "native_measured": {
+        "derivations": 1,
+        "verifications": 32,
+        "evictions": 0,
+        "resident": 1,
+        "high_water": 1,
+        "coefficient_bytes": 134217728,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 32,
+        "bytes_received": 17792,
+        "scheduled": 32,
+        "completed_native": 32,
+        "valid": 32
+      },
+      "high_water_measured": {
+        "connections": 32,
+        "sources": 8,
+        "pending": 31
+      },
+      "rss_peak_KiB_measured": 154832,
+      "passed": true,
+      "legitimate_completions_measured": 32,
+      "maximum_client_p99_s_measured": 0.7795730839716271,
+      "legitimate_clients_measured": 32,
+      "hostile_responses_measured": 0,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed_process": true,
+        "client_exit_code": 0,
+        "server_exit_code": 0,
+        "mode_configured": "cold",
+        "one_bank_for_simultaneous_identical_parent": true,
+        "bounds_passed": true,
+        "passed": true
+      }
+    },
+    "junk_only": {
+      "native_measured": {},
+      "counts_measured": {
+        "accepted_TCP": 3360,
+        "bytes_received": 106752,
+        "malformed": 3360,
+        "unknown_parent": 1664
+      },
+      "high_water_measured": {
+        "connections": 32,
+        "sources": 8,
+        "pending": 0
+      },
+      "rss_peak_KiB_measured": 15368,
+      "passed": true,
+      "legitimate_completions_measured": 0,
+      "maximum_client_p99_s_measured": null,
+      "legitimate_clients_measured": 0,
+      "hostile_responses_measured": 5024,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed_process": true,
+        "client_exit_code": 0,
+        "server_exit_code": 0,
+        "mode_configured": "junk_only",
+        "zero_native_work": true,
+        "bounds_passed": true,
+        "passed": true
+      }
+    },
+    "baseline": {
+      "native_measured": {
+        "derivations": 2,
+        "verifications": 3721,
+        "evictions": 0,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 4,
+        "bytes_received": 1566676,
+        "scheduled": 3721,
+        "completed_native": 3721,
+        "valid": 3721
+      },
+      "high_water_measured": {
+        "connections": 4,
+        "sources": 4,
+        "pending": 3
+      },
+      "rss_peak_KiB_measured": 285408,
+      "passed": true,
+      "legitimate_completions_measured": 3721,
+      "maximum_client_p99_s_measured": 0.06670230196323246,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 0,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed_process": true,
+        "client_exit_code": 0,
+        "server_exit_code": 0,
+        "mode_configured": "baseline",
+        "bounds_passed": true,
+        "passed": true
+      }
+    },
+    "junk": {
+      "native_measured": {
+        "derivations": 2,
+        "verifications": 3676,
+        "evictions": 0,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 20036,
+        "bytes_received": 2187084,
+        "scheduled": 3676,
+        "malformed": 20032,
+        "unknown_parent": 9984,
+        "completed_native": 3676,
+        "valid": 3676
+      },
+      "high_water_measured": {
+        "connections": 36,
+        "sources": 12,
+        "pending": 3
+      },
+      "rss_peak_KiB_measured": 286552,
+      "passed": true,
+      "legitimate_completions_measured": 3676,
+      "maximum_client_p99_s_measured": 0.06699290301185101,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 30016,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed_process": true,
+        "client_exit_code": 0,
+        "server_exit_code": 0,
+        "mode_configured": "junk",
+        "bounds_passed": true,
+        "passed": true
+      }
+    },
+    "slow": {
+      "native_measured": {
+        "derivations": 2,
+        "verifications": 3701,
+        "evictions": 0,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 612,
+        "bytes_received": 1558594,
+        "scheduled": 3701,
+        "completed_native": 3701,
+        "valid": 3701,
+        "deadline_close": 608
+      },
+      "high_water_measured": {
+        "connections": 36,
+        "sources": 12,
+        "pending": 3
+      },
+      "rss_peak_KiB_measured": 285820,
+      "passed": true,
+      "legitimate_completions_measured": 3701,
+      "maximum_client_p99_s_measured": 0.06668946403078735,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 0,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed_process": true,
+        "client_exit_code": 0,
+        "server_exit_code": 0,
+        "mode_configured": "slow",
+        "bounds_passed": true,
+        "passed": true
+      }
+    },
+    "churn": {
+      "native_measured": {
+        "derivations": 193,
+        "verifications": 769,
+        "evictions": 191,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 12,
+        "bytes_received": 249388,
+        "scheduled": 769,
+        "completed_native": 769,
+        "valid": 257,
+        "invalid": 512
+      },
+      "high_water_measured": {
+        "connections": 12,
+        "sources": 12,
+        "pending": 11
+      },
+      "rss_peak_KiB_measured": 302684,
+      "passed": true,
+      "legitimate_completions_measured": 257,
+      "maximum_client_p99_s_measured": 1.0162471170770004,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 512,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed_process": true,
+        "client_exit_code": 0,
+        "server_exit_code": 0,
+        "mode_configured": "churn",
+        "bounds_passed": true,
+        "passed": true
+      }
+    },
+    "shared": {
+      "native_measured": {
+        "derivations": 218,
+        "verifications": 434,
+        "evictions": 216,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 6,
+        "bytes_received": 167000,
+        "scheduled": 434,
+        "completed_native": 434,
+        "valid": 326,
+        "invalid": 108
+      },
+      "high_water_measured": {
+        "connections": 6,
+        "sources": 3,
+        "pending": 5
+      },
+      "rss_peak_KiB_measured": 302176,
+      "passed": true,
+      "legitimate_completions_measured": 326,
+      "maximum_client_p99_s_measured": 1.2377390160690993,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 108,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed_process": true,
+        "client_exit_code": 0,
+        "server_exit_code": 0,
+        "mode_configured": "shared",
+        "bounds_passed": true,
+        "passed": true
+      }
+    },
+    "cross-001": {
+      "native_measured": {
+        "derivations": 2,
+        "verifications": 3701,
+        "evictions": 0,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 8,
+        "bytes_received": 1018893,
+        "scheduled": 3701,
+        "completed_native": 3701,
+        "invalid": 3677,
+        "valid": 24
+      },
+      "high_water_measured": {
+        "connections": 8,
+        "sources": 8,
+        "pending": 7
+      },
+      "rss_peak_KiB_measured": 285824,
+      "passed": false,
+      "legitimate_completions_measured": 0,
+      "maximum_client_p99_s_measured": null,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 3701,
+      "all_clients_liveness_passed": false,
+      "receipt": {
+        "passed": false,
+        "external_client_passed": false,
+        "server_and_attack_passed": true,
+        "network_transport_scope": "Actual TCP through public forwarded port; no local relay. First same-datacenter trial unreachable, second different-datacenter trial reachable."
+      }
+    },
+    "cross-002": {
+      "native_measured": {
+        "derivations": 186,
+        "verifications": 844,
+        "evictions": 184,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 12,
+        "bytes_received": 247809,
+        "scheduled": 844,
+        "completed_native": 844,
+        "invalid": 737,
+        "valid": 107
+      },
+      "high_water_measured": {
+        "connections": 12,
+        "sources": 9,
+        "pending": 11
+      },
+      "rss_peak_KiB_measured": 300556,
+      "passed": true,
+      "legitimate_completions_measured": 107,
+      "maximum_client_p99_s_measured": 2.726689896080643,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 737,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed": true,
+        "external_client_passed": true,
+        "server_and_attack_passed": true,
+        "network_transport_scope": "Actual TCP through public forwarded port; no local relay. First same-datacenter trial unreachable, second different-datacenter trial reachable."
+      }
+    },
+    "capacity": {
+      "native_measured": {
+        "derivations": 1,
+        "verifications": 3,
+        "evictions": 0,
+        "resident": 1,
+        "high_water": 1,
+        "coefficient_bytes": 134217728,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 198,
+        "connection_refused": 3,
+        "bytes_received": 1668,
+        "scheduled": 3,
+        "completed_native": 3,
+        "valid": 3
+      },
+      "high_water_measured": {
+        "connections": 64,
+        "sources": 16,
+        "pending": 0
+      },
+      "rss_peak_KiB_measured": 155260,
+      "receipt": {
+        "negative_control_passed": true,
+        "universal_newcomer_guarantee": "FAIL by design: no identity under finite unauthenticated slots",
+        "records": [
+          {
+            "cycle_configured": 0,
+            "held_connections_configured": 64,
+            "universal_newcomer_liveness_failed_as_expected_measured": true,
+            "hold_setup_s_measured": 0.25140011799521744,
+            "recovery_s_measured": 0.28824040899053216
+          },
+          {
+            "cycle_configured": 1,
+            "held_connections_configured": 64,
+            "universal_newcomer_liveness_failed_as_expected_measured": true,
+            "hold_setup_s_measured": 0.251407198025845,
+            "recovery_s_measured": 0.01610566594172269
+          },
+          {
+            "cycle_configured": 2,
+            "held_connections_configured": 64,
+            "universal_newcomer_liveness_failed_as_expected_measured": true,
+            "hold_setup_s_measured": 0.25137994694523513,
+            "recovery_s_measured": 0.016771125025115907
+          }
+        ],
+        "correct_recovery_responses_measured": 3,
+        "server_exit_code": 0
+      }
+    },
+    "wire": {
+      "native_measured": {
+        "derivations": 5,
+        "verifications": 576,
+        "evictions": 3,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 1,
+        "bytes_received": 262756,
+        "scheduled": 576,
+        "completed_native": 576,
+        "invalid": 556,
+        "valid": 20
+      },
+      "high_water_measured": {
+        "connections": 1,
+        "sources": 1,
+        "pending": 0
+      },
+      "rss_peak_KiB_measured": 302200,
+      "receipt": {
+        "passed": true,
+        "canonical_TCP_responses_measured": 560,
+        "strict_target_status_counts_measured": {
+          "0": 556,
+          "1": 4
+        },
+        "coalesced_valid_frames_measured": 16,
+        "header_lengths_bytes_configured": [
+          0,
+          1,
+          79,
+          80,
+          81,
+          100,
+          101,
+          102,
+          184,
+          215,
+          216,
+          217,
+          236,
+          237,
+          238,
+          351,
+          352,
+          353,
+          372,
+          373,
+          374,
+          487,
+          488,
+          489,
+          508,
+          509,
+          510,
+          4096
+        ],
+        "elapsed_s_measured": 10.736995868035592,
+        "server_exit_code": 0
+      }
+    },
+    "saturated": {
+      "native_measured": {
+        "derivations": 288,
+        "verifications": 3228,
+        "evictions": 286,
+        "resident": 2,
+        "high_water": 2,
+        "coefficient_bytes": 268435456,
+        "errors": 0
+      },
+      "counts_measured": {
+        "accepted_TCP": 128,
+        "bytes_received": 928041,
+        "scheduled": 3228,
+        "completed_native": 3228,
+        "valid": 204,
+        "invalid": 3024,
+        "deadline_close": 64
+      },
+      "high_water_measured": {
+        "connections": 64,
+        "sources": 16,
+        "pending": 63
+      },
+      "rss_peak_KiB_measured": 303748,
+      "passed": true,
+      "legitimate_completions_measured": 204,
+      "maximum_client_p99_s_measured": 3.320361799094826,
+      "legitimate_clients_measured": 4,
+      "hostile_responses_measured": 3022,
+      "all_clients_liveness_passed": true,
+      "receipt": {
+        "passed": true,
+        "server_exit_code": 0,
+        "client_exit_code": 0,
+        "full_capacity_reached_measured": true,
+        "fixed_duration_s_configured": 120,
+        "legitimate_clients_configured": 4,
+        "hostile_clients_configured": 60
+      }
+    }
+  },
+  "liveness_scope": "Finite admitted sources/connections and functioning network/backend. Universal newcomer admission FAILS the documented capacity negative control; shared-NAT/Sybil/link saturation remain external integration concerns."
+}

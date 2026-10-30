@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "server_exit_code": 0,
+  "client_exit_code": 0,
+  "full_capacity_reached_measured": true,
+  "fixed_duration_s_configured": 120,
+  "legitimate_clients_configured": 4,
+  "hostile_clients_configured": 60
+}

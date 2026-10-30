@@ -1,0 +1,9 @@
+{
+  "passed_process": true,
+  "client_exit_code": 0,
+  "server_exit_code": 0,
+  "mode_configured": "cold",
+  "one_bank_for_simultaneous_identical_parent": true,
+  "bounds_passed": true,
+  "passed": true
+}

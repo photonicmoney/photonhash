@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "canonical_full_traces_measured": 560,
+  "parent_classes_measured": 4,
+  "target_comparisons_measured": 560,
+  "unknown_parent_zero_work": true,
+  "native_metrics_measured": {
+    "derivations": 4,
+    "verifications": 560,
+    "evictions": 2,
+    "resident": 2,
+    "high_water": 2,
+    "coefficient_bytes": 268435456,
+    "errors": 0
+  }
+}
