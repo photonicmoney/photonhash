@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "execution": "CPU-only remote pod; clean public checkout plus explicit selected files",
+  "canonical_vectors_measured": 560,
+  "full_bank_comparisons_measured": 8,
+  "admission_and_sanitizers": "complete; no reported address/undefined errors",
+  "telemetry_test_methods_measured": 10,
+  "primary_timing_cohort": "evidence/; reproduction-evidence/ retained separately, no winner selection",
+  "not_candidate_freeze": true
+}

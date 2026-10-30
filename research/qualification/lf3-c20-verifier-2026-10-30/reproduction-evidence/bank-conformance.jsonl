@@ -1,0 +1,9 @@
+{"type":"full_bank_match","parent_index":0,"workers":1,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"full_bank_match","parent_index":0,"workers":2,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"full_bank_match","parent_index":1,"workers":1,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"full_bank_match","parent_index":1,"workers":2,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"full_bank_match","parent_index":2,"workers":1,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"full_bank_match","parent_index":2,"workers":2,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"full_bank_match","parent_index":3,"workers":1,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"full_bank_match","parent_index":3,"workers":2,"coefficient_bytes_measured":134217728,"seeds_and_checksums_match":true}
+{"type":"complete","vectors_matched_measured":560,"parents_measured":4,"full_bank_comparisons_measured":8,"mismatches_measured":0}

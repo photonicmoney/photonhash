@@ -1,0 +1,3 @@
+{"variant": "portable", "bank_median_s_measured": 0.626570547, "cold_median_s_measured": 0.641907709, "cached_median_s_measured": 0.015457447, "days_at_10s_inferred": 23.4296313785}
+{"variant": "OpenSSL-1-worker", "bank_median_s_measured": 0.287184565, "cold_median_s_measured": 0.303056711, "cached_median_s_measured": 0.015654065, "days_at_10s_inferred": 11.0615699515}
+{"variant": "OpenSSL-2-workers", "bank_median_s_measured": 0.253635769, "cold_median_s_measured": 0.269608527, "cached_median_s_measured": 0.015593353, "days_at_10s_inferred": 9.840711235499999}

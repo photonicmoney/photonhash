@@ -1,0 +1,7 @@
+{
+  "tests_measured": 10,
+  "failures_measured": 0,
+  "errors_measured": 0,
+  "passed": true,
+  "scope": "deterministic injected telemetry; not a sensor calibration"
+}

@@ -1,0 +1,286 @@
+{
+  "hardware_scope": "CPU-only cloud allocation; not a laptop or low-power physical-machine benchmark. Actual affinity/topology recorded below.",
+  "affinity_measured": [
+    49,
+    145
+  ],
+  "topology_measured": {
+    "49": {
+      "core": "25",
+      "package": "0"
+    },
+    "145": {
+      "core": "25",
+      "package": "0"
+    }
+  },
+  "variant_order_configured": [
+    "portable",
+    "OpenSSL-1-worker",
+    "OpenSSL-2-workers"
+  ],
+  "work_scope": "All 8 full matrices, retained seeds and raw-stream checksums; 128 MiB expanded bank. Timings include allocation. Serial parent-dependent headers; no bank reuse on cold path.",
+  "variants": [
+    {
+      "variant": "portable",
+      "bank_wall_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.626570547,
+        "MAD_measured": 0.004286145000000019,
+        "median_95CI_inferred": [
+          0.624101423,
+          0.630216649
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "bank_cpu_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.626487264,
+        "MAD_measured": 0.004156950000000048,
+        "median_95CI_inferred": [
+          0.623819018,
+          0.63010958
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cold_wall_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.641907709,
+        "MAD_measured": 0.004272164000000078,
+        "median_95CI_inferred": [
+          0.63949362,
+          0.645534062
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cold_cpu_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.641824127,
+        "MAD_measured": 0.004205644000000008,
+        "median_95CI_inferred": [
+          0.639210213,
+          0.645426463
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cached_wall_s_measured": {
+        "n_measured": 64,
+        "median_measured": 0.015457447,
+        "MAD_measured": 7.051650000000024e-05,
+        "median_95CI_inferred": [
+          0.015419579,
+          0.015494333
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "header_sync_inferred": [
+        {
+          "block_interval_s_configured": 10,
+          "headers_per_365_day_year_inferred": 3153600.0,
+          "elapsed_days_per_chain_year_inferred": 23.4296313785,
+          "cpu_days_per_chain_year_inferred": 23.4265806355,
+          "bank_fraction_of_block_time_inferred": 0.0626570547,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 30,
+          "headers_per_365_day_year_inferred": 1051200.0,
+          "elapsed_days_per_chain_year_inferred": 7.8098771261666675,
+          "cpu_days_per_chain_year_inferred": 7.808860211833333,
+          "bank_fraction_of_block_time_inferred": 0.0208856849,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 60,
+          "headers_per_365_day_year_inferred": 525600.0,
+          "elapsed_days_per_chain_year_inferred": 3.9049385630833338,
+          "cpu_days_per_chain_year_inferred": 3.9044301059166666,
+          "bank_fraction_of_block_time_inferred": 0.01044284245,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 150,
+          "headers_per_365_day_year_inferred": 210240.0,
+          "elapsed_days_per_chain_year_inferred": 1.5619754252333335,
+          "cpu_days_per_chain_year_inferred": 1.5617720423666666,
+          "bank_fraction_of_block_time_inferred": 0.00417713698,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        }
+      ]
+    },
+    {
+      "variant": "OpenSSL-1-worker",
+      "bank_wall_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.287184565,
+        "MAD_measured": 0.0035541900000000126,
+        "median_95CI_inferred": [
+          0.283343712,
+          0.289481098
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "bank_cpu_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.287154693,
+        "MAD_measured": 0.0035663340000000043,
+        "median_95CI_inferred": [
+          0.283323642,
+          0.28943779
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cold_wall_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.303056711,
+        "MAD_measured": 0.0035501840000000118,
+        "median_95CI_inferred": [
+          0.299303531,
+          0.305808514
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cold_cpu_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.303045537,
+        "MAD_measured": 0.0035423890000000346,
+        "median_95CI_inferred": [
+          0.29928304,
+          0.305764939
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cached_wall_s_measured": {
+        "n_measured": 64,
+        "median_measured": 0.015654065,
+        "MAD_measured": 0.0001768879999999983,
+        "median_95CI_inferred": [
+          0.015490287,
+          0.015743901499999997
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "header_sync_inferred": [
+        {
+          "block_interval_s_configured": 10,
+          "headers_per_365_day_year_inferred": 3153600.0,
+          "elapsed_days_per_chain_year_inferred": 11.0615699515,
+          "cpu_days_per_chain_year_inferred": 11.061162100499999,
+          "bank_fraction_of_block_time_inferred": 0.0287184565,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 30,
+          "headers_per_365_day_year_inferred": 1051200.0,
+          "elapsed_days_per_chain_year_inferred": 3.687189983833333,
+          "cpu_days_per_chain_year_inferred": 3.6870540334999995,
+          "bank_fraction_of_block_time_inferred": 0.009572818833333333,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 60,
+          "headers_per_365_day_year_inferred": 525600.0,
+          "elapsed_days_per_chain_year_inferred": 1.8435949919166665,
+          "cpu_days_per_chain_year_inferred": 1.8435270167499997,
+          "bank_fraction_of_block_time_inferred": 0.004786409416666667,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 150,
+          "headers_per_365_day_year_inferred": 210240.0,
+          "elapsed_days_per_chain_year_inferred": 0.7374379967666665,
+          "cpu_days_per_chain_year_inferred": 0.7374108066999999,
+          "bank_fraction_of_block_time_inferred": 0.0019145637666666668,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        }
+      ]
+    },
+    {
+      "variant": "OpenSSL-2-workers",
+      "bank_wall_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.253635769,
+        "MAD_measured": 0.0020940439999999616,
+        "median_95CI_inferred": [
+          0.251747556,
+          0.255317448
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "bank_cpu_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.501783482,
+        "MAD_measured": 0.004017865000000009,
+        "median_95CI_inferred": [
+          0.496552551,
+          0.504418631
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cold_wall_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.269608527,
+        "MAD_measured": 0.00222516300000003,
+        "median_95CI_inferred": [
+          0.267395572,
+          0.271625084
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cold_cpu_s_measured": {
+        "n_measured": 31,
+        "median_measured": 0.523077318,
+        "MAD_measured": 0.0038002639999999976,
+        "median_95CI_inferred": [
+          0.517097251,
+          0.52498157
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "cached_wall_s_measured": {
+        "n_measured": 64,
+        "median_measured": 0.015593353,
+        "MAD_measured": 0.00014817499999999952,
+        "median_95CI_inferred": [
+          0.015489069500000001,
+          0.015708357
+        ],
+        "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this host/run; not hardware-population uncertainty"
+      },
+      "header_sync_inferred": [
+        {
+          "block_interval_s_configured": 10,
+          "headers_per_365_day_year_inferred": 3153600.0,
+          "elapsed_days_per_chain_year_inferred": 9.840711235499999,
+          "cpu_days_per_chain_year_inferred": 19.092322107,
+          "bank_fraction_of_block_time_inferred": 0.0253635769,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 30,
+          "headers_per_365_day_year_inferred": 1051200.0,
+          "elapsed_days_per_chain_year_inferred": 3.2802370785,
+          "cpu_days_per_chain_year_inferred": 6.364107369,
+          "bank_fraction_of_block_time_inferred": 0.008454525633333333,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 60,
+          "headers_per_365_day_year_inferred": 525600.0,
+          "elapsed_days_per_chain_year_inferred": 1.64011853925,
+          "cpu_days_per_chain_year_inferred": 3.1820536845,
+          "bank_fraction_of_block_time_inferred": 0.0042272628166666664,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        },
+        {
+          "block_interval_s_configured": 150,
+          "headers_per_365_day_year_inferred": 210240.0,
+          "elapsed_days_per_chain_year_inferred": 0.6560474156999999,
+          "cpu_days_per_chain_year_inferred": 1.2728214738,
+          "bank_fraction_of_block_time_inferred": 0.0016909051266666667,
+          "limits": "Hash-only serial projection; excludes network, storage, signatures, state and fork work. Uses measured median on this host; not a measured chain sync."
+        }
+      ]
+    }
+  ]
+}
