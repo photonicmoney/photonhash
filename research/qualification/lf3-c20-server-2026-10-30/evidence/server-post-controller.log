@@ -1,0 +1,26 @@
+WAITING_FOR_ALL_PRIMARY_CONFIRMATIONS
+{"phase": "server-post-build", "started_unix": 1793371216.821702}
+{"phase": "server-post-build", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 32.2097919259686}
+{"phase": "server-post-stage", "started_unix": 1793371249.0320792}
+{"phase": "server-post-stage", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 264.1173703230452}
+{"phase": "server-post-cpu", "started_unix": 1793371513.150019}
+{"phase": "server-post-cpu", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 59.222806856036186}
+{"phase": "server-parent-upload", "started_unix": 1793371572.3733494}
+{"phase": "server-parent-upload", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 1.2011636020615697}
+{"phase": "server-analysis-venv", "started_unix": 1793371573.5749645}
+{"phase": "server-analysis-venv", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 0.20085147791542113}
+{"phase": "server-analysis-numpy", "started_unix": 1793371573.776115}
+{"phase": "server-analysis-numpy", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 0.6007392989704385}
+{"phase": "field-fault-tests", "started_unix": 1793371574.3771265}
+{"phase": "field-fault-tests", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 0.20060997002292424}
+{"phase": "server-primary-analysis", "started_unix": 1793371574.578}
+{"phase": "server-primary-analysis", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 1.400959767983295}
+{"phase": "server-independent-integration", "started_unix": 1793371575.9792037}
+{"phase": "server-independent-integration", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 0.6008036440471187}
+{"phase": "server-secondary-analysis", "started_unix": 1793371576.5802531}
+{"phase": "server-secondary-analysis", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 0.40063683898188174}
+{"phase": "server-platform-record", "started_unix": 1793371576.9811223}
+{"phase": "server-platform-record", "passed_process": true, "exit_code": 0, "reason": null, "wall_seconds_measured": 0.20064278901554644}
+{"phase": "server-public-selection", "started_unix": 1793371577.1822262}
+{"phase": "server-public-selection", "passed_process": false, "exit_code": 1, "reason": null, "wall_seconds_measured": 1.2010506549850106}
+Retain failed server-public-selection; no automatic replacement

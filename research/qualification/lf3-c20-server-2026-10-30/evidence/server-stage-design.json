@@ -1,0 +1,20 @@
+{
+  "variants_configured": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "GPU_event_seconds_configured": 30,
+  "block_event_seconds_configured": 5,
+  "batch_configured": 8192,
+  "pacing": "none",
+  "fresh_nonce_batches": false,
+  "scope": "Fixed validated vectors; isolated GEMM plus epilogue, including XOR for fused. Not pure GEMM, not complete attempts, not 600-second confirmation.",
+  "thermal_abort_C_configured": 80,
+  "telemetry_guard_s_configured": 2,
+  "statistical_method": "4000 circular moving-block bootstrap resamples, span 3; exploratory within-run intervals",
+  "sensor_accuracy": "OPEN",
+  "selection_changed": false
+}

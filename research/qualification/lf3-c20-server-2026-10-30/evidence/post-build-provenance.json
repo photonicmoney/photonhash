@@ -1,0 +1,37 @@
+{
+  "CUTLASS_revision": "ad7b2f5e84fcfa124cb02b91d5bd26d238c0459e",
+  "artifacts": [
+    {
+      "path": "restore/source/tools/lf3_gpu_stage_energy.cu",
+      "SHA256_measured": "8b6970cfdc875fc131f2833f10e54dff59ed408a8f3ce2ee0bf3088d207ab075",
+      "bytes_measured": 9870
+    },
+    {
+      "path": "restore/source/tools/lf3_gpu_stage_unpaced.cu",
+      "SHA256_measured": "49af27c2d652533eddc5a8cead0e0f2511e1f8dc41af7086acb77de1d7c3d08c",
+      "bytes_measured": 9846
+    },
+    {
+      "path": "build/lf3_gpu_stage_unpaced",
+      "SHA256_measured": "1d8a11267e348acfdf131366e11958b8506fe8bccb41a466b2c34d4848ac31ca",
+      "bytes_measured": 5902536
+    },
+    {
+      "path": "restore/build/lf3_gpu_energy",
+      "SHA256_measured": "33087ba15e59eda6d6da30fa4496fb8f6db6763871555cb9828214b5de3c0b84",
+      "bytes_measured": 5897760
+    },
+    {
+      "path": "restore/source/tools/lf3_gpu_fused_fold.cuh",
+      "SHA256_measured": "424708291069c7d7ca7928d21b849a2761fdf612f07b111ab229472ce40c65fb",
+      "bytes_measured": 3354
+    },
+    {
+      "path": "restore/source/tools/lf3_gpu_fused_timing.cuh",
+      "SHA256_measured": "8e4585ed67ee7b9f083f69ac87d876ab3614998499c1033b78254c44fe6e14b2",
+      "bytes_measured": 3923
+    }
+  ],
+  "stage_change": "Only host sleep removed, retained old source and binary; no hash/kernel change",
+  "no_candidate_freeze": true
+}

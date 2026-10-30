@@ -1,0 +1,43 @@
+{
+  "scope": "Independent standard-library trapezoid integration of the same observed telemetry; no independent calibrated sensor and no confidence intervals",
+  "variants": [
+    {
+      "choice_configured": 0,
+      "conditions": [
+        {
+          "condition": "cold_start",
+          "blocks_measured": 30,
+          "board_uJ_per_evaluation_measured_median_measured": 244.71994133308064,
+          "counter_uJ_per_evaluation_measured_median_measured": 244.35355910931924,
+          "instant_vs_counter_difference_fraction_measured_median_measured": 0.001235076446721232
+        },
+        {
+          "condition": "warm",
+          "blocks_measured": 30,
+          "board_uJ_per_evaluation_measured_median_measured": 244.85427020920983,
+          "counter_uJ_per_evaluation_measured_median_measured": 244.41313322371298,
+          "instant_vs_counter_difference_fraction_measured_median_measured": 0.001548635630999612
+        }
+      ]
+    },
+    {
+      "choice_configured": 1,
+      "conditions": [
+        {
+          "condition": "cold_start",
+          "blocks_measured": 30,
+          "board_uJ_per_evaluation_measured_median_measured": 180.5825252537236,
+          "counter_uJ_per_evaluation_measured_median_measured": 180.30399731117086,
+          "instant_vs_counter_difference_fraction_measured_median_measured": 0.0015730572939855333
+        },
+        {
+          "condition": "warm",
+          "blocks_measured": 30,
+          "board_uJ_per_evaluation_measured_median_measured": 180.41622185607005,
+          "counter_uJ_per_evaluation_measured_median_measured": 180.28705874339073,
+          "instant_vs_counter_difference_fraction_measured_median_measured": 0.00018185298247164102
+        }
+      ]
+    }
+  ]
+}

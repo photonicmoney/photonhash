@@ -1,0 +1,14 @@
+{
+  "qualified": true,
+  "reasons": [],
+  "max_sampling_gap_s_measured": 0.41569207492284477,
+  "samples_measured": 12051,
+  "event_seconds_measured": {
+    "cold_start": 600.31108428953,
+    "warm": 600.03424255374
+  },
+  "guard_s_configured": 2.0,
+  "sensor_accuracy": "OPEN: statistical acceptance does not calibrate NVML",
+  "confirmation_eligible": true,
+  "complete_condition_records_measured": 2
+}

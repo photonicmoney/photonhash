@@ -1,0 +1,1 @@
+{"passed": true, "stage_variants_measured": 5, "CPU_variants_measured": 5, "stage_energy_uJ_measured": [180.6000678409872, 153.8648139762021, 153.61232180278068, 149.66460134448067, 149.41608006229248], "CPU_bank_seconds_measured": [0.642345484, 0.260645662, 0.140598795, 0.072829248, 0.037533753]}

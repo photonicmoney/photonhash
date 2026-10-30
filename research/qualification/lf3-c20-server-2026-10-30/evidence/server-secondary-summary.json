@@ -1,0 +1,1793 @@
+{
+  "stage_scope": "Exploratory fixed validated vectors; 30 unpaced event seconds per variant, not 600-second confirmation. GEMM plus quantizing epilogue, including XOR for fused. Not pure GEMM or complete attempts. Board energy cannot be assigned to an internal arithmetic component by dividing this isolated result by full-pipeline energy.",
+  "stages": [
+    {
+      "choice_configured": 0,
+      "name": "lf2_warp_cublas_autotune",
+      "event_seconds_measured": 30.3605256958,
+      "blocks_measured": [
+        {
+          "block_configured": 0,
+          "event_seconds_measured": 5.1242331543,
+          "evaluations_counted_measured": 4718592,
+          "wall_seconds_measured": 5.125147289945744,
+          "board_uJ_per_stage_evaluation_measured": 177.2233131281004,
+          "composite_stage_ms_per_batch_measured": 8.92124844,
+          "counter_uJ_per_stage_evaluation_measured": 179.32024300648663,
+          "instant_vs_counter_fraction_measured": -0.011693771117131388
+        },
+        {
+          "block_configured": 1,
+          "event_seconds_measured": 5.14934564209,
+          "evaluations_counted_measured": 4718592,
+          "wall_seconds_measured": 5.151047984021716,
+          "board_uJ_per_stage_evaluation_measured": 180.46502051377666,
+          "composite_stage_ms_per_batch_measured": 8.94995213,
+          "counter_uJ_per_stage_evaluation_measured": 179.86983994294152,
+          "instant_vs_counter_fraction_measured": 0.0033089514674831404
+        },
+        {
+          "block_configured": 2,
+          "event_seconds_measured": 5.16487774658,
+          "evaluations_counted_measured": 4718592,
+          "wall_seconds_measured": 5.165867152973078,
+          "board_uJ_per_stage_evaluation_measured": 179.5894966789492,
+          "composite_stage_ms_per_batch_measured": 8.97651196,
+          "counter_uJ_per_stage_evaluation_measured": 180.633844717843,
+          "instant_vs_counter_fraction_measured": -0.0057815745467031734
+        },
+        {
+          "block_configured": 3,
+          "event_seconds_measured": 5.16935974121,
+          "evaluations_counted_measured": 4718592,
+          "wall_seconds_measured": 5.1704742959700525,
+          "board_uJ_per_stage_evaluation_measured": 180.73511516819775,
+          "composite_stage_ms_per_batch_measured": 9.00111961,
+          "counter_uJ_per_stage_evaluation_measured": 180.788159250748,
+          "instant_vs_counter_fraction_measured": -0.0002934046276598875
+        },
+        {
+          "block_configured": 4,
+          "event_seconds_measured": 5.1618248291,
+          "evaluations_counted_measured": 4718592,
+          "wall_seconds_measured": 5.162806889973581,
+          "board_uJ_per_stage_evaluation_measured": 180.92954207255625,
+          "composite_stage_ms_per_batch_measured": 8.96838379,
+          "counter_uJ_per_stage_evaluation_measured": 180.35724343532266,
+          "instant_vs_counter_fraction_measured": 0.00317313918938249
+        },
+        {
+          "block_configured": 5,
+          "event_seconds_measured": 4.590884582519999,
+          "evaluations_counted_measured": 4194304,
+          "wall_seconds_measured": 4.591893011005595,
+          "board_uJ_per_stage_evaluation_measured": 181.1741194094616,
+          "composite_stage_ms_per_batch_measured": 8.985296250000001,
+          "counter_uJ_per_stage_evaluation_measured": 180.21683647795328,
+          "instant_vs_counter_fraction_measured": 0.005311839616191651
+        }
+      ],
+      "temperature_range_C_measured": [
+        34,
+        56
+      ],
+      "sm_clock_range_MHz_measured": [
+        180,
+        2407
+      ],
+      "power_limit_W_measured": [
+        165.0
+      ],
+      "field_timestamp_freshness_measured": {
+        "passed_metadata_bound": true,
+        "samples_measured": 338,
+        "minimum_field_age_s_measured": 5e-07,
+        "maximum_field_age_s_measured": 7.5e-06,
+        "older_than_2s_count_measured": 0,
+        "future_beyond_1ms_count_measured": 0,
+        "bound_s_configured": 2,
+        "future_clock_tolerance_s_configured": 0.001,
+        "scope": "NVML CPU field timestamp versus sample Unix clock, not a calibrated ADC freshness guarantee or sensor-accuracy claim"
+      },
+      "board_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 180.6000678409872,
+        "MAD_measured": 0.4517629000217198,
+        "median_95CI_inferred_from_measured": [
+          179.5894966789492,
+          180.92954207255625
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "counter_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 180.28703995663795,
+        "MAD_measured": 0.3820023874507399,
+        "median_95CI_inferred_from_measured": [
+          179.86983994294152,
+          180.633844717843
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "instant_vs_counter_fraction_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 0.0014398672808613013,
+        "MAD_measured": 0.0028705282609760947,
+        "median_95CI_inferred_from_measured": [
+          -0.0057815745467031734,
+          0.0033089514674831404
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "composite_stage_ms_per_batch_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 8.972447875,
+        "MAD_measured": 0.017672060000000656,
+        "median_95CI_inferred_from_measured": [
+          8.94995213,
+          8.985296250000001
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      }
+    },
+    {
+      "choice_configured": 1,
+      "name": "lf2_register_cutlass256_q4",
+      "event_seconds_measured": 30.23396322632,
+      "blocks_measured": [
+        {
+          "block_configured": 0,
+          "event_seconds_measured": 5.3433359375,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.344519959995523,
+          "board_uJ_per_stage_evaluation_measured": 150.8197399061511,
+          "composite_stage_ms_per_batch_measured": 7.61068821,
+          "counter_uJ_per_stage_evaluation_measured": 152.5862281784963,
+          "instant_vs_counter_fraction_measured": -0.011576983672987465
+        },
+        {
+          "block_configured": 1,
+          "event_seconds_measured": 5.36064379883,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.3616125009721145,
+          "board_uJ_per_stage_evaluation_measured": 153.61533037839402,
+          "composite_stage_ms_per_batch_measured": 7.60864019,
+          "counter_uJ_per_stage_evaluation_measured": 153.22853430435853,
+          "instant_vs_counter_fraction_measured": 0.0025243083854551455
+        },
+        {
+          "block_configured": 2,
+          "event_seconds_measured": 5.3623685302699995,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.363486691028811,
+          "board_uJ_per_stage_evaluation_measured": 153.74574924815352,
+          "composite_stage_ms_per_batch_measured": 7.61993599,
+          "counter_uJ_per_stage_evaluation_measured": 153.3045236718842,
+          "instant_vs_counter_fraction_measured": 0.0028780988695001333
+        },
+        {
+          "block_configured": 3,
+          "event_seconds_measured": 5.3714956664999995,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.372458755970001,
+          "board_uJ_per_stage_evaluation_measured": 153.98387870425069,
+          "composite_stage_ms_per_batch_measured": 7.63526392,
+          "counter_uJ_per_stage_evaluation_measured": 153.56128841920673,
+          "instant_vs_counter_fraction_measured": 0.0027519324003736365
+        },
+        {
+          "block_configured": 4,
+          "event_seconds_measured": 5.3761342468299995,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.377122781937942,
+          "board_uJ_per_stage_evaluation_measured": 154.136307370852,
+          "composite_stage_ms_per_batch_measured": 7.64140797,
+          "counter_uJ_per_stage_evaluation_measured": 153.64069535776665,
+          "instant_vs_counter_fraction_measured": 0.003225786058382983
+        },
+        {
+          "block_configured": 5,
+          "event_seconds_measured": 3.4199850463900003,
+          "evaluations_counted_measured": 3670016,
+          "wall_seconds_measured": 3.420504749054089,
+          "board_uJ_per_stage_evaluation_measured": 154.020006470839,
+          "composite_stage_ms_per_batch_measured": 7.64553595,
+          "counter_uJ_per_stage_evaluation_measured": 153.71090442580942,
+          "instant_vs_counter_fraction_measured": 0.0020109311449586576
+        }
+      ],
+      "temperature_range_C_measured": [
+        36,
+        59
+      ],
+      "sm_clock_range_MHz_measured": [
+        180,
+        2407
+      ],
+      "power_limit_W_measured": [
+        165.0
+      ],
+      "field_timestamp_freshness_measured": {
+        "passed_metadata_bound": true,
+        "samples_measured": 336,
+        "minimum_field_age_s_measured": 5e-07,
+        "maximum_field_age_s_measured": 6.5e-06,
+        "older_than_2s_count_measured": 0,
+        "future_beyond_1ms_count_measured": 0,
+        "bound_s_configured": 2,
+        "future_clock_tolerance_s_configured": 0.001,
+        "scope": "NVML CPU field timestamp versus sample Unix clock, not a calibrated ADC freshness guarantee or sensor-accuracy claim"
+      },
+      "board_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 153.8648139762021,
+        "MAD_measured": 0.20233804622249352,
+        "median_95CI_inferred_from_measured": [
+          153.61533037839402,
+          154.020006470839
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "counter_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 153.43290604554545,
+        "MAD_measured": 0.2060805267040564,
+        "median_95CI_inferred_from_measured": [
+          153.22853430435853,
+          153.64069535776665
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "instant_vs_counter_fraction_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 0.002638120392914391,
+        "MAD_measured": 0.0004138220710271671,
+        "median_95CI_inferred_from_measured": [
+          0.0020109311449586576,
+          0.0028780988695001333
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "composite_stage_ms_per_batch_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 7.627599955,
+        "MAD_measured": 0.015359880000000103,
+        "median_95CI_inferred_from_measured": [
+          7.61068821,
+          7.64140797
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      }
+    },
+    {
+      "choice_configured": 2,
+      "name": "c20_two_stage_cutlass256_q4",
+      "event_seconds_measured": 30.22705749511,
+      "blocks_measured": [
+        {
+          "block_configured": 0,
+          "event_seconds_measured": 5.34202593994,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.343806313932873,
+          "board_uJ_per_stage_evaluation_measured": 151.68205430645543,
+          "composite_stage_ms_per_batch_measured": 7.60960007,
+          "counter_uJ_per_stage_evaluation_measured": 153.00653147547067,
+          "instant_vs_counter_fraction_measured": -0.008656343988998814
+        },
+        {
+          "block_configured": 1,
+          "event_seconds_measured": 5.3599354248,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.363590024062432,
+          "board_uJ_per_stage_evaluation_measured": 153.81370432920144,
+          "composite_stage_ms_per_batch_measured": 7.61785603,
+          "counter_uJ_per_stage_evaluation_measured": 153.43888049234135,
+          "instant_vs_counter_fraction_measured": 0.0024428217649750247
+        },
+        {
+          "block_configured": 2,
+          "event_seconds_measured": 5.36290411377,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.363833072944544,
+          "board_uJ_per_stage_evaluation_measured": 153.70379505045614,
+          "composite_stage_ms_per_batch_measured": 7.62089586,
+          "counter_uJ_per_stage_evaluation_measured": 153.40576146369048,
+          "instant_vs_counter_fraction_measured": 0.0019427796187184948
+        },
+        {
+          "block_configured": 3,
+          "event_seconds_measured": 5.37008721924,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.374495647964068,
+          "board_uJ_per_stage_evaluation_measured": 154.08718926952733,
+          "composite_stage_ms_per_batch_measured": 7.63216019,
+          "counter_uJ_per_stage_evaluation_measured": 153.6443934471973,
+          "instant_vs_counter_fraction_measured": 0.0028819523602221387
+        },
+        {
+          "block_configured": 4,
+          "event_seconds_measured": 5.3693002319300005,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.370882175047882,
+          "board_uJ_per_stage_evaluation_measured": 153.5208485551052,
+          "composite_stage_ms_per_batch_measured": 7.64342403,
+          "counter_uJ_per_stage_evaluation_measured": 153.8810598188692,
+          "instant_vs_counter_fraction_measured": -0.0023408421035571803
+        },
+        {
+          "block_configured": 5,
+          "event_seconds_measured": 3.42280456543,
+          "evaluations_counted_measured": 3670016,
+          "wall_seconds_measured": 3.4234477099962533,
+          "board_uJ_per_stage_evaluation_measured": 152.5303108822148,
+          "composite_stage_ms_per_batch_measured": 7.64755201,
+          "counter_uJ_per_stage_evaluation_measured": 153.95443364850183,
+          "instant_vs_counter_fraction_measured": -0.009250287455433166
+        }
+      ],
+      "temperature_range_C_measured": [
+        36,
+        59
+      ],
+      "sm_clock_range_MHz_measured": [
+        180,
+        2407
+      ],
+      "power_limit_W_measured": [
+        165.0
+      ],
+      "field_timestamp_freshness_measured": {
+        "passed_metadata_bound": true,
+        "samples_measured": 337,
+        "minimum_field_age_s_measured": 5e-07,
+        "maximum_field_age_s_measured": 1.475e-05,
+        "older_than_2s_count_measured": 0,
+        "future_beyond_1ms_count_measured": 0,
+        "bound_s_configured": 2,
+        "future_clock_tolerance_s_configured": 0.001,
+        "scope": "NVML CPU field timestamp versus sample Unix clock, not a calibrated ADC freshness guarantee or sensor-accuracy claim"
+      },
+      "board_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 153.61232180278068,
+        "MAD_measured": 0.33812499658370143,
+        "median_95CI_inferred_from_measured": [
+          152.5303108822148,
+          153.81370432920144
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "counter_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 153.54163696976934,
+        "MAD_measured": 0.23764917758936122,
+        "median_95CI_inferred_from_measured": [
+          153.40576146369048,
+          153.8810598188692
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "instant_vs_counter_fraction_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": -0.00019903124241934275,
+        "MAD_measured": 0.0028614183050179247,
+        "median_95CI_inferred_from_measured": [
+          -0.008656343988998814,
+          0.0024428217649750247
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "composite_stage_ms_per_batch_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 7.626528025,
+        "MAD_measured": 0.01278400000000035,
+        "median_95CI_inferred_from_measured": [
+          7.61785603,
+          7.64342403
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      }
+    },
+    {
+      "choice_configured": 3,
+      "name": "c20_two_stage_cutlass256_fused_fold",
+      "event_seconds_measured": 30.34161312866,
+      "blocks_measured": [
+        {
+          "block_configured": 0,
+          "event_seconds_measured": 5.19440054321,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.195430182968266,
+          "board_uJ_per_stage_evaluation_measured": 146.6963872082077,
+          "composite_stage_ms_per_batch_measured": 7.39177608,
+          "counter_uJ_per_stage_evaluation_measured": 148.2532654312701,
+          "instant_vs_counter_fraction_measured": -0.010501476770399887
+        },
+        {
+          "block_configured": 1,
+          "event_seconds_measured": 5.209680389400001,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.213106952025555,
+          "board_uJ_per_stage_evaluation_measured": 148.76851588330402,
+          "composite_stage_ms_per_batch_measured": 7.40918398,
+          "counter_uJ_per_stage_evaluation_measured": 149.1357934187673,
+          "instant_vs_counter_fraction_measured": -0.0024627054783018737
+        },
+        {
+          "block_configured": 2,
+          "event_seconds_measured": 5.21576400757,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.221102442010306,
+          "board_uJ_per_stage_evaluation_measured": 149.75172447470356,
+          "composite_stage_ms_per_batch_measured": 7.4143362,
+          "counter_uJ_per_stage_evaluation_measured": 149.17687400771808,
+          "instant_vs_counter_fraction_measured": 0.0038534824570445945
+        },
+        {
+          "block_configured": 3,
+          "event_seconds_measured": 5.2187967224100005,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.223000967991538,
+          "board_uJ_per_stage_evaluation_measured": 149.58047415836214,
+          "composite_stage_ms_per_batch_measured": 7.42044783,
+          "counter_uJ_per_stage_evaluation_measured": 149.3608433972585,
+          "instant_vs_counter_fraction_measured": 0.0014704708148941949
+        },
+        {
+          "block_configured": 4,
+          "event_seconds_measured": 5.2268281860400005,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.227985178004019,
+          "board_uJ_per_stage_evaluation_measured": 149.7487285305992,
+          "composite_stage_ms_per_batch_measured": 7.42764807,
+          "counter_uJ_per_stage_evaluation_measured": 149.44101062171327,
+          "instant_vs_counter_fraction_measured": 0.002059126257282077
+        },
+        {
+          "block_configured": 5,
+          "event_seconds_measured": 4.27614328003,
+          "evaluations_counted_measured": 4718592,
+          "wall_seconds_measured": 4.277121032006107,
+          "board_uJ_per_stage_evaluation_measured": 150.20078032597937,
+          "composite_stage_ms_per_batch_measured": 7.43276787,
+          "counter_uJ_per_stage_evaluation_measured": 149.42089513030825,
+          "instant_vs_counter_fraction_measured": 0.005219385113380485
+        }
+      ],
+      "temperature_range_C_measured": [
+        36,
+        59
+      ],
+      "sm_clock_range_MHz_measured": [
+        180,
+        2407
+      ],
+      "power_limit_W_measured": [
+        165.0
+      ],
+      "field_timestamp_freshness_measured": {
+        "passed_metadata_bound": true,
+        "samples_measured": 337,
+        "minimum_field_age_s_measured": 5e-07,
+        "maximum_field_age_s_measured": 1.275e-05,
+        "older_than_2s_count_measured": 0,
+        "future_beyond_1ms_count_measured": 0,
+        "bound_s_configured": 2,
+        "future_clock_tolerance_s_configured": 0.001,
+        "scope": "NVML CPU field timestamp versus sample Unix clock, not a calibrated ADC freshness guarantee or sensor-accuracy claim"
+      },
+      "board_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 149.66460134448067,
+        "MAD_measured": 0.3116510558607928,
+        "median_95CI_inferred_from_measured": [
+          148.76851588330402,
+          149.7487285305992
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "counter_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 149.26885870248827,
+        "MAD_measured": 0.1425508557704802,
+        "median_95CI_inferred_from_measured": [
+          149.1357934187673,
+          149.42089513030825
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "instant_vs_counter_fraction_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 0.0017647985360881358,
+        "MAD_measured": 0.002771635249124404,
+        "median_95CI_inferred_from_measured": [
+          -0.0024627054783018737,
+          0.002059126257282077
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "composite_stage_ms_per_batch_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 7.417392015,
+        "MAD_measured": 0.009232045000000078,
+        "median_95CI_inferred_from_measured": [
+          7.40918398,
+          7.42764807
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      }
+    },
+    {
+      "choice_configured": 4,
+      "name": "lf2_register_cutlass256_fused_fold",
+      "event_seconds_measured": 30.34646252442,
+      "blocks_measured": [
+        {
+          "block_configured": 0,
+          "event_seconds_measured": 5.1940289917,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.195402203942649,
+          "board_uJ_per_stage_evaluation_measured": 147.35606756205982,
+          "composite_stage_ms_per_batch_measured": 7.39385605,
+          "counter_uJ_per_stage_evaluation_measured": 148.62644519682405,
+          "instant_vs_counter_fraction_measured": -0.008547453537503734
+        },
+        {
+          "block_configured": 1,
+          "event_seconds_measured": 5.20985333252,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.21094824897591,
+          "board_uJ_per_stage_evaluation_measured": 148.99038044895707,
+          "composite_stage_ms_per_batch_measured": 7.40716791,
+          "counter_uJ_per_stage_evaluation_measured": 149.1825234735829,
+          "instant_vs_counter_fraction_measured": -0.0012879727474235318
+        },
+        {
+          "block_configured": 2,
+          "event_seconds_measured": 5.21669189453,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.21793553000316,
+          "board_uJ_per_stage_evaluation_measured": 149.5393790779426,
+          "composite_stage_ms_per_batch_measured": 7.41638422,
+          "counter_uJ_per_stage_evaluation_measured": 149.12594059653244,
+          "instant_vs_counter_fraction_measured": 0.002772411558688899
+        },
+        {
+          "block_configured": 3,
+          "event_seconds_measured": 5.2184209289600005,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.219645817996934,
+          "board_uJ_per_stage_evaluation_measured": 149.29278104664235,
+          "composite_stage_ms_per_batch_measured": 7.42047977,
+          "counter_uJ_per_stage_evaluation_measured": 149.3904474782229,
+          "instant_vs_counter_fraction_measured": -0.000653766242950636
+        },
+        {
+          "block_configured": 4,
+          "event_seconds_measured": 5.23001855469,
+          "evaluations_counted_measured": 5767168,
+          "wall_seconds_measured": 5.233331152005121,
+          "board_uJ_per_stage_evaluation_measured": 150.2444142965694,
+          "composite_stage_ms_per_batch_measured": 7.42761612,
+          "counter_uJ_per_stage_evaluation_measured": 148.15282108445032,
+          "instant_vs_counter_fraction_measured": 0.014117808873358168
+        },
+        {
+          "block_configured": 5,
+          "event_seconds_measured": 4.27744882202,
+          "evaluations_counted_measured": 4718592,
+          "wall_seconds_measured": 4.278538678074256,
+          "board_uJ_per_stage_evaluation_measured": 150.23667051085266,
+          "composite_stage_ms_per_batch_measured": 7.43788815,
+          "counter_uJ_per_stage_evaluation_measured": 149.46760555132087,
+          "instant_vs_counter_fraction_measured": 0.0051453621451621806
+        }
+      ],
+      "temperature_range_C_measured": [
+        36,
+        60
+      ],
+      "sm_clock_range_MHz_measured": [
+        180,
+        2407
+      ],
+      "power_limit_W_measured": [
+        165.0
+      ],
+      "field_timestamp_freshness_measured": {
+        "passed_metadata_bound": true,
+        "samples_measured": 335,
+        "minimum_field_age_s_measured": 5e-07,
+        "maximum_field_age_s_measured": 5.5e-06,
+        "older_than_2s_count_measured": 0,
+        "future_beyond_1ms_count_measured": 0,
+        "bound_s_configured": 2,
+        "future_clock_tolerance_s_configured": 0.001,
+        "scope": "NVML CPU field timestamp versus sample Unix clock, not a calibrated ADC freshness guarantee or sensor-accuracy claim"
+      },
+      "board_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 149.41608006229248,
+        "MAD_measured": 0.6231450309477964,
+        "median_95CI_inferred_from_measured": [
+          148.99038044895707,
+          150.23667051085266
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "counter_uJ_per_stage_evaluation_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 149.15423203505767,
+        "MAD_measured": 0.2747944797142168,
+        "median_95CI_inferred_from_measured": [
+          148.62644519682405,
+          149.3904474782229
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "instant_vs_counter_fraction_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 0.0010593226578691317,
+        "MAD_measured": 0.0032166674462928563,
+        "median_95CI_inferred_from_measured": [
+          -0.0012879727474235318,
+          0.0051453621451621806
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      },
+      "composite_stage_ms_per_batch_measured": {
+        "n_blocks_or_samples_measured": 6,
+        "median_measured": 7.418431995000001,
+        "MAD_measured": 0.010224104999999817,
+        "median_95CI_inferred_from_measured": [
+          7.40716791,
+          7.42761612
+        ],
+        "uncertainty": "4000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+      }
+    }
+  ],
+  "CPU_scope": {
+    "scope": "Separate shared-server allocation; not dedicated modest or low-power physical-machine evidence",
+    "design": {
+      "scope": "Shared server allocation; not modest/low-power physical-machine qualification",
+      "variant_order_configured": [
+        0,
+        1,
+        2,
+        4,
+        8
+      ],
+      "serial_steps_per_variant_configured": 31,
+      "cached_samples_configured": 64,
+      "physical_core_cpu_ids_selected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "affinity_allowed_measured": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "topology_measured": {
+        "0": [
+          "0",
+          "0"
+        ],
+        "1": [
+          "0",
+          "1"
+        ],
+        "2": [
+          "0",
+          "2"
+        ],
+        "3": [
+          "0",
+          "3"
+        ],
+        "4": [
+          "0",
+          "4"
+        ],
+        "5": [
+          "0",
+          "5"
+        ],
+        "6": [
+          "0",
+          "6"
+        ],
+        "7": [
+          "0",
+          "7"
+        ],
+        "8": [
+          "0",
+          "16"
+        ],
+        "9": [
+          "0",
+          "17"
+        ],
+        "10": [
+          "0",
+          "18"
+        ],
+        "11": [
+          "0",
+          "19"
+        ],
+        "12": [
+          "0",
+          "20"
+        ],
+        "13": [
+          "0",
+          "21"
+        ],
+        "14": [
+          "0",
+          "22"
+        ],
+        "15": [
+          "0",
+          "23"
+        ],
+        "16": [
+          "0",
+          "24"
+        ],
+        "17": [
+          "0",
+          "25"
+        ],
+        "18": [
+          "0",
+          "26"
+        ],
+        "19": [
+          "0",
+          "27"
+        ],
+        "20": [
+          "0",
+          "28"
+        ],
+        "21": [
+          "0",
+          "29"
+        ],
+        "22": [
+          "0",
+          "30"
+        ],
+        "23": [
+          "0",
+          "31"
+        ],
+        "24": [
+          "0",
+          "8"
+        ],
+        "25": [
+          "0",
+          "9"
+        ],
+        "26": [
+          "0",
+          "10"
+        ],
+        "27": [
+          "0",
+          "11"
+        ],
+        "28": [
+          "0",
+          "12"
+        ],
+        "29": [
+          "0",
+          "13"
+        ],
+        "30": [
+          "0",
+          "14"
+        ],
+        "31": [
+          "0",
+          "15"
+        ],
+        "32": [
+          "1",
+          "0"
+        ],
+        "33": [
+          "1",
+          "1"
+        ],
+        "34": [
+          "1",
+          "2"
+        ],
+        "35": [
+          "1",
+          "3"
+        ],
+        "36": [
+          "1",
+          "4"
+        ],
+        "37": [
+          "1",
+          "5"
+        ],
+        "38": [
+          "1",
+          "6"
+        ],
+        "39": [
+          "1",
+          "7"
+        ],
+        "40": [
+          "1",
+          "16"
+        ],
+        "41": [
+          "1",
+          "17"
+        ],
+        "42": [
+          "1",
+          "18"
+        ],
+        "43": [
+          "1",
+          "19"
+        ],
+        "44": [
+          "1",
+          "20"
+        ],
+        "45": [
+          "1",
+          "21"
+        ],
+        "46": [
+          "1",
+          "22"
+        ],
+        "47": [
+          "1",
+          "23"
+        ],
+        "48": [
+          "1",
+          "24"
+        ],
+        "49": [
+          "1",
+          "25"
+        ],
+        "50": [
+          "1",
+          "26"
+        ],
+        "51": [
+          "1",
+          "27"
+        ],
+        "52": [
+          "1",
+          "28"
+        ],
+        "53": [
+          "1",
+          "29"
+        ],
+        "54": [
+          "1",
+          "30"
+        ],
+        "55": [
+          "1",
+          "31"
+        ],
+        "56": [
+          "1",
+          "8"
+        ],
+        "57": [
+          "1",
+          "9"
+        ],
+        "58": [
+          "1",
+          "10"
+        ],
+        "59": [
+          "1",
+          "11"
+        ],
+        "60": [
+          "1",
+          "12"
+        ],
+        "61": [
+          "1",
+          "13"
+        ],
+        "62": [
+          "1",
+          "14"
+        ],
+        "63": [
+          "1",
+          "15"
+        ],
+        "64": [
+          "0",
+          "0"
+        ],
+        "65": [
+          "0",
+          "1"
+        ],
+        "66": [
+          "0",
+          "2"
+        ],
+        "67": [
+          "0",
+          "3"
+        ],
+        "68": [
+          "0",
+          "4"
+        ],
+        "69": [
+          "0",
+          "5"
+        ],
+        "70": [
+          "0",
+          "6"
+        ],
+        "71": [
+          "0",
+          "7"
+        ],
+        "72": [
+          "0",
+          "16"
+        ],
+        "73": [
+          "0",
+          "17"
+        ],
+        "74": [
+          "0",
+          "18"
+        ],
+        "75": [
+          "0",
+          "19"
+        ],
+        "76": [
+          "0",
+          "20"
+        ],
+        "77": [
+          "0",
+          "21"
+        ],
+        "78": [
+          "0",
+          "22"
+        ],
+        "79": [
+          "0",
+          "23"
+        ],
+        "80": [
+          "0",
+          "24"
+        ],
+        "81": [
+          "0",
+          "25"
+        ],
+        "82": [
+          "0",
+          "26"
+        ],
+        "83": [
+          "0",
+          "27"
+        ],
+        "84": [
+          "0",
+          "28"
+        ],
+        "85": [
+          "0",
+          "29"
+        ],
+        "86": [
+          "0",
+          "30"
+        ],
+        "87": [
+          "0",
+          "31"
+        ],
+        "88": [
+          "0",
+          "8"
+        ],
+        "89": [
+          "0",
+          "9"
+        ],
+        "90": [
+          "0",
+          "10"
+        ],
+        "91": [
+          "0",
+          "11"
+        ],
+        "92": [
+          "0",
+          "12"
+        ],
+        "93": [
+          "0",
+          "13"
+        ],
+        "94": [
+          "0",
+          "14"
+        ],
+        "95": [
+          "0",
+          "15"
+        ],
+        "96": [
+          "1",
+          "0"
+        ],
+        "97": [
+          "1",
+          "1"
+        ],
+        "98": [
+          "1",
+          "2"
+        ],
+        "99": [
+          "1",
+          "3"
+        ],
+        "100": [
+          "1",
+          "4"
+        ],
+        "101": [
+          "1",
+          "5"
+        ],
+        "102": [
+          "1",
+          "6"
+        ],
+        "103": [
+          "1",
+          "7"
+        ],
+        "104": [
+          "1",
+          "16"
+        ],
+        "105": [
+          "1",
+          "17"
+        ],
+        "106": [
+          "1",
+          "18"
+        ],
+        "107": [
+          "1",
+          "19"
+        ],
+        "108": [
+          "1",
+          "20"
+        ],
+        "109": [
+          "1",
+          "21"
+        ],
+        "110": [
+          "1",
+          "22"
+        ],
+        "111": [
+          "1",
+          "23"
+        ],
+        "112": [
+          "1",
+          "24"
+        ],
+        "113": [
+          "1",
+          "25"
+        ],
+        "114": [
+          "1",
+          "26"
+        ],
+        "115": [
+          "1",
+          "27"
+        ],
+        "116": [
+          "1",
+          "28"
+        ],
+        "117": [
+          "1",
+          "29"
+        ],
+        "118": [
+          "1",
+          "30"
+        ],
+        "119": [
+          "1",
+          "31"
+        ],
+        "120": [
+          "1",
+          "8"
+        ],
+        "121": [
+          "1",
+          "9"
+        ],
+        "122": [
+          "1",
+          "10"
+        ],
+        "123": [
+          "1",
+          "11"
+        ],
+        "124": [
+          "1",
+          "12"
+        ],
+        "125": [
+          "1",
+          "13"
+        ],
+        "126": [
+          "1",
+          "14"
+        ],
+        "127": [
+          "1",
+          "15"
+        ]
+      },
+      "cpu_model_measured": "AMD EPYC 9335 32-Core Processor",
+      "cgroup_cpu_max_measured": "1360000 100000",
+      "runtime_configured": {
+        "OMP_PLACES": "{0},{1},{2},{3},{4},{5},{6},{7}",
+        "OMP_PROC_BIND": "spread",
+        "OMP_DYNAMIC": "FALSE",
+        "OMP_THREAD_LIMIT": "8",
+        "OMP_WAIT_POLICY": "PASSIVE",
+        "GOMP_SPINCOUNT": "0"
+      },
+      "denominator": "Serial parent-dependent cold verifies, bank streams parallel only within one parent; audit checksums and allocation retained"
+    },
+    "full_fold_cross_variant_steps_measured": 124,
+    "bank_conformance_summary_measured": {
+      "type": "complete",
+      "vectors_matched_measured": 560,
+      "parents_measured": 4,
+      "full_bank_comparisons_measured": 16,
+      "mismatches_measured": 0
+    },
+    "variants": [
+      {
+        "workers_configured": 1,
+        "implementation": "portable",
+        "header_sync_and_turnover_inferred": [
+          {
+            "block_interval_s_configured": 10,
+            "elapsed_days_per_chain_year_inferred": 23.9972019255,
+            "CPU_days_per_chain_year_inferred": 23.997158308,
+            "bank_plus_upload_s_inferred": 0.647088527,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0647088527,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 30,
+            "elapsed_days_per_chain_year_inferred": 7.9990673085,
+            "CPU_days_per_chain_year_inferred": 7.999052769333333,
+            "bank_plus_upload_s_inferred": 0.647088527,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.021569617566666664,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 60,
+            "elapsed_days_per_chain_year_inferred": 3.99953365425,
+            "CPU_days_per_chain_year_inferred": 3.9995263846666664,
+            "bank_plus_upload_s_inferred": 0.647088527,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.010784808783333332,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 150,
+            "elapsed_days_per_chain_year_inferred": 1.5998134617,
+            "CPU_days_per_chain_year_inferred": 1.5998105538666665,
+            "bank_plus_upload_s_inferred": 0.647088527,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.004313923513333333,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          }
+        ],
+        "bank_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.642345484,
+          "MAD_measured": 0.003614934000000014,
+          "median_95CI_inferred_from_measured": [
+            0.638775195,
+            0.645037814
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "bank_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.642325475,
+          "MAD_measured": 0.0036126119999999595,
+          "median_95CI_inferred_from_measured": [
+            0.638789396,
+            0.644973371
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.657457587,
+          "MAD_measured": 0.00379951700000003,
+          "median_95CI_inferred_from_measured": [
+            0.653865235,
+            0.660184858
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.657456392,
+          "MAD_measured": 0.00369753000000006,
+          "median_95CI_inferred_from_measured": [
+            0.653879471,
+            0.660120251
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cached_wall_s_measured": {
+          "n_blocks_or_samples_measured": 64,
+          "median_measured": 0.0151651615,
+          "MAD_measured": 3.283349999999921e-05,
+          "median_95CI_inferred_from_measured": [
+            0.015149208,
+            0.0151959115
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        }
+      },
+      {
+        "workers_configured": 1,
+        "implementation": "OpenSSL",
+        "header_sync_and_turnover_inferred": [
+          {
+            "block_interval_s_configured": 10,
+            "elapsed_days_per_chain_year_inferred": 10.074177426499999,
+            "CPU_days_per_chain_year_inferred": 10.0728202835,
+            "bank_plus_upload_s_inferred": 0.265388705,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0265388705,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 30,
+            "elapsed_days_per_chain_year_inferred": 3.3580591421666663,
+            "CPU_days_per_chain_year_inferred": 3.3576067611666667,
+            "bank_plus_upload_s_inferred": 0.265388705,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.008846290166666666,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 60,
+            "elapsed_days_per_chain_year_inferred": 1.6790295710833332,
+            "CPU_days_per_chain_year_inferred": 1.6788033805833333,
+            "bank_plus_upload_s_inferred": 0.265388705,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.004423145083333333,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 150,
+            "elapsed_days_per_chain_year_inferred": 0.6716118284333332,
+            "CPU_days_per_chain_year_inferred": 0.6715213522333333,
+            "bank_plus_upload_s_inferred": 0.265388705,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0017692580333333334,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          }
+        ],
+        "bank_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.260645662,
+          "MAD_measured": 0.0007265129999999842,
+          "median_95CI_inferred_from_measured": [
+            0.260277178,
+            0.261385506
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "bank_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.260568009,
+          "MAD_measured": 0.0006782479999999924,
+          "median_95CI_inferred_from_measured": [
+            0.260236602,
+            0.261391566
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.276004861,
+          "MAD_measured": 0.0005208500000000171,
+          "median_95CI_inferred_from_measured": [
+            0.275571871,
+            0.276657185
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.275967679,
+          "MAD_measured": 0.0005265289999999978,
+          "median_95CI_inferred_from_measured": [
+            0.275577894,
+            0.276663834
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cached_wall_s_measured": {
+          "n_blocks_or_samples_measured": 64,
+          "median_measured": 0.015215531000000001,
+          "MAD_measured": 4.00445000000001e-05,
+          "median_95CI_inferred_from_measured": [
+            0.0151926475,
+            0.015236727
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        }
+      },
+      {
+        "workers_configured": 2,
+        "implementation": "OpenSSL",
+        "header_sync_and_turnover_inferred": [
+          {
+            "block_interval_s_configured": 10,
+            "elapsed_days_per_chain_year_inferred": 5.6951187249999995,
+            "CPU_days_per_chain_year_inferred": 10.453822321499999,
+            "bank_plus_upload_s_inferred": 0.145341838,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0145341838,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 30,
+            "elapsed_days_per_chain_year_inferred": 1.8983729083333332,
+            "CPU_days_per_chain_year_inferred": 3.4846074404999996,
+            "bank_plus_upload_s_inferred": 0.145341838,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.004844727933333333,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 60,
+            "elapsed_days_per_chain_year_inferred": 0.9491864541666666,
+            "CPU_days_per_chain_year_inferred": 1.7423037202499998,
+            "bank_plus_upload_s_inferred": 0.145341838,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0024223639666666667,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 150,
+            "elapsed_days_per_chain_year_inferred": 0.3796745816666666,
+            "CPU_days_per_chain_year_inferred": 0.6969214880999999,
+            "bank_plus_upload_s_inferred": 0.145341838,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0009689455866666667,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          }
+        ],
+        "bank_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.140598795,
+          "MAD_measured": 0.003987275000000012,
+          "median_95CI_inferred_from_measured": [
+            0.137372164,
+            0.142509079
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "bank_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.27110551,
+          "MAD_measured": 0.004976548999999997,
+          "median_95CI_inferred_from_measured": [
+            0.268553687,
+            0.274780508
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.15603065,
+          "MAD_measured": 0.003856902999999995,
+          "median_95CI_inferred_from_measured": [
+            0.15261492,
+            0.157821759
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.286406091,
+          "MAD_measured": 0.0049456759999999544,
+          "median_95CI_inferred_from_measured": [
+            0.283814769,
+            0.290373858
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cached_wall_s_measured": {
+          "n_blocks_or_samples_measured": 64,
+          "median_measured": 0.015126815,
+          "MAD_measured": 3.6964999999999915e-05,
+          "median_95CI_inferred_from_measured": [
+            0.015106009,
+            0.015233112
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        }
+      },
+      {
+        "workers_configured": 4,
+        "implementation": "OpenSSL",
+        "header_sync_and_turnover_inferred": [
+          {
+            "block_interval_s_configured": 10,
+            "elapsed_days_per_chain_year_inferred": 3.2162628349999998,
+            "CPU_days_per_chain_year_inferred": 10.788715479,
+            "bank_plus_upload_s_inferred": 0.077572291,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0077572291000000005,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 30,
+            "elapsed_days_per_chain_year_inferred": 1.0720876116666667,
+            "CPU_days_per_chain_year_inferred": 3.5962384930000004,
+            "bank_plus_upload_s_inferred": 0.077572291,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.002585743033333333,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 60,
+            "elapsed_days_per_chain_year_inferred": 0.5360438058333333,
+            "CPU_days_per_chain_year_inferred": 1.7981192465000002,
+            "bank_plus_upload_s_inferred": 0.077572291,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0012928715166666666,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 150,
+            "elapsed_days_per_chain_year_inferred": 0.21441752233333333,
+            "CPU_days_per_chain_year_inferred": 0.7192476986,
+            "bank_plus_upload_s_inferred": 0.077572291,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0005171486066666667,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          }
+        ],
+        "bank_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.072829248,
+          "MAD_measured": 0.0021284570000000003,
+          "median_95CI_inferred_from_measured": [
+            0.07017914,
+            0.074175118
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "bank_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.28015802,
+          "MAD_measured": 0.0033624750000000314,
+          "median_95CI_inferred_from_measured": [
+            0.276795545,
+            0.280950201
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.08811679,
+          "MAD_measured": 0.0019414400000000026,
+          "median_95CI_inferred_from_measured": [
+            0.087096231,
+            0.089692289
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.295581246,
+          "MAD_measured": 0.0032610330000000243,
+          "median_95CI_inferred_from_measured": [
+            0.292320213,
+            0.29614938
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cached_wall_s_measured": {
+          "n_blocks_or_samples_measured": 64,
+          "median_measured": 0.015164,
+          "MAD_measured": 6.846599999999967e-05,
+          "median_95CI_inferred_from_measured": [
+            0.015125402999999999,
+            0.015282455
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        }
+      },
+      {
+        "workers_configured": 8,
+        "implementation": "OpenSSL",
+        "header_sync_and_turnover_inferred": [
+          {
+            "block_interval_s_configured": 10,
+            "elapsed_days_per_chain_year_inferred": 1.9498260214999998,
+            "CPU_days_per_chain_year_inferred": 10.348914934,
+            "bank_plus_upload_s_inferred": 0.042276796000000005,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.004227679600000001,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 30,
+            "elapsed_days_per_chain_year_inferred": 0.6499420071666666,
+            "CPU_days_per_chain_year_inferred": 3.449638311333333,
+            "bank_plus_upload_s_inferred": 0.042276796000000005,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0014092265333333334,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 60,
+            "elapsed_days_per_chain_year_inferred": 0.3249710035833333,
+            "CPU_days_per_chain_year_inferred": 1.7248191556666665,
+            "bank_plus_upload_s_inferred": 0.042276796000000005,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0007046132666666667,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          },
+          {
+            "block_interval_s_configured": 150,
+            "elapsed_days_per_chain_year_inferred": 0.12998840143333332,
+            "CPU_days_per_chain_year_inferred": 0.6899276622666667,
+            "bank_plus_upload_s_inferred": 0.042276796000000005,
+            "bank_plus_upload_fraction_of_block_time_inferred": 0.0002818453066666667,
+            "scope": "Hash-only serial parent-dependent projection, not a measured chain sync or miner transition; no pipeline overlap assumed. Network, storage, signatures, state and forks excluded."
+          }
+        ],
+        "bank_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.037533753,
+          "MAD_measured": 0.004582775000000004,
+          "median_95CI_inferred_from_measured": [
+            0.035711679,
+            0.038570746
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "bank_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.267987689,
+          "MAD_measured": 0.01019951400000002,
+          "median_95CI_inferred_from_measured": [
+            0.260939719,
+            0.273818114
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_wall_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.053419891,
+          "MAD_measured": 0.004651777000000003,
+          "median_95CI_inferred_from_measured": [
+            0.051431491,
+            0.054130582
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cold_cpu_s_measured": {
+          "n_blocks_or_samples_measured": 31,
+          "median_measured": 0.283531916,
+          "MAD_measured": 0.009705760000000008,
+          "median_95CI_inferred_from_measured": [
+            0.276684488,
+            0.289347939
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        },
+        "cached_wall_s_measured": {
+          "n_blocks_or_samples_measured": 64,
+          "median_measured": 0.015184335,
+          "MAD_measured": 7.073449999999998e-05,
+          "median_95CI_inferred_from_measured": [
+            0.015155863,
+            0.015236038612499999
+          ],
+          "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+        }
+      }
+    ]
+  },
+  "parent_upload": {
+    "scope": "Pageable expanded bank, eight copies totaling 128 MiB; context startup excluded, 31 repeats of an already-derived bank",
+    "host_wall_s_measured": {
+      "n_blocks_or_samples_measured": 31,
+      "median_measured": 0.004743043,
+      "MAD_measured": 7.339900000000003e-05,
+      "median_95CI_inferred_from_measured": [
+        0.004691456,
+        0.004852544
+      ],
+      "uncertainty": "2000 circular moving-block resamples, span 3; conditional on this run, excludes sensor bias and host-population uncertainty"
+    }
+  }
+}

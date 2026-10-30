@@ -1,0 +1,22 @@
+{
+  "variants_configured": [
+    3
+  ],
+  "condition_event_seconds_configured": 2,
+  "conditions_configured": [
+    "cold_start",
+    "warm"
+  ],
+  "batch_configured": 8192,
+  "header_bytes_configured": 184,
+  "power_policy": "Unchanged provider-reported 165 W board limit; no setters. Full unpaced workload.",
+  "hardware_cohort": "RTX PRO 4500 Blackwell Server Edition; separate from RTX 5090",
+  "denominator": "Complete evaluations from a conformance-validated implementation; per-block full-batch fold cross-check plus one C h/fold/digest. Timed attempts not individually C-replayed.",
+  "energy_scope": "GPU board, continuous NVML instantaneous power integration; excludes CPU, PSU and outside-block bank/validation work.",
+  "stage_scope": "Last graph per 64-replay window; GEMM-plus-epilogue, not isolated pure GEMM.",
+  "cold_scope": "15 consecutive seconds <=42 C and <=75 W before each fresh process, then warms naturally. Warm follows without another cooldown.",
+  "telemetry_guard_s_configured": 2,
+  "thermal_abort_C_configured": 80,
+  "confidence": "Sampling uncertainty only; independent sensor calibration remains OPEN",
+  "no_winner_selection": true
+}

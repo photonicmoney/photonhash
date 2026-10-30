@@ -1,0 +1,7 @@
+Using Python 3.12.3 environment at: analysis-venv
+Resolved 1 package in 160ms
+Downloading numpy (16.0MiB)
+ Downloaded numpy
+Prepared 1 package in 202ms
+Installed 1 package in 87ms
+ + numpy==2.5.4
