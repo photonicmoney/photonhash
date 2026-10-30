@@ -1,0 +1,51 @@
+{
+  "scope": "CPU-only core hash and parent-bank/upload measurements; no chain integration.",
+  "receipts": {
+    "remote-cpu-portable-bench-001": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 69.58592668606434,
+      "passed_process": true
+    },
+    "remote-cpu-blas-bench-001": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 39.61277707898989,
+      "passed_process": true
+    },
+    "remote-cpu-parent-dependent-001": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 20.82925160403829,
+      "passed_process": true
+    },
+    "remote-parent-upload-001": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 1.7066912810551003,
+      "passed_process": true
+    }
+  },
+  "CPU_only_infrastructure_failures": [
+    {
+      "attempt": "initial CPU-only pod",
+      "outcome": "Container booted, SSH unreachable; task-owned pod deleted; no benchmark result."
+    },
+    {
+      "attempt": "US CPU capacity request",
+      "outcome": "Allocation failed, no pod created."
+    },
+    {
+      "attempt": "CPU retry country flag",
+      "outcome": "CLI usage_error: country-code unsupported for CPU pods; no pod created."
+    },
+    {
+      "attempt": "CPU retry with supported data-center selector",
+      "outcome": "60-second SSH readiness timeout; SSH port not allocated; task-owned pod deleted; no benchmark result."
+    }
+  ]
+}
