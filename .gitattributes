@@ -6,3 +6,6 @@
 *.txt text eol=lf
 *.yml text eol=lf
 Makefile text eol=lf
+
+# Preserve the outside reviewer's exact supplied bytes on every platform.
+independent/py-c20/ph_indep.py -text
