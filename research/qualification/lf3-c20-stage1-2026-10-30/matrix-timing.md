@@ -67,6 +67,17 @@ Observer event overhead from these medians is **0.1145% inferred** for one-pass
 and **0.3121% inferred** for eight-pass. Small end-to-end overhead does not prove
 that every individual observer phase is unbiased.
 
+The [compiler resource records](evidence/matrix-resources.json) report **224
+measured registers/thread** for both stock packed and its one-pass observer,
+**246 measured** for stock fused and **254 measured** for its eight-pass observer.
+All four report **zero measured stack/spill-store/spill-load bytes**. These are
+ptxas resource reports, not runtime memory-traffic counters. The reported single
+barrier is a barrier identifier count, not the number of executed synchronizations.
+Observer barriers, register pressure and timestamp instructions can affect
+execution. Thread-zero clocks and CTA barriers do not make each phase an
+unbiased hardware-unit stopwatch; warp scheduling and compiler instruction
+placement remain possible phase biases. No SASS-ordering proof is claimed.
+
 The following are **measured medians of per-CTA clock64 span ratios**. There
 are **8192 measured CTA records** for the one-pass observer and **1024 measured
 CTA records** for the eight-pass observer, from one fixed launch each. CTAs
