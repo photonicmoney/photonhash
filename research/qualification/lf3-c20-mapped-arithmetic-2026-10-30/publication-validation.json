@@ -1,0 +1,10 @@
+{
+  "passed_process": true,
+  "selection": "Own RTL, mapped netlists, logs, receipts, dependency license and README; no library body, CUDA or operations credentials",
+  "reproduction_processes_measured": 15,
+  "mapped_equivalence_checks_measured": 6,
+  "simulation_accumulation_checks_measured": 262144,
+  "area_summary_reproduced_exactly": true,
+  "arithmetic_area_inferred_not_chip_energy": true,
+  "not_candidate_freeze": true
+}

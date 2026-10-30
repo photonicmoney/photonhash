@@ -1,0 +1,211 @@
+
+-- Running command `read_verilog -formal control/mac.v; prep -top equiv -flatten; sat -verify -prove mismatch 0 -show-inputs -show-outputs' --
+
+1. Executing Verilog-2005 frontend: control/mac.v
+Parsing formal Verilog input from `control/mac.v' to AST representation.
+Generating RTLIL representation for module `\mac_comb'.
+Generating RTLIL representation for module `\mac_register'.
+Generating RTLIL representation for module `\equiv'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \equiv
+Used module:     \mac_comb
+Parameter \W = 13
+
+2.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_comb'.
+Parameter \W = 13
+Generating RTLIL representation for module `$paramod\mac_comb\W=s32'00000000000000000000000000001101'.
+Parameter \W = 20
+
+2.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_comb'.
+Parameter \W = 20
+Generating RTLIL representation for module `$paramod\mac_comb\W=s32'00000000000000000000000000010100'.
+Reprocessing module equiv because instantiated module $paramod\mac_comb\W=s32'00000000000000000000000000001101 has become available.
+Generating RTLIL representation for module `\equiv'.
+
+2.1.4. Analyzing design hierarchy..
+Top module:  \equiv
+Used module:     \mac_comb
+Parameter \W = 13
+Found cached RTLIL representation for module `$paramod\mac_comb\W=s32'00000000000000000000000000001101'.
+Parameter \W = 20
+Found cached RTLIL representation for module `$paramod\mac_comb\W=s32'00000000000000000000000000010100'.
+
+2.1.5. Analyzing design hierarchy..
+Top module:  \equiv
+Used module:     $paramod\mac_comb\W=s32'00000000000000000000000000001101
+Used module:     $paramod\mac_comb\W=s32'00000000000000000000000000010100
+
+2.1.6. Analyzing design hierarchy..
+Top module:  \equiv
+Used module:     $paramod\mac_comb\W=s32'00000000000000000000000000001101
+Used module:     $paramod\mac_comb\W=s32'00000000000000000000000000010100
+Removing unused module `\mac_register'.
+Removing unused module `\mac_comb'.
+Removed 2 unused modules.
+Mapping positional arguments of cell equiv.narrow ($paramod\mac_comb\W=s32'00000000000000000000000000001101).
+Mapping positional arguments of cell equiv.wide ($paramod\mac_comb\W=s32'00000000000000000000000000010100).
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\mac_comb\W=s32'00000000000000000000000000010100.
+Optimizing module equiv.
+Optimizing module $paramod\mac_comb\W=s32'00000000000000000000000000001101.
+
+2.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\mac_comb\W=s32'00000000000000000000000000010100.
+Deleting now unused module $paramod\mac_comb\W=s32'00000000000000000000000000001101.
+<suppressed ~2 debug messages>
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module equiv.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \equiv..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module equiv...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module equiv.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\equiv'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \equiv..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \equiv.
+Performed a total of 0 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\equiv'.
+Removed a total of 0 cells.
+
+2.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \equiv..
+
+2.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module equiv.
+
+2.7.8. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 7 bits (of 20) from port Y of cell equiv.$flatten\wide.$add$control/mac.v:5$9 ($add).
+Removed top 7 bits (of 20) from port A of cell equiv.$flatten\wide.$add$control/mac.v:5$9 ($add).
+Removed top 7 bits (of 20) from port B of cell equiv.$flatten\wide.$add$control/mac.v:5$9 ($add).
+Removed top 7 bits (of 20) from wire equiv.full.
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \equiv..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module equiv.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\equiv'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \equiv..
+
+2.11.4. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== equiv ===
+
+   Number of wires:                 17
+   Number of wire bits:            166
+   Number of public wires:          16
+   Number of public wire bits:     153
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     $add                            1
+     $mul                            1
+     $reduce_or                      1
+     $xor                            1
+
+2.13. Executing CHECK pass (checking for obvious problems).
+Checking module equiv...
+Found and reported 0 problems.
+
+3. Executing SAT pass (solving SAT problems in the circuit).
+
+Setting up SAT problem:
+Final constraint equation: { } = { }
+Imported 4 cells to SAT database.
+Import proof-constraint: \mismatch = 1'0
+Final proof equation: \mismatch = 1'0
+Import show expression: \a
+Import show expression: \acc
+Import show expression: \b
+Import show expression: \mismatch
+
+Solving problem with 857 variables and 2426 clauses..
+SAT proof finished - no model found: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
