@@ -1,0 +1,202 @@
+[
+  {
+    "name": "CONFORMANCE_FAILURE-probe-control001.json",
+    "bytes_measured": 200,
+    "SHA256_measured": "d70620395cce844a5b533c27baf51a4386034a26655310d0e3b5af5dfda1e84a"
+  },
+  {
+    "name": "probe-control001-diagnosis.json",
+    "bytes_measured": 1123,
+    "SHA256_measured": "af4c0b816f24d5f0c22dac3e2cf51acdbeb7eb1e695901ff78d6c84fe738d661"
+  },
+  {
+    "name": "probe-resource-usage.txt",
+    "bytes_measured": 9615,
+    "SHA256_measured": "8b86e8217de21097a232406ca6ef51678f6277b71142b3e9800c6eb99f691e2a"
+  },
+  {
+    "name": "remote-energy-confirmation-0-001-cooldown.json",
+    "bytes_measured": 13275,
+    "SHA256_measured": "99a9f7e716a64efb182eaae5421b6741032016ab847f4da608682b8ed726a5c7"
+  },
+  {
+    "name": "remote-energy-confirmation-0-001-invalid.json",
+    "bytes_measured": 92,
+    "SHA256_measured": "7e95c453ad124685b0fbd7354389469d7cc1b70dc8b97aa9304ebf2d8f656b0e"
+  },
+  {
+    "name": "remote-energy-confirmation-0-001-nvml.jsonl",
+    "bytes_measured": 777988,
+    "SHA256_measured": "ba21debbf6ff1becf5ec0779a402287d4353f2044ffc85af99966a64e0983c8d"
+  },
+  {
+    "name": "remote-energy-confirmation-0-001.log",
+    "bytes_measured": 99986,
+    "SHA256_measured": "89954972cce9e0a01876afdb94a0bfc5737997f24e448425daa1a485517b54b1"
+  },
+  {
+    "name": "remote-energy-confirmation-0-001.receipt.json",
+    "bytes_measured": 135,
+    "SHA256_measured": "19fab87c766abf173f6433daaeec2014002f7d638418b3d5e68ef6138b1610af"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-0-001-cooldown.json",
+    "bytes_measured": 14937,
+    "SHA256_measured": "6eaa05af4cd5925ad8aeb81f89de390ee6f3327a5c65dcc78c0a78a71b06d1fd"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-0-001-invalid.json",
+    "bytes_measured": 63,
+    "SHA256_measured": "a2eda4d0d4ceb4af69464970c26cb64c811726ef6d2d8c2a884cfb791d9b5205"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-0-001-nvml.jsonl",
+    "bytes_measured": 14677646,
+    "SHA256_measured": "d3dd72a481d6f44244756b750854adb0580621c60ce4508f76d562578c7e389c"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-0-001.log",
+    "bytes_measured": 960207,
+    "SHA256_measured": "26a0a67ee712018fda237f0d78cea18e37023022639647f4cab07cf2c48e09e7"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-0-001.receipt.json",
+    "bytes_measured": 147,
+    "SHA256_measured": "90ba4141a978298aa8e694e4373cd7d9df0e4d541d80735ef5f3e2c76ea476fa"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-0-001-cooldown.json",
+    "bytes_measured": 14941,
+    "SHA256_measured": "581e10aa6d31180153d7172d085932aeee8a003f6ad319ac4e3e80ed63a8fb09"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-0-001-nvml.jsonl",
+    "bytes_measured": 16876044,
+    "SHA256_measured": "579756953bf5d98a398add54288007aa72051475f57e5929e547776d3c3655c5"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-0-001.log",
+    "bytes_measured": 1101975,
+    "SHA256_measured": "0497a2a528300084a204048312dded09b03eedb2c25b85a97ad7b9624906aa14"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-0-001.receipt.json",
+    "bytes_measured": 132,
+    "SHA256_measured": "49995754e9c8842d2d96f5e904539dd360cfda84522c30c09a969b533ee162c9"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-1-001-cooldown.json",
+    "bytes_measured": 42192,
+    "SHA256_measured": "01c17705c913451f8a313b5fa64ce787a9cee4f544aa492dfbddcb14dbfcdf93"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-1-001-nvml.jsonl",
+    "bytes_measured": 16878847,
+    "SHA256_measured": "cb537fb944a1e715ef2aa302182cf29757045df49ca958ed48e2cd53c15a5d63"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-1-001.log",
+    "bytes_measured": 1365854,
+    "SHA256_measured": "a9c18a3bf88bf924078fa6395a31d1bf9348d2d1483ed651f0f0de7fa7551543"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-1-001.receipt.json",
+    "bytes_measured": 131,
+    "SHA256_measured": "4827a2335afd36ad6bffcc69c0f3ffeee595d09755cd396719e9fb2da8b72fa6"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-2-001-cooldown.json",
+    "bytes_measured": 42191,
+    "SHA256_measured": "17a43cadcfea4fd476eda4c492fa3fab957a96f1eb107d33288928cbefd565f3"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-2-001-nvml.jsonl",
+    "bytes_measured": 16885010,
+    "SHA256_measured": "74cfb10e9fff4439d552c44fa479ffe17b1e79c7e72eaf87351b562ae755327b"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-2-001.log",
+    "bytes_measured": 1667746,
+    "SHA256_measured": "9806c3dff6cc8f5ca576b5bd9f3188a4f6c2a2b40afcb45af9f5683687dd1e07"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-2-001.receipt.json",
+    "bytes_measured": 131,
+    "SHA256_measured": "aca53ac3d771d89dbc6f853db859ffa9b8b24edaf867f7b663b861b8694ed293"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-3-001-cooldown.json",
+    "bytes_measured": 42198,
+    "SHA256_measured": "a28dad458c054fac795bee2a1607de4736d4f2749f028575c5314071df5ee1e9"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-3-001-nvml.jsonl",
+    "bytes_measured": 16879014,
+    "SHA256_measured": "8b8ae53de14e0068039e6f12572e0fb83c235c01488255c9e470961fb9914a4c"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-3-001.log",
+    "bytes_measured": 1678926,
+    "SHA256_measured": "d21207bb70153bf08c2c2357a62e69f2321469de46e062f6ad44fcad7a1d141e"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-3-001.receipt.json",
+    "bytes_measured": 132,
+    "SHA256_measured": "b0379d8a7916ed662364b2e46b8ed4586974fc7d1116debfd7a4643f02c44360"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-4-001-cooldown.json",
+    "bytes_measured": 41383,
+    "SHA256_measured": "0a478278c166dfa78e8e35474a65c631fb1ab725a7ce82e22d135e535f727cb3"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-4-001-nvml.jsonl",
+    "bytes_measured": 16694408,
+    "SHA256_measured": "7e5be66fe147a6cce60822c90be11a5fb4b1d5a6d334ab319a6172d6f4cfa260"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-4-001.log",
+    "bytes_measured": 1364287,
+    "SHA256_measured": "a1fc453b63e9397ba8a92aee5d5babe8130b70855caffc1865d7bade81ed7968"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-4-001.receipt.json",
+    "bytes_measured": 127,
+    "SHA256_measured": "cc4f8880748818859b7b532adeaac13d5e10ec690554d29016d825338195528a"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-complete.json",
+    "bytes_measured": 56,
+    "SHA256_measured": "668d4ae9a1edecdda680d3c555bc4a73135a0ff32aec54e3776bcb926a36ba7d"
+  },
+  {
+    "name": "remote-energy-confirmation-paced50-retry2-design.json",
+    "bytes_measured": 1745,
+    "SHA256_measured": "9052640d53763e80623c359b733a02fa9ab89d0fd27f0bb72b2d85b2a7474fde"
+  },
+  {
+    "name": "remote-mma-probe-001.log",
+    "bytes_measured": 1400,
+    "SHA256_measured": "eecae7a4b18908d17f06efaaa48d0f2251c5e9f5ea475c88798bc1e2d8b92fec"
+  },
+  {
+    "name": "remote-mma-probe-002.log",
+    "bytes_measured": 21525,
+    "SHA256_measured": "d9a9f55a61387be981dc84e13ccee16f0552a6af39b79ec521877eb1a5fc0eb6"
+  },
+  {
+    "name": "stage-energy-C20-pair-design.json",
+    "bytes_measured": 1316,
+    "SHA256_measured": "e3fdd812f19481a0bdc07a48a8219ba2a829fdf5190075ba9b030c5df643a72d"
+  },
+  {
+    "name": "stage-pair-controller-002.log",
+    "bytes_measured": 45,
+    "SHA256_measured": "c5823ec5378073fb53db7913b79ee477c7efbe0877cb2e1fcf490f2af9229469"
+  },
+  {
+    "name": "telemetry-abort-diagnosis.json",
+    "bytes_measured": 2436,
+    "SHA256_measured": "3eeb327450b6859dc7db8db132e27331fc683d0591354eeeaaf6f79969071c67"
+  }
+]

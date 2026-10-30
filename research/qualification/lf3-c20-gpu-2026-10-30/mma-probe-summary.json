@@ -1,0 +1,155 @@
+{
+  "scope": "Separate instrumented CTA/warp-0 timing. Mma loop includes operand loads and synchronization; wall-time attribution is inferred, not pure math wall time. Production long-run composite timings are separate.",
+  "trials_measured": 30,
+  "full_fold_checks_measured": 491520,
+  "mappings": {
+    "1": {
+      "instrumented_kernel_ms_measured": {
+        "n_measured": 30,
+        "median_measured": 2.633984089,
+        "MAD_measured": 0.00363194950000012,
+        "min_measured": 2.624768019,
+        "max_measured": 2.650752068,
+        "median_95CI_inferred_from_measured_samples": [
+          2.631551981,
+          2.637408018
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "warp0_Mma_cycles_median_measured": {
+        "n_measured": 30,
+        "median_measured": 134344.5,
+        "MAD_measured": 6.0,
+        "min_measured": 134319.0,
+        "max_measured": 134377.0,
+        "median_95CI_inferred_from_measured_samples": [
+          134341.5,
+          134348.5
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "warp0_CTA_cycles_median_measured": {
+        "n_measured": 30,
+        "median_measured": 141214.0,
+        "MAD_measured": 6.0,
+        "min_measured": 141195.0,
+        "max_measured": 141243.0,
+        "median_95CI_inferred_from_measured_samples": [
+          141211.5,
+          141219.0
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "warp0_Mma_fraction_measured": {
+        "n_measured": 30,
+        "median_measured": 0.95073086,
+        "MAD_measured": 7.685000000035025e-06,
+        "min_measured": 0.950685445,
+        "max_measured": 0.95078245,
+        "median_95CI_inferred_from_measured_samples": [
+          0.950727256,
+          0.9507331255
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "Mma_attributed_kernel_ms_inferred": {
+        "n_measured": 30,
+        "median_95CI_inferred_from_measured_samples": [
+          2.502033439,
+          2.50753338
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability",
+        "median_inferred_from_measured_cycles": 2.5042409814999997,
+        "MAD_inferred_from_measured_cycles": 0.003445895999999893,
+        "min_inferred_from_measured_cycles": 2.495450911,
+        "max_inferred_from_measured_cycles": 2.520125561
+      }
+    },
+    "8": {
+      "instrumented_kernel_ms_measured": {
+        "n_measured": 30,
+        "median_measured": 2.8623839615,
+        "MAD_measured": 0.0034399029999998554,
+        "min_measured": 2.852864027,
+        "max_measured": 2.882368088,
+        "median_95CI_inferred_from_measured_samples": [
+          2.8614560365,
+          2.8656799795
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "warp0_Mma_cycles_median_measured": {
+        "n_measured": 30,
+        "median_measured": 134406.5,
+        "MAD_measured": 9.0,
+        "min_measured": 134376.0,
+        "max_measured": 134436.0,
+        "median_95CI_inferred_from_measured_samples": [
+          134404.0,
+          134416.5
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "warp0_CTA_cycles_median_measured": {
+        "n_measured": 30,
+        "median_measured": 1089186.5,
+        "MAD_measured": 99.5,
+        "min_measured": 1088878.0,
+        "max_measured": 1089512.0,
+        "median_95CI_inferred_from_measured_samples": [
+          1089142.0,
+          1089298.0
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "warp0_Mma_fraction_measured": {
+        "n_measured": 30,
+        "median_measured": 0.986915701,
+        "MAD_measured": 6.869500000006301e-06,
+        "min_measured": 0.986892699,
+        "max_measured": 0.986953224,
+        "median_95CI_inferred_from_measured_samples": [
+          0.9869126925,
+          0.986923179
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+      },
+      "Mma_attributed_kernel_ms_inferred": {
+        "n_measured": 30,
+        "median_95CI_inferred_from_measured_samples": [
+          2.8240196744999997,
+          2.8281954034999996
+        ],
+        "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability",
+        "median_inferred_from_measured_cycles": 2.8248897,
+        "MAD_inferred_from_measured_cycles": 0.003401047999999962,
+        "min_inferred_from_measured_cycles": 2.815549426,
+        "max_inferred_from_measured_cycles": 2.844762477
+      }
+    }
+  },
+  "paired_fused_over_control_kernel_ratio_measured": {
+    "n_measured": 30,
+    "median_measured": 1.0867979290893643,
+    "MAD_measured": 0.0008470716846238346,
+    "min_measured": 1.079464950512681,
+    "max_measured": 1.0905583619295713,
+    "median_95CI_inferred_from_measured_samples": [
+      1.0860136211921505,
+      1.087414860450747
+    ],
+    "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+  },
+  "paired_per_pass_Mma_cycle_ratio_measured": {
+    "n_measured": 30,
+    "median_measured": 1.0004726848305996,
+    "MAD_measured": 0.00010797802840867288,
+    "min_measured": 1.000178615285003,
+    "max_measured": 1.0007220646582848,
+    "median_95CI_inferred_from_measured_samples": [
+      1.0004056509107992,
+      1.0005582475492933
+    ],
+    "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+  }
+}
