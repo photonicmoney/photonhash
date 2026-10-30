@@ -1,0 +1,7 @@
+{
+  "scope": "Publication transport check, not an implementation/conformance mismatch",
+  "initial_check_passed": false,
+  "cause": "Checksum generator included generated Python __pycache__ bytecode, which Git correctly ignored and did not publish. Research source/data hashes unchanged.",
+  "correction": "Exclude __pycache__ and .pyc from explicit selected-file manifest; verify from a fresh pushed checkout before merge.",
+  "qualification_effect": "No consensus qualification; previous primary measurements unchanged."
+}
