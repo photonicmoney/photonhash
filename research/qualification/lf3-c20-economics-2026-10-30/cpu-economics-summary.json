@@ -1,0 +1,577 @@
+{
+  "host": "AMD EPYC 7543 RunPod GPU host; CPU-only verification software, isolated one/two-core affinity. Advertised 15 vCPU, observed cgroup quota 12.75 cores. Not a dedicated modest CPU or low-power physical machine.",
+  "scope": "Core hash computation; chain parsing, admission, target policy and network scheduling excluded. A logically cold bank is derived for each header; OS caches were not flushed.",
+  "timing_units": "seconds unless field says otherwise",
+  "implementations": {
+    "portable_C": {
+      "bank": {
+        "wall_s_measured": {
+          "n_measured": 31,
+          "median_measured": 0.977996438,
+          "MAD_measured": 0.007352541000000046,
+          "min_measured": 0.937855756,
+          "max_measured": 1.018656084,
+          "median_95CI_inferred_from_measured_samples": [
+            0.973958344,
+            0.986046224
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 31,
+          "median_measured": 0.97784935,
+          "MAD_measured": 0.006498129999999991,
+          "min_measured": 0.93770096,
+          "max_measured": 1.01842085,
+          "median_95CI_inferred_from_measured_samples": [
+            0.97387873,
+            0.98575411
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        }
+      },
+      "cached_verify": {
+        "wall_s_measured": {
+          "n_measured": 64,
+          "median_measured": 0.0133176035,
+          "MAD_measured": 0.00015154099999999983,
+          "min_measured": 0.012879319,
+          "max_measured": 0.013803379,
+          "median_95CI_inferred_from_measured_samples": [
+            0.013232732,
+            0.013417354
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 64,
+          "median_measured": 0.013302439999999999,
+          "MAD_measured": 0.0001552750000000016,
+          "min_measured": 0.01287715,
+          "max_measured": 0.01380105,
+          "median_95CI_inferred_from_measured_samples": [
+            0.01322984,
+            0.01339527
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        }
+      },
+      "cold_verify": {
+        "wall_s_measured": {
+          "n_measured": 15,
+          "median_measured": 0.975660291,
+          "MAD_measured": 0.012008478999999905,
+          "min_measured": 0.950980107,
+          "max_measured": 1.018167619,
+          "median_95CI_inferred_from_measured_samples": [
+            0.963651812,
+            0.982058721
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 15,
+          "median_measured": 0.975063029,
+          "MAD_measured": 0.011773509999999932,
+          "min_measured": 0.95059213,
+          "max_measured": 1.01772312,
+          "median_95CI_inferred_from_measured_samples": [
+            0.963289519,
+            0.98181918
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        }
+      },
+      "cached_multicore": {
+        "wall_s_measured": {
+          "n_measured": 7,
+          "median_measured": 0.256666607,
+          "MAD_measured": 0.0075977309999999965,
+          "min_measured": 0.245540848,
+          "max_measured": 0.357673552,
+          "median_95CI_inferred_from_measured_samples": [
+            0.249068876,
+            0.330211758
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "wall_s_per_attempt_measured": {
+          "n_measured": 7,
+          "median_measured": 0.00802083146875,
+          "MAD_measured": 0.0002374290937499999,
+          "min_measured": 0.0076731515,
+          "max_measured": 0.0111772985,
+          "median_95CI_inferred_from_measured_samples": [
+            0.007783402375,
+            0.0103191174375
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "scope": "Independent-parent process throughput only; not serial-chain header sync."
+      },
+      "cold_multicore": {
+        "wall_s_measured": {
+          "n_measured": 5,
+          "median_measured": 3.989098967,
+          "MAD_measured": 0.07502485599999975,
+          "min_measured": 3.914074111,
+          "max_measured": 4.426196921,
+          "median_95CI_inferred_from_measured_samples": [
+            3.957008953,
+            4.120457538
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "wall_s_per_attempt_measured": {
+          "n_measured": 5,
+          "median_measured": 0.498637370875,
+          "MAD_measured": 0.009378106999999969,
+          "min_measured": 0.489259263875,
+          "max_measured": 0.553274615125,
+          "median_95CI_inferred_from_measured_samples": [
+            0.494626119125,
+            0.51505719225
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "scope": "Independent-parent process throughput only; not serial-chain header sync."
+      },
+      "single_core_chain_year_inferred": [
+        {
+          "block_time_s_input": 10,
+          "headers_per_365day_year_inferred": 3153600.0,
+          "elapsed_days_inferred": 35.611600621499996,
+          "elapsed_days_95CI_inferred": [
+            35.173291138,
+            35.8451433165
+          ]
+        },
+        {
+          "block_time_s_input": 30,
+          "headers_per_365day_year_inferred": 1051200.0,
+          "elapsed_days_inferred": 11.870533540499999,
+          "elapsed_days_95CI_inferred": [
+            11.724430379333334,
+            11.948381105500001
+          ]
+        },
+        {
+          "block_time_s_input": 60,
+          "headers_per_365day_year_inferred": 525600.0,
+          "elapsed_days_inferred": 5.935266770249999,
+          "elapsed_days_95CI_inferred": [
+            5.862215189666667,
+            5.9741905527500005
+          ]
+        },
+        {
+          "block_time_s_input": 150,
+          "headers_per_365day_year_inferred": 210240.0,
+          "elapsed_days_inferred": 2.3741067081,
+          "elapsed_days_95CI_inferred": [
+            2.344886075866667,
+            2.3896762211
+          ]
+        }
+      ]
+    },
+    "independent_BLAS": {
+      "bank": {
+        "wall_s_measured": {
+          "n_measured": 15,
+          "median_measured": 0.50427043705713,
+          "MAD_measured": 0.005744811031036079,
+          "min_measured": 0.49055063002742827,
+          "max_measured": 0.5465139310108498,
+          "median_95CI_inferred_from_measured_samples": [
+            0.49959482706617564,
+            0.53314849792514
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 15,
+          "median_measured": 0.50256166,
+          "MAD_measured": 0.004446540000000443,
+          "min_measured": 0.4902097200000002,
+          "max_measured": 0.54625909,
+          "median_95CI_inferred_from_measured_samples": [
+            0.49951511999999987,
+            0.5330547400000001
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        }
+      },
+      "cached_verify": {
+        "wall_s_measured": {
+          "n_measured": 64,
+          "median_measured": 0.01872471597744152,
+          "MAD_measured": 0.00017343700164929032,
+          "min_measured": 0.01838839694391936,
+          "max_measured": 0.025455572991631925,
+          "median_95CI_inferred_from_measured_samples": [
+            0.018658640969078988,
+            0.018896047491580248
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 64,
+          "median_measured": 0.018725535000000626,
+          "MAD_measured": 0.00017201000000000022,
+          "min_measured": 0.018391450000001086,
+          "max_measured": 0.021470360000000355,
+          "median_95CI_inferred_from_measured_samples": [
+            0.01866073999999962,
+            0.01889834999999973
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        }
+      },
+      "cold_verify": {
+        "wall_s_measured": {
+          "n_measured": 15,
+          "median_measured": 0.5212729389313608,
+          "MAD_measured": 0.0016565100522711873,
+          "min_measured": 0.5157827209914103,
+          "max_measured": 0.5256311170523986,
+          "median_95CI_inferred_from_measured_samples": [
+            0.5201848390279338,
+            0.522315611015074
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 15,
+          "median_measured": 0.521163349,
+          "MAD_measured": 0.0017088409999992393,
+          "min_measured": 0.5157816299999993,
+          "max_measured": 0.5254934700000025,
+          "median_95CI_inferred_from_measured_samples": [
+            0.5200174400000002,
+            0.5222910790000004
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        }
+      },
+      "cached_multicore": {
+        "wall_s_measured": {
+          "n_measured": 5,
+          "median_measured": 0.4631513060303405,
+          "MAD_measured": 0.004683239967562258,
+          "min_measured": 0.44922906591091305,
+          "max_measured": 0.47403270204085857,
+          "median_95CI_inferred_from_measured_samples": [
+            0.45846806606277823,
+            0.4632527369540185
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 5,
+          "median_measured": 0.003271439999998904,
+          "MAD_measured": 4.7560000002278e-05,
+          "min_measured": 0.0030842999999975973,
+          "max_measured": 0.003925150000000599,
+          "median_95CI_inferred_from_measured_samples": [
+            0.0032384400000005087,
+            0.003319000000001182
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "wall_s_per_attempt_measured": {
+          "n_measured": 5,
+          "median_measured": 0.01447347831344814,
+          "MAD_measured": 0.00014635124898632057,
+          "min_measured": 0.014038408309716033,
+          "max_measured": 0.01481352193877683,
+          "median_95CI_inferred_from_measured_samples": [
+            0.01432712706446182,
+            0.014476648029813077
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "scope": "Independent-parent process throughput only; not serial-chain header sync."
+      },
+      "cold_multicore": {
+        "wall_s_measured": {
+          "n_measured": 5,
+          "median_measured": 3.9080139360157773,
+          "MAD_measured": 0.006451688939705491,
+          "min_measured": 3.8324376330710948,
+          "max_measured": 3.914465624955483,
+          "median_95CI_inferred_from_measured_samples": [
+            3.871219480992295,
+            3.910655192914419
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "cpu_s_measured": {
+          "n_measured": 5,
+          "median_measured": 0.001576599999999928,
+          "MAD_measured": 3.381999999874097e-05,
+          "min_measured": 0.001542780000001187,
+          "max_measured": 0.0019001100000011206,
+          "median_95CI_inferred_from_measured_samples": [
+            0.0015567599999997128,
+            0.0017674500000026683
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "wall_s_per_attempt_measured": {
+          "n_measured": 5,
+          "median_measured": 0.48850174200197216,
+          "MAD_measured": 0.0008064611174631864,
+          "min_measured": 0.47905470413388684,
+          "max_measured": 0.48930820311943535,
+          "median_95CI_inferred_from_measured_samples": [
+            0.48390243512403686,
+            0.48883189911430236
+          ],
+          "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+        },
+        "scope": "Independent-parent process throughput only; not serial-chain header sync."
+      },
+      "single_core_chain_year_inferred": [
+        {
+          "block_time_s_input": 10,
+          "headers_per_365day_year_inferred": 3153600.0,
+          "elapsed_days_inferred": 19.02646227099467,
+          "elapsed_days_95CI_inferred": [
+            18.986746624519583,
+            19.0645198020502
+          ]
+        },
+        {
+          "block_time_s_input": 30,
+          "headers_per_365day_year_inferred": 1051200.0,
+          "elapsed_days_inferred": 6.342154090331557,
+          "elapsed_days_95CI_inferred": [
+            6.328915541506528,
+            6.354839934016733
+          ]
+        },
+        {
+          "block_time_s_input": 60,
+          "headers_per_365day_year_inferred": 525600.0,
+          "elapsed_days_inferred": 3.1710770451657786,
+          "elapsed_days_95CI_inferred": [
+            3.164457770753264,
+            3.1774199670083667
+          ]
+        },
+        {
+          "block_time_s_input": 150,
+          "headers_per_365day_year_inferred": 210240.0,
+          "elapsed_days_inferred": 1.2684308180663113,
+          "elapsed_days_95CI_inferred": [
+            1.2657831083013056,
+            1.2709679868033465
+          ]
+        }
+      ]
+    }
+  },
+  "within_parent_parallel_C": {
+    "bank_wall_s_measured": {
+      "n_measured": 31,
+      "median_measured": 0.496127276,
+      "MAD_measured": 0.005883753000000047,
+      "min_measured": 0.479373917,
+      "max_measured": 0.517809947,
+      "median_95CI_inferred_from_measured_samples": [
+        0.491408105,
+        0.499493331
+      ],
+      "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+    },
+    "cold_verify_wall_s_measured": {
+      "n_measured": 31,
+      "median_measured": 0.522835452,
+      "MAD_measured": 0.005684719000000005,
+      "min_measured": 0.50582728,
+      "max_measured": 0.545285791,
+      "median_95CI_inferred_from_measured_samples": [
+        0.517428474,
+        0.528520171
+      ],
+      "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+    },
+    "process_cpu_s_measured": {
+      "n_measured": 31,
+      "median_measured": 1.02539105,
+      "MAD_measured": 0.00943084999999999,
+      "min_measured": 0.99182722,
+      "max_measured": 1.065009188,
+      "median_95CI_inferred_from_measured_samples": [
+        1.0159602,
+        1.03286988
+      ],
+      "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+    },
+    "scope": "Serial synthetic parent dependencies; two workers derive matrices inside one parent bank. Three complete banks were byte-compared against serial C before timings. No speculative future parent admission.",
+    "two_core_chain_year_inferred": [
+      {
+        "block_time_s_input": 10,
+        "elapsed_days_inferred": 19.083493998,
+        "process_CPU_days_inferred": 37.426773325000006,
+        "elapsed_days_95CI_inferred": [
+          18.886139301,
+          19.2909862415
+        ]
+      },
+      {
+        "block_time_s_input": 30,
+        "elapsed_days_inferred": 6.361164666,
+        "process_CPU_days_inferred": 12.475591108333335,
+        "elapsed_days_95CI_inferred": [
+          6.295379767,
+          6.4303287471666675
+        ]
+      },
+      {
+        "block_time_s_input": 60,
+        "elapsed_days_inferred": 3.180582333,
+        "process_CPU_days_inferred": 6.237795554166667,
+        "elapsed_days_95CI_inferred": [
+          3.1476898835,
+          3.2151643735833337
+        ]
+      },
+      {
+        "block_time_s_input": 150,
+        "elapsed_days_inferred": 1.2722329332,
+        "process_CPU_days_inferred": 2.495118221666667,
+        "elapsed_days_95CI_inferred": [
+          1.2590759534,
+          1.2860657494333334
+        ]
+      }
+    ]
+  },
+  "parent_upload": {
+    "host_wall_s_measured": {
+      "n_measured": 31,
+      "median_measured": 0.007359809,
+      "MAD_measured": 6.157099999999985e-05,
+      "min_measured": 0.007218647,
+      "max_measured": 0.00842813,
+      "median_95CI_inferred_from_measured_samples": [
+        0.007316248,
+        0.007563511
+      ],
+      "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+    },
+    "GPU_event_ms_measured": {
+      "n_measured": 31,
+      "median_measured": 7.354144096,
+      "MAD_measured": 0.06147193899999959,
+      "min_measured": 7.213568211,
+      "max_measured": 8.422016144,
+      "median_95CI_inferred_from_measured_samples": [
+        7.310912132,
+        7.553535938
+      ],
+      "CI_scope": "4000 circular moving-block resamples, span 3; conditional on this shared host/run, not physical-machine variability"
+    },
+    "scope": "Eight pageable host copies totaling 128 MiB per parent; initialized CUDA context, no pinned staging optimization, not PCIe theoretical bandwidth."
+  },
+  "miner_parent_turnover_inferred": {
+    "portable_C_one_core": [
+      {
+        "block_time_s_input": 10,
+        "bank_plus_upload_s_inferred": 0.985356247,
+        "fraction_of_block_time_inferred": 0.0985356247
+      },
+      {
+        "block_time_s_input": 30,
+        "bank_plus_upload_s_inferred": 0.985356247,
+        "fraction_of_block_time_inferred": 0.03284520823333333
+      },
+      {
+        "block_time_s_input": 60,
+        "bank_plus_upload_s_inferred": 0.985356247,
+        "fraction_of_block_time_inferred": 0.016422604116666666
+      },
+      {
+        "block_time_s_input": 150,
+        "bank_plus_upload_s_inferred": 0.985356247,
+        "fraction_of_block_time_inferred": 0.006569041646666667
+      }
+    ],
+    "portable_C_two_core": [
+      {
+        "block_time_s_input": 10,
+        "bank_plus_upload_s_inferred": 0.5034870850000001,
+        "fraction_of_block_time_inferred": 0.050348708500000006
+      },
+      {
+        "block_time_s_input": 30,
+        "bank_plus_upload_s_inferred": 0.5034870850000001,
+        "fraction_of_block_time_inferred": 0.016782902833333335
+      },
+      {
+        "block_time_s_input": 60,
+        "bank_plus_upload_s_inferred": 0.5034870850000001,
+        "fraction_of_block_time_inferred": 0.008391451416666668
+      },
+      {
+        "block_time_s_input": 150,
+        "bank_plus_upload_s_inferred": 0.5034870850000001,
+        "fraction_of_block_time_inferred": 0.003356580566666667
+      }
+    ],
+    "independent_BLAS_one_core": [
+      {
+        "block_time_s_input": 10,
+        "bank_plus_upload_s_inferred": 0.51163024605713,
+        "fraction_of_block_time_inferred": 0.051163024605713
+      },
+      {
+        "block_time_s_input": 30,
+        "bank_plus_upload_s_inferred": 0.51163024605713,
+        "fraction_of_block_time_inferred": 0.017054341535237667
+      },
+      {
+        "block_time_s_input": 60,
+        "bank_plus_upload_s_inferred": 0.51163024605713,
+        "fraction_of_block_time_inferred": 0.008527170767618834
+      },
+      {
+        "block_time_s_input": 150,
+        "bank_plus_upload_s_inferred": 0.51163024605713,
+        "fraction_of_block_time_inferred": 0.0034108683070475337
+      }
+    ]
+  },
+  "photonic_loading_requirements_inferred": [
+    {
+      "block_time_s_input": 10,
+      "logical_weights_per_s_if_whole_block_spent_loading_inferred": 13421772.8,
+      "logical_weights_per_s_for_1percent_turnover_inferred": 1342177280.0,
+      "packed_4bit_MB_per_s_for_1percent_turnover_inferred": 671.08864,
+      "whole_LF3_optical_compatibility": "OPEN: no measured full-bank loader or exact-fold photonic miner"
+    },
+    {
+      "block_time_s_input": 30,
+      "logical_weights_per_s_if_whole_block_spent_loading_inferred": 4473924.266666667,
+      "logical_weights_per_s_for_1percent_turnover_inferred": 447392426.6666667,
+      "packed_4bit_MB_per_s_for_1percent_turnover_inferred": 223.69621333333333,
+      "whole_LF3_optical_compatibility": "OPEN: no measured full-bank loader or exact-fold photonic miner"
+    },
+    {
+      "block_time_s_input": 60,
+      "logical_weights_per_s_if_whole_block_spent_loading_inferred": 2236962.1333333333,
+      "logical_weights_per_s_for_1percent_turnover_inferred": 223696213.33333334,
+      "packed_4bit_MB_per_s_for_1percent_turnover_inferred": 111.84810666666667,
+      "whole_LF3_optical_compatibility": "OPEN: no measured full-bank loader or exact-fold photonic miner"
+    },
+    {
+      "block_time_s_input": 150,
+      "logical_weights_per_s_if_whole_block_spent_loading_inferred": 894784.8533333334,
+      "logical_weights_per_s_for_1percent_turnover_inferred": 89478485.33333333,
+      "packed_4bit_MB_per_s_for_1percent_turnover_inferred": 44.73924266666666,
+      "whole_LF3_optical_compatibility": "OPEN: no measured full-bank loader or exact-fold photonic miner"
+    }
+  ]
+}
