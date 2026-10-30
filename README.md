@@ -53,6 +53,19 @@ arithmetic and 0.4995 with registers. The non-manufacturable research library
 provides an arithmetic area proxy, not measured ASIC energy or a whole-miner
 advantage. Physical hardware qualification remains open.
 
+The [sustained server follow-up](research/qualification/lf3-c20-server-2026-10-30/README.md)
+reports a separate unpaced GPU cohort, isolated composite-stage energy, checked
+CPU bank scaling, and reproducible raw telemetry. Its
+[nine direct answers](research/qualification/lf3-c20-server-2026-10-30/final-answers.md)
+and [decision memo](research/qualification/lf3-c20-server-2026-10-30/decision-memo.md)
+retain **REVISE**. The predeclared server-GPU fallback is not an RTX 5090 retry;
+sensor calibration, physical modest-machine evidence, production admission and
+outside security/hardware review remain open. No candidate freeze is issued.
+On that RTX PRO 4500 server, fused C20's measured warm board energy is
+155.112 microjoules per counted evaluation, with an inferred within-run 95%
+interval of [155.089, 155.152]. Separate EPYC measurements put exact OpenSSL
+bank generation at 0.260646 s with one worker and 0.037534 s with eight workers.
+
 The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
 **LF3-K8-C20-experiment.1**, a separately named experimental hash that uses
 ChaCha20 to expand each header/nonce binding into the matrix input vector.
@@ -69,12 +82,14 @@ Packing preserves LF2's hash and cuts the GEMM output buffer **8x**: 1 GiB to
 **84.4-87.2%** of sampled device time, including quantization and stores.
 That percentage is not pure matrix time or energy attribution.
 
-These are **exploratory device timings**, using 24 configurations and five
-completed conditions on a shared Windows desktop GPU. Choices were selected
-from the same three/seven-round samples, with outliers retained. Extra
-padding-boundary tests and independent timing confirmation remain incomplete
-after a CUDA initialization stall. No sustained miner, energy, optical
-advantage or consensus-security result is claimed. Neither change is activated.
+These are **historical exploratory device timings**, using 24 configurations
+and five completed conditions on a shared Windows desktop GPU. Choices were
+selected from the same three/seven-round samples, with outliers retained. At
+that checkpoint, extra padding-boundary tests and independent confirmation
+were incomplete after a CUDA initialization stall. The qualification packages
+above add boundary checks and separate-cohort confirmation; the Windows stall
+remains unresolved. This historical comparison does not establish a sustained
+miner, energy, optical advantage or consensus security. Neither change is activated.
 
 Read the [ChaCha20 construction and reference vector](docs/lf3-k8-c20-experiment-1.md),
 the [complete comparison and limitations](docs/lf2-gpu-comparison-2026-10-29.md),

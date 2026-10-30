@@ -1,0 +1,16 @@
+{"type":"affinity_probe","workers_configured":1,"workers_measured":1,"thread_measured":0,"CPU_measured":0}
+{"type":"affinity_probe","workers_configured":2,"workers_measured":2,"thread_measured":1,"CPU_measured":4}
+{"type":"affinity_probe","workers_configured":2,"workers_measured":2,"thread_measured":0,"CPU_measured":0}
+{"type":"affinity_probe","workers_configured":4,"workers_measured":4,"thread_measured":3,"CPU_measured":6}
+{"type":"affinity_probe","workers_configured":4,"workers_measured":4,"thread_measured":2,"CPU_measured":4}
+{"type":"affinity_probe","workers_configured":4,"workers_measured":4,"thread_measured":0,"CPU_measured":0}
+{"type":"affinity_probe","workers_configured":4,"workers_measured":4,"thread_measured":1,"CPU_measured":2}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":4,"CPU_measured":4}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":2,"CPU_measured":2}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":6,"CPU_measured":6}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":5,"CPU_measured":5}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":1,"CPU_measured":1}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":3,"CPU_measured":3}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":7,"CPU_measured":7}
+{"type":"affinity_probe","workers_configured":8,"workers_measured":8,"thread_measured":0,"CPU_measured":0}
+{"type":"probe_complete"}

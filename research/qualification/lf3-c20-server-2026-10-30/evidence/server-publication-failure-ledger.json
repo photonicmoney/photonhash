@@ -1,0 +1,8 @@
+{
+  "failed_attempt": "server-public-selection",
+  "reason": "Packaging source path missing: control/nvml_sample.py; actual measured sampler was restore/control/nvml_sample.py",
+  "failed_partial_selection_retained": "public-server-failed-selection-001",
+  "repair": "Copy the actual sampler from its original checkpoint path; no measurement or hash implementation rerun or change",
+  "sampler_SHA256_measured": "84010a909031c046a1f628c06e8adcfef0b72e9c82ba0cb63b80ff013b3754a0",
+  "scope": "Publication packaging failure, not an implementation mismatch"
+}

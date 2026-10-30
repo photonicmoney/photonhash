@@ -1,0 +1,51 @@
+{
+  "qualified": true,
+  "reasons": [],
+  "max_sampling_gap_s_measured": 0.1328225260367617,
+  "samples_measured": 337,
+  "event_seconds_measured": {
+    "stage_only": 30.34161312866
+  },
+  "guard_s_configured": 2.0,
+  "sensor_accuracy": "OPEN: statistical acceptance does not calibrate NVML",
+  "confirmation_eligible": false,
+  "scope": "Exploratory single isolated stage; no cold/warm confirmation claim",
+  "windows_measured": [
+    {
+      "begin": 934969.845857355,
+      "end": 934975.041287538,
+      "event_seconds": 5.19440054321,
+      "evaluations_counted": 5767168
+    },
+    {
+      "begin": 934975.07510744,
+      "end": 934980.288214392,
+      "event_seconds": 5.209680389400001,
+      "evaluations_counted": 5767168
+    },
+    {
+      "begin": 934980.324806503,
+      "end": 934985.545908945,
+      "event_seconds": 5.21576400757,
+      "evaluations_counted": 5767168
+    },
+    {
+      "begin": 934985.579555972,
+      "end": 934990.80255694,
+      "event_seconds": 5.2187967224100005,
+      "evaluations_counted": 5767168
+    },
+    {
+      "begin": 934990.837635594,
+      "end": 934996.065620772,
+      "event_seconds": 5.2268281860400005,
+      "evaluations_counted": 5767168
+    },
+    {
+      "begin": 934996.110537401,
+      "end": 935000.387658433,
+      "event_seconds": 4.27614328003,
+      "evaluations_counted": 4718592
+    }
+  ]
+}

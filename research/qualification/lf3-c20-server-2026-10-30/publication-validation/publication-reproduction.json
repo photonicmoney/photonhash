@@ -1,0 +1,7 @@
+{
+  "passed_process": true,
+  "canonical_vectors_measured": 560,
+  "whole_bank_comparisons_measured": 16,
+  "cross_variant_cold_fold_comparisons_measured": 124,
+  "scope": "Public CPU research reproduction only; no activation, low-power or energy claim"
+}

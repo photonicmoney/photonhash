@@ -1,0 +1,8 @@
+{"type":"phase","name":"main_enter"}
+{"type":"phase","name":"cudaSetDeviceFlags_begin"}
+{"type":"phase","name":"cudaSetDeviceFlags_end"}
+{"type":"phase","name":"cudaSetDevice_begin"}
+{"type":"phase","name":"cudaSetDevice_end"}
+{"type":"phase","name":"cudaGetDeviceProperties_begin"}
+{"type":"phase","name":"cudaGetDeviceProperties_end"}
+{"type":"inventory","device":"NVIDIA RTX PRO 4500 Blackwell Server Edition","runtime_measured":13000,"driver_measured":13020}

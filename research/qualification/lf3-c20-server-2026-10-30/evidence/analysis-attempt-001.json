@@ -1,0 +1,8 @@
+{
+  "stage": "partial completed-variant analysis",
+  "passed": false,
+  "error_observed": "ModuleNotFoundError: No module named 'numpy'",
+  "scope": "System Python import failed before reading or processing research data. GPU controller continued independently.",
+  "action": "Retain this failure. Resolve the analysis dependency after the isolated GPU confirmation, then run the unchanged fixed analysis.",
+  "configuration_or_measurement_selection_changed": false
+}

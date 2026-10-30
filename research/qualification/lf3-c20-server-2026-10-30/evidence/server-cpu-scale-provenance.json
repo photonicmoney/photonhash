@@ -1,0 +1,47 @@
+{
+  "gcc_version_measured": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "OpenSSL_version_measured": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "sources": [
+    {
+      "path": "restore/source/src/photonhash.c",
+      "SHA256_measured": "e4331939a9c0423ee7c1219aed5484545ff0ec2a507b9d7105330881ef5ca852"
+    },
+    {
+      "path": "restore/source/src/photonhash_launch.c",
+      "SHA256_measured": "067e463f127c69fe265bc90c8d808f6ed3ea9915aef88607ca85f04a8cd51e43"
+    },
+    {
+      "path": "cpu-reference/src/photonhash_lf2_stream.c",
+      "SHA256_measured": "ffa0044b9db58a77ff616e6967580cb7dde1227ed01b0938346984e81913db8a"
+    },
+    {
+      "path": "cpu-reference/src/photonhash_lf3_c20.c",
+      "SHA256_measured": "b411e4cb8b2b9778849c5e29d6d7c26e6e6ce7ed3c93623f391706e4fc76a84e"
+    },
+    {
+      "path": "cpu-reference/src/photonhash_lf3_c20_cached.c",
+      "SHA256_measured": "e60aa4d5a6ade1a1213a71b47479f616a78d8ee3b602eb2f6258a7e42852fa17"
+    },
+    {
+      "path": "control/bank_openssl.c",
+      "SHA256_measured": "3b4c8080959ed0def7a6841cd75e349f6a6079f4accf6c30dd9ab80c5994b9fc"
+    },
+    {
+      "path": "control/cpu_scale_bench.c",
+      "SHA256_measured": "76288d3a6f5f02ddbbf8466d0d2c3c36693a9db0fac06e3848c49fb783ee3250"
+    },
+    {
+      "path": "control/server_bank_conformance.c",
+      "SHA256_measured": "cb0da58ac08c19addcc1967975dfdf7f2a2f0fa16c1b015986cf94bb067c525f"
+    },
+    {
+      "path": "control/cpu_affinity_probe.c",
+      "SHA256_measured": "1e4aaa21c9cb2cf6637a143177fdadb0b4c7b809abd5df5407d2ee6207b9dbd9"
+    },
+    {
+      "path": "control/cpu_scale_suite.py",
+      "SHA256_measured": "928a2064f0edd35f295bfe8f22d340845a35e8d5b1973f15b40c0ed2b9b2e3dd"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,15 @@
+test_bad_samples (__main__.Tests.test_bad_samples) ... ok
+test_bad_windows (__main__.Tests.test_bad_windows) ... ok
+test_exact_boundary_and_monotonic (__main__.Tests.test_exact_boundary_and_monotonic) ... ok
+test_incomplete (__main__.Tests.test_incomplete) ... ok
+test_monitor_latch_survives_late_healthy_sample (__main__.Tests.test_monitor_latch_survives_late_healthy_sample) ... ok
+test_normal (__main__.Tests.test_normal) ... ok
+test_online_invalid_samples_latch (__main__.Tests.test_online_invalid_samples_latch) ... ok
+test_overlap (__main__.Tests.test_overlap) ... ok
+test_recovered_long_query_latches_before_refresh (__main__.Tests.test_recovered_long_query_latches_before_refresh) ... ok
+test_retrospective_rejects_recovered_gap (__main__.Tests.test_retrospective_rejects_recovered_gap) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK

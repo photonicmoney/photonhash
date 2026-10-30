@@ -1,0 +1,36 @@
+{
+  "GPU_model_measured": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+  "GPU_UUID_measured": "GPU-9b4147d1-6886-dee6-da2a-ac480e4fe314",
+  "driver_version_measured": "595.91.07",
+  "reported_power_limit_W_measured": 165.0,
+  "CUDA_toolkit_version_measured": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_01:58:59_PM_PDT_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n",
+  "configured_image_tag": "runpod/pytorch:1.0.7-cu1300-torch291-ubuntu2404-cluster",
+  "image_digest": "Not independently measured on this pod; do not substitute the earlier cohort digest",
+  "configured_CUTLASS_revision": "ad7b2f5e84fcfa124cb02b91d5bd26d238c0459e",
+  "cohort": "Full RTX PRO 4500 Blackwell Server Edition, separate from the old RTX 5090 cohort",
+  "deployment": "No release, chain integration or activation",
+  "kernel_sources": "Retained privately pending the eligible freeze; this pre-freeze selection is not a public GPU-source reproduction package",
+  "artifacts": [
+    {
+      "path": "restore/build/lf3_gpu_energy",
+      "bytes_measured": 5897760,
+      "SHA256_measured": "33087ba15e59eda6d6da30fa4496fb8f6db6763871555cb9828214b5de3c0b84"
+    },
+    {
+      "path": "restore/build/lf3_qualification",
+      "bytes_measured": 5905520,
+      "SHA256_measured": "1d53d2f8aa1b297c217b9fba1eeec05fee26bc679b3ce3ff0793d5e3035a4f1f"
+    },
+    {
+      "path": "build/lf3_gpu_stage_unpaced",
+      "bytes_measured": 5902536,
+      "SHA256_measured": "1d8a11267e348acfdf131366e11958b8506fe8bccb41a466b2c34d4848ac31ca"
+    },
+    {
+      "path": "restore/build/parent-upload",
+      "bytes_measured": 996536,
+      "SHA256_measured": "250337e8c98359f281c1d9180366540ac3b015c7dafe7051dfb8b2b734a485b2"
+    }
+  ],
+  "NumPy_version_measured": "2.5.4"
+}

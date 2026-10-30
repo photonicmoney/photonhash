@@ -1,0 +1,7 @@
+{
+  "passed_process": true,
+  "exit_code": 0,
+  "wall_seconds_measured": 58.483139734948054,
+  "public_base_commit_measured": "738eab5aa72b6d7b8ddfe3ef8a4b97edc2f3b72c",
+  "scope": "Separate public CPU-source reproduction; not a replacement performance cohort"
+}
