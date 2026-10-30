@@ -1,5 +1,9 @@
 # Fixed confirmation measurement tables
 
+**FINAL REVIEW CORRECTION: FUSED LF2 CONFIRMATION INVALID.** Its measured maximum sampling gap is 9.370326 seconds, exceeding the configured two-second limit. All five processes completed, but only the other four variants have eligible telemetry. Neither the live guard nor the original aggregator rejected this gap. Fused-LF2 timing and energy rows are retained as INVALID observations, excluded from qualification. Cause remains OPEN; no retry was made. See [post-review-qualification.json](post-review-qualification.json).
+
+The unchanged original statistics and original validation receipt are retained in `energy-statistics-before-review.json` and `publication-validation-before-review.json`. Their former pass flags are superseded. The current summary marks confirmation incomplete. The portable energy analyzer reproduces the original raw statistics, not qualification; its old `confirmation_complete` field is insufficient. No corrected analyzer execution or new benchmark is claimed. Transport checksums below are file-maintenance checks, not a repeat of research computation.
+
 Medians and MAD labeled measured are observations; bracketed 95% intervals and ceilings are inferred. These are nominal 50% GPU-event-duty measurements, including inter-window idle, not sustained unpaced mining or wall-socket energy. Sensor-method disagreement is separate from the intervals.
 
 ## Whole-attempt gross GPU-board energy
@@ -14,8 +18,8 @@ Medians and MAD labeled measured are observations; bracketed 95% intervals and c
 | c20_two_stage_cutlass256_q4 | warm | 600.123 | 1,621,622,784 | 268.0892 / 1.4679 [267.1569, 268.7727] | 252.4555 / 0.7067 [252.1859, 252.7415] | 268.5868 / 0.7446 [268.0320, 269.0092] |
 | c20_two_stage_cutlass256_fused_fold | cold_start | 600.070 | 1,584,922,624 | 264.0039 / 1.9203 [262.9042, 264.9020] | 248.7820 / 0.6657 [248.2322, 249.2104] | 263.4846 / 0.7625 [263.0033, 264.1488] |
 | c20_two_stage_cutlass256_fused_fold | warm | 600.104 | 1,583,874,048 | 265.0175 / 1.8587 [263.3982, 265.9176] | 249.2051 / 0.7492 [248.6176, 249.5687] | 263.9454 / 0.7344 [263.2836, 264.4584] |
-| lf2_register_cutlass256_fused_fold | cold_start | 600.235 | 1,286,602,752 | 295.8143 / 23.4027 [282.9538, 307.6134] | 279.5494 / 1.0151 [278.7083, 280.1274] | 295.0609 / 1.8298 [293.8584, 295.7457] |
-| lf2_register_cutlass256_fused_fold | warm | 600.057 | 1,285,029,888 | 290.4179 / 30.8973 [280.0757, 309.5447] | 280.2337 / 0.5993 [279.7984, 280.3944] | 295.4877 / 1.6676 [294.4693, 296.6814] |
+| INVALID lf2_register_cutlass256_fused_fold | cold_start | 600.235 | 1,286,602,752 | 295.8143 / 23.4027 [282.9538, 307.6134] | 279.5494 / 1.0151 [278.7083, 280.1274] | 295.0609 / 1.8298 [293.8584, 295.7457] |
+| INVALID lf2_register_cutlass256_fused_fold | warm | 600.057 | 1,285,029,888 | 290.4179 / 30.8973 [280.0757, 309.5447] | 280.2337 / 0.5993 [279.7984, 280.3944] | 295.4877 / 1.6676 [294.4693, 296.6814] |
 
 ## Device-stage timing and time ceilings
 
@@ -31,8 +35,8 @@ Each block summarizes the last graph in each 64-replay window. Times are measure
 | c20_two_stage_cutlass256_q4 / warm | 0.0529 / 0.0000 [0.0529, 0.0529] | 2.8211 / 0.0041 [2.8183, 2.8273] | 0.0922 / 0.0000 [0.0922, 0.0922] | 0.1536 / 0.0000 [0.1536, 0.1536] | 90.4559 / 0.0089 [90.4474, 90.4648] | 10.4776x [10.4683, 10.4875] |
 | c20_two_stage_cutlass256_fused_fold / cold_start | 0.0508 / 0.0000 [0.0508, 0.0508] | 2.9194 / 0.0020 [2.9194, 2.9215] | 0.0004 / 0.0000 [0.0004, 0.0004] | 0.1532 / 0.0000 [0.1532, 0.1532] | 93.4520 / 0.0043 [93.4482, 93.4558] | 15.2718x [15.2630, 15.2807] |
 | c20_two_stage_cutlass256_fused_fold / warm | 0.0508 / 0.0000 [0.0508, 0.0508] | 2.9215 / 0.0020 [2.9195, 2.9235] | 0.0004 / 0.0000 [0.0004, 0.0004] | 0.1532 / 0.0000 [0.1532, 0.1532] | 93.4563 / 0.0043 [93.4520, 93.4596] | 15.2819x [15.2719, 15.2896] |
-| lf2_register_cutlass256_fused_fold / cold_start | 0.7892 / 0.0000 [0.7892, 0.7892] | 2.8805 / 0.0041 [2.8764, 2.8836] | 0.0004 / 0.0000 [0.0004, 0.0004] | 0.1553 / 0.0000 [0.1553, 0.1553] | 75.3097 / 0.0183 [75.2881, 75.3278] | 4.0502x [4.0466, 4.0531] |
-| lf2_register_cutlass256_fused_fold / warm | 0.7892 / 0.0000 [0.7892, 0.7892] | 2.8826 / 0.0020 [2.8805, 2.8846] | 0.0004 / 0.0000 [0.0004, 0.0004] | 0.1553 / 0.0000 [0.1553, 0.1553] | 75.3213 / 0.0118 [75.3146, 75.3330] | 4.0521x [4.0510, 4.0540] |
+| INVALID lf2_register_cutlass256_fused_fold / cold_start | 0.7892 / 0.0000 [0.7892, 0.7892] | 2.8805 / 0.0041 [2.8764, 2.8836] | 0.0004 / 0.0000 [0.0004, 0.0004] | 0.1553 / 0.0000 [0.1553, 0.1553] | 75.3097 / 0.0183 [75.2881, 75.3278] | 4.0502x [4.0466, 4.0531] |
+| INVALID lf2_register_cutlass256_fused_fold / warm | 0.7892 / 0.0000 [0.7892, 0.7892] | 2.8826 / 0.0020 [2.8805, 2.8846] | 0.0004 / 0.0000 [0.0004, 0.0004] | 0.1553 / 0.0000 [0.1553, 0.1553] | 75.3213 / 0.0118 [75.3146, 75.3330] | 4.0521x [4.0510, 4.0540] |
 
 ## Throughput and telemetry
 
@@ -48,8 +52,8 @@ Rates below are measured. Event-window rate includes the device window; paced el
 | c20_two_stage_cutlass256_q4 / warm | 2702663.9250 / 2480.0762 [2699213.7344, 2704705.8242] | 1350157.4341 / 1230.8708 [1348367.8939, 1351033.7267] | [57, 71] | [2617, 2857] | [13801, 13801] | 0.330804 | 6.1971 / 0.6891 [5.9073, 6.5558] | 6.4095 / 0.3022 [6.2310, 6.4933] |
 | c20_two_stage_cutlass256_fused_fold / cold_start | 2641081.0297 / 1412.1054 [2639528.0571, 2641961.8053] | 1318948.6604 / 722.3202 [1318447.4947, 1319890.4515] | [41, 70] | [2400, 2887] | [13801, 13801] | 0.571710 | 6.0461 / 0.5602 [5.8395, 6.4429] | 5.9117 / 0.3567 [5.7438, 6.2764] |
 | c20_two_stage_cutlass256_fused_fold / warm | 2639054.3238 / 1548.6065 [2637672.6888, 2640366.3090] | 1318307.9802 / 689.4035 [1317644.5223, 1318989.5860] | [57, 70] | [2677, 2865] | [13801, 13801] | 0.571710 | 6.3954 / 0.9697 [5.6237, 6.7675] | 5.9521 / 0.3741 [5.6361, 6.0737] |
-| lf2_register_cutlass256_fused_fold / cold_start | 2142749.5532 / 1744.0501 [2141280.7275, 2144636.5433] | 1070214.1747 / 1583.4602 [1068848.0124, 1071806.1177] | [47, 68] | [2400, 2917] | [13801, 13801] | 9.370326 | 6.2082 / 7.7779 [1.7662, 10.4740] | 5.4506 / 0.8033 [4.7112, 5.7988] |
-| lf2_register_cutlass256_fused_fold / warm | 2141812.5357 / 1091.7424 [2140542.6582, 2142635.3694] | 1069876.3130 / 563.0136 [1069444.8104, 1070454.1873] | [55, 68] | [2700, 2910] | [13801, 13801] | 9.370326 | 3.3558 / 10.7293 [-0.0358, 10.1718] | 5.4785 / 0.6432 [5.0872, 5.7398] |
+| INVALID lf2_register_cutlass256_fused_fold / cold_start | 2142749.5532 / 1744.0501 [2141280.7275, 2144636.5433] | 1070214.1747 / 1583.4602 [1068848.0124, 1071806.1177] | [47, 68] | [2400, 2917] | [13801, 13801] | 9.370326 | 6.2082 / 7.7779 [1.7662, 10.4740] | 5.4506 / 0.8033 [4.7112, 5.7988] |
+| INVALID lf2_register_cutlass256_fused_fold / warm | 2141812.5357 / 1091.7424 [2140542.6582, 2142635.3694] | 1069876.3130 / 563.0136 [1069444.8104, 1070454.1873] | [55, 68] | [2700, 2910] | [13801, 13801] | 9.370326 | 3.3558 / 10.7293 [-0.0358, 10.1718] | 5.4785 / 0.6432 [5.0872, 5.7398] |
 
 ## Separate instrumented matrix-loop observer
 

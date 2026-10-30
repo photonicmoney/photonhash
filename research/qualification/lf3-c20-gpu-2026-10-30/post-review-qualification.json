@@ -1,0 +1,16 @@
+{
+  "qualification_passed": false,
+  "complete_process_receipts_observed": 5,
+  "variants_with_eligible_telemetry_observed": 4,
+  "sampling_gap_limit_seconds_configured": 2,
+  "invalid_variant": "lf2_register_cutlass256_fused_fold",
+  "invalid_variant_max_sampling_gap_seconds_measured_rounded": 9.370326,
+  "eligible_variants": ["lf2_warp_cublas_autotune", "lf2_register_cutlass256_q4", "c20_two_stage_cutlass256_q4", "c20_two_stage_cutlass256_fused_fold"],
+  "finding": "The live heartbeat guard and original postprocessor did not reject the final fused-LF2 telemetry discontinuity. A successful process receipt is insufficient. Invalidate that variant's entire confirmation; do not recycle its blocks into a qualified run.",
+  "cause_of_delay": "OPEN; no driver-versus-scheduling cause established",
+  "raw_statistics": "energy-statistics-before-review.json is the unchanged original aggregator output. Its confirmation_complete=true flag is superseded by this review. The portable analyzer replays raw statistics only, not qualification.",
+  "current_summary": "energy-confirmation-summary.json differs from raw statistics only by confirmation_complete=false. All failed observations remain available.",
+  "pod_state": "Deleted before this final inspection; source, binaries and raw evidence preserved locally. No replacement pod or local research execution.",
+  "recommendation": "REVISE; withhold candidate freeze",
+  "required_fix": "Enforce maximum timestamp gaps retrospectively, add an independent deadline monitor that cannot silently recover its heartbeat after a scheduling pause, then repeat the invalid fused-LF2 confirmation on authorized remote hardware. No retry performed here."
+}

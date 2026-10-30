@@ -1,4 +1,5 @@
 {
+  "post_review_qualification": "FAILED: fused LF2 maximum measured sampling gap 9.370326 seconds exceeds configured 2 seconds; process pass superseded; no samples recycled; see post-review-qualification.json",
   "scope": "Process/build receipt is not automatically a conformance or security pass; incomplete runs remain ineligible. Earlier historical local/control-plane failures are retained in the conformance and CPU ledgers.",
   "receipts": {
     "remote-adversarial-c20-001.receipt.json": {

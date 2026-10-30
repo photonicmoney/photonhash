@@ -1,5 +1,9 @@
 # Nine direct qualification answers
 
+**FINAL REVIEW CORRECTION: FUSED LF2 CONFIRMATION INVALID.** Its measured maximum sampling gap is 9.370326 seconds, exceeding the configured two-second limit. All five processes completed, but only the other four variants have eligible telemetry. Neither the live guard nor the original aggregator rejected this gap. Fused-LF2 timing and energy rows are retained as INVALID observations, excluded from qualification. Cause remains OPEN; no retry was made. See [post-review-qualification.json](post-review-qualification.json).
+
+The unchanged original statistics and original validation receipt are retained in `energy-statistics-before-review.json` and `publication-validation-before-review.json`. Their former pass flags are superseded. The current summary marks confirmation incomplete. The portable energy analyzer reproduces the original raw statistics, not qualification; its old `confirmation_complete` field is insufficient. No corrected analyzer execution or new benchmark is claimed. Transport checksums below are file-maintenance checks, not a repeat of research computation.
+
 Experiment tags remain unchanged. No consensus freeze, activation or release. Measured observations and inferred calculations are distinguished below.
 
 ## 1. Fused C20 matrix share and Amdahl ceiling
@@ -24,8 +28,8 @@ The following are **measured gross paced GPU-board medians**, including inter-wi
 | c20_two_stage_cutlass256_q4 | warm | 268.0892 [267.1569, 268.7727] | 252.4555 [252.1859, 252.7415] |
 | c20_two_stage_cutlass256_fused_fold | cold_start | 264.0039 [262.9042, 264.9020] | 248.7820 [248.2322, 249.2104] |
 | c20_two_stage_cutlass256_fused_fold | warm | 265.0175 [263.3982, 265.9176] | 249.2051 [248.6176, 249.5687] |
-| lf2_register_cutlass256_fused_fold | cold_start | 295.8143 [282.9538, 307.6134] | 279.5494 [278.7083, 280.1274] |
-| lf2_register_cutlass256_fused_fold | warm | 290.4179 [280.0757, 309.5447] | 280.2337 [279.7984, 280.3944] |
+| INVALID lf2_register_cutlass256_fused_fold | cold_start | 295.8143 [282.9538, 307.6134] | 279.5494 [278.7083, 280.1274] |
+| INVALID lf2_register_cutlass256_fused_fold | warm | 290.4179 [280.0757, 309.5447] | 280.2337 [279.7984, 280.3944] |
 
 The full tables also retain MAD, one-second-average power integration, measured sensor-method spread, clocks, temperatures, power limits and sampling gaps. Method disagreement remains an unresolved systematic limitation; no favorable method is selected. Optional isolated matrix-stage measurements, if completed, are explicitly composite-stage microbenchmarks, not bare MMA or complete-attempt energy.
 

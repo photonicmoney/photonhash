@@ -1,4 +1,4 @@
-"""Remote continuous-NVML analysis. No GPU calls; no local execution."""
+"""RAW STATISTICS ONLY. Legacy completion flag is not qualification; see post-review-qualification.json. No GPU calls; no local execution."""
 import argparse,json,math,pathlib
 import numpy as np
 prefix='remote-energy-confirmation-paced50-retry2'

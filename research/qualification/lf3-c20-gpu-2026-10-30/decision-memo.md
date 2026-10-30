@@ -1,5 +1,9 @@
 # LF3-K8-C20 qualification decision memo
 
+**FINAL REVIEW CORRECTION: FUSED LF2 CONFIRMATION INVALID.** Its measured maximum sampling gap is 9.370326 seconds, exceeding the configured two-second limit. All five processes completed, but only the other four variants have eligible telemetry. Neither the live guard nor the original aggregator rejected this gap. Fused-LF2 timing and energy rows are retained as INVALID observations, excluded from qualification. Cause remains OPEN; no retry was made. See [post-review-qualification.json](post-review-qualification.json).
+
+The unchanged original statistics and original validation receipt are retained in `energy-statistics-before-review.json` and `publication-validation-before-review.json`. Their former pass flags are superseded. The current summary marks confirmation incomplete. The portable energy analyzer reproduces the original raw statistics, not qualification; its old `confirmation_complete` field is insufficient. No corrected analyzer execution or new benchmark is claimed. Transport checksums below are file-maintenance checks, not a repeat of research computation.
+
 30 October 2026 UTC. **Recommendation: REVISE. No activation or release.**
 This is an assessment of the experimental construction, not the conditional
 PhotonHash v0.5.0-candidate.1 freeze package. The team retains the qualification
@@ -27,7 +31,7 @@ qualification is unavailable. The inferred ASIC datapath proxy favors exact
 capacity, noise calibration and energy per correct fold remain unmeasured at
 the full bank size.
 
-**What failed.** The local GPU incident ended local workload authorization;
+**What failed.** The final fused-LF2 run additionally exceeded the two-second sampling limit despite a passed process receipt; its confirmation is invalid. The local GPU incident ended local workload authorization;
 Windows initialization/crash causes remain unresolved. The remote unpaced run
 hit its thermal guard. A paced attempt lost timely telemetry and was discarded;
 a fresh run does not establish the cause of that delay. One instrumented

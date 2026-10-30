@@ -1,7 +1,7 @@
 {
   "scope": "Nominal 50% GPU-event duty; gross GPU board energy includes per-window idle inside each block, excludes bank setup and validation outside blocks. Not sustained unpaced or PSU/CPU energy.",
   "sensor": "10-Hz continuous NVML instantaneous power trapezoids; continuously sampled energy counter is a cross-check. Driver-reported sensor accuracy is not established by a statistical CI.",
-  "confirmation_complete": true,
+  "confirmation_complete": false,
   "variants": [
     {
       "name": "lf2_warp_cublas_autotune",

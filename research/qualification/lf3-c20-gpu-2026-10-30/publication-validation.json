@@ -1,6 +1,6 @@
 {
-  "passed": true,
-  "portable_analyzer_reproduces_summary_byte_for_byte": true,
+  "passed": false,
+  "portable_analyzer_reproduces_summary_byte_for_byte": false,
   "portable_probe_analyzer_reproduces_summary_byte_for_byte": true,
   "complete_variants_measured": 5,
   "conditions_per_variant_measured": 2,

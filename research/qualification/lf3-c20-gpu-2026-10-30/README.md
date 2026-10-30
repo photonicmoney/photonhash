@@ -1,5 +1,9 @@
 # LF3-K8-C20 fixed GPU confirmation and energy assessment
 
+**FINAL REVIEW CORRECTION: FUSED LF2 CONFIRMATION INVALID.** Its measured maximum sampling gap is 9.370326 seconds, exceeding the configured two-second limit. All five processes completed, but only the other four variants have eligible telemetry. Neither the live guard nor the original aggregator rejected this gap. Fused-LF2 timing and energy rows are retained as INVALID observations, excluded from qualification. Cause remains OPEN; no retry was made. See [post-review-qualification.json](post-review-qualification.json).
+
+The unchanged original statistics and original validation receipt are retained in `energy-statistics-before-review.json` and `publication-validation-before-review.json`. Their former pass flags are superseded. The current summary marks confirmation incomplete. The portable energy analyzer reproduces the original raw statistics, not qualification; its old `confirmation_complete` field is insufficient. No corrected analyzer execution or new benchmark is claimed. Transport checksums below are file-maintenance checks, not a repeat of research computation.
+
 30 October 2026 UTC. **Experiment-tagged research; no candidate freeze,
 activation or release.** This report follows the
 [four-way conformance checkpoint](../lf3-c20-2026-10-30/README.md),
@@ -178,7 +182,7 @@ python analyze-energy.py --evidence /tmp/lf3-energy-replay --output /tmp/lf3-ene
 ```
 
 This is data analysis, not a GPU benchmark. The owner's local research
-restriction remains in force. The portable analyzer's replay comparison is
+restriction remains in force. The historical raw-statistics analyzer replay comparison, superseded for qualification, is
 recorded in [publication-validation.json](publication-validation.json).
 The C/CUDA kernel sources remain unpublished pending the conditional freeze;
 raw telemetry reproduction does not independently reproduce those kernels.
