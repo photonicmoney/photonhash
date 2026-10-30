@@ -1,0 +1,332 @@
+{
+  "passed": true,
+  "mode_configured": "junk_only",
+  "duration_s_configured": 10,
+  "elapsed_s_measured": 10.048880352987908,
+  "legitimate_clients_configured": 0,
+  "records": [
+    {
+      "role": "hostile",
+      "client": 0,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 1,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 2,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 3,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 4,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 5,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 6,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 7,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 8,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 9,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 10,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 11,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 12,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 13,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 14,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 15,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 16,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 17,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 18,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 19,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 20,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 21,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 22,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 23,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 24,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 25,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 26,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 27,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 28,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 29,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 30,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 31,
+      "kind": "junk",
+      "counts_measured": {
+        "responses": 157,
+        "status_3": 105,
+        "status_2": 52
+      }
+    }
+  ],
+  "mismatches": [],
+  "wire_scope": "Same protocol and scheduling for both roles; repeated canonical valid fixtures, no duplicate suppression in this isolated laboratory",
+  "liveness_scope": "Finite admitted-source/connection load; no unlimited-Sybil, physical-link or shared-NAT newcomer guarantee"
+}

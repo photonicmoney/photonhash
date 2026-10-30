@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "external_client_passed": true,
+  "server_and_attack_passed": true,
+  "network_transport_scope": "Actual TCP through public forwarded port; no local relay. First same-datacenter trial unreachable, second different-datacenter trial reachable."
+}

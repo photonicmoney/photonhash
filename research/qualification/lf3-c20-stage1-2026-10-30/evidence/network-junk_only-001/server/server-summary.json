@@ -1,0 +1,29 @@
+{
+  "type": "complete",
+  "elapsed_s_measured": 11.121059549041092,
+  "counts_measured": {
+    "accepted_TCP": 3360,
+    "bytes_received": 106752,
+    "malformed": 3360,
+    "unknown_parent": 1664
+  },
+  "native_measured": {},
+  "connections_measured": 0,
+  "sources_measured": 0,
+  "pending_measured": 0,
+  "inflight_measured": 0,
+  "high_water_measured": {
+    "connections": 32,
+    "sources": 8,
+    "pending": 0
+  },
+  "rss_peak_KiB_measured": 15368,
+  "fatal": null,
+  "socket_buffers_bytes_measured": [
+    [
+      16384,
+      16384
+    ]
+  ],
+  "stopped_by_controller": true
+}

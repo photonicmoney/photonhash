@@ -1,0 +1,111 @@
+{
+  "status": "Measured kernel/mainloop/epilogue spans; hardware tensor activity unavailable on this host",
+  "hardware_counters": "OPEN: ERR_NVGPUCTRPERM despite query process exit 0",
+  "interpretation": "Mainloop includes memory delivery, synchronization and stalls. CTA clock64 proportions are not GPU wall-time fractions. Observer changes barriers/register allocation; no pure multiply share or photonic Amdahl ceiling is inferred.",
+  "guard_receipt": {
+    "passed_process": true,
+    "exit_code": 0,
+    "guard_reason": null,
+    "wall_seconds_measured": 14.651342390920036,
+    "maximum_temperature_C_measured": 52,
+    "clocks_power_unchanged": true
+  },
+  "conformance": [
+    {
+      "type": "conformance",
+      "kind_configured": 0,
+      "CPU_full_traces_measured": 16,
+      "batch_full_folds_measured": 8192,
+      "passed": true
+    },
+    {
+      "type": "conformance",
+      "kind_configured": 1,
+      "CPU_full_traces_measured": 16,
+      "batch_full_folds_measured": 8192,
+      "passed": true
+    },
+    {
+      "type": "conformance",
+      "kind_configured": 2,
+      "CPU_full_traces_measured": 16,
+      "batch_full_folds_measured": 8192,
+      "passed": true
+    },
+    {
+      "type": "conformance",
+      "kind_configured": 3,
+      "CPU_full_traces_measured": 16,
+      "batch_full_folds_measured": 8192,
+      "passed": true
+    }
+  ],
+  "kernels": {
+    "0": {
+      "windows_measured": 20,
+      "event_seconds_measured": 3.051517427,
+      "batch_ms_median_measured": 7.6315872250000005,
+      "batch_ms_MAD_measured": 0.01556892499999929,
+      "median_95pct_CI_ms_inferred": [
+        7.615809650000001,
+        7.6478531
+      ],
+      "CI_method": "Fixed-seed percentile bootstrap of ten ABBA cycle clusters, 10000 resamples"
+    },
+    "1": {
+      "windows_measured": 20,
+      "event_seconds_measured": 2.96840999,
+      "batch_ms_median_measured": 7.420618425,
+      "batch_ms_MAD_measured": 0.014588550000000033,
+      "median_95pct_CI_ms_inferred": [
+        7.4069275,
+        7.436109549999999
+      ],
+      "CI_method": "Fixed-seed percentile bootstrap of ten ABBA cycle clusters, 10000 resamples"
+    },
+    "2": {
+      "windows_measured": 20,
+      "event_seconds_measured": 3.0565954900000003,
+      "batch_ms_median_measured": 7.64032325,
+      "batch_ms_MAD_measured": 0.013931274999999577,
+      "median_95pct_CI_ms_inferred": [
+        7.6268303,
+        7.6553894
+      ],
+      "CI_method": "Fixed-seed percentile bootstrap of ten ABBA cycle clusters, 10000 resamples",
+      "CTA_records_measured": 8192,
+      "mainloop_inclusive_span_percent_median_measured": 94.8008147834147,
+      "quant_fold_span_percent_median_measured": 0.5999859323345291,
+      "epilogue_store_span_percent_median_measured": 4.339054310484696,
+      "aggregate_CTA_cycles_measured": {
+        "span_cycles_measured": 1162891216,
+        "mainloop_inclusive_cycles_measured": 1102453859,
+        "quant_fold_cycles_measured": 6938062,
+        "epilogue_store_cycles_measured": 50474205
+      },
+      "observer_event_overhead_percent_inferred": 0.11447192756155466
+    },
+    "3": {
+      "windows_measured": 20,
+      "event_seconds_measured": 2.976175358,
+      "batch_ms_median_measured": 7.443776725,
+      "batch_ms_MAD_measured": 0.016477575000000133,
+      "median_95pct_CI_ms_inferred": [
+        7.4261921,
+        7.456535349999999
+      ],
+      "CI_method": "Fixed-seed percentile bootstrap of ten ABBA cycle clusters, 10000 resamples",
+      "CTA_records_measured": 1024,
+      "mainloop_inclusive_span_percent_median_measured": 98.57251197807282,
+      "quant_fold_span_percent_median_measured": 0.7122033799145877,
+      "epilogue_store_span_percent_median_measured": 0.5617547010648335,
+      "aggregate_CTA_cycles_measured": {
+        "span_cycles_measured": 1116085397,
+        "mainloop_inclusive_cycles_measured": 1100155908,
+        "quant_fold_cycles_measured": 7939032,
+        "epilogue_store_cycles_measured": 6266441
+      },
+      "observer_event_overhead_percent_inferred": 0.3120804584423986
+    }
+  }
+}

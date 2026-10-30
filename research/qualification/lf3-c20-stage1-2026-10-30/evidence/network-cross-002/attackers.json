@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "mode_configured": "attack_only",
+  "duration_s_configured": 60,
+  "elapsed_s_measured": 60.60793574608397,
+  "legitimate_clients_configured": 0,
+  "records": [
+    {
+      "role": "hostile",
+      "client": 0,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 93,
+        "status_0": 93
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 1,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 92,
+        "status_0": 92
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 2,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 92,
+        "status_0": 92
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 3,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 92,
+        "status_0": 92
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 4,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 92,
+        "status_0": 92
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 5,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 92,
+        "status_0": 92
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 6,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 92,
+        "status_0": 92
+      }
+    },
+    {
+      "role": "hostile",
+      "client": 7,
+      "kind": "churn",
+      "counts_measured": {
+        "responses": 92,
+        "status_0": 92
+      }
+    }
+  ],
+  "mismatches": [],
+  "wire_scope": "Same protocol and scheduling for both roles; repeated canonical valid fixtures, no duplicate suppression in this isolated laboratory",
+  "liveness_scope": "Finite admitted-source/connection load; no unlimited-Sybil, physical-link or shared-NAT newcomer guarantee"
+}

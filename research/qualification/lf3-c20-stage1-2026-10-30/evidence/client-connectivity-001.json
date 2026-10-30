@@ -1,0 +1,16 @@
+[
+  {
+    "port_private_control": 19504,
+    "connected": false,
+    "error_type": "ConnectionRefusedError",
+    "error_number": 111,
+    "elapsed_s_measured": 0.0009966150391846895
+  },
+  {
+    "port_private_control": 19505,
+    "connected": false,
+    "error_type": "ConnectionRefusedError",
+    "error_number": 111,
+    "elapsed_s_measured": 0.0003683400573208928
+  }
+]

@@ -1,0 +1,130 @@
+ptxas info    : 11 bytes gmem
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512compare_gemmILb0EEEvPKiS2_PKhmPj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512compare_gemmILb0EEEvPKiS2_PKhmPj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, used 0 barriers
+ptxas info    : Compile time = 16.240 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512compare_gemmILb1EEEvPKiS2_PKhmPj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512compare_gemmILb1EEEvPKiS2_PKhmPj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 0 barriers
+ptxas info    : Compile time = 1.379 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88510final_hashILb0EEEvPhS1_PKhS3_S3_j' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88510final_hashILb0EEEvPhS1_PKhS3_S3_j
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 80 registers, used 0 barriers
+ptxas info    : Compile time = 194.101 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88510final_hashILb1EEEvPhS1_PKhS3_S3_j' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88510final_hashILb1EEEvPhS1_PKhS3_S3_j
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 80 registers, used 0 barriers
+ptxas info    : Compile time = 194.155 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512fold_outputsILb0EEEvPhPKiPKhj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512fold_outputsILb0EEEvPhPKiPKhj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 2.264 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512fold_outputsILb1EEEvPhPKiPKhj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512fold_outputsILb1EEEvPhPKiPKhj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 1.238 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88516vectors_registerILb1EEEvPaPhPKhmPKmj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88516vectors_registerILb1EEEvPaPhPKhmPKmj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 0 barriers
+ptxas info    : Compile time = 235.154 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88516vectors_registerILb0EEEvPaPhPKhmPKmj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88516vectors_registerILb0EEEvPaPhPKhmPKmj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 76 registers, used 0 barriers
+ptxas info    : Compile time = 509.743 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512vectors_warpILb1EEEvPaPhPKhmPKmj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512vectors_warpILb1EEEvPaPhPKhmPKmj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 54.964 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512vectors_warpILb0EEEvPaPhPKhmPKmj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88512vectors_warpILb0EEEvPaPhPKhmPKmj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 0 barriers
+ptxas info    : Compile time = 85.531 ms
+ptxas info    : Compiling entry function '_ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88513chacha_expandEPaPKhj' for 'sm_120'
+ptxas info    : Function properties for _ZN49_GLOBAL__N__9ea423c5_16_matrix_timing_cu_ada2a88513chacha_expandEPaPKhj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 10.400 ms
+ptxas info    : Compiling entry function '_ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi256ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi256ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi256EEEaNSD_11ColumnMajorELi0ENSF_INSG_ILi64ELi256EEELi256ESI_Li16EEESL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESY_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aS11_iSE_NS14_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1F_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1E_Li1ENS1K_22PredicatedTileIteratorINS1K_26OutputTileOptimalThreadMapINS1K_15OutputTileShapeILi256ELi8ELi2ELi1ELi1EEENS1O_ILi1ELi8ELi1ELi1ELi8EEELi256ELi16ELi4EEENS_15integer_subbyteILi4ELb0EEELb0ESM_Lb0EEENS1J_4warp24FragmentIteratorTensorOpIS16_S19_iNSK_IiLi4ELb1EEESE_EENS1V_20TileIteratorTensorOpIS16_S19_iSE_EENS1K_18SharedLoadIteratorINS1R_18CompactedThreadMapEiLi64EEE12LF2Quantize4NSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE' for 'sm_120'
+ptxas info    : Function properties for _ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi256ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi256ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi256EEEaNSD_11ColumnMajorELi0ENSF_INSG_ILi64ELi256EEELi256ESI_Li16EEESL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESY_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aS11_iSE_NS14_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1F_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1E_Li1ENS1K_22PredicatedTileIteratorINS1K_26OutputTileOptimalThreadMapINS1K_15OutputTileShapeILi256ELi8ELi2ELi1ELi1EEENS1O_ILi1ELi8ELi1ELi1ELi8EEELi256ELi16ELi4EEENS_15integer_subbyteILi4ELb0EEELb0ESM_Lb0EEENS1J_4warp24FragmentIteratorTensorOpIS16_S19_iNSK_IiLi4ELb1EEESE_EENS1V_20TileIteratorTensorOpIS16_S19_iSE_EENS1K_18SharedLoadIteratorINS1R_18CompactedThreadMapEiLi64EEE12LF2Quantize4NSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 224 registers, used 1 barriers
+ptxas info    : Compile time = 97.514 ms
+ptxas info    : Compiling entry function '_ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi128ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi128ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi128EEEaNSD_11ColumnMajorELi0ESJ_SL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESJ_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aSZ_iSE_NS12_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1D_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1C_Li1ENS1I_22PredicatedTileIteratorINS1I_26OutputTileOptimalThreadMapINS1I_15OutputTileShapeILi128ELi8ELi2ELi1ELi1EEENS1M_ILi1ELi8ELi1ELi1ELi8EEELi128ELi16ELi4EEENS_15integer_subbyteILi4ELb0EEELb0ESM_Lb0EEENS1H_4warp24FragmentIteratorTensorOpIS14_S17_iNSK_IiLi4ELb1EEESE_EENS1T_25TileIteratorTensorOpMixedIS14_S17_iLi32ELi4ELi16ELi8ELb1EEENS1I_23SharedLoadIteratorMixedINS1P_18CompactedThreadMapEiLi32ELi4ELi16ELi8ELb1EEE12LF2Quantize4NSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE' for 'sm_120'
+ptxas info    : Function properties for _ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi128ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi128ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi128EEEaNSD_11ColumnMajorELi0ESJ_SL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESJ_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aSZ_iSE_NS12_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1D_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1C_Li1ENS1I_22PredicatedTileIteratorINS1I_26OutputTileOptimalThreadMapINS1I_15OutputTileShapeILi128ELi8ELi2ELi1ELi1EEENS1M_ILi1ELi8ELi1ELi1ELi8EEELi128ELi16ELi4EEENS_15integer_subbyteILi4ELb0EEELb0ESM_Lb0EEENS1H_4warp24FragmentIteratorTensorOpIS14_S17_iNSK_IiLi4ELb1EEESE_EENS1T_25TileIteratorTensorOpMixedIS14_S17_iLi32ELi4ELi16ELi8ELb1EEENS1I_23SharedLoadIteratorMixedINS1P_18CompactedThreadMapEiLi32ELi4ELi16ELi8ELb1EEE12LF2Quantize4NSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 226 registers, used 1 barriers
+ptxas info    : Compile time = 100.096 ms
+ptxas info    : Compiling entry function '_ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi256ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi256ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi256EEEaNSD_11ColumnMajorELi0ENSF_INSG_ILi64ELi256EEELi256ESI_Li16EEESL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESY_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aS11_iSE_NS14_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1F_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1E_Li1ENS1K_22PredicatedTileIteratorINS1K_26OutputTileOptimalThreadMapINS1K_15OutputTileShapeILi256ELi8ELi2ELi1ELi1EEENS1O_ILi1ELi8ELi1ELi1ELi8EEELi256ELi4ELi32EEEiLb0ESM_Lb0EEENS1J_4warp24FragmentIteratorTensorOpIS16_S19_iNSK_IiLi4ELb1EEESE_EENS1T_20TileIteratorTensorOpIS16_S19_iSE_EENS1K_18SharedLoadIteratorINS1R_18CompactedThreadMapEiLi16EEENS1J_6thread17LinearCombinationIiLi4EiiLNS22_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EiEENSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE' for 'sm_120'
+ptxas info    : Function properties for _ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi256ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi256ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi256EEEaNSD_11ColumnMajorELi0ENSF_INSG_ILi64ELi256EEELi256ESI_Li16EEESL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESY_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aS11_iSE_NS14_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1F_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1E_Li1ENS1K_22PredicatedTileIteratorINS1K_26OutputTileOptimalThreadMapINS1K_15OutputTileShapeILi256ELi8ELi2ELi1ELi1EEENS1O_ILi1ELi8ELi1ELi1ELi8EEELi256ELi4ELi32EEEiLb0ESM_Lb0EEENS1J_4warp24FragmentIteratorTensorOpIS16_S19_iNSK_IiLi4ELb1EEESE_EENS1T_20TileIteratorTensorOpIS16_S19_iSE_EENS1K_18SharedLoadIteratorINS1R_18CompactedThreadMapEiLi16EEENS1J_6thread17LinearCombinationIiLi4EiiLNS22_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EiEENSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 224 registers, used 1 barriers
+ptxas info    : Compile time = 122.341 ms
+ptxas info    : Compiling entry function '_ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi128ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi128ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi128EEEaNSD_11ColumnMajorELi0ESJ_SL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESJ_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aSZ_iSE_NS12_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1D_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1C_Li1ENS1I_22PredicatedTileIteratorINS1I_26OutputTileOptimalThreadMapINS1I_15OutputTileShapeILi128ELi8ELi2ELi1ELi1EEENS1M_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEiLb0ESM_Lb0EEENS1H_4warp24FragmentIteratorTensorOpIS14_S17_iNSK_IiLi4ELb1EEESE_EENS1R_20TileIteratorTensorOpIS14_S17_iSE_EENS1I_18SharedLoadIteratorINS1P_18CompactedThreadMapEiLi16EEENS1H_6thread17LinearCombinationIiLi4EiiLNS20_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EiEENSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE' for 'sm_120'
+ptxas info    : Function properties for _ZN7cutlass6KernelINS_4gemm6kernel4GemmINS1_11threadblock13MmaMultistageINS1_9GemmShapeILi128ELi128ELi64EEENS_9transform11threadblock28PredicatedTileAccessIteratorINS_11MatrixShapeILi128ELi64EEEaNS_6layout8RowMajorELi1ENS8_29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi64ELi128EEELi128ENSG_ILi4ELi8EEELi16EEENS_5ArrayIaLi16ELb0EEELb0ENSD_9NoPermuteEEENS9_25RegularTileAccessIteratorISC_aNSD_37RowMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi0ESJ_Li16EEELNS_4arch14CacheOperation4KindE1ENSA_INSB_ILi64ELi128EEEaNSD_11ColumnMajorELi0ESJ_SL_Lb0ESM_EENSO_ISV_aNSD_40ColumnMajorTensorOpMultiplicandCrosswiseILi8ELi64EEELi1ESJ_Li16EEELSU_1EiSE_NS4_9MmaPolicyINS1_4warp11MmaTensorOpINS6_ILi64ELi64ELi64EEEaSQ_aSZ_iSE_NS12_17MmaTensorOpPolicyINSS_3MmaINS6_ILi16ELi8ELi32EEELi32EaSE_aSW_iSE_NSS_21OpMultiplyAddSaturateEEENSB_ILi1ELi1EEEEELi1ELb0EbEENSB_ILi0ELi0EEES1D_Li1EEELi3ELNS1_23SharedMemoryClearOptionE0EbEENS_8epilogue11threadblock8EpilogueIS7_S1C_Li1ENS1I_22PredicatedTileIteratorINS1I_26OutputTileOptimalThreadMapINS1I_15OutputTileShapeILi128ELi8ELi2ELi1ELi1EEENS1M_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEiLb0ESM_Lb0EEENS1H_4warp24FragmentIteratorTensorOpIS14_S17_iNSK_IiLi4ELb1EEESE_EENS1R_20TileIteratorTensorOpIS14_S17_iSE_EENS1I_18SharedLoadIteratorINS1P_18CompactedThreadMapEiLi16EEENS1H_6thread17LinearCombinationIiLi4EiiLNS20_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EiEENSB_ILi0ELi8EEELi1ELi1EEENS4_30GemmIdentityThreadblockSwizzleILi1EEELb0EEEEEvNT_6ParamsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 226 registers, used 1 barriers
+ptxas info    : Compile time = 126.334 ms
+ptxas info    : Compiling entry function '_Z19stage1_phase_kernelILi8EEviPKaS1_PhPy' for 'sm_120'
+ptxas info    : Function properties for _Z19stage1_phase_kernelILi8EEviPKaS1_PhPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 254 registers, used 1 barriers
+ptxas info    : Compile time = 109.922 ms
+ptxas info    : Compiling entry function '_Z19stage1_phase_kernelILi1EEviPKaS1_PhPy' for 'sm_120'
+ptxas info    : Function properties for _Z19stage1_phase_kernelILi1EEviPKaS1_PhPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 224 registers, used 1 barriers
+ptxas info    : Compile time = 104.121 ms
+ptxas info    : Compiling entry function '_Z21lf3_fused_fold_kernelILi256EEviPKaS1_Ph' for 'sm_120'
+ptxas info    : Function properties for _Z21lf3_fused_fold_kernelILi256EEviPKaS1_Ph
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 246 registers, used 1 barriers
+ptxas info    : Compile time = 105.231 ms
+ptxas info    : Compiling entry function '_Z17stage1_check_foldPKiPKhjPj' for 'sm_120'
+ptxas info    : Function properties for _Z17stage1_check_foldPKiPKhjPj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 2.169 ms
+/workspace/lf3-stage1/cutlass/include/cutlass/platform/platform.h:599:33: warning: ‘long4’ is deprecated: use long4_16a or long4_32a [-Wdeprecated-declarations]
+  599 | struct alignment_of<long4> {
+      |                                 ^    
+In file included from /usr/local/cuda-13.0/targets/x86_64-linux/include/driver_types.h:61,
+                 from /usr/local/cuda/bin/../targets/x86_64-linux/include/builtin_types.h:59,
+                 from /usr/local/cuda/bin/../targets/x86_64-linux/include/crt/host_runtime.h:58,
+                 from /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:218:
+/usr/local/cuda-13.0/targets/x86_64-linux/include/vector_types.h:532:98: note: declared here
+  532 | typedef __device_builtin__ struct long4 __VECTOR_TYPE_DEPRECATED__("use long4_16a or long4_32a") long4;
+      |                                                                                                  ^~~~~
+/workspace/lf3-stage1/cutlass/include/cutlass/platform/platform.h:603:33: warning: ‘ulong4’ is deprecated: use ulong4_16a or ulong4_32a [-Wdeprecated-declarations]
+  603 | struct alignment_of<ulong4> {
+      |                                 ^     
+/usr/local/cuda-13.0/targets/x86_64-linux/include/vector_types.h:533:101: note: declared here
+  533 | typedef __device_builtin__ struct ulong4 __VECTOR_TYPE_DEPRECATED__("use ulong4_16a or ulong4_32a") ulong4;
+      |                                                                                                     ^~~~~~
+/workspace/lf3-stage1/cutlass/include/cutlass/platform/platform.h:619:33: warning: ‘longlong4’ is deprecated: use longlong4_16a or longlong4_32a [-Wdeprecated-declarations]
+  619 | struct alignment_of<longlong4> {
+      |                                 ^        
+/usr/local/cuda-13.0/targets/x86_64-linux/include/vector_types.h:550:110: note: declared here
+  550 | typedef __device_builtin__ struct longlong4 __VECTOR_TYPE_DEPRECATED__("use longlong4_16a or longlong4_32a") longlong4;
+      |                                                                                                              ^~~~~~~~~
+/workspace/lf3-stage1/cutlass/include/cutlass/platform/platform.h:623:33: warning: ‘ulonglong4’ is deprecated: use ulonglong4_16a or ulonglong4_32a [-Wdeprecated-declarations]
+  623 | struct alignment_of<ulonglong4> {
+      |                                 ^         
+/usr/local/cuda-13.0/targets/x86_64-linux/include/vector_types.h:551:113: note: declared here
+  551 | typedef __device_builtin__ struct ulonglong4 __VECTOR_TYPE_DEPRECATED__("use ulonglong4_16a or ulonglong4_32a") ulonglong4;
+      |                                                                                                                 ^~~~~~~~~~
+/workspace/lf3-stage1/cutlass/include/cutlass/platform/platform.h:627:33: warning: ‘double4’ is deprecated: use double4_16a or double4_32a [-Wdeprecated-declarations]
+  627 | struct alignment_of<double4> {
+      |                                 ^      
+/usr/local/cuda-13.0/targets/x86_64-linux/include/vector_types.h:561:104: note: declared here
+  561 | typedef __device_builtin__ struct double4 __VECTOR_TYPE_DEPRECATED__("use double4_16a or double4_32a") double4;
+      |                                                                                                        ^~~~~~~

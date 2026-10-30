@@ -66,6 +66,18 @@ On that RTX PRO 4500 server, fused C20's measured warm board energy is
 interval of [155.089, 155.152]. Separate EPYC measurements put exact OpenSSL
 bank generation at 0.260646 s with one worker and 0.037534 s with eight workers.
 
+The [isolated Stage 1 network and timing study](research/qualification/lf3-c20-stage1-2026-10-30/README.md)
+adds an actual concurrent TCP verifier, bounded bank ownership and ordinary-client
+service under hostile traffic. At **64 measured simultaneous connections**, four
+legitimate clients complete **204 measured valid verifications** during the
+configured two-minute full-capacity attack; maximum client p99 is **3.320362
+measured seconds**. The cache has **two configured slots / 256 MiB coefficient
+bound**. Newcomer admission under exhausted slots explicitly fails its negative
+control; production peer/chain admission remains open. Separate GPU phase clocks
+expose quantize/fold/store overhead but do not measure pure multiplication:
+the inclusive matrix loop also contains operand loads and waits. **REVISE**
+remains the recommendation; no candidate freeze or activation is issued.
+
 The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
 **LF3-K8-C20-experiment.1**, a separately named experimental hash that uses
 ChaCha20 to expand each header/nonce binding into the matrix input vector.

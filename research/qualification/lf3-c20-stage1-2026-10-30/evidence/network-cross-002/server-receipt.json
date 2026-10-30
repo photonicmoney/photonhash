@@ -1,0 +1,8 @@
+{
+  "server_and_attack_passed": true,
+  "client_receipt_required": true,
+  "start_unix_configured": 1793395614.0,
+  "seconds_configured": 60,
+  "server_exit_code": 0,
+  "attack_exit_code": 0
+}

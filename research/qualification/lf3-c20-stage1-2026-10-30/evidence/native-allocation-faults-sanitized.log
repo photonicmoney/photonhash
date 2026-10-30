@@ -1,0 +1,17 @@
+{"type":"allocation_failure_recovered","large_allocation_index_configured":0,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":1,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":2,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":3,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":4,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":5,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":6,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":7,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":8,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":9,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":10,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":11,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":12,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":13,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":14,"resident_after_failure_measured":1}
+{"type":"allocation_failure_recovered","large_allocation_index_configured":15,"resident_after_failure_measured":1}
+{"type":"complete","injected_allocation_failures_measured":16,"passed":true}

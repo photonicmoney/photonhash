@@ -1,0 +1,10 @@
+{
+  "status": "owner-requested retry failed provisioning; no resource returned or created",
+  "http_status_measured": 400,
+  "provider_message_measured": "There are no longer any instances available with the requested specifications. Please refresh and try again.",
+  "requested_GPU_configured": "NVIDIA GeForce RTX 4090",
+  "cloud_configured": "COMMUNITY",
+  "advertised_price_USD_per_hour_at_request_measured": 0.34,
+  "configured_rental_stop_minutes": 30,
+  "effect": "No alternate profiling host obtained. Further host choice requested from owner."
+}

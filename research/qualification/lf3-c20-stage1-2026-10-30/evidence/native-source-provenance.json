@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "path": "public-source/src/photonhash.c",
+      "SHA256_measured": "e4331939a9c0423ee7c1219aed5484545ff0ec2a507b9d7105330881ef5ca852"
+    },
+    {
+      "path": "public-source/src/photonhash_launch.c",
+      "SHA256_measured": "067e463f127c69fe265bc90c8d808f6ed3ea9915aef88607ca85f04a8cd51e43"
+    },
+    {
+      "path": "public-source/research/qualification/lf3-c20-verifier-2026-10-30/reference/src/photonhash_lf2_stream.c",
+      "SHA256_measured": "ffa0044b9db58a77ff616e6967580cb7dde1227ed01b0938346984e81913db8a"
+    },
+    {
+      "path": "public-source/research/qualification/lf3-c20-verifier-2026-10-30/reference/src/photonhash_lf3_c20.c",
+      "SHA256_measured": "b411e4cb8b2b9778849c5e29d6d7c26e6e6ce7ed3c93623f391706e4fc76a84e"
+    },
+    {
+      "path": "public-source/research/qualification/lf3-c20-verifier-2026-10-30/reference/src/photonhash_lf3_c20_cached.c",
+      "SHA256_measured": "e60aa4d5a6ade1a1213a71b47479f616a78d8ee3b602eb2f6258a7e42852fa17"
+    },
+    {
+      "path": "public-source/research/qualification/lf3-c20-verifier-2026-10-30/src/bank_openssl.c",
+      "SHA256_measured": "3b4c8080959ed0def7a6841cd75e349f6a6079f4accf6c30dd9ab80c5994b9fc"
+    },
+    {
+      "path": "src/network_cache.c",
+      "SHA256_measured": "6f61f6c174f7157b1a121aecbf0aee0abf69d3fab2cf1bd37aa45e33a2544ef4"
+    },
+    {
+      "path": "src/cache_fault_test.c",
+      "SHA256_measured": "c1bfc88aa9f5e897c0ca828149dc41a055cd2bab2250551f74aa8b4e75d2ce6e"
+    },
+    {
+      "path": "src/verifier_server.py",
+      "SHA256_measured": "5fe100352cc8f8b15de1af2b3faa8f9916b44616202613050fc2d1aaa6dc2031"
+    }
+  ],
+  "gcc_measured": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "OpenSSL_measured": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)"
+}
