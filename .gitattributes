@@ -9,3 +9,4 @@ Makefile text eol=lf
 
 # Preserve the outside reviewer's exact supplied bytes on every platform.
 independent/py-c20/ph_indep.py -text
+research/qualification/lf3-c20-security-2026-10-30/reviewer-approx.py -text

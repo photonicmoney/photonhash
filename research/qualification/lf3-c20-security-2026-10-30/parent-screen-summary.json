@@ -1,0 +1,46 @@
+{
+  "parents_measured": 1024,
+  "zero_fraction_measured": {
+    "n_measured": 1024,
+    "median_measured": 0.06250003725290298,
+    "MAD_measured": 1.4536082744598389e-05,
+    "min_measured": 0.062421806156635284,
+    "max_measured": 0.0625745877623558
+  },
+  "int4_one_bits_per_coefficient_measured": {
+    "n_measured": 1024,
+    "median_measured": 1.9999982044100761,
+    "MAD_measured": 5.856901407241821e-05,
+    "min_measured": 1.999709852039814,
+    "max_measured": 2.000264510512352
+  },
+  "row_sum_mean_measured": {
+    "n_measured": 1024,
+    "median_measured": -2048.0499420166016,
+    "MAD_measured": 1.1573944091796875,
+    "min_measured": -2053.744873046875,
+    "max_measured": -2043.1268310546875
+  },
+  "row_sum_sd_measured": {
+    "n_measured": 1024,
+    "median_measured": 295.037510262934,
+    "MAD_measured": 0.7703517512955784,
+    "min_measured": 291.5799116072804,
+    "max_measured": 298.030278992792
+  },
+  "max_coefficient_probability_deviation_from_uniform_measured": {
+    "n_measured": 1024,
+    "median_measured": 4.274025559425354e-05,
+    "MAD_measured": 6.977468729019165e-06,
+    "min_measured": 2.121180295944214e-05,
+    "max_measured": 8.311867713928223e-05
+  },
+  "GF2_64x64_rank_histogram_measured": {
+    "61": 181,
+    "62": 4240,
+    "63": 18908,
+    "64": 9439
+  },
+  "full_4096_matrix_rank_measured": false,
+  "bank_timing_scope": "contended screening; do not use for authoritative verification economics"
+}

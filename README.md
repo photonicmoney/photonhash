@@ -28,6 +28,10 @@ tools, and the historical experiments that led to it.
 agree with zero skips. The [conformance package and limits](research/qualification/lf3-c20-2026-10-30/README.md)
 include the unchanged outside Python checker and an extended Rust checker.
 These use experiment tags. No candidate freeze or activation is implied.
+The [security checkpoint](research/qualification/lf3-c20-security-2026-10-30/README.md)
+adds 1,024 measured parent banks, two nonzero-parent noise studies and the
+approximation/photonic-tolerance tables. Physical noisy-miner energy, sparse
+execution and grinding economics remain open.
 
 The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
 **LF3-K8-C20-experiment.1**, a separately named experimental hash that uses

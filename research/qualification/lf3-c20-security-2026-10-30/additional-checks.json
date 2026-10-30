@@ -1,0 +1,292 @@
+{
+  "remote-security-public-smoke-001": [
+    {
+      "type": "complete",
+      "parents_measured": 2,
+      "nonces_per_parent_measured": 4,
+      "skipped_cases_measured": 0,
+      "energy_shortcut_demonstrated": false,
+      "conclusion": "No measured energy advantage established by synthetic noise probabilities. Photonic break-even energy must be < P_exact_fold times exact energy; approximate device qualification remains OPEN."
+    },
+    {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 26.29260617203545,
+      "passed_process": true
+    }
+  ],
+  "remote-cache-contract-001": [
+    {
+      "type": "residue_identity",
+      "integer_sums_measured": 491521,
+      "signed_sum_min_input": -229376,
+      "signed_sum_max_input": 262144,
+      "mod13_mismatches_measured": 0,
+      "expected_negative_control_mod12_mismatches_measured": 245760
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 0,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000288623,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 1,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000284013,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 2,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000282673,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 3,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000307753,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 4,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000281293,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 5,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000290613,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 6,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000314064,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 7,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000294723,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 8,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000282563,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 9,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000299863,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 10,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000307843,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 11,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000288633,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 12,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000289843,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 13,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000317423,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 14,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000282043,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 15,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000296303,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 16,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000319424,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 17,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000297103,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 18,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000290073,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 19,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000322554,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 20,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000296953,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 21,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000295193,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 22,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000289033,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 23,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000314544,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 24,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000291533,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 25,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000283353,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 26,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000310673,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 27,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000284143,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 28,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000292513,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 29,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000308674,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "prepared_cache_miss_batch",
+      "sample_input": 30,
+      "misses_measured": 32768,
+      "wall_s_measured": 0.000291673,
+      "cache_generation_change_measured": 0,
+      "cache_occupied_parents_measured": 2
+    },
+    {
+      "type": "complete",
+      "passed": true,
+      "GPU_used": false,
+      "misses_measured": 1015808,
+      "peak_RSS_KiB_measured": 270884,
+      "scope": "Existing LF2 prepared-parent wrapper contract only. C20 cached hash requires a supplied bank; production C20 admission integration remains OPEN."
+    },
+    {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 2.175341787049547,
+      "passed_process": true
+    }
+  ]
+}
