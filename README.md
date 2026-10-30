@@ -23,6 +23,12 @@ tools, and the historical experiments that led to it.
 
 ## New research results: LF2 packing and ChaCha20
 
+**30 October qualification checkpoint:** all four C20 implementations agree on
+**560 measured full-fold vectors**; **1,048,576 measured random GPU/C cases**
+agree with zero skips. The [conformance package and limits](research/qualification/lf3-c20-2026-10-30/README.md)
+include the unchanged outside Python checker and an extended Rust checker.
+These use experiment tags. No candidate freeze or activation is implied.
+
 The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
 **LF3-K8-C20-experiment.1**, a separately named experimental hash that uses
 ChaCha20 to expand each header/nonce binding into the matrix input vector.

@@ -18,6 +18,40 @@ const VECTOR_TAG: &[u8] = b"LASER/PhotonHash/v1/vector";
 const BANK_TAG: &[u8] = b"LASER/PhotonHash/launch-LF2/matrix";
 const FINAL_TAG: &[u8] = b"LASER/PhotonHash/launch-LF2/final";
 const BANK_TEST_TAG: &[u8] = b"PhotonHash/v0.4.0-shadow.1/test-bank";
+const C20_VECTOR_TAG: &[u8] = b"LASER/PhotonHash/LF3-K8-C20-experiment.1/vector";
+const C20_FINAL_TAG: &[u8] = b"LASER/PhotonHash/LF3-K8-C20-experiment.1/final";
+
+// Direct RFC 8439 section 2.3 implementation; no C/CUDA code or FFI.
+fn c20_quarter(s: &mut [u32; 16], a: usize, b: usize, c: usize, d: usize) {
+    s[a] = s[a].wrapping_add(s[b]); s[d] = (s[d] ^ s[a]).rotate_left(16);
+    s[c] = s[c].wrapping_add(s[d]); s[b] = (s[b] ^ s[c]).rotate_left(12);
+    s[a] = s[a].wrapping_add(s[b]); s[d] = (s[d] ^ s[a]).rotate_left(8);
+    s[c] = s[c].wrapping_add(s[d]); s[b] = (s[b] ^ s[c]).rotate_left(7);
+}
+
+pub fn c20_block(key: &[u8; 32], nonce: &[u8; 12], counter: u32) -> [u8; 64] {
+    let mut initial = [0u32; 16];
+    initial[..4].copy_from_slice(&[0x61707865, 0x3320646e, 0x79622d32, 0x6b206574]);
+    for (word, bytes) in initial[4..12].iter_mut().zip(key.chunks_exact(4)) {
+        *word = u32::from_le_bytes(bytes.try_into().unwrap());
+    }
+    initial[12] = counter;
+    for (word, bytes) in initial[13..].iter_mut().zip(nonce.chunks_exact(4)) {
+        *word = u32::from_le_bytes(bytes.try_into().unwrap());
+    }
+    let mut state = initial;
+    for _ in 0..10 {
+        for [a,b,c,d] in [[0,4,8,12],[1,5,9,13],[2,6,10,14],[3,7,11,15],
+                          [0,5,10,15],[1,6,11,12],[2,7,8,13],[3,4,9,14]] {
+            c20_quarter(&mut state,a,b,c,d);
+        }
+    }
+    let mut result = [0u8; 64];
+    for ((destination, word), original) in result.chunks_exact_mut(4).zip(state).zip(initial) {
+        destination.copy_from_slice(&word.wrapping_add(original).to_le_bytes());
+    }
+    result
+}
 
 fn shake(parts: &[&[u8]], length: usize) -> Vec<u8> {
     let mut state = Shake256::default();
@@ -74,6 +108,24 @@ pub struct MatrixBank {
 }
 
 impl MatrixBank {
+    pub fn evaluate_c20(&self, header: &[u8], nonce: u64) -> Attempt {
+        assert_eq!(self.matrices.len(), PASSES);
+        let h = array32(shake(&[C20_VECTOR_TAG, header, &nonce.to_le_bytes()], DIGEST_LEN));
+        let packed: Vec<u8> = (1..=32).flat_map(|counter| c20_block(&h, &[0u8;12], counter)).collect();
+        let x = signed_nibbles(&packed);
+        let mut folded = vec![0u8; N/2];
+        for matrix in &self.matrices {
+            for (r, row) in matrix.rows().enumerate() {
+                let sum: i32 = row.iter().zip(&x)
+                    .map(|(&a,&b)| i32::from(a)*i32::from(b)).sum();
+                let q = (((sum + 262144) as u32 >> 9) & 15) as u8;
+                folded[r/2] ^= q << (4*(r%2));
+            }
+        }
+        let digest = array32(shake(&[C20_FINAL_TAG, &h, &folded], DIGEST_LEN));
+        Attempt { h, folded, digest }
+    }
+
     pub fn derive(parent: &[u8; DIGEST_LEN]) -> Self {
         let matrices = (0..PASSES)
             .map(|pass| {
@@ -220,6 +272,48 @@ pub fn verify_vectors(text: &str) -> Result<VerificationReport, String> {
         evaluate_time: evaluation_started.elapsed(),
         cases,
     })
+}
+
+pub fn verify_c20_vectors(text: &str) -> Result<VerificationReport, String> {
+    let fields = parse_fields(text);
+    if fields.get("profile").map(String::as_str) != Some("LF3-K8-C20-experiment.1")
+        || fields.get("n").map(String::as_str) != Some("4096")
+        || fields.get("passes").map(String::as_str) != Some("8") {
+        return Err("C20 experiment profile mismatch".into());
+    }
+    let count = fields.get("cases").ok_or("missing case count")?
+        .parse::<usize>().map_err(|e| e.to_string())?;
+    if count < 64 { return Err("fewer than the required 64 vectors".into()); }
+    let mut previous_parent = None;
+    let mut bank = None;
+    let mut derive_time = Duration::ZERO;
+    let mut evaluate_time = Duration::ZERO;
+    for case in 0..count {
+        let prefix = format!("case[{case}]");
+        let parent: [u8;32] = field_bytes(&fields,&format!("{prefix}.parent"))?
+            .try_into().map_err(|_| "parent length")?;
+        if previous_parent != Some(parent) {
+            // Release the previous bank before deriving its replacement.
+            drop(bank.take());
+            let started = Instant::now();
+            bank = Some(MatrixBank::derive(&parent));
+            derive_time += started.elapsed();
+            previous_parent = Some(parent);
+        }
+        let header = field_bytes(&fields,&format!("{prefix}.header"))?;
+        let nonce = fields.get(&format!("{prefix}.nonce")).ok_or("missing nonce")?
+            .parse::<u64>().map_err(|e| e.to_string())?;
+        let started = Instant::now();
+        let actual = bank.as_ref().unwrap().evaluate_c20(&header,nonce);
+        evaluate_time += started.elapsed();
+        for (field,bytes) in [("h",actual.h.as_slice()),("fold",actual.folded.as_slice()),("digest",actual.digest.as_slice())] {
+            if field_bytes(&fields,&format!("{prefix}.{field}"))? != bytes {
+                return Err(format!("STOP: implementation mismatch: {field}, case {case}"));
+            }
+        }
+        if case%32 == 31 { println!("C20 full-fold progress: {} measured cases",case+1); }
+    }
+    Ok(VerificationReport { derive_time, evaluate_time, cases:count })
 }
 
 fn shadow_parent(index: usize) -> [u8; DIGEST_LEN] {

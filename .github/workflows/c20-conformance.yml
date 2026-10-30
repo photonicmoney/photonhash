@@ -1,0 +1,55 @@
+name: C20 experimental conformance
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-checkers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install the measured NumPy version
+        run: python -m pip install numpy==2.5.4
+      - name: Check the unchanged external checker identity
+        run: echo '78f120cae14bfd7cc60dad75da877e796b9e56a6b33c7cfc08760e01e4000f39  independent/py-c20/ph_indep.py' | sha256sum --check
+      - name: Independent Python full-fold vectors
+        run: python independent/py-c20/check_vectors.py research/qualification/lf3-c20-2026-10-30/c20-experiment-vectors.txt
+      - name: Independent Rust primitive and full-fold vectors
+        run: cargo run --release --locked --manifest-path independent/rust-lf2/Cargo.toml --bin c20-vectors -- research/qualification/lf3-c20-2026-10-30/c20-experiment-vectors.txt
+      - name: Reject a changed last fold byte in both checkers
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          source = Path('research/qualification/lf3-c20-2026-10-30/c20-experiment-vectors.txt')
+          lines = source.read_text().splitlines()
+          for i, line in enumerate(lines):
+              if line.startswith('case[0].fold='):
+                  key, value = line.split('=', 1)
+                  lines[i] = key + '=' + value[:-2] + f'{int(value[-2:], 16)^1:02x}'
+                  break
+          else:
+              raise SystemExit('missing fold fixture')
+          changed = Path('/tmp/c20-corrupted-fold.txt')
+          changed.write_text('\n'.join(lines) + '\n')
+          commands = [
+              ['python', 'independent/py-c20/check_vectors.py', str(changed)],
+              ['independent/rust-lf2/target/release/c20-vectors', str(changed)],
+          ]
+          for command in commands:
+              result = subprocess.run(command, capture_output=True, text=True)
+              if result.returncode != 40 or 'fold' not in result.stdout + result.stderr:
+                  raise SystemExit('checker failed the fold-tampering rejection check')
+          PY

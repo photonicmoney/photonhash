@@ -1,0 +1,401 @@
+{
+  "scope": "Qualification run ledger; original raw local/remote logs retained privately. Each failed run is excluded from performance estimates. Superseding reviewer rule stops work-avoiding shortcuts; conformance failures are retained and invalidate affected evidence.",
+  "runs": [
+    {
+      "run": "remote-adversarial-c20-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 347.47914901492186,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-approximation-1024x2-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 122.7636555719655,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-boundaries-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 0.9309506420977414,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-build-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 73.65501422795933,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-c20-fuzz-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 387.56944574799854,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-cpu-bench-build-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 0.25062511290889233,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-cpu-blas-bench-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 39.61277707898989,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-cpu-portable-bench-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 69.58592668606434,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-confirmation-0-001",
+      "scope": "RunPod",
+      "status": "failed_or_interrupted",
+      "exit_code_measured": -15,
+      "reason": null,
+      "wall_seconds_measured": 110.09415938903112,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof.",
+      "invalid_detail": {
+        "sampler_errors": [
+          "remote thermal abort >=80 C"
+        ],
+        "exit_code": -15,
+        "thread_alive": false
+      }
+    },
+    {
+      "run": "remote-energy-pilot-0-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 11.804684127913788,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-1-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 5.9223588990280405,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-2-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 6.018450960051268,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-3-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 6.026893739937805,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-4-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 6.05407771107275,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-paced50-0-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 9.787561562028714,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-paced50-1-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.08120265393518,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-paced50-2-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.037300162017345,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-paced50-3-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.308096830034629,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-energy-pilot-paced50-4-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.328205425990745,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-init-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 0.9495953799923882,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-mma-probe-001",
+      "scope": "RunPod",
+      "status": "failed_or_interrupted",
+      "exit_code_measured": 40,
+      "reason": "shared_STOP",
+      "wall_seconds_measured": 1.5905819369945675,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-mma-probe-002",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 1.7652063539717346,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-paced-build-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 20.214496396947652,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-parent-stats-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 1496.6006073789904,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-probe-build-001",
+      "scope": "RunPod",
+      "status": "failed_or_interrupted",
+      "exit_code_measured": 2,
+      "reason": null,
+      "wall_seconds_measured": 3.819453094038181,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-probe-build-002",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 22.78803988301661,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-probe-build-003",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 27.152565352036618,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-random-cpu-128-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 3.2948734359815717,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-random-cpu-million-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 1124.6711124540307,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-random-gpu-128-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 3.6550380749395117,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-random-gpu-million-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 67.32963611697778,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-vectors-c-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 13.164997128071263,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-vectors-gpu-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 5.863270588917658,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-vectors-python-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 13.643962444039062,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "remote-vectors-rust-001",
+      "scope": "RunPod",
+      "status": "passed_process",
+      "exit_code_measured": 0,
+      "reason": null,
+      "wall_seconds_measured": 18.94315533200279,
+      "qualification_note": "A successful telemetry pilot is not confirmation; build and process success alone are not conformance or security proof."
+    },
+    {
+      "run": "local-build-001/002",
+      "scope": "historical local",
+      "status": "failed",
+      "reason": "Windows command-shell syntax; retained original logs; not correctness evidence"
+    },
+    {
+      "run": "local-build-004",
+      "scope": "historical local",
+      "status": "failed",
+      "reason": "const/API compilation error; later corrected; no valid timing"
+    },
+    {
+      "run": "local-vectors-gpu-001",
+      "scope": "historical local",
+      "status": "failed",
+      "reason": "stale binary usage; corrected rebuild used for later check"
+    },
+    {
+      "run": "local-random-cpu-million-001",
+      "scope": "historical local",
+      "status": "interrupted",
+      "matching_cases_measured": 18176,
+      "reason": "Owner GPU incident; incomplete, excluded from final remote count"
+    },
+    {
+      "run": "local-parent-stats-001",
+      "scope": "historical local",
+      "status": "interrupted",
+      "parents_measured": 12,
+      "reason": "Owner GPU incident; incomplete, excluded from remote parent count"
+    },
+    {
+      "run": "local-energy-pilot-c20-fused-001",
+      "scope": "historical local",
+      "status": "failed_incomplete",
+      "reason": "Owner reported fan ramp, signal loss and forced reboot; no valid energy estimate. Local research disabled thereafter."
+    },
+    {
+      "run": "remote-numpy-setup-001",
+      "scope": "RunPod",
+      "status": "failed",
+      "reason": "System Python is externally managed; installed dependency in isolated venv instead"
+    },
+    {
+      "run": "remote-CPU-US-allocation",
+      "scope": "RunPod control plane",
+      "status": "failed_no_resource",
+      "reason": "Unavailable capacity"
+    },
+    {
+      "run": "remote-CPU-two-vCPU-connection",
+      "scope": "RunPod control plane",
+      "status": "failed_resource_deleted",
+      "reason": "Official image booted but SSH unreachable; pod deleted; no CPU benchmark from that pod"
+    },
+    {
+      "run": "remote-shutdown-REST-read",
+      "scope": "RunPod control plane",
+      "status": "failed_no_workload",
+      "reason": "Pod-scoped REST authorization rejected; independently verified GraphQL watchdog installed before research"
+    },
+    {
+      "run": "remote-power-limit-350W-request",
+      "scope": "RunPod control plane",
+      "status": "rejected_no_workload",
+      "reason": "Driver supports 400 through 575 W; prelaunch expected-limit guard rejected the unchanged 575 W setting"
+    },
+    {
+      "run": "remote-power-limit-400W-request",
+      "scope": "RunPod control plane",
+      "status": "rejected_no_workload",
+      "reason": "Insufficient container permission; shell conditional prevented workload launch. Actual limit remains 575 W."
+    }
+  ]
+}
