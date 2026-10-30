@@ -1,0 +1,69 @@
+{
+  "run": "remote-energy-confirmation-paced50-0-001",
+  "invalid": {
+    "sampler_errors": [],
+    "exit_code": 124,
+    "thread_alive": false
+  },
+  "max_temperature_C_measured": 68,
+  "max_query_wall_s_measured": 6.422187955933623,
+  "longest_gaps_measured": [
+    {
+      "gap_s_measured": 6.422459908993915,
+      "before_unix_ns": 1793331729653331666,
+      "after_unix_ns": 1793331736075791795,
+      "after_query_wall_s_measured": 0.007464009919203818,
+      "after_temperature_C_measured": 53
+    },
+    {
+      "gap_s_measured": 0.302648723940365,
+      "before_unix_ns": 1793331006242018174,
+      "after_unix_ns": 1793331006544667268,
+      "after_query_wall_s_measured": 0.004104093997739255,
+      "after_temperature_C_measured": 58
+    },
+    {
+      "gap_s_measured": 0.27281174797099084,
+      "before_unix_ns": 1793330105968225354,
+      "after_unix_ns": 1793330106241037092,
+      "after_query_wall_s_measured": 0.005764701985754073,
+      "after_temperature_C_measured": 65
+    },
+    {
+      "gap_s_measured": 0.17100865906104445,
+      "before_unix_ns": 1793331281891830794,
+      "after_unix_ns": 1793331282062839713,
+      "after_query_wall_s_measured": 0.004103104001842439,
+      "after_temperature_C_measured": 57
+    },
+    {
+      "gap_s_measured": 0.14182929694652557,
+      "before_unix_ns": 1793331282184367862,
+      "after_unix_ns": 1793331282326197769,
+      "after_query_wall_s_measured": 0.004168943967670202,
+      "after_temperature_C_measured": 57
+    },
+    {
+      "gap_s_measured": 0.12152843899093568,
+      "before_unix_ns": 1793331282062839713,
+      "after_unix_ns": 1793331282184367862,
+      "after_query_wall_s_measured": 0.00484246201813221,
+      "after_temperature_C_measured": 57
+    },
+    {
+      "gap_s_measured": 0.1169761010678485,
+      "before_unix_ns": 1793331281674750152,
+      "after_unix_ns": 1793331281791726313,
+      "after_query_wall_s_measured": 0.002271223929710686,
+      "after_temperature_C_measured": 56
+    },
+    {
+      "gap_s_measured": 0.10385859000962228,
+      "before_unix_ns": 1793330827826660510,
+      "after_unix_ns": 1793330827930519060,
+      "after_query_wall_s_measured": 0.0044549580197781324,
+      "after_temperature_C_measured": 57
+    }
+  ],
+  "scope": "No sampler exception or thermal crossing recorded. External-abort predicate also covers sampling heartbeat older than two seconds. Cause of host/driver scheduling delay remains open."
+}

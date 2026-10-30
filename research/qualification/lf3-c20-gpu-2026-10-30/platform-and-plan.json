@@ -1,0 +1,26 @@
+{
+  "provenance": "Existing provisioning and remote-inventory records; no additional device query during confirmation.",
+  "platform_observed": {
+    "GPU": "NVIDIA GeForce RTX 5090",
+    "driver_version": "595.91.07",
+    "CUDA_toolkit_version": "13.0",
+    "nvcc_build": "13.0.88",
+    "CPU_reported": "AMD EPYC 7543",
+    "CPU_cgroup_quota_observed": "1275000 100000",
+    "image": "runpod/pytorch:1.0.7-cu1300-torch291-ubuntu2404-cluster",
+    "image_digest": "sha256:ab2addc2916ffc72989288bd5048933c69ba6531f1d679c25afbd9eadc5a5fd5",
+    "CUTLASS_revision": "ad7b2f5e84fcfa124cb02b91d5bd26d238c0459e",
+    "CUTLASS_tag": "v3.9.2",
+    "NumPy_version": "2.5.4"
+  },
+  "fixed_inputs": {
+    "batch_configured": 8192,
+    "header_bytes_configured": 184,
+    "header_rule": "H[i]=(17*i+9) modulo 256",
+    "parent_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+    "initial_nonce_hex": "19f8d3a5620c7b40",
+    "graph_replays_per_window_configured": 64,
+    "nonce_rule": "Advance first nonce by 8192 in every complete-attempt graph; no reset between blocks/conditions. Stage-only exploratory graphs reuse fixed validated vectors."
+  },
+  "limits": "Single shared host, fixed variant order and paced execution. Vendor cuBLAS AUTOTUNE policy fixed; internal selected algorithm identifier not logged. No between-board/day replication or calibrated wall-socket energy. Sources/binaries not published in this conditional-freeze assessment."
+}

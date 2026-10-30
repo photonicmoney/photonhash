@@ -1,0 +1,358 @@
+{
+  "post_review_qualification": "FAILED: fused LF2 maximum measured sampling gap 9.370326 seconds exceeds configured 2 seconds; process pass superseded; no samples recycled; see post-review-qualification.json",
+  "scope": "Process/build receipt is not automatically a conformance or security pass; incomplete runs remain ineligible. Earlier historical local/control-plane failures are retained in the conformance and CPU ledgers.",
+  "receipts": {
+    "remote-adversarial-c20-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 347.47914901492186,
+      "passed_process": true
+    },
+    "remote-approximation-1024x2-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 122.7636555719655,
+      "passed_process": true
+    },
+    "remote-boundaries-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 0.9309506420977414,
+      "passed_process": true
+    },
+    "remote-build-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 73.65501422795933,
+      "passed_process": true
+    },
+    "remote-c20-fuzz-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 387.56944574799854,
+      "passed_process": true
+    },
+    "remote-cache-contract-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 2.175341787049547,
+      "passed_process": true
+    },
+    "remote-cpu-bench-build-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 0.25062511290889233,
+      "passed_process": true
+    },
+    "remote-cpu-blas-bench-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 39.61277707898989,
+      "passed_process": true
+    },
+    "remote-cpu-parent-dependent-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 20.82925160403829,
+      "passed_process": true
+    },
+    "remote-cpu-portable-bench-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 69.58592668606434,
+      "passed_process": true
+    },
+    "remote-energy-confirmation-0-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": -15,
+      "reason": null,
+      "wall_seconds_measured": 110.09415938903112,
+      "passed_process": false
+    },
+    "remote-energy-confirmation-paced50-0-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": -15,
+      "reason": "external_abort",
+      "wall_seconds_measured": 2097.6522192130797,
+      "passed_process": false
+    },
+    "remote-energy-confirmation-paced50-retry2-0-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 2405.0860815050546,
+      "passed_process": true
+    },
+    "remote-energy-confirmation-paced50-retry2-1-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 2405.110055168974,
+      "passed_process": true
+    },
+    "remote-energy-confirmation-paced50-retry2-2-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 2405.783622211078,
+      "passed_process": true
+    },
+    "remote-energy-confirmation-paced50-retry2-3-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 2405.7497197589837,
+      "passed_process": true
+    },
+    "remote-energy-confirmation-paced50-retry2-4-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 2415.15337729,
+      "passed_process": true
+    },
+    "remote-energy-pilot-0-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 11.804684127913788,
+      "passed_process": true
+    },
+    "remote-energy-pilot-1-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 5.9223588990280405,
+      "passed_process": true
+    },
+    "remote-energy-pilot-2-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 6.018450960051268,
+      "passed_process": true
+    },
+    "remote-energy-pilot-3-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 6.026893739937805,
+      "passed_process": true
+    },
+    "remote-energy-pilot-4-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 6.05407771107275,
+      "passed_process": true
+    },
+    "remote-energy-pilot-paced50-0-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 9.787561562028714,
+      "passed_process": true
+    },
+    "remote-energy-pilot-paced50-1-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.08120265393518,
+      "passed_process": true
+    },
+    "remote-energy-pilot-paced50-2-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.037300162017345,
+      "passed_process": true
+    },
+    "remote-energy-pilot-paced50-3-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.308096830034629,
+      "passed_process": true
+    },
+    "remote-energy-pilot-paced50-4-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 10.328205425990745,
+      "passed_process": true
+    },
+    "remote-init-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 0.9495953799923882,
+      "passed_process": true
+    },
+    "remote-mma-probe-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 40,
+      "reason": "shared_STOP",
+      "wall_seconds_measured": 1.5905819369945675,
+      "passed_process": false
+    },
+    "remote-mma-probe-002.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 1.7652063539717346,
+      "passed_process": true
+    },
+    "remote-paced-build-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 20.214496396947652,
+      "passed_process": true
+    },
+    "remote-parallel-bank-build-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 0.2101573549443856,
+      "passed_process": true
+    },
+    "remote-parent-stats-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 1496.6006073789904,
+      "passed_process": true
+    },
+    "remote-parent-upload-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 1.7066912810551003,
+      "passed_process": true
+    },
+    "remote-probe-build-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 2,
+      "reason": null,
+      "wall_seconds_measured": 3.819453094038181,
+      "passed_process": false
+    },
+    "remote-probe-build-002.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 22.78803988301661,
+      "passed_process": true
+    },
+    "remote-probe-build-003.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 27.152565352036618,
+      "passed_process": true
+    },
+    "remote-random-cpu-128-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 3.2948734359815717,
+      "passed_process": true
+    },
+    "remote-random-cpu-million-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 1124.6711124540307,
+      "passed_process": true
+    },
+    "remote-random-gpu-128-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 3.6550380749395117,
+      "passed_process": true
+    },
+    "remote-random-gpu-million-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 67.32963611697778,
+      "passed_process": true
+    },
+    "remote-security-public-smoke-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 26.29260617203545,
+      "passed_process": true
+    },
+    "remote-stage-build-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 21.355260616983287,
+      "passed_process": true
+    },
+    "remote-upload-build-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 1.7885910240001976,
+      "passed_process": true
+    },
+    "remote-vectors-c-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 13.164997128071263,
+      "passed_process": true
+    },
+    "remote-vectors-gpu-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 5.863270588917658,
+      "passed_process": true
+    },
+    "remote-vectors-python-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 13.643962444039062,
+      "passed_process": true
+    },
+    "remote-vectors-rust-001.receipt.json": {
+      "type": "run_end",
+      "exit_code": 0,
+      "reason": null,
+      "wall_seconds_measured": 18.94315533200279,
+      "passed_process": true
+    }
+  },
+  "explicit_failures": {
+    "stock_thermal_abort": {
+      "sampler_errors": [
+        "remote thermal abort >=80 C"
+      ],
+      "exit_code": -15,
+      "thread_alive": false
+    },
+    "paced_telemetry_abort": {
+      "sampler_errors": [],
+      "exit_code": 124,
+      "thread_alive": false
+    }
+  },
+  "stage_pair_completed_measured": false,
+  "optional_stage_controller_observation": "Insufficient deadline budget for stage suite\n"
+}

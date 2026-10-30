@@ -35,6 +35,9 @@ execution and grinding economics remain open.
 The [CPU economics checkpoint](research/qualification/lf3-c20-economics-2026-10-30/README.md)
 accounts for a new bank at every header and preserves serial parent dependencies.
 Dedicated modest-CPU qualification and full-size photonic loading remain open.
+The [fixed GPU/energy assessment and decision memo](research/qualification/lf3-c20-gpu-2026-10-30/README.md)
+recommend **REVISE**, distinguishing measured paced results from unresolved
+qualification gaps. No candidate freeze or activation is implied.
 
 The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
 **LF3-K8-C20-experiment.1**, a separately named experimental hash that uses

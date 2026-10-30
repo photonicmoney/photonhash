@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "portable_analyzer_reproduces_summary_byte_for_byte": false,
+  "portable_probe_analyzer_reproduces_summary_byte_for_byte": true,
+  "complete_variants_measured": 5,
+  "conditions_per_variant_measured": 2,
+  "minimum_event_seconds_per_condition_input": 600,
+  "all_cold_start_flags_measured": true,
+  "raw_files_selected_measured": 40,
+  "stage_pair_completed_measured": false,
+  "candidate_freeze": false,
+  "scope": "Completed experiment evidence; no kernel sources, activation, release or Laser changes.",
+  "public_export_regular_files_only": true
+}
