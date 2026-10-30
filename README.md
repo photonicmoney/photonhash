@@ -46,6 +46,13 @@ measured bank medians are 0.6355 s portable and 0.2838 s single-worker OpenSSL.
 Production admission, physical low-power hardware and energy calibration remain
 open; this is not a consensus candidate freeze.
 
+The [exact-arithmetic mapping follow-up](research/qualification/lf3-c20-mapped-arithmetic-2026-10-30/README.md)
+adds a residue proof and six passing mapped-netlist equivalence checks. Its
+13-bit/32-bit cell-area ratios are **inferred** as 0.5790 for combinational
+arithmetic and 0.4995 with registers. The non-manufacturable research library
+provides an arithmetic area proxy, not measured ASIC energy or a whole-miner
+advantage. Physical hardware qualification remains open.
+
 The **29 October 2026** comparison evaluates unchanged LF2-K8 packing beside
 **LF3-K8-C20-experiment.1**, a separately named experimental hash that uses
 ChaCha20 to expand each header/nonce binding into the matrix input vector.

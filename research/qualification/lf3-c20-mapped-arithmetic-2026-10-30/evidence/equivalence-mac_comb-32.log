@@ -1,0 +1,496 @@
+
+-- Running command `read_verilog control/mac.v; chparam -set W 32 mac_comb; hierarchy -top mac_comb; proc; flatten; opt; rename mac_comb gold; design -stash gold; read_liberty -ignore_miss_func /workspace/lf3-followup/asic/NangateOpenCellLibrary_typical.lib; read_verilog /workspace/lf3-followup/asic/mac_comb-32.v; hierarchy -top mac_comb; proc; flatten; opt; rename mac_comb gate; design -stash gate; design -copy-from gold -as gold gold; design -copy-from gate -as gate gate; equiv_make gold gate equiv; hierarchy -top equiv; equiv_simple; equiv_induct -seq 4; equiv_status -assert' --
+
+1. Executing Verilog-2005 frontend: control/mac.v
+Parsing Verilog input from `control/mac.v' to AST representation.
+Generating RTLIL representation for module `\mac_comb'.
+Generating RTLIL representation for module `\mac_register'.
+Generating RTLIL representation for module `\equiv'.
+Successfully finished Verilog frontend.
+Parameter \W = 32
+
+2. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_comb'.
+Parameter \W = 32
+Generating RTLIL representation for module `$paramod\mac_comb\W=32'00000000000000000000000000100000'.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \mac_comb
+
+3.2. Analyzing design hierarchy..
+Top module:  \mac_comb
+Removing unused module `\equiv'.
+Removing unused module `\mac_register'.
+Removed 2 unused modules.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_comb.
+
+5. Executing FLATTEN pass (flatten design).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_comb.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_comb'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_comb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_comb.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_comb'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_comb..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_comb.
+
+6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_comb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_comb.
+Performed a total of 0 changes.
+
+6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_comb'.
+Removed a total of 0 cells.
+
+6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_comb..
+
+6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_comb.
+
+6.16. Finished OPT passes. (There is nothing left to do.)
+Renaming module \mac_comb to \gold.
+
+7. Executing Liberty frontend: /workspace/lf3-followup/asic/NangateOpenCellLibrary_typical.lib
+Ignoring cell CLKGATETST_X1 with missing function on output IQ.
+Ignoring cell CLKGATETST_X2 with missing function on output IQ.
+Ignoring cell CLKGATETST_X4 with missing function on output IQ.
+Ignoring cell CLKGATETST_X8 with missing function on output IQ.
+Ignoring cell CLKGATE_X1 with missing function on output IQ.
+Ignoring cell CLKGATE_X2 with missing function on output IQ.
+Ignoring cell CLKGATE_X4 with missing function on output IQ.
+Ignoring cell CLKGATE_X8 with missing function on output IQ.
+Imported 127 cell types from liberty file.
+
+8. Executing Verilog-2005 frontend: /workspace/lf3-followup/asic/mac_comb-32.v
+Parsing Verilog input from `/workspace/lf3-followup/asic/mac_comb-32.v' to AST representation.
+Generating RTLIL representation for module `\mac_comb'.
+Successfully finished Verilog frontend.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \mac_comb
+Used module:     \NAND2_X1
+Used module:     \NOR2_X1
+Used module:     \AOI21_X1
+Used module:     \XNOR2_X1
+Used module:     \OR2_X1
+Used module:     \AND2_X1
+Used module:     \OAI21_X1
+Used module:     \XOR2_X1
+Used module:     \NAND3_X1
+Used module:     \OR3_X1
+Used module:     \NOR3_X1
+Used module:     \OAI22_X1
+Used module:     \NAND4_X1
+Used module:     \INV_X1
+Used module:     \AND3_X1
+Used module:     \AOI22_X1
+Used module:     \AND4_X1
+Used module:     \MUX2_X1
+Used module:     \NOR4_X1
+Used module:     \AOI211_X1
+Used module:     \AOI221_X1
+
+9.2. Analyzing design hierarchy..
+Top module:  \mac_comb
+Used module:     \NAND2_X1
+Used module:     \NOR2_X1
+Used module:     \AOI21_X1
+Used module:     \XNOR2_X1
+Used module:     \OR2_X1
+Used module:     \AND2_X1
+Used module:     \OAI21_X1
+Used module:     \XOR2_X1
+Used module:     \NAND3_X1
+Used module:     \OR3_X1
+Used module:     \NOR3_X1
+Used module:     \OAI22_X1
+Used module:     \NAND4_X1
+Used module:     \INV_X1
+Used module:     \AND3_X1
+Used module:     \AOI22_X1
+Used module:     \AND4_X1
+Used module:     \MUX2_X1
+Used module:     \NOR4_X1
+Used module:     \AOI211_X1
+Used module:     \AOI221_X1
+Removing unused module `\XOR2_X2'.
+Removing unused module `\XNOR2_X2'.
+Removing unused module `\TLAT_X1'.
+Removing unused module `\TINV_X1'.
+Removing unused module `\TBUF_X16'.
+Removing unused module `\TBUF_X8'.
+Removing unused module `\TBUF_X4'.
+Removing unused module `\TBUF_X2'.
+Removing unused module `\TBUF_X1'.
+Removing unused module `\SDFF_X2'.
+Removing unused module `\SDFF_X1'.
+Removing unused module `\SDFFS_X2'.
+Removing unused module `\SDFFS_X1'.
+Removing unused module `\SDFFR_X2'.
+Removing unused module `\SDFFR_X1'.
+Removing unused module `\SDFFRS_X2'.
+Removing unused module `\SDFFRS_X1'.
+Removing unused module `\OR4_X4'.
+Removing unused module `\OR4_X2'.
+Removing unused module `\OR4_X1'.
+Removing unused module `\OR3_X4'.
+Removing unused module `\OR3_X2'.
+Removing unused module `\OR2_X4'.
+Removing unused module `\OR2_X2'.
+Removing unused module `\OAI222_X4'.
+Removing unused module `\OAI222_X2'.
+Removing unused module `\OAI222_X1'.
+Removing unused module `\OAI221_X4'.
+Removing unused module `\OAI221_X2'.
+Removing unused module `\OAI221_X1'.
+Removing unused module `\OAI211_X4'.
+Removing unused module `\OAI211_X2'.
+Removing unused module `\OAI211_X1'.
+Removing unused module `\OAI33_X1'.
+Removing unused module `\OAI22_X4'.
+Removing unused module `\OAI22_X2'.
+Removing unused module `\OAI21_X4'.
+Removing unused module `\OAI21_X2'.
+Removing unused module `\NOR4_X4'.
+Removing unused module `\NOR4_X2'.
+Removing unused module `\NOR3_X4'.
+Removing unused module `\NOR3_X2'.
+Removing unused module `\NOR2_X4'.
+Removing unused module `\NOR2_X2'.
+Removing unused module `\NAND4_X4'.
+Removing unused module `\NAND4_X2'.
+Removing unused module `\NAND3_X4'.
+Removing unused module `\NAND3_X2'.
+Removing unused module `\NAND2_X4'.
+Removing unused module `\NAND2_X2'.
+Removing unused module `\MUX2_X2'.
+Removing unused module `\LOGIC1_X1'.
+Removing unused module `\LOGIC0_X1'.
+Removing unused module `\INV_X32'.
+Removing unused module `\INV_X16'.
+Removing unused module `\INV_X8'.
+Removing unused module `\INV_X4'.
+Removing unused module `\INV_X2'.
+Removing unused module `\HA_X1'.
+Removing unused module `\FILLCELL_X32'.
+Removing unused module `\FILLCELL_X16'.
+Removing unused module `\FILLCELL_X8'.
+Removing unused module `\FILLCELL_X4'.
+Removing unused module `\FILLCELL_X2'.
+Removing unused module `\TAPCELL_X1'.
+Removing unused module `\FILLCELL_X1'.
+Removing unused module `\FA_X1'.
+Removing unused module `\DLL_X2'.
+Removing unused module `\DLL_X1'.
+Removing unused module `\DLH_X2'.
+Removing unused module `\DLH_X1'.
+Removing unused module `\DFF_X2'.
+Removing unused module `\DFF_X1'.
+Removing unused module `\DFFS_X2'.
+Removing unused module `\DFFS_X1'.
+Removing unused module `\DFFR_X2'.
+Removing unused module `\DFFR_X1'.
+Removing unused module `\DFFRS_X2'.
+Removing unused module `\DFFRS_X1'.
+Removing unused module `\CLKBUF_X3'.
+Removing unused module `\CLKBUF_X2'.
+Removing unused module `\CLKBUF_X1'.
+Removing unused module `\BUF_X32'.
+Removing unused module `\BUF_X16'.
+Removing unused module `\BUF_X8'.
+Removing unused module `\BUF_X4'.
+Removing unused module `\BUF_X2'.
+Removing unused module `\BUF_X1'.
+Removing unused module `\AOI222_X4'.
+Removing unused module `\AOI222_X2'.
+Removing unused module `\AOI222_X1'.
+Removing unused module `\AOI221_X4'.
+Removing unused module `\AOI221_X2'.
+Removing unused module `\AOI211_X4'.
+Removing unused module `\AOI211_X2'.
+Removing unused module `\AOI22_X4'.
+Removing unused module `\AOI22_X2'.
+Removing unused module `\AOI21_X4'.
+Removing unused module `\AOI21_X2'.
+Removing unused module `\ANTENNA_X1'.
+Removing unused module `\AND4_X4'.
+Removing unused module `\AND4_X2'.
+Removing unused module `\AND3_X4'.
+Removing unused module `\AND3_X2'.
+Removing unused module `\AND2_X4'.
+Removing unused module `\AND2_X2'.
+Removed 106 unused modules.
+
+10. Executing PROC pass (convert processes to netlists).
+
+10.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+10.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+10.4. Executing PROC_INIT pass (extract init attributes).
+
+10.5. Executing PROC_ARST pass (detect async resets in processes).
+
+10.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+10.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+10.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+10.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+10.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module OAI22_X1.
+Optimizing module NAND2_X1.
+Optimizing module AOI221_X1.
+Optimizing module NOR3_X1.
+Optimizing module MUX2_X1.
+Optimizing module AOI211_X1.
+Optimizing module XNOR2_X1.
+Optimizing module XOR2_X1.
+Optimizing module AOI22_X1.
+Optimizing module NOR2_X1.
+Optimizing module OAI21_X1.
+Optimizing module AOI21_X1.
+Optimizing module OR2_X1.
+Optimizing module NAND4_X1.
+Optimizing module mac_comb.
+Optimizing module AND4_X1.
+Optimizing module INV_X1.
+Optimizing module NOR4_X1.
+Optimizing module AND3_X1.
+Optimizing module NAND3_X1.
+Optimizing module OR3_X1.
+Optimizing module AND2_X1.
+
+11. Executing FLATTEN pass (flatten design).
+Deleting now unused module OAI22_X1.
+Deleting now unused module NAND2_X1.
+Deleting now unused module AOI221_X1.
+Deleting now unused module NOR3_X1.
+Deleting now unused module MUX2_X1.
+Deleting now unused module AOI211_X1.
+Deleting now unused module XNOR2_X1.
+Deleting now unused module XOR2_X1.
+Deleting now unused module AOI22_X1.
+Deleting now unused module NOR2_X1.
+Deleting now unused module OAI21_X1.
+Deleting now unused module AOI21_X1.
+Deleting now unused module OR2_X1.
+Deleting now unused module NAND4_X1.
+Deleting now unused module AND4_X1.
+Deleting now unused module INV_X1.
+Deleting now unused module NOR4_X1.
+Deleting now unused module AND3_X1.
+Deleting now unused module NAND3_X1.
+Deleting now unused module OR3_X1.
+Deleting now unused module AND2_X1.
+<suppressed ~234 debug messages>
+
+12. Executing OPT pass (performing simple optimizations).
+
+12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_comb.
+<suppressed ~5 debug messages>
+
+12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_comb'.
+<suppressed ~105 debug messages>
+Removed a total of 35 cells.
+
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_comb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_comb.
+Performed a total of 0 changes.
+
+12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_comb'.
+Removed a total of 0 cells.
+
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_comb..
+Removed 1 unused cells and 478 unused wires.
+<suppressed ~4 debug messages>
+
+12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_comb.
+
+12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_comb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_comb.
+Performed a total of 0 changes.
+
+12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_comb'.
+Removed a total of 0 cells.
+
+12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_comb..
+
+12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_comb.
+
+12.16. Finished OPT passes. (There is nothing left to do.)
+Renaming module \mac_comb to \gate.
+
+13. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: a_gold (\a_gold), a_gate (\a_gate) -> a
+Presumably equivalent wires: acc_gold (\acc_gold), acc_gate (\acc_gate) -> acc
+Presumably equivalent wires: b_gold (\b_gold), b_gate (\b_gate) -> b
+Presumably equivalent wires: next_acc_gold (\next_acc_gold), next_acc_gate ({ \_301_.ZN_gate \_299_.ZN_gate \_293_.ZN_gate \_288_.ZN_gate \_279_.ZN_gate \_276_.Z_gate \_271_.ZN_gate \_267_.Z_gate \_261_.ZN_gate \_258_.Z_gate \_252_.Z_gate \_249_.ZN_gate \_244_.Z_gate \_240_.ZN_gate \_234_.ZN_gate \_230_.ZN_gate \_222_.ZN_gate \_219_.Z_gate \_212_.ZN_gate \_208_.Z_gate \_203_.ZN_gate \_432_.ZN_gate \_427_.ZN_gate \_422_.Z_gate \_418_.Z_gate \_414_.ZN_gate \_399_.Z_gate \_377_.ZN_gate \_353_.Z_gate \_328_.ZN_gate \_316_.Z_gate \_302_.ZN_gate }) -> next_acc
+
+14. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+14.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\gate'.
+Removing unused module `\gold'.
+Removed 2 unused modules.
+
+15. Executing EQUIV_SIMPLE pass.
+Found 32 unproven $equiv cells (1 groups) in equiv:
+ Grouping SAT models for \next_acc:
+  Trying to prove $equiv for \next_acc [0]: success!
+  Trying to prove $equiv for \next_acc [1]: success!
+  Trying to prove $equiv for \next_acc [2]: success!
+  Trying to prove $equiv for \next_acc [3]: success!
+  Trying to prove $equiv for \next_acc [4]: success!
+  Trying to prove $equiv for \next_acc [5]: success!
+  Trying to prove $equiv for \next_acc [6]: success!
+  Trying to prove $equiv for \next_acc [7]: success!
+  Trying to prove $equiv for \next_acc [8]: success!
+  Trying to prove $equiv for \next_acc [9]: success!
+  Trying to prove $equiv for \next_acc [10]: success!
+  Trying to prove $equiv for \next_acc [11]: success!
+  Trying to prove $equiv for \next_acc [12]: success!
+  Trying to prove $equiv for \next_acc [13]: success!
+  Trying to prove $equiv for \next_acc [14]: success!
+  Trying to prove $equiv for \next_acc [15]: success!
+  Trying to prove $equiv for \next_acc [16]: success!
+  Trying to prove $equiv for \next_acc [17]: success!
+  Trying to prove $equiv for \next_acc [18]: success!
+  Trying to prove $equiv for \next_acc [19]: success!
+  Trying to prove $equiv for \next_acc [20]: success!
+  Trying to prove $equiv for \next_acc [21]: success!
+  Trying to prove $equiv for \next_acc [22]: success!
+  Trying to prove $equiv for \next_acc [23]: success!
+  Trying to prove $equiv for \next_acc [24]: success!
+  Trying to prove $equiv for \next_acc [25]: success!
+  Trying to prove $equiv for \next_acc [26]: success!
+  Trying to prove $equiv for \next_acc [27]: success!
+  Trying to prove $equiv for \next_acc [28]: success!
+  Trying to prove $equiv for \next_acc [29]: success!
+  Trying to prove $equiv for \next_acc [30]: success!
+  Trying to prove $equiv for \next_acc [31]: success!
+Proved 32 previously unproven $equiv cells.
+
+16. Executing EQUIV_INDUCT pass.
+No selected unproven $equiv cells found in equiv.
+Proved 0 previously unproven $equiv cells.
+
+17. Executing EQUIV_STATUS pass.
+Found 32 $equiv cells in equiv:
+  Of those cells 32 are proven and 0 are unproven.
+  Equivalence successfully proven!

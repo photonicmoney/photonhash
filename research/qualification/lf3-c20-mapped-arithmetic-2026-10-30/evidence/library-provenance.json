@@ -1,0 +1,7 @@
+{
+  "library_url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/75cd896b6d1ea33d2e8cdc3046b55cfd34ed963b/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib",
+  "source_commit": "75cd896b6d1ea33d2e8cdc3046b55cfd34ed963b",
+  "SHA256_measured": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1",
+  "bytes_measured": 6692032,
+  "scope": "Illustrative Nangate45 typical cell mapping; no place/route, extraction, power, memory, I/O or full miner."
+}

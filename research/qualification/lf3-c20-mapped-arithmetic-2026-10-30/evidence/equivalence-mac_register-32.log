@@ -1,0 +1,780 @@
+
+-- Running command `read_verilog control/mac.v; chparam -set W 32 mac_register; hierarchy -top mac_register; proc; flatten; opt; rename mac_register gold; design -stash gold; read_liberty -ignore_miss_func /workspace/lf3-followup/asic/NangateOpenCellLibrary_typical.lib; read_verilog /workspace/lf3-followup/asic/mac_register-32.v; hierarchy -top mac_register; proc; flatten; opt; rename mac_register gate; design -stash gate; design -copy-from gold -as gold gold; design -copy-from gate -as gate gate; equiv_make gold gate equiv; hierarchy -top equiv; equiv_simple; equiv_induct -seq 4; equiv_status -assert' --
+
+1. Executing Verilog-2005 frontend: control/mac.v
+Parsing Verilog input from `control/mac.v' to AST representation.
+Generating RTLIL representation for module `\mac_comb'.
+Generating RTLIL representation for module `\mac_register'.
+Generating RTLIL representation for module `\equiv'.
+Successfully finished Verilog frontend.
+Parameter \W = 32
+
+2. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_register'.
+Parameter \W = 32
+Generating RTLIL representation for module `$paramod\mac_register\W=32'00000000000000000000000000100000'.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \mac_register
+Used module:     \mac_comb
+Parameter \W = 32
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\mac_comb'.
+Parameter \W = 32
+Generating RTLIL representation for module `$paramod\mac_comb\W=32'00000000000000000000000000100000'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \mac_register
+Used module:     $paramod\mac_comb\W=32'00000000000000000000000000100000
+
+3.4. Analyzing design hierarchy..
+Top module:  \mac_register
+Used module:     $paramod\mac_comb\W=32'00000000000000000000000000100000
+Removing unused module `\equiv'.
+Removing unused module `\mac_comb'.
+Removed 2 unused modules.
+Mapping positional arguments of cell mac_register.add ($paramod\mac_comb\W=32'00000000000000000000000000100000).
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$control/mac.v:11$6 in module mac_register.
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\mac_register.$proc$control/mac.v:11$6'.
+     1/1: $0\acc[31:0]
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\mac_register.\acc' using process `\mac_register.$proc$control/mac.v:11$6'.
+  created $dff cell `$procdff$14' with positive edge clock.
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\mac_register.$proc$control/mac.v:11$6'.
+Removing empty process `mac_register.$proc$control/mac.v:11$6'.
+Cleaned up 2 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+Optimizing module $paramod\mac_comb\W=32'00000000000000000000000000100000.
+
+5. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\mac_comb\W=32'00000000000000000000000000100000.
+<suppressed ~1 debug messages>
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_register'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_register..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_register.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_register'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$14 ($dff) from module mac_register (D = $procmux$9_Y, Q = \acc, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$15 ($sdff) from module mac_register (D = \next_acc, Q = \acc).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_register..
+Removed 2 unused cells and 7 unused wires.
+<suppressed ~3 debug messages>
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+
+6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_register.
+Performed a total of 0 changes.
+
+6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_register'.
+Removed a total of 0 cells.
+
+6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_register..
+
+6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+
+6.16. Finished OPT passes. (There is nothing left to do.)
+Renaming module \mac_register to \gold.
+
+7. Executing Liberty frontend: /workspace/lf3-followup/asic/NangateOpenCellLibrary_typical.lib
+Ignoring cell CLKGATETST_X1 with missing function on output IQ.
+Ignoring cell CLKGATETST_X2 with missing function on output IQ.
+Ignoring cell CLKGATETST_X4 with missing function on output IQ.
+Ignoring cell CLKGATETST_X8 with missing function on output IQ.
+Ignoring cell CLKGATE_X1 with missing function on output IQ.
+Ignoring cell CLKGATE_X2 with missing function on output IQ.
+Ignoring cell CLKGATE_X4 with missing function on output IQ.
+Ignoring cell CLKGATE_X8 with missing function on output IQ.
+Imported 127 cell types from liberty file.
+
+8. Executing Verilog-2005 frontend: /workspace/lf3-followup/asic/mac_register-32.v
+Parsing Verilog input from `/workspace/lf3-followup/asic/mac_register-32.v' to AST representation.
+Generating RTLIL representation for module `\$paramod\mac_comb\W=32'00000000000000000000000000100000'.
+Generating RTLIL representation for module `\mac_register'.
+Successfully finished Verilog frontend.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \mac_register
+Used module:     \$paramod\mac_comb\W=32'00000000000000000000000000100000
+Used module:         \XNOR2_X1
+Used module:         \MUX2_X1
+Used module:         \AND2_X1
+Used module:         \OR3_X1
+Used module:         \OAI21_X1
+Used module:         \AOI21_X1
+Used module:         \NAND2_X1
+Used module:         \OR2_X1
+Used module:         \NOR2_X1
+Used module:         \NOR3_X1
+Used module:         \NOR4_X1
+Used module:         \XOR2_X1
+Used module:         \AOI22_X1
+Used module:         \INV_X1
+Used module:         \AOI211_X1
+Used module:         \AND3_X1
+Used module:         \OAI22_X1
+Used module:         \AOI221_X1
+Used module:         \NAND4_X1
+Used module:         \NAND3_X1
+Used module:         \AND4_X1
+Used module:     \DFF_X1
+
+9.2. Analyzing design hierarchy..
+Top module:  \mac_register
+Used module:     \$paramod\mac_comb\W=32'00000000000000000000000000100000
+Used module:         \XNOR2_X1
+Used module:         \MUX2_X1
+Used module:         \AND2_X1
+Used module:         \OR3_X1
+Used module:         \OAI21_X1
+Used module:         \AOI21_X1
+Used module:         \NAND2_X1
+Used module:         \OR2_X1
+Used module:         \NOR2_X1
+Used module:         \NOR3_X1
+Used module:         \NOR4_X1
+Used module:         \XOR2_X1
+Used module:         \AOI22_X1
+Used module:         \INV_X1
+Used module:         \AOI211_X1
+Used module:         \AND3_X1
+Used module:         \OAI22_X1
+Used module:         \AOI221_X1
+Used module:         \NAND4_X1
+Used module:         \NAND3_X1
+Used module:         \AND4_X1
+Used module:     \DFF_X1
+Removing unused module `\XOR2_X2'.
+Removing unused module `\XNOR2_X2'.
+Removing unused module `\TLAT_X1'.
+Removing unused module `\TINV_X1'.
+Removing unused module `\TBUF_X16'.
+Removing unused module `\TBUF_X8'.
+Removing unused module `\TBUF_X4'.
+Removing unused module `\TBUF_X2'.
+Removing unused module `\TBUF_X1'.
+Removing unused module `\SDFF_X2'.
+Removing unused module `\SDFF_X1'.
+Removing unused module `\SDFFS_X2'.
+Removing unused module `\SDFFS_X1'.
+Removing unused module `\SDFFR_X2'.
+Removing unused module `\SDFFR_X1'.
+Removing unused module `\SDFFRS_X2'.
+Removing unused module `\SDFFRS_X1'.
+Removing unused module `\OR4_X4'.
+Removing unused module `\OR4_X2'.
+Removing unused module `\OR4_X1'.
+Removing unused module `\OR3_X4'.
+Removing unused module `\OR3_X2'.
+Removing unused module `\OR2_X4'.
+Removing unused module `\OR2_X2'.
+Removing unused module `\OAI222_X4'.
+Removing unused module `\OAI222_X2'.
+Removing unused module `\OAI222_X1'.
+Removing unused module `\OAI221_X4'.
+Removing unused module `\OAI221_X2'.
+Removing unused module `\OAI221_X1'.
+Removing unused module `\OAI211_X4'.
+Removing unused module `\OAI211_X2'.
+Removing unused module `\OAI211_X1'.
+Removing unused module `\OAI33_X1'.
+Removing unused module `\OAI22_X4'.
+Removing unused module `\OAI22_X2'.
+Removing unused module `\OAI21_X4'.
+Removing unused module `\OAI21_X2'.
+Removing unused module `\NOR4_X4'.
+Removing unused module `\NOR4_X2'.
+Removing unused module `\NOR3_X4'.
+Removing unused module `\NOR3_X2'.
+Removing unused module `\NOR2_X4'.
+Removing unused module `\NOR2_X2'.
+Removing unused module `\NAND4_X4'.
+Removing unused module `\NAND4_X2'.
+Removing unused module `\NAND3_X4'.
+Removing unused module `\NAND3_X2'.
+Removing unused module `\NAND2_X4'.
+Removing unused module `\NAND2_X2'.
+Removing unused module `\MUX2_X2'.
+Removing unused module `\LOGIC1_X1'.
+Removing unused module `\LOGIC0_X1'.
+Removing unused module `\INV_X32'.
+Removing unused module `\INV_X16'.
+Removing unused module `\INV_X8'.
+Removing unused module `\INV_X4'.
+Removing unused module `\INV_X2'.
+Removing unused module `\HA_X1'.
+Removing unused module `\FILLCELL_X32'.
+Removing unused module `\FILLCELL_X16'.
+Removing unused module `\FILLCELL_X8'.
+Removing unused module `\FILLCELL_X4'.
+Removing unused module `\FILLCELL_X2'.
+Removing unused module `\TAPCELL_X1'.
+Removing unused module `\FILLCELL_X1'.
+Removing unused module `\FA_X1'.
+Removing unused module `\DLL_X2'.
+Removing unused module `\DLL_X1'.
+Removing unused module `\DLH_X2'.
+Removing unused module `\DLH_X1'.
+Removing unused module `\DFF_X2'.
+Removing unused module `\DFFS_X2'.
+Removing unused module `\DFFS_X1'.
+Removing unused module `\DFFR_X2'.
+Removing unused module `\DFFR_X1'.
+Removing unused module `\DFFRS_X2'.
+Removing unused module `\DFFRS_X1'.
+Removing unused module `\CLKBUF_X3'.
+Removing unused module `\CLKBUF_X2'.
+Removing unused module `\CLKBUF_X1'.
+Removing unused module `\BUF_X32'.
+Removing unused module `\BUF_X16'.
+Removing unused module `\BUF_X8'.
+Removing unused module `\BUF_X4'.
+Removing unused module `\BUF_X2'.
+Removing unused module `\BUF_X1'.
+Removing unused module `\AOI222_X4'.
+Removing unused module `\AOI222_X2'.
+Removing unused module `\AOI222_X1'.
+Removing unused module `\AOI221_X4'.
+Removing unused module `\AOI221_X2'.
+Removing unused module `\AOI211_X4'.
+Removing unused module `\AOI211_X2'.
+Removing unused module `\AOI22_X4'.
+Removing unused module `\AOI22_X2'.
+Removing unused module `\AOI21_X4'.
+Removing unused module `\AOI21_X2'.
+Removing unused module `\ANTENNA_X1'.
+Removing unused module `\AND4_X4'.
+Removing unused module `\AND4_X2'.
+Removing unused module `\AND3_X4'.
+Removing unused module `\AND3_X2'.
+Removing unused module `\AND2_X4'.
+Removing unused module `\AND2_X2'.
+Removed 105 unused modules.
+
+10. Executing PROC pass (convert processes to netlists).
+
+10.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+10.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+10.4. Executing PROC_INIT pass (extract init attributes).
+
+10.5. Executing PROC_ARST pass (detect async resets in processes).
+
+10.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+10.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+10.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+10.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+10.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DFF_X1.
+Optimizing module NAND4_X1.
+Optimizing module INV_X1.
+Optimizing module OR3_X1.
+Optimizing module AOI221_X1.
+Optimizing module mac_register.
+Optimizing module NAND3_X1.
+Optimizing module AOI211_X1.
+Optimizing module NOR4_X1.
+Optimizing module XOR2_X1.
+Optimizing module AOI22_X1.
+Optimizing module NAND2_X1.
+Optimizing module OR2_X1.
+Optimizing module AOI21_X1.
+Optimizing module MUX2_X1.
+Optimizing module NOR3_X1.
+Optimizing module OAI22_X1.
+Optimizing module AND4_X1.
+Optimizing module \$paramod\mac_comb\W=32'00000000000000000000000000100000.
+Optimizing module NOR2_X1.
+Optimizing module AND3_X1.
+Optimizing module XNOR2_X1.
+Optimizing module OAI21_X1.
+Optimizing module AND2_X1.
+
+11. Executing FLATTEN pass (flatten design).
+Deleting now unused module DFF_X1.
+Deleting now unused module NAND4_X1.
+Deleting now unused module INV_X1.
+Deleting now unused module OR3_X1.
+Deleting now unused module AOI221_X1.
+Deleting now unused module NAND3_X1.
+Deleting now unused module AOI211_X1.
+Deleting now unused module NOR4_X1.
+Deleting now unused module XOR2_X1.
+Deleting now unused module AOI22_X1.
+Deleting now unused module NAND2_X1.
+Deleting now unused module OR2_X1.
+Deleting now unused module AOI21_X1.
+Deleting now unused module MUX2_X1.
+Deleting now unused module NOR3_X1.
+Deleting now unused module OAI22_X1.
+Deleting now unused module AND4_X1.
+Deleting now unused module \$paramod\mac_comb\W=32'00000000000000000000000000100000.
+Deleting now unused module NOR2_X1.
+Deleting now unused module AND3_X1.
+Deleting now unused module XNOR2_X1.
+Deleting now unused module OAI21_X1.
+Deleting now unused module AND2_X1.
+<suppressed ~332 debug messages>
+
+12. Executing OPT pass (performing simple optimizations).
+
+12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+<suppressed ~5 debug messages>
+
+12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_register'.
+<suppressed ~210 debug messages>
+Removed a total of 70 cells.
+
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_register.
+Performed a total of 0 changes.
+
+12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_register'.
+Removed a total of 0 cells.
+
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_register..
+Removed 29 unused cells and 470 unused wires.
+<suppressed ~33 debug messages>
+
+12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+
+12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_register.
+Performed a total of 0 changes.
+
+12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_register'.
+Removed a total of 0 cells.
+
+12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_register..
+Removed 0 unused cells and 56 unused wires.
+<suppressed ~56 debug messages>
+
+12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+
+12.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mac_register..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mac_register.
+Performed a total of 0 changes.
+
+12.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mac_register'.
+Removed a total of 0 cells.
+
+12.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mac_register..
+
+12.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mac_register.
+
+12.23. Finished OPT passes. (There is nothing left to do.)
+Renaming module \mac_register to \gate.
+
+13. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: a_gold (\a_gold), a_gate (\a_gate) -> a
+Presumably equivalent wires: acc_gold (\acc_gold), acc_gate ({ \_191_.IQ_gate \_190_.IQ_gate \_189_.IQ_gate \_188_.IQ_gate \_187_.IQ_gate \_186_.IQ_gate \_185_.IQ_gate \_184_.IQ_gate \_183_.IQ_gate \_182_.IQ_gate \_181_.IQ_gate \_180_.IQ_gate \_179_.IQ_gate \_178_.IQ_gate \_177_.IQ_gate \_176_.IQ_gate \_175_.IQ_gate \_174_.IQ_gate \_173_.IQ_gate \_172_.IQ_gate \_171_.IQ_gate \_170_.IQ_gate \_169_.IQ_gate \_168_.IQ_gate \_167_.IQ_gate \_166_.IQ_gate \_165_.IQ_gate \_164_.IQ_gate \_163_.IQ_gate \_162_.IQ_gate \_193_.IQ_gate \_192_.IQ_gate }) -> acc
+Presumably equivalent wires: add.a_gold (\a_gold), add.a_gate (\a_gate) -> add.a
+Presumably equivalent wires: add.acc_gold (\acc_gold), add.acc_gate ({ \_191_.IQ_gate \_190_.IQ_gate \_189_.IQ_gate \_188_.IQ_gate \_187_.IQ_gate \_186_.IQ_gate \_185_.IQ_gate \_184_.IQ_gate \_183_.IQ_gate \_182_.IQ_gate \_181_.IQ_gate \_180_.IQ_gate \_179_.IQ_gate \_178_.IQ_gate \_177_.IQ_gate \_176_.IQ_gate \_175_.IQ_gate \_174_.IQ_gate \_173_.IQ_gate \_172_.IQ_gate \_171_.IQ_gate \_170_.IQ_gate \_169_.IQ_gate \_168_.IQ_gate \_167_.IQ_gate \_166_.IQ_gate \_165_.IQ_gate \_164_.IQ_gate \_163_.IQ_gate \_162_.IQ_gate \_193_.IQ_gate \_192_.IQ_gate }) -> add.acc
+Presumably equivalent wires: add.b_gold (\b_gold), add.b_gate (\b_gate) -> add.b
+Presumably equivalent wires: add.next_acc_gold (\next_acc_gold), add.next_acc_gate ({ \_156_.B_gate \_154_.B_gate \_152_.B_gate \_150_.B_gate \_148_.B_gate \_146_.B_gate \_144_.B_gate \_142_.B_gate \_140_.B_gate \_138_.B_gate \_136_.B_gate \_134_.B_gate \_132_.B_gate \_130_.B_gate \_128_.B_gate \_126_.B_gate \_124_.B_gate \_122_.B_gate \_120_.B_gate \_118_.B_gate \_116_.B_gate \_114_.B_gate \_112_.B_gate \_110_.B_gate \_108_.B_gate \_106_.B_gate \_104_.B_gate \_102_.B_gate \_100_.B_gate \_098_.B_gate \_160_.B_gate \_158_.B_gate }) -> add.next_acc
+Presumably equivalent wires: b_gold (\b_gold), b_gate (\b_gate) -> b
+Presumably equivalent wires: clk_gold (\clk_gold), clk_gate (\clk_gate) -> clk
+Presumably equivalent wires: enable_gold (\enable_gold), enable_gate (\enable_gate) -> enable
+Presumably equivalent wires: next_acc_gold (\next_acc_gold), next_acc_gate ({ \_156_.B_gate \_154_.B_gate \_152_.B_gate \_150_.B_gate \_148_.B_gate \_146_.B_gate \_144_.B_gate \_142_.B_gate \_140_.B_gate \_138_.B_gate \_136_.B_gate \_134_.B_gate \_132_.B_gate \_130_.B_gate \_128_.B_gate \_126_.B_gate \_124_.B_gate \_122_.B_gate \_120_.B_gate \_118_.B_gate \_116_.B_gate \_114_.B_gate \_112_.B_gate \_110_.B_gate \_108_.B_gate \_106_.B_gate \_104_.B_gate \_102_.B_gate \_100_.B_gate \_098_.B_gate \_160_.B_gate \_158_.B_gate }) -> next_acc
+Presumably equivalent wires: reset_gold (\reset_gold), reset_gate (\reset_gate) -> reset
+Changing input A of cell $flatten\_098_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_162_.IQ_gate -> \acc [2]
+Changing input A of cell $flatten\_100_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_163_.IQ_gate -> \acc [3]
+Changing input A of cell $flatten\_102_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_164_.IQ_gate -> \acc [4]
+Changing input A of cell $flatten\_104_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_165_.IQ_gate -> \acc [5]
+Changing input A of cell $flatten\_106_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_166_.IQ_gate -> \acc [6]
+Changing input A of cell $flatten\_108_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_167_.IQ_gate -> \acc [7]
+Changing input A of cell $flatten\_110_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_168_.IQ_gate -> \acc [8]
+Changing input A of cell $flatten\_112_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_169_.IQ_gate -> \acc [9]
+Changing input A of cell $flatten\_114_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_170_.IQ_gate -> \acc [10]
+Changing input A of cell $flatten\_116_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_171_.IQ_gate -> \acc [11]
+Changing input A of cell $flatten\_118_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_172_.IQ_gate -> \acc [12]
+Changing input A of cell $flatten\_120_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_173_.IQ_gate -> \acc [13]
+Changing input A of cell $flatten\_122_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_174_.IQ_gate -> \acc [14]
+Changing input A of cell $flatten\_124_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_175_.IQ_gate -> \acc [15]
+Changing input A of cell $flatten\_126_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_176_.IQ_gate -> \acc [16]
+Changing input A of cell $flatten\_128_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_177_.IQ_gate -> \acc [17]
+Changing input A of cell $flatten\_130_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_178_.IQ_gate -> \acc [18]
+Changing input A of cell $flatten\_132_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_179_.IQ_gate -> \acc [19]
+Changing input A of cell $flatten\_134_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_180_.IQ_gate -> \acc [20]
+Changing input A of cell $flatten\_136_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_181_.IQ_gate -> \acc [21]
+Changing input A of cell $flatten\_138_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_182_.IQ_gate -> \acc [22]
+Changing input A of cell $flatten\_140_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_183_.IQ_gate -> \acc [23]
+Changing input A of cell $flatten\_142_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_184_.IQ_gate -> \acc [24]
+Changing input A of cell $flatten\_144_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_185_.IQ_gate -> \acc [25]
+Changing input A of cell $flatten\_146_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_186_.IQ_gate -> \acc [26]
+Changing input A of cell $flatten\_148_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_187_.IQ_gate -> \acc [27]
+Changing input A of cell $flatten\_150_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_188_.IQ_gate -> \acc [28]
+Changing input A of cell $flatten\_152_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_189_.IQ_gate -> \acc [29]
+Changing input A of cell $flatten\_154_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_190_.IQ_gate -> \acc [30]
+Changing input A of cell $flatten\_156_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_191_.IQ_gate -> \acc [31]
+Changing input A of cell $flatten\_158_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_192_.IQ_gate -> \acc [0]
+Changing input A of cell $flatten\_160_.$auto$liberty.cc:75:create_and_cell$273_gate ($_AND_): \_193_.IQ_gate -> \acc [1]
+Changing input A of cell $flatten\add.\_202_.$auto$liberty.cc:58:create_inv_cell$257_gate ($_NOT_): \_164_.IQ_gate -> \acc [4]
+Changing input A of cell $flatten\add.\_203_.$auto$liberty.cc:58:create_inv_cell$257_gate ($_NOT_): \_166_.IQ_gate -> \acc [6]
+Changing input A of cell $flatten\add.\_204_.$auto$liberty.cc:58:create_inv_cell$257_gate ($_NOT_): \_173_.IQ_gate -> \acc [13]
+Changing input A of cell $flatten\add.\_205_.$auto$liberty.cc:58:create_inv_cell$257_gate ($_NOT_): \_190_.IQ_gate -> \acc [30]
+Changing input B of cell $flatten\add.\_208_.$auto$liberty.cc:75:create_and_cell$299_gate ($_AND_): \_192_.IQ_gate -> \acc [0]
+Changing input A of cell $flatten\add.\_212_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_193_.IQ_gate -> \acc [1]
+Changing input A of cell $flatten\add.\_213_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_193_.IQ_gate -> \acc [1]
+Changing input A of cell $flatten\add.\_224_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_162_.IQ_gate -> \acc [2]
+Changing input B of cell $flatten\add.\_228_.$auto$liberty.cc:75:create_and_cell$53_gate ($_AND_): \_162_.IQ_gate -> \acc [2]
+Changing input A of cell $flatten\add.\_248_.$auto$liberty.cc:75:create_and_cell$23_gate ($_AND_): \_163_.IQ_gate -> \acc [3]
+Changing input A of cell $flatten\add.\_250_.$auto$liberty.cc:84:create_or_cell$55_gate ($_OR_): \_163_.IQ_gate -> \acc [3]
+Changing input A of cell $flatten\add.\_296_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_165_.IQ_gate -> \acc [5]
+Changing input A of cell $flatten\add.\_297_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_165_.IQ_gate -> \acc [5]
+Changing input A of cell $flatten\add.\_312_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_166_.IQ_gate -> \acc [6]
+Changing input A of cell $flatten\add.\_315_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_167_.IQ_gate -> \acc [7]
+Changing input A of cell $flatten\add.\_316_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_167_.IQ_gate -> \acc [7]
+Changing input A of cell $flatten\add.\_319_.$auto$liberty.cc:75:create_and_cell$17_gate ($_AND_): \_168_.IQ_gate -> \acc [8]
+Changing input A of cell $flatten\add.\_320_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_168_.IQ_gate -> \acc [8]
+Changing input A of cell $flatten\add.\_323_.$auto$liberty.cc:84:create_or_cell$339_gate ($_OR_): \_169_.IQ_gate -> \acc [9]
+Changing input A of cell $flatten\add.\_324_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_169_.IQ_gate -> \acc [9]
+Changing input A of cell $flatten\add.\_325_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_169_.IQ_gate -> \acc [9]
+Changing input A of cell $flatten\add.\_328_.$auto$liberty.cc:75:create_and_cell$17_gate ($_AND_): \_170_.IQ_gate -> \acc [10]
+Changing input A of cell $flatten\add.\_329_.$auto$liberty.cc:84:create_or_cell$545_gate ($_OR_): \_170_.IQ_gate -> \acc [10]
+Changing input A of cell $flatten\add.\_330_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_170_.IQ_gate -> \acc [10]
+Changing input A of cell $flatten\add.\_333_.$auto$liberty.cc:84:create_or_cell$339_gate ($_OR_): \_171_.IQ_gate -> \acc [11]
+Changing input A of cell $flatten\add.\_334_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_171_.IQ_gate -> \acc [11]
+Changing input A of cell $flatten\add.\_335_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_171_.IQ_gate -> \acc [11]
+Changing input A of cell $flatten\add.\_338_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_172_.IQ_gate -> \acc [12]
+Changing input A of cell $flatten\add.\_339_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_172_.IQ_gate -> \acc [12]
+Changing input A of cell $flatten\add.\_343_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_173_.IQ_gate -> \acc [13]
+Changing input A of cell $flatten\add.\_349_.$auto$liberty.cc:75:create_and_cell$17_gate ($_AND_): \_174_.IQ_gate -> \acc [14]
+Changing input A of cell $flatten\add.\_351_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_174_.IQ_gate -> \acc [14]
+Changing input A of cell $flatten\add.\_354_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_175_.IQ_gate -> \acc [15]
+Changing input B of cell $flatten\add.\_358_.$auto$liberty.cc:75:create_and_cell$123_gate ($_AND_): \_175_.IQ_gate -> \acc [15]
+Changing input A of cell $flatten\add.\_360_.$auto$liberty.cc:75:create_and_cell$17_gate ($_AND_): \_176_.IQ_gate -> \acc [16]
+Changing input A of cell $flatten\add.\_361_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_176_.IQ_gate -> \acc [16]
+Changing input A of cell $flatten\add.\_365_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_177_.IQ_gate -> \acc [17]
+Changing input A of cell $flatten\add.\_366_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_177_.IQ_gate -> \acc [17]
+Changing input A of cell $flatten\add.\_368_.$auto$liberty.cc:84:create_or_cell$411_gate ($_OR_): \_177_.IQ_gate -> \acc [17]
+Changing input A of cell $flatten\add.\_369_.$auto$liberty.cc:75:create_and_cell$17_gate ($_AND_): \_178_.IQ_gate -> \acc [18]
+Changing input A of cell $flatten\add.\_370_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_178_.IQ_gate -> \acc [18]
+Changing input A of cell $flatten\add.\_375_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_179_.IQ_gate -> \acc [19]
+Changing input A of cell $flatten\add.\_376_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_179_.IQ_gate -> \acc [19]
+Changing input A of cell $flatten\add.\_378_.$auto$liberty.cc:84:create_or_cell$411_gate ($_OR_): \_179_.IQ_gate -> \acc [19]
+Changing input A of cell $flatten\add.\_379_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_180_.IQ_gate -> \acc [20]
+Changing input B of cell $flatten\add.\_383_.$auto$liberty.cc:75:create_and_cell$53_gate ($_AND_): \_180_.IQ_gate -> \acc [20]
+Changing input A of cell $flatten\add.\_384_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_181_.IQ_gate -> \acc [21]
+Changing input A of cell $flatten\add.\_387_.$auto$liberty.cc:84:create_or_cell$545_gate ($_OR_): \_180_.IQ_gate -> \acc [20]
+Changing input B of cell $flatten\add.\_387_.$auto$liberty.cc:84:create_or_cell$545_gate ($_OR_): \_181_.IQ_gate -> \acc [21]
+Changing input A of cell $flatten\add.\_389_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_182_.IQ_gate -> \acc [22]
+Changing input A of cell $flatten\add.\_390_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_182_.IQ_gate -> \acc [22]
+Changing input A of cell $flatten\add.\_393_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_183_.IQ_gate -> \acc [23]
+Changing input A of cell $flatten\add.\_395_.$auto$liberty.cc:84:create_or_cell$551_gate ($_OR_): \_182_.IQ_gate -> \acc [22]
+Changing input B of cell $flatten\add.\_395_.$auto$liberty.cc:84:create_or_cell$551_gate ($_OR_): \_183_.IQ_gate -> \acc [23]
+Changing input A of cell $flatten\add.\_398_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_184_.IQ_gate -> \acc [24]
+Changing input B of cell $flatten\add.\_401_.$auto$liberty.cc:75:create_and_cell$53_gate ($_AND_): \_184_.IQ_gate -> \acc [24]
+Changing input A of cell $flatten\add.\_402_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_185_.IQ_gate -> \acc [25]
+Changing input A of cell $flatten\add.\_405_.$auto$liberty.cc:84:create_or_cell$545_gate ($_OR_): \_184_.IQ_gate -> \acc [24]
+Changing input B of cell $flatten\add.\_405_.$auto$liberty.cc:84:create_or_cell$545_gate ($_OR_): \_185_.IQ_gate -> \acc [25]
+Changing input A of cell $flatten\add.\_407_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_186_.IQ_gate -> \acc [26]
+Changing input A of cell $flatten\add.\_408_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_186_.IQ_gate -> \acc [26]
+Changing input A of cell $flatten\add.\_411_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_187_.IQ_gate -> \acc [27]
+Changing input A of cell $flatten\add.\_415_.$auto$liberty.cc:84:create_or_cell$351_gate ($_OR_): \_186_.IQ_gate -> \acc [26]
+Changing input B of cell $flatten\add.\_415_.$auto$liberty.cc:84:create_or_cell$351_gate ($_OR_): \_187_.IQ_gate -> \acc [27]
+Changing input A of cell $flatten\add.\_417_.$auto$liberty.cc:75:create_and_cell$285_gate ($_AND_): \_188_.IQ_gate -> \acc [28]
+Changing input A of cell $flatten\add.\_418_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_188_.IQ_gate -> \acc [28]
+Changing input A of cell $flatten\add.\_423_.$auto$liberty.cc:84:create_or_cell$339_gate ($_OR_): \_189_.IQ_gate -> \acc [29]
+Changing input A of cell $flatten\add.\_424_.$auto$liberty.cc:75:create_and_cell$17_gate ($_AND_): \_189_.IQ_gate -> \acc [29]
+Changing input A of cell $flatten\add.\_434_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_191_.IQ_gate -> \acc [31]
+Changing input A of cell $flatten\add.\_435_.$auto$liberty.cc:66:create_xor_cell$681_gate ($_XOR_): \_192_.IQ_gate -> \acc [0]
+Changing input A of cell $flatten\add.$add$control/mac.v:5$8_gold ($add): \acc_gold -> \acc
+Changing input D of cell $auto$ff.cc:266:slice$16_gold ($sdffe): \next_acc_gold -> \next_acc
+
+14. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1. Analyzing design hierarchy..
+Top module:  \equiv
+
+14.2. Analyzing design hierarchy..
+Top module:  \equiv
+Removing unused module `\gate'.
+Removing unused module `\gold'.
+Removed 2 unused modules.
+
+15. Executing EQUIV_SIMPLE pass.
+Found 136 unproven $equiv cells (6 groups) in equiv:
+ Grouping SAT models for \acc:
+  Trying to prove $equiv for \acc [0]: failed.
+  Trying to prove $equiv for \acc [1]: failed.
+  Trying to prove $equiv for \acc [2]: failed.
+  Trying to prove $equiv for \acc [3]: failed.
+  Trying to prove $equiv for \acc [4]: failed.
+  Trying to prove $equiv for \acc [5]: failed.
+  Trying to prove $equiv for \acc [6]: failed.
+  Trying to prove $equiv for \acc [7]: failed.
+  Trying to prove $equiv for \acc [8]: failed.
+  Trying to prove $equiv for \acc [9]: failed.
+  Trying to prove $equiv for \acc [10]: failed.
+  Trying to prove $equiv for \acc [11]: failed.
+  Trying to prove $equiv for \acc [12]: failed.
+  Trying to prove $equiv for \acc [13]: failed.
+  Trying to prove $equiv for \acc [14]: failed.
+  Trying to prove $equiv for \acc [15]: failed.
+  Trying to prove $equiv for \acc [16]: failed.
+  Trying to prove $equiv for \acc [17]: failed.
+  Trying to prove $equiv for \acc [18]: failed.
+  Trying to prove $equiv for \acc [19]: failed.
+  Trying to prove $equiv for \acc [20]: failed.
+  Trying to prove $equiv for \acc [21]: failed.
+  Trying to prove $equiv for \acc [22]: failed.
+  Trying to prove $equiv for \acc [23]: failed.
+  Trying to prove $equiv for \acc [24]: failed.
+  Trying to prove $equiv for \acc [25]: failed.
+  Trying to prove $equiv for \acc [26]: failed.
+  Trying to prove $equiv for \acc [27]: failed.
+  Trying to prove $equiv for \acc [28]: failed.
+  Trying to prove $equiv for \acc [29]: failed.
+  Trying to prove $equiv for \acc [30]: failed.
+  Trying to prove $equiv for \acc [31]: failed.
+ Grouping SAT models for \next_acc:
+  Trying to prove $equiv for \next_acc [0]: success!
+  Trying to prove $equiv for \next_acc [1]: success!
+  Trying to prove $equiv for \next_acc [2]: success!
+  Trying to prove $equiv for \next_acc [3]: success!
+  Trying to prove $equiv for \next_acc [4]: success!
+  Trying to prove $equiv for \next_acc [5]: success!
+  Trying to prove $equiv for \next_acc [6]: success!
+  Trying to prove $equiv for \next_acc [7]: success!
+  Trying to prove $equiv for \next_acc [8]: success!
+  Trying to prove $equiv for \next_acc [9]: success!
+  Trying to prove $equiv for \next_acc [10]: success!
+  Trying to prove $equiv for \next_acc [11]: success!
+  Trying to prove $equiv for \next_acc [12]: success!
+  Trying to prove $equiv for \next_acc [13]: success!
+  Trying to prove $equiv for \next_acc [14]: success!
+  Trying to prove $equiv for \next_acc [15]: success!
+  Trying to prove $equiv for \next_acc [16]: success!
+  Trying to prove $equiv for \next_acc [17]: success!
+  Trying to prove $equiv for \next_acc [18]: success!
+  Trying to prove $equiv for \next_acc [19]: success!
+  Trying to prove $equiv for \next_acc [20]: success!
+  Trying to prove $equiv for \next_acc [21]: success!
+  Trying to prove $equiv for \next_acc [22]: success!
+  Trying to prove $equiv for \next_acc [23]: success!
+  Trying to prove $equiv for \next_acc [24]: success!
+  Trying to prove $equiv for \next_acc [25]: success!
+  Trying to prove $equiv for \next_acc [26]: success!
+  Trying to prove $equiv for \next_acc [27]: success!
+  Trying to prove $equiv for \next_acc [28]: success!
+  Trying to prove $equiv for \next_acc [29]: success!
+  Trying to prove $equiv for \next_acc [30]: success!
+  Trying to prove $equiv for \next_acc [31]: success!
+ Grouping SAT models for \add.acc:
+  Trying to prove $equiv for \add.acc [0]: failed.
+  Trying to prove $equiv for \add.acc [1]: failed.
+  Trying to prove $equiv for \add.acc [2]: failed.
+  Trying to prove $equiv for \add.acc [3]: failed.
+  Trying to prove $equiv for \add.acc [4]: failed.
+  Trying to prove $equiv for \add.acc [5]: failed.
+  Trying to prove $equiv for \add.acc [6]: failed.
+  Trying to prove $equiv for \add.acc [7]: failed.
+  Trying to prove $equiv for \add.acc [8]: failed.
+  Trying to prove $equiv for \add.acc [9]: failed.
+  Trying to prove $equiv for \add.acc [10]: failed.
+  Trying to prove $equiv for \add.acc [11]: failed.
+  Trying to prove $equiv for \add.acc [12]: failed.
+  Trying to prove $equiv for \add.acc [13]: failed.
+  Trying to prove $equiv for \add.acc [14]: failed.
+  Trying to prove $equiv for \add.acc [15]: failed.
+  Trying to prove $equiv for \add.acc [16]: failed.
+  Trying to prove $equiv for \add.acc [17]: failed.
+  Trying to prove $equiv for \add.acc [18]: failed.
+  Trying to prove $equiv for \add.acc [19]: failed.
+  Trying to prove $equiv for \add.acc [20]: failed.
+  Trying to prove $equiv for \add.acc [21]: failed.
+  Trying to prove $equiv for \add.acc [22]: failed.
+  Trying to prove $equiv for \add.acc [23]: failed.
+  Trying to prove $equiv for \add.acc [24]: failed.
+  Trying to prove $equiv for \add.acc [25]: failed.
+  Trying to prove $equiv for \add.acc [26]: failed.
+  Trying to prove $equiv for \add.acc [27]: failed.
+  Trying to prove $equiv for \add.acc [28]: failed.
+  Trying to prove $equiv for \add.acc [29]: failed.
+  Trying to prove $equiv for \add.acc [30]: failed.
+  Trying to prove $equiv for \add.acc [31]: failed.
+ Grouping SAT models for \add.a:
+  Trying to prove $equiv for \add.a [0]: success!
+  Trying to prove $equiv for \add.a [1]: success!
+  Trying to prove $equiv for \add.a [2]: success!
+  Trying to prove $equiv for \add.a [3]: success!
+ Grouping SAT models for \add.next_acc:
+  Trying to prove $equiv for \add.next_acc [0]: success!
+  Trying to prove $equiv for \add.next_acc [1]: success!
+  Trying to prove $equiv for \add.next_acc [2]: success!
+  Trying to prove $equiv for \add.next_acc [3]: success!
+  Trying to prove $equiv for \add.next_acc [4]: success!
+  Trying to prove $equiv for \add.next_acc [5]: success!
+  Trying to prove $equiv for \add.next_acc [6]: success!
+  Trying to prove $equiv for \add.next_acc [7]: success!
+  Trying to prove $equiv for \add.next_acc [8]: success!
+  Trying to prove $equiv for \add.next_acc [9]: success!
+  Trying to prove $equiv for \add.next_acc [10]: success!
+  Trying to prove $equiv for \add.next_acc [11]: success!
+  Trying to prove $equiv for \add.next_acc [12]: success!
+  Trying to prove $equiv for \add.next_acc [13]: success!
+  Trying to prove $equiv for \add.next_acc [14]: success!
+  Trying to prove $equiv for \add.next_acc [15]: success!
+  Trying to prove $equiv for \add.next_acc [16]: success!
+  Trying to prove $equiv for \add.next_acc [17]: success!
+  Trying to prove $equiv for \add.next_acc [18]: success!
+  Trying to prove $equiv for \add.next_acc [19]: success!
+  Trying to prove $equiv for \add.next_acc [20]: success!
+  Trying to prove $equiv for \add.next_acc [21]: success!
+  Trying to prove $equiv for \add.next_acc [22]: success!
+  Trying to prove $equiv for \add.next_acc [23]: success!
+  Trying to prove $equiv for \add.next_acc [24]: success!
+  Trying to prove $equiv for \add.next_acc [25]: success!
+  Trying to prove $equiv for \add.next_acc [26]: success!
+  Trying to prove $equiv for \add.next_acc [27]: success!
+  Trying to prove $equiv for \add.next_acc [28]: success!
+  Trying to prove $equiv for \add.next_acc [29]: success!
+  Trying to prove $equiv for \add.next_acc [30]: success!
+  Trying to prove $equiv for \add.next_acc [31]: success!
+ Grouping SAT models for \add.b:
+  Trying to prove $equiv for \add.b [0]: success!
+  Trying to prove $equiv for \add.b [1]: success!
+  Trying to prove $equiv for \add.b [2]: success!
+  Trying to prove $equiv for \add.b [3]: success!
+Proved 72 previously unproven $equiv cells.
+
+16. Executing EQUIV_INDUCT pass.
+Found 64 unproven $equiv cells in module equiv:
+  Proving existence of base case for step 1. (12209 clauses over 4643 variables)
+  Proving induction step 1. (25540 clauses over 9638 variables)
+  Proof for induction step holds. Entire workset of 64 cells proven!
+Proved 64 previously unproven $equiv cells.
+
+17. Executing EQUIV_STATUS pass.
+Found 136 $equiv cells in equiv:
+  Of those cells 136 are proven and 0 are unproven.
+  Equivalence successfully proven!

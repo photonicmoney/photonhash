@@ -1,0 +1,2 @@
+RTL_SIMULATION_PASS rows=64 terms_per_row=4096 accumulation_checks=262144
+/workspace/lf3-followup/public-asic/src/mac_tb.v:39: $finish called at 2622086 (1s)
